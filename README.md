@@ -18,7 +18,7 @@ A static site with 11 calculators, a GIFT Nifty page and the pages AdSense needs
 ## Go live
 1. **Domain:** buy one (calcsouq.com).
 2. **Rebuild with your domain and AdSense ID.** Send both to Claude, or run:
-   `python3 build/build.py site https://calcsouq.com ca-pub-XXXXXXXXXXXXXXXX GSC_CODE`
+   `python3 build/build.py site https://www.calcsouq.com ca-pub-XXXXXXXXXXXXXXXX GSC_CODE`
    This bakes the domain into canonical URLs and the sitemap, adds the AdSense code to every page, fills `ads.txt` and hides the grey placeholders.
 3. **GitHub:** create an empty repo and push the site folder.
 4. **Vercel:** Add New, then Project, then import the repo. Set **Root Directory** to `site`, then Deploy and add your domain.
