@@ -52,7 +52,7 @@ body="""
 <h3>Worked example</h3>
 <p>Basic salary AED 8,000, service of 3 years and 6 months. Daily wage = 8,000 ÷ 30 = AED 266.67. Gratuity = 266.67 × 21 × 3.5 = <strong>AED 19,600</strong>.</p>
 <h3>Resignation vs termination</h3>
-<p>Under the new law, resigning no longer reduces gratuity on a standard (limited) contract. You receive the same amount whether you resign or are terminated, unless you are dismissed under Article 44 for gross misconduct.</p>
+<p>Under the new law, resigning no longer reduces gratuity. You receive the same amount whether you resign or are terminated, and gratuity is still payable even after a dismissal without notice under Article 44 (under the old law it could be forfeited). Your employer may deduct amounts you genuinely owe them.</p>
 <h3>Who this calculator does not cover</h3>
 <p>UAE nationals in GPSSA pension schemes, government employees, DIFC and ADGM employees (who have their own schemes, such as DEWS) and domestic workers follow different rules. Check with your HR team or MOHRE for your exact entitlement.</p>
 """,

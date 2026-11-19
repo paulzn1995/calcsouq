@@ -1,7 +1,8 @@
 # Usage: python3 build.py OUTDIR [SITE_URL] [ADSENSE_CLIENT] [SEARCH_CONSOLE_CODE]
 import os, sys, shutil, html, datetime
 sys.path.insert(0, os.path.dirname(__file__))
-from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, SITE_NAME, TAGLINE
+from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, SITE_NAME, TAGLINE
+from articles import ARTICLES
 from tools_india import TOOLS
 
 out = sys.argv[1]
@@ -38,6 +39,9 @@ for t in TOOLS:
     page += f'<article>{t["body"]}<p class="hint">Last reviewed {today:%d %B %Y}.</p></article>\n{ad()}\n'
     page += '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(
         f"<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>" for q, a in faqs) + "</section>\n"
+    gl = [a for a in ARTICLES if a["tool"] == t["slug"]]
+    if gl:
+        page += '<section class="related"><h2>Guides</h2><ul>' + "".join(f'<li><a href="/guides/{a["slug"]}/">{a["h1"]}</a></li>' for a in gl) + "</ul></section>"
     page += related(t) + "</main>\n"
     page += foot("<script>\n{" + t["js"] + "}\n</script>")
     w(p.strip("/") + "/index.html", page)
@@ -55,9 +59,30 @@ for g, gt in GROUPS:
     home += "".join(f'<a class="card" href="/{t["slug"]}/"><b>{t["name"]}</b><span>{t["card"]}</span></a>' for t in TOOLS if t["group"] == g)
     home += "</div>"
     if g == "uae": home += ad()
+home += '<h2 id="guides" class="group-title" style="font:600 26px Spectral,serif;color:var(--ink)">Guides</h2><div class="grid">' + "".join(f'<a class="card" href="/guides/{a["slug"]}/"><b>{a["h1"]}</b><span>{a["desc"][:90].rsplit(" ",1)[0]}…</span></a>' for a in ARTICLES[:9]) + '</div><p><a href="/guides/">All guides →</a></p>'
 home += ad() + "</main>" + foot()
 w("index.html", home)
 paths.insert(0, ("/", "daily", "1.0"))
+
+# Guides
+TOOLS_BY = {t["slug"]: t for t in TOOLS}
+for a in ARTICLES:
+    p = f"/guides/{a['slug']}/"; paths.append((p, "monthly", "0.7"))
+    t = TOOLS_BY[a["tool"]]
+    pg = head(cfg, a["title"], a["desc"], p, a["keywords"], [article_ld(cfg, a["title"], a["desc"], p, str(today)), crumbs_ld(cfg, a["h1"], p), faq_ld(a["faqs"])])
+    pg += f'<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></div><article style="padding-top:8px"><h1>{a["h1"]}</h1><p class="lede">{a["lede"]}</p>'
+    pg += f'<a class="card" href="/{t["slug"]}/" style="background:var(--panel);margin:8px 0 20px"><b>Try the {t["name"]} →</b><span>{t["card"]}</span></a>'
+    pg += a["body"] + ad() + '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(f"<details><summary>{html.escape(q)}</summary><p>{html.escape(x)}</p></details>" for q, x in a["faqs"]) + "</section>"
+    pg += f'<p class="hint">Updated {today:%d %B %Y}. General information only, not legal, tax or investment advice.</p></article>'
+    more = [b for b in ARTICLES if b["group"] == a["group"] and b is not a][:4]
+    pg += '<section class="related"><h2>More guides</h2><div class="grid">' + "".join(f'<a class="card" href="/guides/{b["slug"]}/"><b>{b["h1"]}</b></a>' for b in more) + "</div></section></main>" + foot()
+    w(p.strip("/") + "/index.html", pg)
+gi = head(cfg, f"Guides: UAE Gratuity, VAT, Gold, Forex Trading & Kerala Property · {SITE_NAME}", "Plain-English guides for expats and traders in the UAE and India: gratuity, VAT, gold, remittances, forex risk, futures, GIFT Nifty and Kerala land.", "/guides/", "uae guides, gratuity guide, forex guide, kerala land guide", [])
+gi += '<main class="wrap"><section style="padding:36px 0 8px"><h1>Guides</h1><p class="lede">Short, exact answers to the questions behind our calculators.</p></section>'
+for g, gt in GROUPS:
+    gi += f'<h2 class="group-title" style="font:600 26px Spectral,serif;color:var(--ink)">{gt}</h2><div class="grid">' + "".join(f'<a class="card" href="/guides/{a["slug"]}/"><b>{a["h1"]}</b><span>{a["lede"][:110]}</span></a>' for a in ARTICLES if a["group"] == g) + "</div>"
+gi += ad() + "</main>" + foot()
+w("guides/index.html", gi); paths.append(("/guides/", "weekly", "0.8"))
 
 # Info pages
 INFO = {

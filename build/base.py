@@ -96,7 +96,7 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
 })();
 """
 
-NAV = [("UAE", "/#uae"), ("Trading", "/#trading"), ("India & Kerala", "/#india"), ("GIFT Nifty", "/gift-nifty/")]
+NAV = [("UAE", "/#uae"), ("Trading", "/#trading"), ("India & Kerala", "/#india"), ("GIFT Nifty", "/gift-nifty/"), ("Guides", "/guides/")]
 
 
 def head(cfg, title, desc, path, keywords, jsonld):
@@ -146,7 +146,7 @@ def ad(label="Advertisement"):
 
 def foot(extra_js=""):
     return f"""<footer class="site"><div class="wrap">
-<nav aria-label="Footer"><a href="/">All calculators</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<nav aria-label="Footer"><a href="/">All calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
 <p>© <span class="yr">2026</span> {SITE_NAME}. Results are estimates for general information, not legal, tax or investment advice.</p>
 </div></footer>
 <script src="/assets/site.js"></script>
@@ -172,3 +172,9 @@ def app_ld(cfg, name, desc, path):
     return {"@context": "https://schema.org", "@type": "WebApplication", "name": name, "description": desc,
             "url": cfg["url"].rstrip("/") + path, "applicationCategory": "FinanceApplication",
             "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}
+
+
+def article_ld(cfg, title, desc, path, date):
+    return {"@context": "https://schema.org", "@type": "Article", "headline": title[:110], "description": desc,
+            "mainEntityOfPage": cfg["url"].rstrip("/") + path, "datePublished": date, "dateModified": date,
+            "author": {"@type": "Organization", "name": SITE_NAME}, "publisher": {"@type": "Organization", "name": SITE_NAME}}
