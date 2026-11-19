@@ -45,4 +45,30 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; if (ib) ib.classList.add('show'); });
   if (ib) { const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !navigator.standalone; if (ios) { ib.classList.add('show'); ib.querySelector('button').hidden = true; ib.querySelector('.ios').hidden = false; }
     ib.querySelector('button').addEventListener('click', () => { if (deferred) { deferred.prompt(); deferred = null; ib.classList.remove('show'); } }); }
+  // site search (index built at deploy time)
+  let IDX = null; const esc = x => String(x).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const load = () => IDX ? Promise.resolve(IDX) : fetch('/search-index.json').then(r => r.json()).then(j => (IDX = j));
+  document.querySelectorAll('.search').forEach(box => {
+    const inp = box.querySelector('input'), res = box.querySelector('.results'); let sel = 0;
+    const run = () => load().then(ix => {
+      const q = inp.value.trim().toLowerCase(); if (!q) { res.classList.remove('open'); return; }
+      const ws = q.split(/\s+/);
+      const hits = ix.map(it => { const hay = (it.t + ' ' + it.k + ' ' + it.d).toLowerCase(); let sc = 0; for (const w of ws) { if (!hay.includes(w)) return null; sc += it.t.toLowerCase().includes(w) ? 3 : 1; } return [sc + (it.c === 'Calculator' ? 1 : 0), it]; })
+        .filter(Boolean).sort((a, b) => b[0] - a[0]).slice(0, 8).map(x => x[1]);
+      sel = 0;
+      res.innerHTML = hits.length ? hits.map((h, i) => `<a href="${h.u}"${i ? '' : ' class="sel"'}>${esc(h.t)}<small>${h.c} · ${esc(h.d)}</small></a>`).join('') : '<p>No matches. Try "gratuity", "gold", "EMI" or "lot size".</p>';
+      res.classList.add('open');
+    }).catch(() => {});
+    inp.addEventListener('input', run);
+    inp.addEventListener('focus', () => { load().catch(() => {}); if (inp.value) run(); });
+    inp.addEventListener('keydown', e => {
+      const as = [...res.querySelectorAll('a')];
+      if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && as.length) { e.preventDefault(); as[sel] && as[sel].classList.remove('sel'); sel = (sel + (e.key === 'ArrowDown' ? 1 : -1) + as.length) % as.length; as[sel].classList.add('sel'); }
+      if (e.key === 'Enter' && as[sel]) { e.preventDefault(); location.href = as[sel].href; }
+      if (e.key === 'Escape') res.classList.remove('open');
+    });
+    document.addEventListener('click', e => { if (!box.contains(e.target)) res.classList.remove('open'); });
+  });
+  document.querySelectorAll('.print').forEach(b => b.addEventListener('click', () => { try { window.print(); } catch (e) {} }));
+  document.querySelectorAll('.fb button').forEach(b => b.addEventListener('click', () => { b.parentElement.innerHTML = 'Thanks for the feedback. Spotted a mistake? Email contact@calcsouq.com.'; }));
 })();

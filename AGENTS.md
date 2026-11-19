@@ -6,9 +6,10 @@ Owner: Paulson Jose (paulznjoz@gmail.com). Contact address on the site: contact@
 ## Build
 - Everything in `site/` is generated. Never hand-edit `site/`; edit `build/` and rebuild:
   `python3 build/build.py site`  (settings come from `build/config.json`: url, adsense, slot, gsc)
-- Calculators: `build/tools_uae.py`, `build/tools_trading.py`, `build/tools_india.py`
+- Calculators: `build/tools_uae.py`, `build/tools_trading.py`, `build/tools_india.py`, `build/tools_extra.py`, `build/tools_unique.py` (combined "Only on CalcSouq" tools; set `unique=True`, optional `sources=[(name, url)]`)
 - Guides: `build/articles.py` (one `A(...)` call per article; `tool` must be an existing calculator slug)
-- Layout, theme, ads: `build/base.py`. GIFT Nifty page: `build/giftnifty_index.html` + `build/quote.js`
+- Layout, theme, ads, search, share bar: `build/base.py`. Site search index is generated automatically from tools and guides.
+- Design: clean product style (Inter, gold #f5c300 used sparingly). Keep copy plain and specific; avoid hype, slogans and generic marketing phrases.
 - Topic ideas waiting to be written: `build/backlog.md`
 
 ## Content rules

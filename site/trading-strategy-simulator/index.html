@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading Monte Carlo Simulator: Drawdown, Losing Streaks &amp; Risk of Ruin</title>
+<meta name="description" content="Simulate 1,000 futures for your trading strategy from win rate, risk–reward and risk per trade. See likely drawdowns, losing streaks and the chance of ending in profit.">
+<meta name="keywords" content="trading monte carlo simulator, drawdown calculator, risk of ruin calculator, losing streak probability trading, win rate risk reward simulator, forex strategy simulator, prop firm drawdown">
+<link rel="canonical" href="https://www.calcsouq.com/trading-strategy-simulator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:title" content="Trading Monte Carlo Simulator: Drawdown, Losing Streaks &amp; Risk of Ruin">
+<meta property="og:description" content="Simulate 1,000 futures for your trading strategy from win rate, risk–reward and risk per trade. See likely drawdowns, losing streaks and the chance of ending in profit.">
+<meta property="og:url" content="https://www.calcsouq.com/trading-strategy-simulator/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CalcSouq">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=2390ec3c">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Trading Strategy Simulator", "description": "Simulate 1,000 futures for your trading strategy from win rate, risk–reward and risk per trade. See likely drawdowns, losing streaks and the chance of ending in profit.", "url": "https://www.calcsouq.com/trading-strategy-simulator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Trading Strategy Simulator", "item": "https://www.calcsouq.com/trading-strategy-simulator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a Monte Carlo simulation in trading?", "acceptedAnswer": {"@type": "Answer", "text": "It replays your strategy many times in random order to show the range of possible results, drawdowns and losing streaks, not just the average."}}, {"@type": "Question", "name": "How do I lower my drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "Lower the risk per trade. Halving risk roughly halves drawdowns, and expectancy per trade stays the same."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
+<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg><input type="search" class="q" placeholder="Search calculators and guides" aria-label="Search calculators and guides" autocomplete="off"><div class="results" role="listbox"></div></div>
+<nav aria-label="Main"><a href="/#calculators">Calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#trading">Trading</a></div>
+<h1>Trading strategy simulator</h1><p class="lede">Your win rate and risk–reward tell you the average. This shows the range: 1,000 simulated runs of your next trades, with the drawdowns and losing streaks you should be ready for.</p>
+<div class="meta"><span>Updated 20 Nov 2026</span><span>Free, no sign-up</span><a href="#how">How it works</a></div>
+<section class="tool" aria-label="Trading Strategy Simulator">
+<div class="inputs">
+ <div class="row2"><div><label for="bal">Starting balance</label><input id="bal" inputmode="decimal" value="10000"></div>
+ <div><label for="risk">Risk per trade (%)</label><input id="risk" inputmode="decimal" value="1"></div></div>
+ <div class="row2"><div><label for="win">Win rate (%)</label><input id="win" inputmode="decimal" value="45"></div>
+ <div><label for="rr">Average reward (R)</label><input id="rr" inputmode="decimal" value="2"><div class="hint">2 means winners make twice what losers lose.</div></div></div>
+ <div class="row2"><div><label for="n">Trades per run</label><input id="n" inputmode="numeric" value="200"></div>
+ <div><label for="cost">Costs per trade (R)</label><input id="cost" inputmode="decimal" value="0.05"><div class="hint">Spread + commission as a fraction of risk.</div></div></div>
+ <div><label for="dd">Drawdown limit to test (%)</label><input id="dd" inputmode="decimal" value="10"><div class="hint">For example a prop-firm maximum loss.</div></div>
+ <button type="button" class="btn primary" id="again">Run again</button>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">Chance of ending in profit</div><div class="big" id="out">—</div>
+ <ul class="lines" id="lines"></ul>
+ <div class="fig"><svg id="chart" role="img" aria-label="Simulated equity curves"></svg></div>
+ <p class="formula" id="msg"></p>
+</div></section>
+<div class="share" aria-label="Share"><span>Share your result</span><a class="wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a><button type="button" class="native">Share</button><button type="button" class="copy"><span hidden></span>Copy link</button><button type="button" class="print">Print</button></div>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Advertisement</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Advertise on CalcSouq</b><span>Reach UAE expats, NRIs and traders. Get in touch via the Contact page.</span></a></div></div></aside>
+<article id="how">
+<h2>Why simulate instead of using averages</h2>
+<p>Expectancy, meaning win rate × reward minus loss rate × risk, tells you whether a strategy makes money on average. It doesn't tell you how rough the ride will be. Two traders with the same edge can have very different months purely through the order of wins and losses. This simulator plays out your next trades 1,000 times with random order, so you can see the spread of outcomes.</p>
+<h3>How to read the results</h3>
+<ul><li><strong>Typical worst drawdown:</strong> the peak-to-trough fall in half of the runs. Expect at least this.</li>
+<li><strong>Bad-luck drawdown (1 in 20):</strong> plan your risk so you could survive this.</li>
+<li><strong>Losing streak:</strong> even a 50% win rate regularly produces runs of 6–8 losses in 200 trades.</li>
+<li><strong>Drawdown limit:</strong> the share of runs that hit your limit, for example a prop-firm's maximum loss from the starting balance.</li></ul>
+<h3>Worked example</h3>
+<p>Win rate 45%, reward 2R, costs 0.05R: expectancy = 0.45 × 2 − 0.55 − 0.05 = <strong>+0.30R per trade</strong>. At 1% risk that edge is solid, but the simulator typically still shows double-digit drawdowns along the way.</p>
+<p>Pair this with the <a href="/position-size-calculator/">position size calculator</a> and the <a href="/risk-reward-calculator/">risk–reward calculator</a>. This tool is educational and not investment advice.</p>
+<div class="fb">Was this calculator useful? <button type="button" class="btn">Yes</button><button type="button" class="btn">No</button></div></article>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Advertisement</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Advertise on CalcSouq</b><span>Reach UAE expats, NRIs and traders. Get in touch via the Contact page.</span></a></div></div></aside>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>What is a Monte Carlo simulation in trading?</summary><p>It replays your strategy many times in random order to show the range of possible results, drawdowns and losing streaks, not just the average.</p></details><details><summary>How do I lower my drawdown?</summary><p>Lower the risk per trade. Halving risk roughly halves drawdowns, and expectancy per trade stays the same.</p></details></section>
+<section class="related"><h2>Related calculators</h2><div class="grid"><a class="card" href="/forex-pip-value-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div><div><b>Pip Value Calculator</b><span>Value of one pip per lot in your currency</span></div></a><a class="card" href="/position-size-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div><div><b>Position Size Calculator</b><span>Lot size from account risk and stop loss</span></div></a><a class="card" href="/forex-margin-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div><div><b>Forex Margin Calculator</b><span>Required margin for any lot size and leverage</span></div></a><a class="card" href="/swap-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div><div><b>Forex Swap Calculator</b><span>Overnight rollover with triple-swap days</span></div></a><a class="card" href="/futures-tick-value-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div><div><b>Futures Tick Value Calculator</b><span>Tick value and P&L for CME contracts</span></div></a><a class="card" href="/market-hours/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div><div><b>World Market Hours</b><span>Which markets are open right now</span></div></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<p>© <span class="yr">2026</span> CalcSouq · Made in Dubai. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
+</div></footer>
+<script src="/assets/site.js?v=2390ec3c"></script>
+<script>
+{
+let curves = [], med = [];
+function q(a, p) { const s = [...a].sort((x, y) => x - y); return s[Math.min(s.length - 1, Math.floor(p * s.length))]; }
+function calc() {
+  const B = V('bal') || 1, rk = V('risk') / 100, w = V('win') / 100, R = V('rr'), N = Math.min(Math.max(Math.round(V('n')), 1), 2000), c = V('cost'), lim = V('dd') / 100, RUNS = 1000;
+  const ends = [], dds = [], streaks = []; let hitLim = 0; curves = [];
+  for (let k = 0; k < RUNS; k++) {
+    let eq = B, peak = B, mdd = 0, st = 0, mst = 0, hit = false; const cv = k < 40 ? [B] : null;
+    for (let t = 0; t < N; t++) {
+      const r = eq * rk;
+      if (Math.random() < w) { eq += r * (R - c); st = 0; } else { eq -= r * (1 + c); st++; if (st > mst) mst = st; }
+      if (eq > peak) peak = eq; const dd = (peak - eq) / peak; if (dd > mdd) mdd = dd; if (!hit && (B - eq) / B >= lim) hit = true;
+      if (cv) cv.push(eq);
+    }
+    ends.push(eq); dds.push(mdd); streaks.push(mst); if (hit) hitLim++; if (cv) curves.push(cv);
+  }
+  const prof = ends.filter(e => e > B).length / RUNS, exp = w * R - (1 - w) - c;
+  $('out').textContent = (prof > .99 && prof < 1 ? '>99' : prof < .01 && prof > 0 ? '<1' : F(prof * 100, 0)) + '%';
+  $('lines').innerHTML = [['Expectancy per trade', F(exp, 2) + ' R'], ['Median ending balance', F(q(ends, .5), 0)], ['Range (5th–95th percentile)', F(q(ends, .05), 0) + ' – ' + F(q(ends, .95), 0)], ['Typical worst drawdown', F(q(dds, .5) * 100, 1) + '%'], ['Bad-luck drawdown (1 in 20)', F(q(dds, .95) * 100, 1) + '%'], ['Typical longest losing streak', q(streaks, .5) + ' trades'], [`Runs that lost ${F(lim * 100, 0)}% of the start`, F(hitLim / RUNS * 100, 1) + '%']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  $('msg').textContent = exp <= 0 ? 'This strategy loses money on average after costs. No position size fixes negative expectancy.' : 'Thin lines show 40 sample runs. Results assume each trade is independent; real markets can be streakier.';
+  draw();
+}
+const svg = $('chart');
+function draw() {
+  const W = svg.clientWidth, H = svg.clientHeight; if (!W || !curves.length) return;
+  const all = curves.flat(), lo = Math.min(...all), hi = Math.max(...all), n = curves[0].length - 1 || 1, B = curves[0][0];
+  const x = i => 4 + i / n * (W - 8), y = v => 6 + (1 - (v - lo) / ((hi - lo) || 1)) * (H - 12);
+  const path = cv => cv.map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ',' + y(v).toFixed(1)).join('');
+  svg.innerHTML = `<line x1="4" x2="${W - 4}" y1="${y(B)}" y2="${y(B)}" stroke="currentColor" stroke-dasharray="4 4" opacity=".4"/>` + curves.map(cv => `<path d="${path(cv)}" fill="none" stroke="${cv[cv.length - 1] >= B ? '#c99a00' : '#c2261d'}" stroke-width="1" opacity=".35"/>`).join('');
+}
+const ro = new ResizeObserver(draw); ro.observe(svg);
+$('again').addEventListener('click', calc);
+let tm; document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(calc, 250); })); calc();
+}
+</script>
+</body>
+</html>

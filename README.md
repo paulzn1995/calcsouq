@@ -6,7 +6,6 @@ A static site with 11 calculators, a GIFT Nifty page and the pages AdSense needs
 - UAE: `/uae-gratuity-calculator/`, `/uae-vat-calculator/`, `/gold-price-calculator/`, `/aed-to-inr-calculator/`
 - Trading: `/forex-pip-value-calculator/`, `/position-size-calculator/`, `/forex-margin-calculator/`, `/swap-calculator/`, `/futures-tick-value-calculator/`, `/market-hours/`
 - India: `/kerala-land-converter/`, `/kerala-stamp-duty-calculator/`
-- `/gift-nifty/`: delayed GIFT Nifty page. It shows sample data until `api/quote.js` is given a licensed vendor feed.
 - `/about/`, `/privacy/` (includes the AdSense cookie wording), `/terms/`, `/contact/`, `404.html`
 
 ## Search engine work already done

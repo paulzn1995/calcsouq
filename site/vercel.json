@@ -1,4 +1,5 @@
 {
   "trailingSlash": true,
+  "redirects": [{ "source": "/gift-nifty", "destination": "/", "permanent": true }, { "source": "/gift-nifty/:path*", "destination": "/", "permanent": true }],
   "headers": [{ "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }]
 }
