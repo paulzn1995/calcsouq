@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gold Price Calculator UAE &amp; India: Jewellery Price with Making Charges &amp; VAT/GST</title>
+<meta name="description" content="Calculate the final price of gold jewellery in Dubai or India: gold rate per gram × weight + making charges + 5% UAE VAT or 3% GST. Works for 24K, 22K, 21K and 18K.">
+<meta name="keywords" content="gold price calculator, gold jewellery price calculator, gold rate calculator dubai, 22k gold price calculator, making charges calculator, gold calculator uae, gold price calculator india gst, gold rate per gram calculator, gold vat uae">
+<link rel="canonical" href="https://calcsouq.com/gold-price-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:title" content="Gold Price Calculator UAE &amp; India: Jewellery Price with Making Charges &amp; VAT/GST">
+<meta property="og:description" content="Calculate the final price of gold jewellery in Dubai or India: gold rate per gram × weight + making charges + 5% UAE VAT or 3% GST. Works for 24K, 22K, 21K and 18K.">
+<meta property="og:url" content="https://calcsouq.com/gold-price-calculator/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1d2bd8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Gold Jewellery Price Calculator", "description": "Calculate the final price of gold jewellery in Dubai or India: gold rate per gram × weight + making charges + 5% UAE VAT or 3% GST. Works for 24K, 22K, 21K and 18K.", "url": "https://calcsouq.com/gold-price-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Gold Jewellery Price Calculator", "item": "https://calcsouq.com/gold-price-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is the gold jewellery price calculated in Dubai?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the gold rate per gram for your purity by the weight, add the making charge, then add 5% VAT on the total."}}, {"@type": "Question", "name": "Is VAT charged on making charges in the UAE?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Retail gold jewellery carries 5% VAT on the full sale value, including making charges."}}, {"@type": "Question", "name": "What is the GST on gold jewellery in India?", "acceptedAnswer": {"@type": "Answer", "text": "3% GST is charged on the value of gold jewellery, including making charges."}}, {"@type": "Question", "name": "What are typical making charges?", "acceptedAnswer": {"@type": "Answer", "text": "They vary widely by design and shop, from a few percent for plain chains to 20% or more for intricate pieces. Always compare and negotiate."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">Calc<b>Souq</b><small>Free calculators for UAE & India</small></a>
+<nav aria-label="Main"><a href="/#uae">UAE</a><a href="/#trading">Trading</a><a href="/#india">India & Kerala</a><a href="/gift-nifty/">GIFT Nifty</a></nav>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/">Home</a> › Gold Jewellery Price Calculator</div>
+<h1>Gold jewellery price calculator</h1><p class="lede">Work out what a piece of gold jewellery should cost from today's rate, its weight, the jeweller's making charge and tax.</p>
+<section class="tool" aria-label="Gold Jewellery Price Calculator">
+<div class="inputs">
+ <div><label>Where are you buying?</label><div class="seg" id="ctry"><button type="button" data-v="uae" aria-pressed="true">UAE (AED)</button><button type="button" data-v="in" aria-pressed="false">India (₹)</button></div></div>
+ <div class="row2"><div><label for="karat">Purity</label><select id="karat"><option value="24">24K (99.9%)</option><option value="22" selected>22K (91.6%)</option><option value="21">21K (87.5%)</option><option value="18">18K (75%)</option></select></div>
+ <div><label for="wt">Weight (grams)</label><input id="wt" inputmode="decimal" value="10"></div></div>
+ <div><label for="rate" id="rateLabel">Rate per gram</label><input id="rate" inputmode="decimal" value="320"><div class="hint">Sample rate. Enter today's rate from your jeweller or the gold association.</div></div>
+ <label class="check"><input type="checkbox" id="is24"> The rate I entered is the 24K rate (convert it to my purity)</label>
+ <div><label>Making charge</label><div class="seg" id="mk"><button type="button" data-v="pct" aria-pressed="true">% of gold value</button><button type="button" data-v="gram" aria-pressed="false">Per gram</button></div></div>
+ <div class="row2"><div><label for="mkv">Making charge value</label><input id="mkv" inputmode="decimal" value="8"></div><div><label for="tax" id="taxLabel">VAT (%)</label><input id="tax" inputmode="decimal" value="5"></div></div>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">Final price</div><div class="big" id="out">—</div>
+ <ul class="lines" id="lines"></ul>
+ <p class="formula" id="note"></p>
+</div></section>
+<div class="ad" role="complementary" aria-label="Advertisement">Advertisement</div>
+<article>
+<h2>How the price of gold jewellery is worked out</h2>
+<p><strong>Final price = (gold rate per gram × weight) + making charges + tax</strong></p>
+<ul><li><strong>Gold rate:</strong> the published rate for the purity you are buying (24K, 22K, 21K or 18K).</li>
+<li><strong>Making charge:</strong> the jeweller's fee for crafting the piece. It is quoted either as a percentage of the gold value or as a fixed amount per gram, and is often negotiable.</li>
+<li><strong>UAE:</strong> 5% VAT is charged on the full price, including making charges. Investment bullion of 99% purity or more is zero-rated.</li>
+<li><strong>India:</strong> 3% GST is charged on the jewellery value, including making charges.</li></ul>
+<h3>Converting the 24K rate to other purities</h3>
+<p>If you only know the 24K rate, multiply it by the purity: 22K ≈ 91.6%, 21K = 87.5% and 18K = 75%. Tick the box in the calculator to do this automatically. Jewellers' published 22K rates can differ slightly from this conversion.</p>
+<h3>Tips before you buy</h3>
+<ul><li>Ask for the gold value, making charge and tax as separate lines on the invoice.</li>
+<li>Check for hallmarking: BIS HUID in India, or the Dubai Central Laboratory hallmark in Dubai.</li>
+<li>Stone weight should not be charged at the gold rate.</li></ul>
+<p class="hint">Last reviewed 20 November 2026.</p></article>
+<div class="ad" role="complementary" aria-label="Advertisement">Advertisement</div>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>How is the gold jewellery price calculated in Dubai?</summary><p>Multiply the gold rate per gram for your purity by the weight, add the making charge, then add 5% VAT on the total.</p></details><details><summary>Is VAT charged on making charges in the UAE?</summary><p>Yes. Retail gold jewellery carries 5% VAT on the full sale value, including making charges.</p></details><details><summary>What is the GST on gold jewellery in India?</summary><p>3% GST is charged on the value of gold jewellery, including making charges.</p></details><details><summary>What are typical making charges?</summary><p>They vary widely by design and shop, from a few percent for plain chains to 20% or more for intricate pieces. Always compare and negotiate.</p></details></section>
+<section class="related"><h2>Related calculators</h2><div class="grid"><a class="card" href="/uae-gratuity-calculator/"><b>UAE Gratuity Calculator</b><span>End-of-service benefit under the new labour law</span></a><a class="card" href="/uae-vat-calculator/"><b>UAE VAT Calculator</b><span>Add or remove 5% VAT in AED</span></a><a class="card" href="/aed-to-inr-calculator/"><b>AED to INR Remittance Calculator</b><span>Compare exchange houses by rupees received</span></a><a class="card" href="/forex-pip-value-calculator/"><b>Pip Value Calculator</b><span>Value of one pip per lot in your currency</span></a><a class="card" href="/position-size-calculator/"><b>Position Size Calculator</b><span>Lot size from account risk and stop loss</span></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/">All calculators</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<p>© <span class="yr">2026</span> CalcSouq. Results are estimates for general information, not legal, tax or investment advice.</p>
+</div></footer>
+<script src="/assets/site.js"></script>
+<script>
+{
+const PUR = { 24: 0.999, 22: 0.916, 21: 0.875, 18: 0.75 };
+let lastC = null;
+const ctry = seg('ctry', c => { if (lastC && lastC !== c) $('tax').value = c === 'uae' ? 5 : 3; lastC = c; calc(); });
+const mk = seg('mk', () => calc());
+lastC = ctry();
+function calc() {
+  const c = ctry(), cur = c === 'uae' ? 'AED ' : '₹', k = +$('karat').value;
+  $('taxLabel').textContent = c === 'uae' ? 'VAT (%)' : 'GST (%)';
+  $('rateLabel').textContent = `Rate per gram (${c === 'uae' ? 'AED' : '₹'})`;
+  const rate = $('is24').checked ? V('rate') * PUR[k] / PUR[24] : V('rate');
+  const gold = rate * V('wt'), making = mk() === 'pct' ? gold * V('mkv') / 100 : V('mkv') * V('wt');
+  const tax = (gold + making) * V('tax') / 100, tot = gold + making + tax;
+  $('out').textContent = cur + F(tot);
+  $('lines').innerHTML = [[`${k}K rate per gram`, rate], ['Gold value', gold], ['Making charge', making], [(c === 'uae' ? 'VAT ' : 'GST ') + V('tax') + '%', tax]].map(([a, v]) => `<li><span>${a}</span><b>${cur}${F(v)}</b></li>`).join('');
+  $('note').textContent = c === 'uae' ? 'UAE: 5% VAT applies to the full price of jewellery, including making charges. Tourists can reclaim it at departure.' : 'India: 3% GST applies to the value of the jewellery, including making charges.';
+}
+document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
+}
+</script>
+</body>
+</html>

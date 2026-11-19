@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Futures Tick Value &amp; P&amp;L Calculator: ES, NQ, CL, GC, Micro Futures</title>
+<meta name="description" content="Free futures tick value calculator. See tick size, tick value and profit or loss for E-mini S&amp;P (ES), Nasdaq (NQ), crude oil (CL), gold (GC), micros and custom contracts.">
+<meta name="keywords" content="futures tick value calculator, futures profit calculator, es tick value, nq tick value, cl tick value, gold futures tick value, micro futures calculator, cme tick size, futures p&amp;l calculator">
+<link rel="canonical" href="https://calcsouq.com/futures-tick-value-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:title" content="Futures Tick Value &amp; P&amp;L Calculator: ES, NQ, CL, GC, Micro Futures">
+<meta property="og:description" content="Free futures tick value calculator. See tick size, tick value and profit or loss for E-mini S&amp;P (ES), Nasdaq (NQ), crude oil (CL), gold (GC), micros and custom contracts.">
+<meta property="og:url" content="https://calcsouq.com/futures-tick-value-calculator/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1d2bd8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Futures Tick Value Calculator", "description": "Free futures tick value calculator. See tick size, tick value and profit or loss for E-mini S&P (ES), Nasdaq (NQ), crude oil (CL), gold (GC), micros and custom contracts.", "url": "https://calcsouq.com/futures-tick-value-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Futures Tick Value Calculator", "item": "https://calcsouq.com/futures-tick-value-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the tick value of ES?", "acceptedAnswer": {"@type": "Answer", "text": "The E-mini S&P 500 moves in 0.25-point ticks worth $12.50, which is $50 per full point."}}, {"@type": "Question", "name": "What is the tick value of NQ?", "acceptedAnswer": {"@type": "Answer", "text": "The E-mini Nasdaq-100 moves in 0.25-point ticks worth $5.00, which is $20 per point."}}, {"@type": "Question", "name": "What is the tick value of crude oil futures (CL)?", "acceptedAnswer": {"@type": "Answer", "text": "CL moves in $0.01 ticks worth $10 per contract, which is $1,000 per $1 move."}}, {"@type": "Question", "name": "What is the tick value of gold futures (GC)?", "acceptedAnswer": {"@type": "Answer", "text": "GC moves in $0.10 ticks worth $10 per contract."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">Calc<b>Souq</b><small>Free calculators for UAE & India</small></a>
+<nav aria-label="Main"><a href="/#uae">UAE</a><a href="/#trading">Trading</a><a href="/#india">India & Kerala</a><a href="/gift-nifty/">GIFT Nifty</a></nav>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/">Home</a> › Futures Tick Value Calculator</div>
+<h1>Futures tick value calculator</h1><p class="lede">Pick a contract, enter your entry and exit, and see how many ticks you made or lost and what they are worth.</p>
+<section class="tool" aria-label="Futures Tick Value Calculator">
+<div class="inputs">
+ <div><label for="ct">Contract</label><select id="ct"><option value="ES">ES · E-mini S&P 500</option><option value="MES">MES · Micro E-mini S&P 500</option><option value="NQ">NQ · E-mini Nasdaq-100</option><option value="MNQ">MNQ · Micro E-mini Nasdaq-100</option><option value="YM">YM · E-mini Dow</option><option value="CL">CL · Crude oil (WTI)</option><option value="NG">NG · Natural gas</option><option value="GC">GC · Gold</option><option value="MGC">MGC · Micro gold</option><option value="SI">SI · Silver</option><option value="6E">6E · Euro FX</option><option value="custom">Custom contract</option></select></div>
+ <div class="row2"><div><label for="ts">Tick size</label><input id="ts" inputmode="decimal" value="0.25"></div><div><label for="tv">Tick value (USD)</label><input id="tv" inputmode="decimal" value="12.50"></div></div>
+ <div><label>Direction</label><div class="seg" id="dir"><button type="button" data-v="long" aria-pressed="true">Long (buy)</button><button type="button" data-v="short" aria-pressed="false">Short (sell)</button></div></div>
+ <div class="row2"><div><label for="en">Entry price</label><input id="en" inputmode="decimal" value="6000.00"></div><div><label for="ex">Exit price</label><input id="ex" inputmode="decimal" value="6012.50"></div></div>
+ <div class="row2"><div><label for="qty">Contracts</label><input id="qty" inputmode="numeric" value="2"></div><div><label for="fee">Round-turn fees per contract (USD)</label><input id="fee" inputmode="decimal" value="4.5"></div></div>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">Net profit / loss</div><div class="big" id="out">—</div>
+ <ul class="lines" id="lines"></ul>
+</div></section>
+<div class="ad" role="complementary" aria-label="Advertisement">Advertisement</div>
+<article>
+<h2>Tick size and tick value</h2>
+<p>The <strong>tick size</strong> is the smallest price step a contract can move, and the <strong>tick value</strong> is what one tick is worth per contract. P&L = (exit − entry) ÷ tick size × tick value × contracts.</p>
+<div class="scroll"><table><thead><tr><th>Symbol</th><th>Contract</th><th class="n">Tick size</th><th class="n">Tick value</th></tr></thead><tbody>
+<tr><td>ES</td><td>E-mini S&P 500</td><td class="n">0.25</td><td class="n">$12.50</td></tr><tr><td>MES</td><td>Micro E-mini S&P 500</td><td class="n">0.25</td><td class="n">$1.25</td></tr><tr><td>NQ</td><td>E-mini Nasdaq-100</td><td class="n">0.25</td><td class="n">$5.00</td></tr><tr><td>MNQ</td><td>Micro E-mini Nasdaq-100</td><td class="n">0.25</td><td class="n">$0.50</td></tr><tr><td>YM</td><td>E-mini Dow</td><td class="n">1</td><td class="n">$5.00</td></tr><tr><td>CL</td><td>Crude oil (WTI)</td><td class="n">0.01</td><td class="n">$10.00</td></tr><tr><td>NG</td><td>Natural gas</td><td class="n">0.001</td><td class="n">$10.00</td></tr><tr><td>GC</td><td>Gold</td><td class="n">0.1</td><td class="n">$10.00</td></tr><tr><td>MGC</td><td>Micro gold</td><td class="n">0.1</td><td class="n">$1.00</td></tr><tr><td>SI</td><td>Silver</td><td class="n">0.005</td><td class="n">$25.00</td></tr><tr><td>6E</td><td>Euro FX</td><td class="n">5e-05</td><td class="n">$6.25</td></tr>
+</tbody></table></div>
+<p>Contract specifications can change. Check the exchange (CME Group) or your broker's contract specs before trading.</p>
+<p class="hint">Last reviewed 20 November 2026.</p></article>
+<div class="ad" role="complementary" aria-label="Advertisement">Advertisement</div>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>What is the tick value of ES?</summary><p>The E-mini S&amp;P 500 moves in 0.25-point ticks worth $12.50, which is $50 per full point.</p></details><details><summary>What is the tick value of NQ?</summary><p>The E-mini Nasdaq-100 moves in 0.25-point ticks worth $5.00, which is $20 per point.</p></details><details><summary>What is the tick value of crude oil futures (CL)?</summary><p>CL moves in $0.01 ticks worth $10 per contract, which is $1,000 per $1 move.</p></details><details><summary>What is the tick value of gold futures (GC)?</summary><p>GC moves in $0.10 ticks worth $10 per contract.</p></details></section>
+<section class="related"><h2>Related calculators</h2><div class="grid"><a class="card" href="/forex-pip-value-calculator/"><b>Pip Value Calculator</b><span>Value of one pip per lot in your currency</span></a><a class="card" href="/position-size-calculator/"><b>Position Size Calculator</b><span>Lot size from account risk and stop loss</span></a><a class="card" href="/forex-margin-calculator/"><b>Forex Margin Calculator</b><span>Required margin for any lot size and leverage</span></a><a class="card" href="/swap-calculator/"><b>Forex Swap Calculator</b><span>Overnight rollover with triple-swap days</span></a><a class="card" href="/market-hours/"><b>World Market Hours</b><span>Which markets are open right now</span></a><a class="card" href="/uae-gratuity-calculator/"><b>UAE Gratuity Calculator</b><span>End-of-service benefit under the new labour law</span></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/">All calculators</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<p>© <span class="yr">2026</span> CalcSouq. Results are estimates for general information, not legal, tax or investment advice.</p>
+</div></footer>
+<script src="/assets/site.js"></script>
+<script>
+{
+const FUT = {'ES':[0.25,12.5],'MES':[0.25,1.25],'NQ':[0.25,5.0],'MNQ':[0.25,0.5],'YM':[1,5.0],'CL':[0.01,10.0],'NG':[0.001,10.0],'GC':[0.1,10.0],'MGC':[0.1,1.0],'SI':[0.005,25.0],'6E':[5e-05,6.25]};
+let lastCt = $('ct').value;
+$('ct').addEventListener('change', () => { const c = $('ct').value; if (FUT[c] && c !== lastCt) { $('ts').value = FUT[c][0]; $('tv').value = FUT[c][1].toFixed(2); } lastCt = c; calc(); });
+const dir = seg('dir', () => calc());
+function calc() {
+  const ts = V('ts'), tv = V('tv'), q = V('qty'), mv = (V('ex') - V('en')) * (dir() === 'long' ? 1 : -1);
+  const ticks = ts ? mv / ts : 0, gross = ticks * tv * q, net = gross - V('fee') * q;
+  $('out').innerHTML = `<span class="${net >= 0 ? 'up' : 'dn'}">${net >= 0 ? '+' : '−'}$${FX(Math.abs(net))}</span>`;
+  $('lines').innerHTML = [['Price move', FX(mv, 5).replace(/0+$/, '').replace(/\.$/, '')], ['Ticks', FX(ticks, 1)], ['Point value', '$' + FX(ts ? tv / ts : 0)], ['Gross P&L', '$' + FX(gross)], ['Fees', '$' + FX(V('fee') * q)]].map(([x, y]) => `<li><span>${x}</span><b>${y}</b></li>`).join('');
+}
+document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
+}
+</script>
+</body>
+</html>
