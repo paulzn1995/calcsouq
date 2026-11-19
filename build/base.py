@@ -103,6 +103,13 @@ footer.site nav{display:flex;flex-wrap:wrap;gap:4px 18px;margin-bottom:10px}foot
 @media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start;white-space:normal}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;color:var(--mute)}.stack td:empty{display:none}}
 @media(max-width:600px){header nav{flex-wrap:nowrap;overflow-x:auto;margin:0 -6px;scrollbar-width:none;width:100%}header nav::-webkit-scrollbar{display:none}header nav a{flex:none;background:var(--ab)}}
 @media(max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0 0}
+.share span{font-size:14px;color:var(--mute);margin-right:4px}
+.share a,.share button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 14.5px var(--body);text-decoration:none;cursor:pointer;transition:transform .22s cubic-bezier(.34,1.45,.5,1),border-color .25s}
+.share a:active,.share button:active{transform:scale(.96)}
+.share .wa{background:#25d366;border-color:#25d366;color:#08311b}
+.share svg{width:18px;height:18px}
+.install{display:none;margin:18px 0 0}.install.show{display:flex}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 """
 
@@ -137,6 +144,22 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
   // label table cells for the stacked phone layout
   const label = () => document.querySelectorAll('.stack').forEach(t => { const h = [...t.querySelectorAll('thead th')].map(x => x.textContent); t.querySelectorAll('tbody tr').forEach(r => [...r.cells].forEach((c, i) => c.dataset.l = h[i] || '')); });
   label(); const stackObs = new MutationObserver(label); document.querySelectorAll('.stack tbody').forEach(b => stackObs.observe(b, { childList: true }));
+  // share bar: WhatsApp, native share, copy link
+  const shareText = () => { const h = document.querySelector('h1'), b = document.querySelector('.big'), l = document.querySelector('.big-label');
+    return (b && b.textContent.trim() && b.textContent.trim() !== '—' ? `${h ? h.textContent.trim() : 'CalcSouq'}: ${l ? l.textContent.trim() + ' ' : ''}${b.textContent.trim()}. Try yours: ` : `${document.title}: `) + location.origin + location.pathname; };
+  const wa = document.querySelector('.share .wa');
+  const syncWa = () => { if (wa) wa.href = 'https://wa.me/?text=' + encodeURIComponent(shareText()); };
+  syncWa(); const waObs = new MutationObserver(syncWa); document.querySelectorAll('.big').forEach(b => waObs.observe(b, { childList: true, characterData: true, subtree: true }));
+  const nat = document.querySelector('.share .native');
+  if (nat) { if (!navigator.share) nat.hidden = true; nat.addEventListener('click', () => navigator.share({ title: document.title, text: shareText(), url: location.href }).catch(() => {})); }
+  const cp = document.querySelector('.share .copy');
+  if (cp) cp.addEventListener('click', () => { (navigator.clipboard ? navigator.clipboard.writeText(location.href) : Promise.reject()).then(() => { cp.lastChild.textContent = 'Link copied'; setTimeout(() => cp.lastChild.textContent = 'Copy link', 1800); }).catch(() => { cp.lastChild.textContent = location.href; }); });
+  // installable app
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js').catch(() => {});
+  let deferred; const ib = document.querySelector('.install');
+  window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; if (ib) ib.classList.add('show'); });
+  if (ib) { const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !navigator.standalone; if (ios) { ib.classList.add('show'); ib.querySelector('button').hidden = true; ib.querySelector('.ios').hidden = false; }
+    ib.querySelector('button').addEventListener('click', () => { if (deferred) { deferred.prompt(); deferred = null; ib.classList.remove('show'); } }); }
 })();
 """
 
@@ -173,6 +196,10 @@ def head(cfg, title, desc, path, keywords, jsonld):
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#f5c300">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CalcSouq">
 {gsc}{ads}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -236,3 +263,12 @@ def article_ld(cfg, title, desc, path, date):
     return {"@context": "https://schema.org", "@type": "Article", "headline": title[:110], "description": desc,
             "mainEntityOfPage": cfg["url"].rstrip("/") + path, "datePublished": date, "dateModified": date,
             "author": {"@type": "Organization", "name": SITE_NAME}, "publisher": {"@type": "Organization", "name": SITE_NAME}}
+
+
+WA_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>'
+
+def share_bar():
+    return ('<div class="share" aria-label="Share"><span>Share your result</span>'
+            f'<a class="wa" href="https://wa.me/" rel="noopener">{WA_SVG}WhatsApp</a>'
+            '<button type="button" class="native">Share</button>'
+            '<button type="button" class="copy"><span hidden></span>Copy link</button></div>')

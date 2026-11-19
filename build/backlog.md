@@ -35,7 +35,7 @@
 - GIFT Nifty vs Nifty futures: differences
 
 ## New calculator ideas (needs owner approval before building)
-- Annual leave encashment calculator (UAE)
-- Gold tola / pavan converter
-- Loan EMI calculator (AED and INR)
-- Risk–reward calculator for traders
+- UAE overtime pay calculator
+- Dubai rent increase calculator (RERA index rules – verify current rules)
+- NRI income tax estimator on Indian rent/interest (verify current slabs)
+- Compound interest / SIP calculator (AED and ₹)

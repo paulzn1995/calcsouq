@@ -1,10 +1,10 @@
 # Usage: python3 build.py OUTDIR [SITE_URL] [ADSENSE_CLIENT] [SEARCH_CONSOLE_CODE]
 import os, sys, shutil, html, datetime, json
 sys.path.insert(0, os.path.dirname(__file__))
-from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, SITE_NAME, TAGLINE
+from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, share_bar, SITE_NAME, TAGLINE
 from articles import ARTICLES
 import base
-from tools_india import TOOLS
+from tools_extra import TOOLS
 
 out = sys.argv[1]
 _conf = json.load(open(os.path.join(os.path.dirname(__file__), "config.json")))
@@ -41,7 +41,7 @@ for t in TOOLS:
     faqs = t["faqs"]
     page = head(cfg, t["title"], t["desc"], p, t["keywords"], [app_ld(cfg, t["name"], t["desc"], p), crumbs_ld(cfg, t["name"], p), faq_ld(faqs)])
     page += f'<main class="wrap"><div class="crumbs"><a href="/">Home</a> › {t["name"]}</div>\n<h1>{t["h1"]}</h1><p class="lede">{t["lede"]}</p>\n'
-    page += f'<section class="tool" aria-label="{html.escape(t["name"])}">{t["tool"]}</section>\n{ad()}\n'
+    page += f'<section class="tool" aria-label="{html.escape(t["name"])}">{t["tool"]}</section>\n' + (share_bar() if t["slug"] != "market-hours" else "") + f'\n{ad()}\n'
     page += f'<article>{t["body"]}<p class="hint">Last reviewed {today:%d %B %Y}.</p></article>\n{ad()}\n'
     page += '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(
         f"<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>" for q, a in faqs) + "</section>\n"
@@ -59,6 +59,7 @@ home = head(cfg, f"{SITE_NAME}: Free Calculators for UAE & India (Gratuity, VAT,
             "uae calculators, gratuity calculator, vat calculator uae, gold price calculator dubai, aed to inr, pip calculator, lot size calculator, cent to sq ft, kerala stamp duty", [ld_site])
 home += '<main class="wrap"><section style="padding:36px 0 8px"><h1>Everyday money sums for the UAE and India, done right</h1>'
 home += '<p class="lede">Free calculators for expats, traders and families back home. Every formula is explained, and each page shows its worked example.</p></section>'
+home += '<div class="install card" style="background:var(--panel);margin:0 0 14px;gap:14px;align-items:center;flex-wrap:wrap"><div style="flex:1 1 220px"><b>Add CalcSouq to your home screen</b><span>Open every calculator in one tap, like an app.</span><span class="ios" hidden> On iPhone: tap Share, then "Add to Home Screen".</span></div><button type="button" style="min-height:44px;padding:0 18px;border-radius:999px;border:0;background:#f5c300;color:#111;font:600 15px var(--body);cursor:pointer">Install app</button></div>'
 home += '<a class="card" href="/gift-nifty/" style="background:var(--panel);margin:10px 0 6px"><b>GIFT Nifty today</b><span>Delayed GIFT Nifty price, implied Nifty 50 opening gap and global cues before 9:15 IST.</span></a>'
 for g, gt in GROUPS:
     home += f'<h2 id="{g}" class="group-title" style="font:600 26px Spectral,serif;color:var(--ink)">{gt}</h2><div class="grid">'
@@ -142,6 +143,32 @@ w("gift-nifty/index.html", g)
 paths.insert(1, ("/gift-nifty/", "hourly", "0.9"))
 os.makedirs(out + "/api", exist_ok=True)
 shutil.copy(os.path.join(os.path.dirname(__file__), "quote.js"), out + "/api/quote.js")
+
+# PWA
+w("manifest.webmanifest", json.dumps({"name": "CalcSouq: calculators for UAE & India", "short_name": "CalcSouq", "start_url": "/", "scope": "/", "display": "standalone",
+    "background_color": "#f6f6f4", "theme_color": "#f5c300", "description": "Free UAE, trading and Kerala calculators.",
+    "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
+              {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, indent=1))
+w("sw.js", """// CalcSouq service worker: pages network-first, assets cache-first, offline fallback to cache.
+const C = 'calcsouq-""" + base.VER + """';
+self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(C).then(c => c.addAll(['/', '/assets/site.css?v=""" + base.VER + """', '/assets/site.js?v=""" + base.VER + """']))); });
+self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== C).map(k => caches.delete(k)))).then(() => self.clients.claim())));
+self.addEventListener('fetch', e => {
+  const r = e.request, u = new URL(r.url);
+  if (r.method !== 'GET' || u.origin !== location.origin || u.pathname.startsWith('/api/')) return;
+  if (u.pathname.startsWith('/assets/') || /\\.(png|svg|webmanifest)$/.test(u.pathname)) {
+    e.respondWith(caches.match(r).then(m => m || fetch(r).then(res => { const cp = res.clone(); caches.open(C).then(c => c.put(r, cp)); return res; })));
+  } else if (r.mode === 'navigate') {
+    e.respondWith(fetch(r).then(res => { const cp = res.clone(); caches.open(C).then(c => c.put(r, cp)); return res; }).catch(() => caches.match(r).then(m => m || caches.match('/'))));
+  }
+});
+""")
+from PIL import Image, ImageDraw, ImageFont
+for sz in (192, 512):
+    im = Image.new("RGB", (sz, sz), "#f5c300"); d = ImageDraw.Draw(im)
+    f = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf", int(sz * .58))
+    bb = d.textbbox((0, 0), "C", font=f); d.text(((sz - bb[2] - bb[0]) / 2, (sz - bb[3] - bb[1]) / 2), "C", font=f, fill="#111111")
+    im.save(os.path.join(out, f"icon-{sz}.png"))
 
 # SEO files
 u = cfg["url"].rstrip("/")

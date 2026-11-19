@@ -1,0 +1,28 @@
+{
+ "name": "CalcSouq: calculators for UAE & India",
+ "short_name": "CalcSouq",
+ "start_url": "/",
+ "scope": "/",
+ "display": "standalone",
+ "background_color": "#f6f6f4",
+ "theme_color": "#f5c300",
+ "description": "Free UAE, trading and Kerala calculators.",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
