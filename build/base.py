@@ -1,5 +1,5 @@
 # Shared layout pieces for the CalcSouq site generator.
-import json, html
+import json, html, hashlib
 
 SITE_NAME = "CalcSouq"
 TAGLINE = "Free calculators for UAE & India"
@@ -140,6 +140,8 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
 })();
 """
 
+VER = hashlib.md5((CSS + JS).encode()).hexdigest()[:8]
+
 NAV = [("UAE", "/#uae"), ("Trading", "/#trading"), ("India & Kerala", "/#india"), ("GIFT Nifty", "/gift-nifty/"), ("Guides", "/guides/")]
 
 
@@ -174,7 +176,7 @@ def head(cfg, title, desc, path, keywords, jsonld):
 {gsc}{ads}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={VER}">
 {ld}</head>
 <body>
 <header class="top"><div class="wrap">
@@ -205,7 +207,7 @@ def foot(extra_js=""):
 <nav aria-label="Footer"><a href="/">All calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
 <p>© <span class="yr">2026</span> {SITE_NAME}. Results are estimates for general information, not legal, tax or investment advice.</p>
 </div></footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v={VER}"></script>
 {extra_js}
 </body>
 </html>
