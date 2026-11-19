@@ -1,5 +1,5 @@
 # Usage: python3 build.py OUTDIR [SITE_URL] [ADSENSE_CLIENT] [SEARCH_CONSOLE_CODE]
-import os, sys, shutil, html, datetime
+import os, sys, shutil, html, datetime, json
 sys.path.insert(0, os.path.dirname(__file__))
 from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, SITE_NAME, TAGLINE
 from articles import ARTICLES
@@ -7,14 +7,17 @@ import base
 from tools_india import TOOLS
 
 out = sys.argv[1]
-cfg = {"url": sys.argv[2] if len(sys.argv) > 2 else "https://calcsouq.com",
-       "adsense": sys.argv[3] if len(sys.argv) > 3 else "",
-       "gsc": sys.argv[4] if len(sys.argv) > 4 else ""}
+_conf = json.load(open(os.path.join(os.path.dirname(__file__), "config.json")))
+cfg = {"url": sys.argv[2] if len(sys.argv) > 2 else _conf["url"],
+       "adsense": sys.argv[3] if len(sys.argv) > 3 else _conf.get("adsense", ""),
+       "gsc": sys.argv[4] if len(sys.argv) > 4 else _conf.get("gsc", "")}
+if len(sys.argv) <= 5 and _conf.get("slot"):
+    sys.argv[5:] = [_conf["slot"]]
 base.AD["client"] = cfg["adsense"]
 base.AD["slot"] = sys.argv[5] if len(sys.argv) > 5 else ""
 host = cfg["url"].split("//")[1].split("/")[0].removeprefix("www.")
 EMAIL = "contact@" + host
-today = datetime.date(2026, 11, 20)
+today = datetime.date.today()
 GROUPS = [("uae", "UAE money tools"), ("trading", "Trading calculators"), ("india", "India & Kerala")]
 
 if os.path.exists(out):
