@@ -3,12 +3,15 @@ import os, sys, shutil, html, datetime
 sys.path.insert(0, os.path.dirname(__file__))
 from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, SITE_NAME, TAGLINE
 from articles import ARTICLES
+import base
 from tools_india import TOOLS
 
 out = sys.argv[1]
 cfg = {"url": sys.argv[2] if len(sys.argv) > 2 else "https://calcsouq.com",
        "adsense": sys.argv[3] if len(sys.argv) > 3 else "",
        "gsc": sys.argv[4] if len(sys.argv) > 4 else ""}
+base.AD["client"] = cfg["adsense"]
+base.AD["slot"] = sys.argv[5] if len(sys.argv) > 5 else ""
 host = cfg["url"].split("//")[1].split("/")[0].removeprefix("www.")
 EMAIL = "contact@" + host
 today = datetime.date(2026, 11, 20)
@@ -123,6 +126,14 @@ g = g.replace('<nav><a href="#quote">', '<nav><a href="/">All calculators</a><a 
 g = g.replace('PreOpen is not affiliated', 'CalcSouq is not affiliated').replace('© <span id="yr"></span> PreOpen', '© <span id="yr"></span> CalcSouq')
 for a, b in [("/about.html", "/about/"), ("/privacy.html", "/privacy/"), ("/terms.html", "/terms/"), ("/contact.html", "/contact/")]:
     g = g.replace(a, b)
+THEME_OVERRIDE = """<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:light-dark(#f6f6f4,#0c0c0d);--ink:light-dark(#111,#fff);--mute:light-dark(#66666b,#a0a0a6);--line:light-dark(#e2e2de,rgba(255,255,255,.1));--panel:light-dark(#fbf8ee,rgba(245,195,0,.06));--blue:light-dark(#8a6c00,#f5c300)}
+body{font-family:Figtree,system-ui,sans-serif}h1,h2,.serif,.price,.logo,.times b{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:400!important}
+.logo b{font-style:italic;color:var(--blue)}.tabs button[aria-pressed=true]{background:#f5c300;color:#111;border-color:#f5c300}
+.ad{border-radius:22px;border:1px solid var(--line)!important;background:var(--panel)!important}
+header{background:color-mix(in srgb,var(--bg) 88%,transparent)!important;backdrop-filter:blur(10px)}</style>
+"""
+g = g.replace("</head>", THEME_OVERRIDE + "</head>", 1)
 assert "Calc<b>Souq" in g and "canonical" in g
 w("gift-nifty/index.html", g)
 paths.insert(1, ("/gift-nifty/", "hourly", "0.9"))
