@@ -27,6 +27,9 @@ if os.path.exists(out):
 os.makedirs(out + "/assets")
 w = lambda p, s: (os.makedirs(os.path.dirname(os.path.join(out, p)), exist_ok=True), open(os.path.join(out, p), "w").write(s))
 w("assets/site.css", CSS)
+_static = os.path.join(os.path.dirname(__file__), "static")
+if os.path.isdir(_static):
+    shutil.copytree(_static, out, dirs_exist_ok=True)  # e.g. build/static/media/ig/*.mp4 -> site/media/ig/
 w("assets/site.js", JS)
 w("favicon.svg", '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#f5c300"/><text x="32" y="45" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="800" fill="#15171a" text-anchor="middle">C</text></svg>')
 paths = []
