@@ -89,9 +89,29 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
   // installable app
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js').catch(() => {});
   let deferred; const ib = document.querySelector('.install');
-  window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; if (ib) ib.classList.add('show'); });
-  if (ib) { const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !navigator.standalone; if (ios) { ib.classList.add('show'); ib.querySelector('button').hidden = true; ib.querySelector('.ios').hidden = false; }
-    ib.querySelector('button').addEventListener('click', () => { if (deferred) { deferred.prompt(); deferred = null; ib.classList.remove('show'); } }); }
+  const ua = navigator.userAgent;
+  const isIOS = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const standalone = navigator.standalone || matchMedia('(display-mode: standalone)').matches;
+  const inApp = /FBAN|FBAV|Instagram|Line\/|Twitter|LinkedInApp|Snapchat|musical_ly|TikTok|GSA\//i.test(ua);
+  const otherIOS = /CriOS|FxiOS|EdgiOS/i.test(ua);
+  const SHARE = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="vertical-align:-5px"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function sheet() {
+    let steps, title = 'Add CalcSouq to your home screen';
+    if (isIOS && inApp) steps = ['Tap <b>•••</b> or <b>⋯</b> at the top right of this screen.', 'Choose <b>Open in browser</b> (or <b>Open in Safari</b>).', 'In Safari, tap ' + SHARE + ' <b>Share</b>, then <b>Add to Home Screen</b>.'];
+    else if (isIOS && otherIOS) steps = ['Tap ' + SHARE + ' <b>Share</b> in the address bar.', 'Tap <b>Add to Home Screen</b>. (If you don’t see it, open this page in Safari.)', 'Tap <b>Add</b>.'];
+    else if (isIOS) steps = ['Tap ' + SHARE + ' <b>Share</b> at the bottom of Safari (top right on iPad).', 'Scroll down and tap <b>Add to Home Screen</b>.', 'Tap <b>Add</b>. CalcSouq now opens like an app.'];
+    else steps = ['Open your browser menu <b>⋮</b>.', 'Tap <b>Install app</b> or <b>Add to Home screen</b>.', 'Confirm. CalcSouq now opens like an app.'];
+    const bg = document.createElement('div'); bg.className = 'a2hs';
+    bg.innerHTML = `<div class="a2hs-in" role="dialog" aria-modal="true" aria-label="${title}"><button type="button" class="x" aria-label="Close">×</button><b class="t">${title}</b><ol>${steps.map(x => `<li>${x}</li>`).join('')}</ol>${isIOS && !inApp && !otherIOS && !/ipad/i.test(ua) && navigator.maxTouchPoints > 0 ? '<div class="arrow">↓</div>' : ''}</div>`;
+    const close = () => bg.remove(); bg.addEventListener('click', e => { if (e.target === bg || e.target.classList.contains('x')) close(); });
+    document.body.appendChild(bg);
+  }
+  window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; if (ib && !standalone) ib.classList.add('show'); });
+  if (ib) {
+    if (standalone) ib.classList.remove('show');
+    else if (isIOS) { ib.classList.add('show'); const b = ib.querySelector('button'); b.hidden = false; b.textContent = 'How to add'; }
+    ib.querySelector('button').addEventListener('click', () => { if (deferred) { deferred.prompt(); deferred.userChoice.finally(() => { deferred = null; ib.classList.remove('show'); }); } else sheet(); });
+  }
   // site search (index built at deploy time)
   let IDX = null; const esc = x => String(x).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const load = () => IDX ? Promise.resolve(IDX) : fetch('/search-index.json').then(r => r.json()).then(j => (IDX = j));
