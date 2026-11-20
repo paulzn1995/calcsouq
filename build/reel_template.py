@@ -108,5 +108,6 @@ def render(fn,name,secs=10):
     for i in range(n): p.stdin.write(fn(i).tobytes())
     p.stdin.close(); assert p.wait()==0
     import os; os.replace(f"{name}.tmp.mp4",f"{name}.mp4")
-which=sys.argv[1]
-render(reelA if which=="A" else reelB, "reelA" if which=="A" else "reelB")
+if __name__=="__main__":
+ which=sys.argv[1]
+ render(reelA if which=="A" else reelB, "reelA" if which=="A" else "reelB")
