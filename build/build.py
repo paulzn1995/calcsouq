@@ -46,16 +46,38 @@ def related(t):
     other = [x for x in TOOLS if x["group"] != t["group"]][:2]
     return '<section class="related"><h2>Related calculators</h2><div class="grid">' + "".join(card(x) for x in (same + other)[:6]) + "</div></section>"
 
+# Translated pages (hi, zh, ru, ml)
+from i18n import LANGS, ORDER as LORDER
+TOOLS_ALL = {t["slug"]: t for t in TOOLS}
+def tr(s, reps):
+    for a, b in sorted(reps, key=lambda r: -len(r[0])):
+        s = s.replace(a, b)
+    return s
+def lang_alts(slug):
+    a = [("en", f"/{slug}/")] + [(c, f"/{c}/{slug}/") for c in LORDER if slug in LANGS[c]["tools"]]
+    return a + [("x-default", f"/{slug}/")] if len(a) > 1 else None
+HOME_ALTS = [("en", "/")] + [(c, f"/{c}/") for c in LORDER] + [("x-default", "/")]
+def lcard(code, slug):
+    m, t = LANGS[code]["tools"][slug], TOOLS_ALL[slug]
+    return f'<a class="card" href="/{code}/{slug}/"><div class="ic">{ic(t)}</div><div><b>{m["name"]}</b><span>{m["card"]}</span></div></a>'
+def lang_switch(cur, slug=None):
+    out = []
+    for c in ["en"] + LORDER:
+        if c == cur: continue
+        if c == "en": out.append(f'<a href="/{slug + "/" if slug else ""}" lang="en">English</a>')
+        elif slug is None or slug in LANGS[c]["tools"]:
+            out.append(f'<a href="/{c}/{slug + "/" if slug else ""}" lang="{c}">{LANGS[c]["native"]}</a>')
+    return out
 for t in TOOLS:
     p = f"/{t['slug']}/"
     paths.append((p, "weekly", "0.9"))
     faqs = t["faqs"]
-    alts = [("en", p), ("ml", "/ml" + p), ("x-default", p)] if t["slug"] in ML else None
+    alts = lang_alts(t["slug"])
     page = head(cfg, t["title"], t["desc"], p, t["keywords"], [app_ld(cfg, t["name"], t["desc"], p), crumbs_ld(cfg, t["name"], p), faq_ld(faqs)], alts=alts)
     srcs = t.get("sources") or SRC.get(t["slug"], [])
     grp = dict(GROUPS)[t["group"]]
     page += f'<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#{t["group"]}">{grp}</a></div>\n<h1>{t["h1"]}</h1><p class="lede">{t["lede"]}</p>\n'
-    page += f'<div class="meta"><span>Updated {today:%d %b %Y}</span><span>Free, no sign-up</span>' + (f'<a href="/ml{p}" lang="ml">മലയാളം</a>' if alts else '') + ('<a href="#sources">Sources</a>' if srcs else '<a href="#how">How it works</a>') + '</div>\n'
+    page += f'<div class="meta"><span>Updated {today:%d %b %Y}</span><span>Free, no sign-up</span>' + "".join(lang_switch("en", t["slug"])) if alts else "" + ('<a href="#sources">Sources</a>' if srcs else '<a href="#how">How it works</a>') + '</div>\n'
     page += f'<section class="tool" aria-label="{html.escape(t["name"])}">{t["tool"]}</section>\n' + (share_bar() if t["slug"] != "market-hours" else "") + f'\n{ad()}\n'
     sb = ('<div class="sources" id="sources"><b>Sources</b><ul>' + "".join(f'<li><a href="{u}" rel="noopener">{n}</a></li>' for n, u in srcs) + '</ul></div>') if srcs else ""
     page += f'<article id="how">{t["body"]}{sb}{feedback()}</article>\n{ad()}\n'
@@ -69,39 +91,32 @@ for t in TOOLS:
     w(p.strip("/") + "/index.html", page)
 
 
-# Malayalam pages
-def tr(s, reps, slug):
-    for a, b in reps:
-        s = s.replace(a, b)
-    return s
-TOOLS_ALL = {t["slug"]: t for t in TOOLS}
-def mlcard(slug):
-    m, t = ML[slug], TOOLS_ALL[slug]
-    return f'<a class="card" href="/ml/{slug}/"><div class="ic">{ic(t)}</div><div><b>{m["name"]}</b><span>{m["card"]}</span></div></a>'
-for slug, m in ML.items():
-    for a, _ in m["rep"]:
-        if a not in TOOLS_ALL[slug]["tool"] + TOOLS_ALL[slug]["js"]: print("  ml miss:", slug, repr(a[:60]))
-    t = TOOLS_ALL[slug]; p = f"/ml/{slug}/"; paths.append((p, "weekly", "0.8"))
-    alts = [("en", f"/{slug}/"), ("ml", p), ("x-default", f"/{slug}/")]
-    page = head(cfg, m["title"], m["desc"], p, m["keywords"], [app_ld(cfg, m["name"], m["desc"], p), crumbs_ld(cfg, m["name"], p), faq_ld(m["faqs"])], lang="ml", alts=alts)
-    page += f'<main class="wrap"><div class="crumbs"><a href="/ml/">മലയാളം</a> › {m["name"]}</div>\n<h1>{m["h1"]}</h1><p class="lede">{m["lede"]}</p>\n'
-    page += f'<div class="meta"><span>പുതുക്കിയത് {today:%d.%m.%Y}</span><span>Free, no sign-up</span><a href="/{slug}/" lang="en">English</a></div>\n'
-    page += f'<section class="tool" aria-label="{html.escape(m["name"])}">{tr(t["tool"], m["rep"], slug)}</section>\n' + share_bar() + f'\n{ad()}\n'
-    srcs = t.get("sources") or SRC.get(slug, [])
-    sb = ('<div class="sources" id="sources"><b>Sources</b><ul>' + "".join(f'<li><a href="{u}" rel="noopener">{n}</a></li>' for n, u in srcs) + '</ul></div>') if srcs else ""
-    page += f'<article id="how">{m["body"]}{sb}{feedback()}</article>\n{ad()}\n'
-    page += '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(f"<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>" for q, a in m["faqs"]) + "</section>\n"
-    page += '<section class="related"><h2>Related calculators</h2><div class="grid">' + "".join(mlcard(x) for x in ML if x != slug) + "</div></section></main>\n"
-    page += foot("<script>\n{" + tr(t["js"], m["rep"], slug) + "}\n</script>")
-    for a, b in COMMON: page = page.replace(a, b)
-    w(p.strip("/") + "/index.html", page)
-mh = head(cfg, "മലയാളം കാൽക്കുലേറ്ററുകൾ: ഗ്രാറ്റുവിറ്റി, സ്വർണം, സെന്റ്, ദിർഹം · CalcSouq", "സൗജന്യ കാൽക്കുലേറ്ററുകളും ടൂളുകളും മലയാളത്തിൽ: PSC ഫോട്ടോ, ഫൈനൽ സെറ്റിൽമെന്റ്, ഗ്രാറ്റുവിറ്റി, സ്വർണ വില, പവൻ, സെന്റ്, വീട് ബജറ്റ്, ദിർഹം–രൂപ.", "/ml/",
-          "മലയാളം കാൽക്കുലേറ്റർ, ഗ്രാറ്റുവിറ്റി മലയാളം, പവൻ ഗ്രാം, സെന്റ് സ്ക്വയർ ഫീറ്റ്, ദിർഹം രൂപ", [], lang="ml", alts=[("en", "/"), ("ml", "/ml/"), ("x-default", "/")])
-mh += '<main class="wrap"><section class="hero"><h1>മലയാളത്തിൽ സൗജന്യ കാൽക്കുലേറ്ററുകളും ടൂളുകളും</h1><p class="lede">PSC ഫോട്ടോ, ഗ്രാറ്റുവിറ്റി, സ്വർണം, ഭൂമി അളവ്, വീട് ബജറ്റ്, പണം അയക്കൽ — നിയമങ്ങൾ വിശദീകരിച്ച്, മലയാളത്തിൽ.</p></section>'
-mh += '<div class="grid" style="margin-top:22px">' + "".join(mlcard(x) for x in ML) + '</div>' + ad()
-mh += '<p class="hint" style="margin-top:22px">കൂടുതൽ കാൽക്കുലേറ്ററുകൾ ഇംഗ്ലീഷിൽ: <a href="/" lang="en">CalcSouq home</a></p></main>' + foot()
-for a, b in COMMON: mh = mh.replace(a, b)
-w("ml/index.html", mh); paths.append(("/ml/", "weekly", "0.8"))
+for code in LORDER:
+    L = LANGS[code]; T = L["tools"]
+    for slug, m in T.items():
+        t = TOOLS_ALL[slug]
+        for a, _ in m["rep"]:
+            if a not in t["tool"] + t["js"]: print(f"  {code} miss:", slug, repr(a[:60]))
+        p = f"/{code}/{slug}/"; paths.append((p, "weekly", "0.8"))
+        page = head(cfg, m["title"], m["desc"], p, m["keywords"], [app_ld(cfg, m["name"], m["desc"], p), crumbs_ld(cfg, m["name"], p), faq_ld(m["faqs"])], lang=code, alts=lang_alts(slug))
+        page += f'<main class="wrap"><div class="crumbs"><a href="/{code}/">{L["native"]}</a> › {m["name"]}</div>\n<h1>{m["h1"]}</h1><p class="lede">{m["lede"]}</p>\n'
+        page += f'<div class="meta"><span>{L["updated"]} {today:%d.%m.%Y}</span><span>Free, no sign-up</span>' + "".join(lang_switch(code, slug)) + '</div>\n'
+        page += f'<section class="tool" aria-label="{html.escape(m["name"])}">{tr(t["tool"], m["rep"])}</section>\n' + share_bar() + f'\n{ad()}\n'
+        srcs = t.get("sources") or SRC.get(slug, [])
+        sb = ('<div class="sources" id="sources"><b>Sources</b><ul>' + "".join(f'<li><a href="{u}" rel="noopener">{n}</a></li>' for n, u in srcs) + '</ul></div>') if srcs else ""
+        page += f'<article id="how">{m["body"]}{sb}{feedback()}</article>\n{ad()}\n'
+        page += '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(f"<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>" for q, a in m["faqs"]) + "</section>\n"
+        page += '<section class="related"><h2>Related calculators</h2><div class="grid">' + "".join(lcard(code, x) for x in T if x != slug) + "</div></section></main>\n"
+        page += foot("<script>\n{" + tr(t["js"], m["rep"]) + "}\n</script>")
+        page = tr(page, L["common_rep"])
+        w(p.strip("/") + "/index.html", page)
+    mh = head(cfg, L["home_title"], L["home_desc"], f"/{code}/", L["home_kw"], [], lang=code, alts=HOME_ALTS)
+    mh += f'<main class="wrap"><section class="hero"><h1>{L["home_h1"]}</h1><p class="lede">{L["home_lede"]}</p></section>'
+    mh += '<div class="grid" style="margin-top:22px">' + "".join(lcard(code, x) for x in T) + '</div>' + ad()
+    mh += f'<p class="hint" style="margin-top:22px">{L["english_more"]} <a href="/" lang="en">CalcSouq (English)</a> · ' + " · ".join(lang_switch(code)[1:]) + '</p></main>' + foot()
+    mh = tr(mh, L["common_rep"])
+    w(f"{code}/index.html", mh); paths.append((f"/{code}/", "weekly", "0.8"))
+LANG_BAR = " · ".join(f'<a href="/{c}/" lang="{c}">{LANGS[c]["native"]}</a>' for c in LORDER)
 
 # Home
 hd = "Free online calculators and tools: photo resizer, loan EMI, gold price, currency, salary and end-of-service pay, trading risk and property costs. Formulas explained, sources linked, no sign-up."
@@ -112,7 +127,7 @@ home += '<main class="wrap"><section class="hero"><h1>Free calculators and tools
 home += '<p class="lede">Resize photos for applications, plan loans and savings, price gold, check salary and end-of-service pay, size trades and cost a property. Each tool shows its formula and sources, and works without sign-up.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. resize photo, EMI, gold, gratuity"')
 home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div></section>'
-home += '<p class="hint" style="margin-top:14px">Also in Malayalam: <a href="/ml/" lang="ml">മലയാളം കാൽക്കുലേറ്ററുകൾ →</a></p>'
+home += '<p class="hint" style="margin-top:14px">Also in: ' + LANG_BAR + '</p>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
 _ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "kerala-plot-house-budget-calculator"]
 uq = sorted([t for t in TOOLS if t.get("unique")], key=lambda t: _ord.index(t["slug"]) if t["slug"] in _ord else 99)
@@ -226,7 +241,7 @@ og.save(os.path.join(out, "og.png"))
 
 # Search index
 idx = [{"t": t["name"], "u": f"/{t['slug']}/", "c": "Calculator", "d": t["card"], "k": t["keywords"]} for t in TOOLS]
-idx += [{"t": m["name"], "u": f"/ml/{k}/", "c": "മലയാളം", "d": m["card"], "k": m["keywords"]} for k, m in ML.items()]
+idx += [{"t": m["name"], "u": f"/{c}/{k}/", "c": LANGS[c]["native"], "d": m["card"], "k": m["keywords"]} for c in LORDER for k, m in LANGS[c]["tools"].items()]
 idx += [{"t": a["h1"], "u": f"/guides/{a['slug']}/", "c": "Guide", "d": a["lede"][:90], "k": a["keywords"]} for a in ARTICLES]
 w("search-index.json", json.dumps(idx, ensure_ascii=False))
 

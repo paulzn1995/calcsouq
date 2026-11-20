@@ -168,7 +168,7 @@ lede="സ്ഥലത്തിന്റെ വില, സർക്കാർ ഫ�
 card="സ്ഥലം, രജിസ്ട്രേഷൻ, നിർമ്മാണം — ഒറ്റ ബജറ്റ്",
 rep=[("Plot size (cents)", "പ്ലോട്ട് വലുപ്പം (സെന്റ്)"), ("Price per cent (₹)", "സെന്റിന് വില (₹)"), ("Fair value per cent (₹)", "സെന്റിന് ന്യായവില (₹)"),
      ("Government fair value for the survey number.", "സർവേ നമ്പറിന്റെ സർക്കാർ ന്യായവില."), ("Broker fee (%)", "ബ്രോക്കർ ഫീസ് (%)"), ("Stamp duty %", "സ്റ്റാമ്പ് ഡ്യൂട്ടി %"),
-     ("Registration %", "രജിസ്ട്രേഷൻ %"), ("Legal &amp; docs (₹)", "ആധാരം, നിയമ ചെലവ് (₹)"), ("Legal & docs (₹)", "ആധാരം, നിയമ ചെലവ് (₹)"),
+     ("Registration %", "രജിസ്ട്രേഷൻ %"), ("Legal & docs (₹)", "ആധാരം, നിയമ ചെലവ് (₹)"), ("Legal & docs (₹)", "ആധാരം, നിയമ ചെലവ് (₹)"),
      ("House built-up area (sq ft)", "വീടിന്റെ വിസ്തീർണം (ച.അടി)"), ("Enter 0 for land only.", "സ്ഥലം മാത്രമെങ്കിൽ 0."),
      ("Construction cost per sq ft (₹)", "ച.അടിക്ക് നിർമ്മാണ ചെലവ് (₹)"), ("Permit, connections, wall & gate (₹)", "പെർമിറ്റ്, കണക്ഷൻ, മതിൽ, ഗേറ്റ് (₹)"),
      ("Total budget", "ആകെ ബജറ്റ്"), ("['Land',", "['സ്ഥലം',"), ("['Stamp & registration',", "['സ്റ്റാമ്പ് + രജിസ്ട്രേഷൻ',"), ("['Broker',", "['ബ്രോക്കർ',"),
