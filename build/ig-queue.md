@@ -14,6 +14,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:22 | reel | 2026-11-21-1000-traders.mp4 | /trading-strategy-simulator/ | replaced (silent version deleted by Paulson) | 18123070780988329 |
 | 2026-11-21 00:29 | reel | 2026-11-21-sip-quiz-audio.mp4 | /sip-calculator/ | posted with soundtrack (approved) | 18117462449174214 |
 | 2026-11-21 00:29 | reel | 2026-11-21-1000-traders-audio.mp4 | /trading-strategy-simulator/ | posted with soundtrack (approved) | 18116309174128547 |
+| 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
 - 2026-11-21 Paulson: prefers broad, intriguing content built on the site's complex calculations (quiz/guess formats, simulations) over single-tool demos.
