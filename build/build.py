@@ -19,7 +19,7 @@ base.AD["slot"] = sys.argv[5] if len(sys.argv) > 5 else ""
 host = cfg["url"].split("//")[1].split("/")[0].removeprefix("www.")
 EMAIL = "contact@" + host
 today = datetime.date.today()
-GROUPS = [("uae", "UAE work & money"), ("trading", "Trading"), ("india", "India, Kerala & NRI"), ("docs", "Photos & documents")]
+GROUPS = [("uae", "Salary, work & money"), ("docs", "Photos & documents"), ("trading", "Trading & investing"), ("india", "Property & land")]
 SRC = {"uae-gratuity-calculator": [("UAE Ministry of Human Resources & Emiratisation (MOHRE)", "https://www.mohre.gov.ae")], "uae-leave-encashment-calculator": [("UAE Government portal: annual leave", "https://u.ae/en/information-and-services/jobs/employment-in-the-private-sector/types-of-leaves-and-entitlements-in-the-private-sector/annual-leave")], "uae-vat-calculator": [("UAE Federal Tax Authority", "https://tax.gov.ae")], "gold-price-calculator": [("UAE Federal Tax Authority", "https://tax.gov.ae")], "kerala-stamp-duty-calculator": [("Kerala Registration Department", "https://keralaregistration.gov.in")], "futures-tick-value-calculator": [("CME Group contract specifications", "https://www.cmegroup.com")]}
 
 if os.path.exists(out):
@@ -92,26 +92,27 @@ for slug, m in ML.items():
     page += foot("<script>\n{" + tr(t["js"], m["rep"], slug) + "}\n</script>")
     for a, b in COMMON: page = page.replace(a, b)
     w(p.strip("/") + "/index.html", page)
-mh = head(cfg, "മലയാളം കാൽക്കുലേറ്ററുകൾ: ഗ്രാറ്റുവിറ്റി, സ്വർണം, സെന്റ്, ദിർഹം · CalcSouq", "യുഎഇ പ്രവാസികൾക്കും കേരളത്തിനും വേണ്ടിയുള്ള സൗജന്യ കാൽക്കുലേറ്ററുകൾ മലയാളത്തിൽ: ഫൈനൽ സെറ്റിൽമെന്റ്, ഗ്രാറ്റുവിറ്റി, സ്വർണ വില, പവൻ, സെന്റ്, വീട് ബജറ്റ്, ദിർഹം–രൂപ.", "/ml/",
+mh = head(cfg, "മലയാളം കാൽക്കുലേറ്ററുകൾ: ഗ്രാറ്റുവിറ്റി, സ്വർണം, സെന്റ്, ദിർഹം · CalcSouq", "സൗജന്യ കാൽക്കുലേറ്ററുകളും ടൂളുകളും മലയാളത്തിൽ: PSC ഫോട്ടോ, ഫൈനൽ സെറ്റിൽമെന്റ്, ഗ്രാറ്റുവിറ്റി, സ്വർണ വില, പവൻ, സെന്റ്, വീട് ബജറ്റ്, ദിർഹം–രൂപ.", "/ml/",
           "മലയാളം കാൽക്കുലേറ്റർ, ഗ്രാറ്റുവിറ്റി മലയാളം, പവൻ ഗ്രാം, സെന്റ് സ്ക്വയർ ഫീറ്റ്, ദിർഹം രൂപ", [], lang="ml", alts=[("en", "/"), ("ml", "/ml/"), ("x-default", "/")])
-mh += '<main class="wrap"><section class="hero"><h1>പ്രവാസികൾക്കും നാട്ടിലെ കാര്യങ്ങൾക്കും വേണ്ടിയുള്ള കാൽക്കുലേറ്ററുകൾ</h1><p class="lede">ഗ്രാറ്റുവിറ്റി, ഫൈനൽ സെറ്റിൽമെന്റ്, സ്വർണം, ഭൂമി അളവ്, വീട് ബജറ്റ്, നാട്ടിലേക്ക് പണം അയക്കൽ — നിയമങ്ങൾ വിശദീകരിച്ച്, മലയാളത്തിൽ.</p></section>'
+mh += '<main class="wrap"><section class="hero"><h1>മലയാളത്തിൽ സൗജന്യ കാൽക്കുലേറ്ററുകളും ടൂളുകളും</h1><p class="lede">PSC ഫോട്ടോ, ഗ്രാറ്റുവിറ്റി, സ്വർണം, ഭൂമി അളവ്, വീട് ബജറ്റ്, പണം അയക്കൽ — നിയമങ്ങൾ വിശദീകരിച്ച്, മലയാളത്തിൽ.</p></section>'
 mh += '<div class="grid" style="margin-top:22px">' + "".join(mlcard(x) for x in ML) + '</div>' + ad()
 mh += '<p class="hint" style="margin-top:22px">കൂടുതൽ കാൽക്കുലേറ്ററുകൾ ഇംഗ്ലീഷിൽ: <a href="/" lang="en">CalcSouq home</a></p></main>' + foot()
 for a, b in COMMON: mh = mh.replace(a, b)
 w("ml/index.html", mh); paths.append(("/ml/", "weekly", "0.8"))
 
 # Home
-hd = "Free calculators for life in the UAE and back home in India: final settlement, gratuity, gold, EMI, remittances, trading risk and Kerala property costs."
+hd = "Free online calculators and tools: photo resizer, loan EMI, gold price, currency, salary and end-of-service pay, trading risk and property costs. Formulas explained, sources linked, no sign-up."
 ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd}
-home = head(cfg, f"{SITE_NAME}: UAE & India Calculators (Gratuity, Final Settlement, Gold, EMI, Trading)", hd, "/",
-            "uae calculators, final settlement calculator uae, gratuity calculator, gold tola calculator, emi calculator uae, aed to inr, lot size calculator, kerala land cost calculator", [ld_site])
-home += '<main class="wrap"><section class="hero"><h1>Calculators for working in the UAE and planning back home</h1>'
-home += '<p class="lede">Settlement and gratuity, gold, loans, remittances, trading risk and Kerala property, with the rules explained and sources linked.</p>'
-home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. gratuity, gold tola, EMI"')
-home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Final settlement", "uae-final-settlement-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Gold price", "gold-price-calculator"), ("AED to INR", "aed-to-inr-calculator"), ("Lot size", "position-size-calculator"), ("Cent to sq ft", "kerala-land-converter"), ("Photo resizer", "photo-resizer")]) + '</div></section>'
-home += '<p class="hint" style="margin-top:14px">മലയാളത്തിൽ വേണോ? <a href="/ml/" lang="ml">മലയാളം കാൽക്കുലേറ്ററുകൾ →</a></p>'
+home = head(cfg, f"{SITE_NAME}: Free Online Calculators & Tools (Photo Resizer, EMI, Gold, Gratuity, Trading)", hd, "/",
+            "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site])
+home += '<main class="wrap"><section class="hero"><h1>Free calculators and tools for money, work and everyday forms</h1>'
+home += '<p class="lede">Resize photos for applications, plan loans and savings, price gold, check salary and end-of-service pay, size trades and cost a property. Each tool shows its formula and sources, and works without sign-up.</p>'
+home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. resize photo, EMI, gold, gratuity"')
+home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("Resize to 20 KB", "resize-photo-to-20kb"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Position size", "position-size-calculator")]) + '</div></section>'
+home += '<p class="hint" style="margin-top:14px">Also in Malayalam: <a href="/ml/" lang="ml">മലയാളം കാൽക്കുലേറ്ററുകൾ →</a></p>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
-uq = [t for t in TOOLS if t.get("unique")]
+_ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "kerala-plot-house-budget-calculator"]
+uq = sorted([t for t in TOOLS if t.get("unique")], key=lambda t: _ord.index(t["slug"]) if t["slug"] in _ord else 99)
 home += '<h2 class="group-title" id="calculators">Only on CalcSouq</h2><p class="lede" style="font-size:15px;margin-top:-6px">Tools that combine several calculations you\'d otherwise do separately.</p><div class="grid">' + "".join(card(t) for t in uq) + '</div>'
 for g, gt in GROUPS:
     home += f'<h2 id="{g}" class="group-title">{gt}</h2><div class="grid">' + "".join(card(t) for t in TOOLS if t["group"] == g and not t.get("unique")) + "</div>"
@@ -134,7 +135,7 @@ for a in ARTICLES:
     more = [b for b in ARTICLES if b["group"] == a["group"] and b is not a][:4]
     pg += '<section class="related"><h2>More guides</h2><div class="grid">' + "".join(f'<a class="card" href="/guides/{b["slug"]}/"><b>{b["h1"]}</b></a>' for b in more) + "</div></section></main>" + foot()
     w(p.strip("/") + "/index.html", pg)
-gi = head(cfg, f"Guides: UAE Gratuity, VAT, Gold, Forex Trading & Kerala Property · {SITE_NAME}", "Plain-English guides for expats and traders in the UAE and India: gratuity, VAT, gold, remittances, forex risk, futures and Kerala land.", "/guides/", "uae guides, gratuity guide, forex guide, kerala land guide", [])
+gi = head(cfg, f"Guides: Gratuity, VAT, Gold, Forex Trading & Property · {SITE_NAME}", "Plain-English guides behind our calculators: salary and gratuity, VAT, gold, currency transfers, forex and futures risk, and land measurement.", "/guides/", "uae guides, gratuity guide, forex guide, kerala land guide", [])
 gi += '<main class="wrap"><section style="padding:36px 0 8px"><h1>Guides</h1><p class="lede">Short, exact answers to the questions behind our calculators.</p></section>'
 for g, gt in GROUPS:
     if not any(a["group"] == g for a in ARTICLES): continue
@@ -162,9 +163,9 @@ w("templates/index.html", tp); paths.append(("/templates/", "monthly", "0.5"))
 
 # Info pages
 INFO = {
-"about": ("About " + SITE_NAME, f"""<p>{SITE_NAME} is a free collection of calculators for people who live, work and invest between the UAE and India: end-of-service gratuity, VAT, gold jewellery prices, remittances, trading risk and Kerala property.</p>
+"about": ("About " + SITE_NAME, f"""<p>{SITE_NAME} is a free collection of online calculators and tools for everyday money, work and paperwork: resizing photos for applications, loan EMIs, gold prices, currency transfers, salary and end-of-service pay, trading risk and property costs. New tools are added regularly.</p>
 <h2>How we build the tools</h2><p>Each calculator follows the published rule it is based on, such as the UAE Labour Law for gratuity, the FTA for VAT, or exchange contract specifications for futures, and shows the formula and a worked example so you can check the result yourself. Pages are reviewed when rules change.</p>
-<h2>Who runs the site</h2><p>{SITE_NAME} is run by a dealing and operations professional with several years' experience across forex, CFDs, futures and equities at a regulated broker in Dubai.</p>
+<h2>Who runs the site</h2><p>{SITE_NAME} is built and maintained by a finance professional with several years' experience in multi-asset dealing and operations across forex, CFDs, futures and equities.</p>
 <h2>Independence</h2><p>The site is funded by advertising and is not affiliated with any bank, exchange house, broker or government body.</p>"""),
 "privacy": ("Privacy policy", f"""<p>This policy explains what information {SITE_NAME} collects when you visit the site and how it is used.</p>
 <h2>Information we collect</h2><p>You do not need an account. The numbers you type into calculators are processed in your browser and are not sent to us; some are remembered in your own browser's storage so the page reopens where you left it. Our hosting provider keeps standard server logs (IP address, browser type, pages visited, time of visit) for security and performance.</p>
@@ -182,12 +183,12 @@ INFO = {
 }
 for k, (t, b) in INFO.items():
     p = f"/{k}/"; paths.append((p, "yearly", "0.3"))
-    w(k + "/index.html", head(cfg, f"{t} · {SITE_NAME}", f"{t} for {SITE_NAME}, free calculators for the UAE and India.", p, "", [])
+    w(k + "/index.html", head(cfg, f"{t} · {SITE_NAME}", f"{t} for {SITE_NAME}, free online calculators and tools.", p, "", [])
       + f'<main class="wrap"><article style="padding-top:36px"><h1>{t}</h1><p class="hint">Last updated {today:%d %B %Y}</p>{b}</article></main>' + foot())
 
 # PWA
-w("manifest.webmanifest", json.dumps({"name": "CalcSouq: calculators for UAE & India", "short_name": "CalcSouq", "start_url": "/", "scope": "/", "display": "standalone",
-    "background_color": "#f6f6f4", "theme_color": "#f5c300", "description": "Free UAE, trading and Kerala calculators.",
+w("manifest.webmanifest", json.dumps({"name": "CalcSouq: free calculators & tools", "short_name": "CalcSouq", "start_url": "/", "scope": "/", "display": "standalone",
+    "background_color": "#f6f6f4", "theme_color": "#f5c300", "description": "Free online calculators and photo tools.",
     "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
               {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, indent=1))
 w("sw.js", """// CalcSouq service worker: pages network-first, assets cache-first, offline fallback to cache.
@@ -216,7 +217,7 @@ fb = ImageFont.truetype(IF if os.path.exists(IF) else "/usr/share/fonts/truetype
 fr = ImageFont.truetype(IF.replace("Bold", "Regular") if os.path.exists(IF) else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 38)
 d.rounded_rectangle([80, 80, 190, 190], 28, fill="#f5c300"); d.text((135, 135), "C", font=fb, fill="#15171a", anchor="mm")
 d.text((220, 135), "CalcSouq", font=fb, fill="#15171a", anchor="lm")
-d.text((80, 300), "Free calculators & tools", font=fb, fill="#15171a"); d.text((80, 395), "UAE · India · Kerala · Trading · Photo resizer", font=fr, fill="#555a62")
+d.text((80, 300), "Free calculators & tools", font=fb, fill="#15171a"); d.text((80, 395), "Money · Work · Trading · Property · Photos", font=fr, fill="#555a62")
 d.rectangle([80, 520, 280, 530], fill="#f5c300"); d.text((80, 560), "calcsouq.com", font=fr, fill="#15171a", anchor="lm")
 og.save(os.path.join(out, "og.png"))
 

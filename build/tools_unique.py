@@ -66,13 +66,13 @@ faqs=[("How long does my employer have to pay my final settlement?", "All end-of
 # ---------------- Gulf savings & return planner ----------------
 TOOLS.insert(1, dict(
 group="uae", slug="gulf-savings-return-planner", unique=True, icon="money",
-name="Gulf Savings & Return-Home Planner",
+name="Savings Goal Planner (Abroad to Home)",
 title="Gulf Return Planner: How Many Years to Save Your Target in India",
 desc="Plan your return from the UAE to India: monthly savings in AED, exchange rate, investment growth and gratuity, and see exactly when you reach your target in rupees.",
 keywords="how many years to work in gulf, nri savings calculator, uae savings to india calculator, return to india planner, gulf malayali savings, nri retirement corpus calculator, save 1 crore uae",
 h1="Gulf savings and return-home planner",
 lede="How long do you need to work in the UAE to reach your savings goal back home? Combine monthly savings, growth and your gratuity in one plan.",
-card="When you'll reach your savings goal in rupees",
+card="How long until you reach your savings target, with growth and currency",
 tool="""
 <div class="inputs">
  <div class="row2"><div><label for="target">Target savings (₹ lakh)</label><input id="target" inputmode="decimal" value="100"><div class="hint">100 lakh = ₹1 crore.</div></div>

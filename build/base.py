@@ -2,7 +2,7 @@
 import json, html, hashlib
 
 SITE_NAME = "CalcSouq"
-TAGLINE = "Free calculators for UAE & India"
+TAGLINE = "Free online calculators and tools"
 
 CSS = r"""/*
 VOICE: a practical, trustworthy utility, like a bank's or Wise's calculator pages: plain words, exact numbers, no decoration for its own sake.
@@ -278,8 +278,8 @@ def head(cfg, title, desc, path, keywords, jsonld, lang="en", alts=None):
 
 AD = {"client": "", "slot": ""}
 
-HOUSE = ['<b>Advertise on CalcSouq</b><span>Reach UAE expats, NRIs and traders. Get in touch via the Contact page.</span>',
-         '<b>Advertise on CalcSouq</b><span>Reach UAE expats, NRIs and traders. Get in touch via the Contact page.</span>']
+HOUSE = ['<b>Advertise on CalcSouq</b><span>Reach people planning their money, work and applications. Get in touch via the Contact page.</span>',
+         '<b>Advertise on CalcSouq</b><span>Reach people planning their money, work and applications. Get in touch via the Contact page.</span>']
 _n = [0]
 
 def ad(label="Advertisement"):
@@ -295,7 +295,7 @@ def ad(label="Advertisement"):
 def foot(extra_js=""):
     return f"""<footer class="site"><div class="wrap">
 <nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
-<p>© <span class="yr">2026</span> {SITE_NAME} · Made in Dubai. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
+<p>© <span class="yr">2026</span> {SITE_NAME}. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
 </div></footer>
 <script src="/assets/site.js?v={VER}"></script>
 {extra_js}

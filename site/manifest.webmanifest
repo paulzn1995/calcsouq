@@ -1,12 +1,12 @@
 {
- "name": "CalcSouq: calculators for UAE & India",
+ "name": "CalcSouq: free calculators & tools",
  "short_name": "CalcSouq",
  "start_url": "/",
  "scope": "/",
  "display": "standalone",
  "background_color": "#f6f6f4",
  "theme_color": "#f5c300",
- "description": "Free UAE, trading and Kerala calculators.",
+ "description": "Free online calculators and photo tools.",
  "icons": [
   {
    "src": "/icon-192.png",
