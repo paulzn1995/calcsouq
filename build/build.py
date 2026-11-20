@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, share_bar, feedback, ICONS, SITE_NAME, TAGLINE
 from articles import ARTICLES
 import base
-from tools_property import TOOLS
+from tools_world import TOOLS
 from ml import ML, COMMON
 
 out = sys.argv[1]
