@@ -53,6 +53,7 @@ header nav a:hover{background:var(--soft)}
 .inputs{padding:24px;display:grid;gap:16px;align-content:start}
 .result{padding:24px;background:var(--soft);border-left:1px solid var(--line)}
 label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+[hidden]{display:none!important}
 .hint{font-size:13px;color:var(--mute);margin-top:5px;line-height:1.45}
 .pick-btn{position:relative;overflow:hidden}.pick-btn input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:0}
 .photo-pick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px;position:relative}.photo-pick .hint{margin:0;min-width:0;overflow-wrap:anywhere}
