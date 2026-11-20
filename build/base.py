@@ -281,7 +281,7 @@ def ad(label="Advertisement"):
 
 def foot(extra_js=""):
     return f"""<footer class="site"><div class="wrap">
-<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
 <p>© <span class="yr">2026</span> {SITE_NAME} · Made in Dubai. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
 </div></footer>
 <script src="/assets/site.js?v={VER}"></script>

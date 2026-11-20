@@ -141,6 +141,24 @@ for g, gt in GROUPS:
 gi += ad() + "</main>" + foot()
 w("guides/index.html", gi); paths.append(("/guides/", "weekly", "0.8"))
 
+
+# Templates (paid spreadsheets; links come from config.json "gumroad")
+GR = _conf.get("gumroad", {})
+TPL = [("settlement", "UAE Final Settlement Workbook (Excel)", "uae-final-settlement-calculator",
+        "The same calculation as our final settlement calculator, in a spreadsheet you keep: inputs sheet, line-by-line statement, and a leave log that totals unpaid leave for you.",
+        ["Gratuity under Article 51 with the 2-year cap", "Unused leave, unpaid salary and notice in or out", "Leave log with dropdowns", "Works in Excel, Google Sheets and Numbers"]),
+       ("journal", "Trading Journal & R-Multiple Tracker (Excel)", "trading-strategy-simulator",
+        "Log every closed trade and see what your method is really doing: R-multiple per trade, win rate, expectancy, profit factor, drawdown and results by setup.",
+        ["500-row journal with automatic balance and drawdown", "Risk vs plan check on every trade", "Stats by setup", "Works in Excel, Google Sheets and Numbers"])]
+tp = head(cfg, f"Spreadsheet templates: UAE final settlement, trading journal · {SITE_NAME}", "Excel templates from CalcSouq: a UAE final settlement and gratuity workbook, and a trading journal with R-multiples, expectancy and drawdown.", "/templates/", "uae final settlement excel, gratuity excel template, trading journal excel, r multiple tracker", [])
+tp += '<main class="wrap"><section style="padding:36px 0 8px"><h1>Spreadsheet templates</h1><p class="lede">Our most-used calculators as spreadsheets you can keep, edit and share. The free calculators stay free.</p></section><div class="grid">'
+for k, name, tool, d, feats in TPL:
+    link = GR.get(k, "")
+    btn = f'<a class="btn primary" href="{link}" rel="noopener">Buy on Gumroad</a>' if link else f'<a class="btn" href="mailto:{EMAIL}?subject=Notify%20me:%20{name.replace(" ", "%20")}">Email me when it is available</a>'
+    tp += f'<div class="card" style="display:block"><b>{name}</b><p>{d}</p><ul>' + "".join(f"<li>{x}</li>" for x in feats) + f'</ul><p>{btn} <a href="/{tool}/">Try the free calculator</a></p></div>'
+tp += '</div>' + ad() + "</main>" + foot()
+w("templates/index.html", tp); paths.append(("/templates/", "monthly", "0.5"))
+
 # Info pages
 INFO = {
 "about": ("About " + SITE_NAME, f"""<p>{SITE_NAME} is a free collection of calculators for people who live, work and invest between the UAE and India: end-of-service gratuity, VAT, gold jewellery prices, remittances, trading risk and Kerala property.</p>
