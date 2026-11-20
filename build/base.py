@@ -182,6 +182,25 @@ input,select{transition:border-color .2s,box-shadow .2s,background .2s}
 header.top{transition:box-shadow .3s,background .3s}header.top.scrolled{box-shadow:0 8px 24px -18px rgba(16,24,40,.5)}
 details{transition:background .2s}details[open] summary~*{animation:rise .35s cubic-bezier(.2,.7,.2,1) both}
 
+/* ---- Language switcher ---- */
+.lang{position:relative}
+.lang summary{list-style:none;display:flex;align-items:center;gap:7px;cursor:pointer;padding:7px 12px;border:1px solid var(--line);border-radius:999px;font-weight:600;font-size:14px;color:var(--ink);background:var(--surface);user-select:none}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary svg{width:17px;height:17px;color:var(--gold-ink)}
+.lang summary:hover,.lang[open] summary{border-color:var(--gold)}
+.lang-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:50;min-width:170px;padding:6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px -20px rgba(16,24,40,.45);display:grid}
+.lang-menu a{padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:550}
+.lang-menu a:hover{background:var(--soft)}.lang-menu a[aria-current]{background:light-dark(rgba(245,195,0,.16),rgba(245,195,0,.12));font-weight:700}
+@media(max-width:760px){.lang{margin-left:auto}.lang summary{padding:6px 10px;font-size:13px}}
+.langbar{background:light-dark(#fff7d6,#2a2610);border-bottom:1px solid light-dark(rgba(245,195,0,.5),rgba(245,195,0,.25));font-size:15px}
+.langbar .wrap{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;padding-block:9px}
+.langbar a.go{font-weight:700;color:var(--ink);background:var(--gold);padding:6px 14px;border-radius:999px;text-decoration:none}
+.langbar button{margin-left:auto;background:none;border:0;font-size:20px;line-height:1;color:var(--mute);cursor:pointer;padding:4px 8px}
+.langrow{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:18px;font-size:14px;color:var(--mute)}
+.langrow svg{width:18px;height:18px;color:var(--gold-ink)}
+.langrow a{padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;transition:transform .2s,border-color .2s}
+.langrow a:hover{transform:translateY(-2px);border-color:var(--gold)}
+
 /* ---- Desktop layout: wider page, two-column hero with animated art ---- */
 @media(min-width:1280px){.wrap{max-width:1320px}}
 @media(min-width:1600px){.wrap{max-width:1440px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -248,6 +267,22 @@ JS = r"""// Shared helpers: formatting, remembered inputs, year.
   els.forEach(el => { el.classList.add('rv'); const g = el.parentElement; if (g && g.classList.contains('grid')) el.style.setProperty('--d', (([...g.children].indexOf(el) % 3) * 0.07) + 's'); });
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
   els.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight) el.classList.add('in'); else io.observe(el); });
+})();
+(() => {
+  document.addEventListener('click', e => { document.querySelectorAll('details.lang[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); }); });
+  const L = document.documentElement.lang;
+  const M = { hi: ['यह पेज हिन्दी में भी उपलब्ध है।', 'हिन्दी में खोलें'], zh: ['本页面有中文版。', '切换到中文'], ru: ['Эта страница есть на русском языке.', 'Открыть на русском'], ml: ['ഈ പേജ് മലയാളത്തിലും ലഭ്യമാണ്.', 'മലയാളത്തിൽ തുറക്കുക'] };
+  let seen = '';
+  try { seen = localStorage.getItem('calcsouq:langbar') || ''; } catch (e) {}
+  const pref = (navigator.languages || [navigator.language || '']).map(x => String(x).slice(0, 2).toLowerCase());
+  const c = pref.find(x => M[x]);
+  if (!c || c === L || seen === c || (L !== 'en' && pref[0] === L)) return;
+  const alt = document.querySelector(`link[rel="alternate"][hreflang="${c}"]`);
+  const href = alt ? new URL(alt.href).pathname : '/' + c + '/';
+  const bar = document.createElement('div'); bar.className = 'langbar'; bar.lang = c;
+  bar.innerHTML = `<div class="wrap"><span>🌐 ${M[c][0]}</span><a class="go" href="${href}">${M[c][1]} →</a><button type="button" aria-label="Close">×</button></div>`;
+  bar.querySelector('button').onclick = () => { bar.remove(); try { localStorage.setItem('calcsouq:langbar', c); } catch (e) {} };
+  const h = document.querySelector('header.top'); if (h) h.after(bar);
 })();
 window.F = (n, d = 2) => (Number.isFinite(n) ? n : 0).toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
 window.FX = (n, d = 2) => (Number.isFinite(n) ? n : 0).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -327,6 +362,16 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
 VER = hashlib.md5((CSS + JS).encode()).hexdigest()[:8]
 
 NAV = [("Calculators", "/#calculators"), ("Guides", "/guides/"), ("About", "/about/")]
+LANG_UI = [("en", "English", "/"), ("hi", "हिन्दी", "/hi/"), ("zh", "中文", "/zh/"), ("ru", "Русский", "/ru/"), ("ml", "മലയാളം", "/ml/")]
+LOCALE = {"en": "en_GB", "hi": "hi_IN", "zh": "zh_CN", "ru": "ru_RU", "ml": "ml_IN"}
+GLOBE = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>'
+
+def lang_switch(lang, alts):
+    m = {l: p for l, p in (alts or []) if l != "x-default"}
+    cur = dict((c, n) for c, n, _ in LANG_UI).get(lang, "English")
+    items = "".join(f'<a href="{m.get(c, h)}" lang="{c}" hreflang="{c}"' + (' aria-current="true"' if c == lang else '') + f'>{n}</a>' for c, n, h in LANG_UI)
+    return f'<details class="lang"><summary title="Language / भाषा / 语言 / Язык">{GLOBE}<span>{cur}</span></summary><div class="lang-menu">{items}</div></details>'
+
 
 SEARCH = ('<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg>'
           '<input type="search" class="q" placeholder="Search calculators and guides" aria-label="Search calculators and guides" autocomplete="off"><div class="results" role="listbox"></div></div>')
@@ -341,6 +386,11 @@ def head(cfg, title, desc, path, keywords, jsonld, lang="en", alts=None):
                '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=%s" crossorigin="anonymous"></script>\n'
                % (cfg["adsense"], cfg["adsense"]))
     gsc = '<meta name="google-site-verification" content="%s">\n' % cfg["gsc"] if cfg.get("gsc") else ""
+    gsc += '<meta name="yandex-verification" content="%s">\n' % cfg["yandex"] if cfg.get("yandex") else ""
+    gsc += '<meta name="msvalidate.01" content="%s">\n' % cfg["bing"] if cfg.get("bing") else ""
+    gsc += '<meta name="baidu-site-verification" content="%s">\n' % cfg["baidu"] if cfg.get("baidu") else ""
+    for j in jsonld:
+        if isinstance(j, dict) and j.get("@type") in ("WebApplication", "WebSite", "Article", "FAQPage"): j.setdefault("inLanguage", lang)
     ld = "".join('<script type="application/ld+json">%s</script>\n' % json.dumps(j, ensure_ascii=False) for j in jsonld)
     e = html.escape
     return f"""<!DOCTYPE html>
@@ -355,6 +405,7 @@ def head(cfg, title, desc, path, keywords, jsonld, lang="en", alts=None):
 {hl}<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:locale" content="{LOCALE.get(lang, "en_GB")}">{"".join(f'<meta property="og:locale:alternate" content="{LOCALE[l]}">' for l, _ in (alts or []) if l in LOCALE and l != lang)}
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{e(url)}">
@@ -380,6 +431,7 @@ def head(cfg, title, desc, path, keywords, jsonld, lang="en", alts=None):
 <a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
 {SEARCH}
 <nav aria-label="Main">{''.join(f'<a href="{h}">{n}</a>' for n, h in NAV)}</nav>
+{lang_switch(lang, alts)}
 </div></header>
 """
 
@@ -402,7 +454,7 @@ def ad(label="Advertisement"):
 
 def foot(extra_js=""):
     return f"""<footer class="site"><div class="wrap">
-<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/hi/" lang="hi">हिन्दी</a><a href="/zh/" lang="zh">中文</a><a href="/ru/" lang="ru">Русский</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
 <p>© <span class="yr">2026</span> {SITE_NAME}. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
 </div></footer>
 <script src="/assets/site.js?v={VER}"></script>

@@ -111,23 +111,23 @@ for code in LORDER:
         page = tr(page, L["common_rep"])
         w(p.strip("/") + "/index.html", page)
     mh = head(cfg, L["home_title"], L["home_desc"], f"/{code}/", L["home_kw"], [], lang=code, alts=HOME_ALTS)
-    mh += f'<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>{L["home_h1"]}</h1><p class="lede">{L["home_lede"]}</p></div>' + base.HERO_ART + '</section>'
+    mh += f'<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>{L["home_h1"]}</h1><p class="lede">{L["home_lede"]}</p><div class="langrow">' + base.GLOBE + "".join(f'<a href="{"/" if c == "en" else "/" + c + "/"}" lang="{c}">{n}</a>' for c, n, _ in base.LANG_UI if c != code) + '</div></div>' + base.HERO_ART + '</section>'
     mh += '<div class="grid" style="margin-top:22px">' + "".join(lcard(code, x) for x in T) + '</div>' + ad()
     mh += f'<p class="hint" style="margin-top:22px">{L["english_more"]} <a href="/" lang="en">CalcSouq (English)</a> · ' + " · ".join(lang_switch(code)[1:]) + '</p></main>' + foot()
     mh = tr(mh, L["common_rep"])
     w(f"{code}/index.html", mh); paths.append((f"/{code}/", "weekly", "0.8"))
 LANG_BAR = " · ".join(f'<a href="/{c}/" lang="{c}">{LANGS[c]["native"]}</a>' for c in LORDER)
+LANGROW = '<div class="langrow">' + base.GLOBE + '<span>Also in your language:</span>' + "".join(f'<a href="/{c}/" lang="{c}" hreflang="{c}">{LANGS[c]["native"]}</a>' for c in LORDER) + '</div>'
 
 # Home
 hd = "Free online calculators and tools: photo resizer, loan EMI, gold price, currency, salary and end-of-service pay, trading risk and property costs. Formulas explained, sources linked, no sign-up."
 ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd}
 home = head(cfg, f"{SITE_NAME}: Free Online Calculators & Tools (Photo Resizer, EMI, Gold, Gratuity, Trading)", hd, "/",
-            "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site])
+            "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site], alts=HOME_ALTS)
 home += '<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>Free calculators and tools for <em>money, work and everyday forms</em></h1>'
 home += '<p class="lede">Resize photos for applications, plan loans and savings, price gold, check salary and end-of-service pay, size trades and cost a property. Each tool shows its formula and sources, and works without sign-up.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. resize photo, EMI, gold, gratuity"')
-home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div></div>' + base.HERO_ART + '</section>'
-home += '<p class="hint" style="margin-top:14px">Also in: ' + LANG_BAR + '</p>'
+home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div>' + LANGROW + '</div>' + base.HERO_ART + '</section>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
 _ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "property-buying-cost-calculator"]
 uq = sorted([t for t in TOOLS if t.get("unique")], key=lambda t: _ord.index(t["slug"]) if t["slug"] in _ord else 99)
@@ -247,8 +247,25 @@ w("search-index.json", json.dumps(idx, ensure_ascii=False))
 
 # SEO files
 u = cfg["url"].rstrip("/")
-w("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-    f"<url><loc>{u}{p}</loc><lastmod>{today}</lastmod><changefreq>{c}</changefreq><priority>{pr}</priority></url>\n" for p, c, pr in paths) + "</urlset>\n")
+INDEXNOW_KEY = "c4lcs0uq7e2b9f1a5d3e8c6b0a4f2d91"
+def _alts_for(p):
+    seg = [x for x in p.split("/") if x]
+    if not seg: return HOME_ALTS
+    if len(seg) == 1 and seg[0] in LANGS: return HOME_ALTS
+    slug = seg[-1] if (len(seg) == 2 and seg[0] in LANGS) or len(seg) == 1 else None
+    return lang_alts(slug) if slug and slug in TOOLS_ALL else None
+def _sm(p, c, pr):
+    a = _alts_for(p)
+    x = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{u}{q}"/>' for l, q in (a or []))
+    return f"<url><loc>{u}{p}</loc><lastmod>{today}</lastmod><changefreq>{c}</changefreq><priority>{pr}</priority>{x}</url>\n"
+w("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "".join(_sm(p, c, pr) for p, c, pr in paths) + "</urlset>\n")
+# llms.txt: plain list of every tool in every language, for AI assistants and answer engines
+_ll = [f"# {SITE_NAME}", "", "> Free online calculators and tools. Every tool runs in the browser, shows its formula and needs no sign-up. Available in English, Hindi (hi), Chinese (zh), Russian (ru) and Malayalam (ml).", "", "## English"]
+_ll += [f"- [{t['name']}]({u}/{t['slug']}/): {t['card']}" for t in TOOLS]
+for c in LORDER:
+    _ll += ["", f"## {LANGS[c]['native']} ({c})"] + [f"- [{m['name']}]({u}/{c}/{k}/): {m['card']}" for k, m in LANGS[c]["tools"].items()]
+w("llms.txt", "\n".join(_ll) + "\n")
+w(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
 w("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {u}/sitemap.xml\n")
 pub = cfg["adsense"].removeprefix("ca-") if cfg["adsense"] else "pub-XXXXXXXXXXXXXXXX"
 w("ads.txt", f"google.com, {pub}, DIRECT, f08c47fec0942fa0\n")

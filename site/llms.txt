@@ -1,0 +1,85 @@
+# CalcSouq
+
+> Free online calculators and tools. Every tool runs in the browser, shows its formula and needs no sign-up. Available in English, Hindi (hi), Chinese (zh), Russian (ru) and Malayalam (ml).
+
+## English
+- [UAE Final Settlement Calculator](https://www.calcsouq.com/uae-final-settlement-calculator/): Gratuity, leave, notice and salary in one statement
+- [Savings Goal Planner (Abroad to Home)](https://www.calcsouq.com/gulf-savings-return-planner/): How long until you reach your savings target, with growth and currency
+- [UAE Gratuity Calculator](https://www.calcsouq.com/uae-gratuity-calculator/): End-of-service benefit under the new labour law
+- [UAE VAT Calculator](https://www.calcsouq.com/uae-vat-calculator/): Add or remove 5% VAT in AED
+- [Gold Jewellery Price Calculator](https://www.calcsouq.com/gold-price-calculator/): Rate × weight + making charge + VAT or GST
+- [AED to INR Remittance Calculator](https://www.calcsouq.com/aed-to-inr-calculator/): Compare exchange houses by rupees received
+- [Pip Value Calculator](https://www.calcsouq.com/forex-pip-value-calculator/): Value of one pip per lot in your currency
+- [Position Size Calculator](https://www.calcsouq.com/position-size-calculator/): Lot size from account risk and stop loss
+- [Forex Margin Calculator](https://www.calcsouq.com/forex-margin-calculator/): Required margin for any lot size and leverage
+- [Forex Swap Calculator](https://www.calcsouq.com/swap-calculator/): Overnight rollover with triple-swap days
+- [Futures Tick Value Calculator](https://www.calcsouq.com/futures-tick-value-calculator/): Tick value and P&L for CME contracts
+- [World Market Hours](https://www.calcsouq.com/market-hours/): Which markets are open right now
+- [Kerala Land Area Converter](https://www.calcsouq.com/kerala-land-converter/): Cent, acre, are, sq ft and more
+- [Kerala Stamp Duty Calculator](https://www.calcsouq.com/kerala-stamp-duty-calculator/): 8% stamp duty + 2% registration fee
+- [UAE Leave Encashment Calculator](https://www.calcsouq.com/uae-leave-encashment-calculator/): Pay for unused annual leave, on basic salary
+- [Gold Tola & Pavan Converter](https://www.calcsouq.com/gold-tola-pavan-converter/): Tola, pavan, grams and troy ounces
+- [Loan EMI Calculator (AED & ₹)](https://www.calcsouq.com/loan-emi-calculator/): Monthly instalment and total interest
+- [Risk–Reward Calculator](https://www.calcsouq.com/risk-reward-calculator/): R-multiple and breakeven win rate
+- [Kerala Plot & House Budget Planner](https://www.calcsouq.com/kerala-plot-house-budget-calculator/): Land, registration and construction in one budget
+- [Trading Strategy Simulator](https://www.calcsouq.com/trading-strategy-simulator/): 1,000 simulated runs: drawdown and risk of ruin
+- [Photo Resizer for Applications](https://www.calcsouq.com/photo-resizer/): Crop, resize, compress to KB, add name & date
+- [Kerala PSC Photo Resizer (150×200, 30 KB, Name & Date)](https://www.calcsouq.com/kerala-psc-photo-resizer/): 150 × 200 px, under 30 KB, name and date added
+- [Resize Photo to 20 KB](https://www.calcsouq.com/resize-photo-to-20kb/): Compress any photo to under 20 KB
+- [Resize Photo to 50 KB](https://www.calcsouq.com/resize-photo-to-50kb/): Photo between 20 and 50 KB, passport size
+- [Signature Resizer (10–20 KB)](https://www.calcsouq.com/signature-resizer/): Signature to 140 × 60 px, 10–20 KB
+- [Passport Size Photo Maker (3.5 × 4.5 cm)](https://www.calcsouq.com/passport-size-photo-maker/): 3.5 × 4.5 cm photo from your phone
+- [US Visa Photo Resizer (600×600, DS-160)](https://www.calcsouq.com/us-visa-photo-resizer/): DS-160 photo: 600 × 600 px, under 240 KB
+- [UAE Visa Photo Resizer (43 × 55 mm)](https://www.calcsouq.com/uae-visa-photo-resizer/): 43 × 55 mm, white background
+- [Image to PDF (JPG to PDF)](https://www.calcsouq.com/image-to-pdf/): Combine photos into one PDF, private
+- [Age Calculator](https://www.calcsouq.com/age-calculator/): Exact age on any date, next birthday
+- [Percentage Calculator](https://www.calcsouq.com/percentage-calculator/): % of, % change, increase and decrease
+- [SIP Calculator (with Step-Up)](https://www.calcsouq.com/sip-calculator/): Monthly investing with yearly step-up
+- [Compound Interest & FD Calculator](https://www.calcsouq.com/compound-interest-calculator/): FD maturity and compound growth
+- [GST Calculator (India, 2026 Rates)](https://www.calcsouq.com/gst-calculator/): Add or remove GST, CGST/SGST split
+- [Days Between Dates & Date Calculator](https://www.calcsouq.com/date-calculator/): Days, working days, add or subtract days
+- [Word & Character Counter](https://www.calcsouq.com/word-counter/): Words, characters, reading time
+- [BMI Calculator](https://www.calcsouq.com/bmi-calculator/): BMI, category and healthy weight range
+- [Property Buying Cost Calculator](https://www.calcsouq.com/property-buying-cost-calculator/): Stamp duty, registration and fees for your country
+- [China Salary Income Tax Calculator](https://www.calcsouq.com/china-income-tax-calculator/): Take-home pay after tax and social insurance
+- [Russia Salary Tax (NDFL) Calculator](https://www.calcsouq.com/russia-salary-tax-calculator/): Net salary on the 13–22% scale
+- [Russia Home Purchase Tax Refund Calculator](https://www.calcsouq.com/russia-property-tax-deduction-calculator/): Refund for the flat price and mortgage interest
+- [Mortgage Calculator (Equal Payments vs Equal Principal)](https://www.calcsouq.com/mortgage-calculator/): Annuity vs equal principal, total interest
+
+## हिन्दी (hi)
+- [फ़ोटो रीसाइज़र (KB और पिक्सेल)](https://www.calcsouq.com/hi/photo-resizer/): फ़ोटो को सही पिक्सेल और KB में बदलें
+- [JPG से PDF](https://www.calcsouq.com/hi/image-to-pdf/): कई फ़ोटो को एक PDF में बदलें
+- [उम्र कैलकुलेटर](https://www.calcsouq.com/hi/age-calculator/): किसी भी तारीख पर सटीक उम्र
+- [प्रतिशत कैलकुलेटर](https://www.calcsouq.com/hi/percentage-calculator/): % निकालें, % बदलाव, बढ़ोतरी-घटौती
+- [SIP कैलकुलेटर (स्टेप-अप के साथ)](https://www.calcsouq.com/hi/sip-calculator/): हर महीने निवेश, हर साल बढ़ोतरी
+- [GST कैलकुलेटर (2026 दरें)](https://www.calcsouq.com/hi/gst-calculator/): GST जोड़ें या हटाएँ, CGST/SGST
+- [प्रॉपर्टी ख़रीद लागत कैलकुलेटर](https://www.calcsouq.com/hi/property-buying-cost-calculator/): स्टांप ड्यूटी, रजिस्ट्रेशन — हर राज्य के लिए
+
+## 中文 (zh)
+- [个税计算器（工资税后）](https://www.calcsouq.com/zh/china-income-tax-calculator/): 五险一金、专项附加扣除、税后工资
+- [房贷计算器（等额本息 / 等额本金）](https://www.calcsouq.com/zh/mortgage-calculator/): 月供、总利息、两种还款方式对比
+- [购房成本计算器](https://www.calcsouq.com/zh/property-buying-cost-calculator/): 契税、登记费和中介费
+- [照片尺寸调整（像素和KB）](https://www.calcsouq.com/zh/photo-resizer/): 裁剪、调整尺寸、压缩到指定KB
+- [JPG 转 PDF](https://www.calcsouq.com/zh/image-to-pdf/): 多张照片合成一个 PDF
+- [年龄计算器](https://www.calcsouq.com/zh/age-calculator/): 任意日期的精确年龄
+- [百分比计算器](https://www.calcsouq.com/zh/percentage-calculator/): 百分比、变化率、加减百分比
+
+## Русский (ru)
+- [Калькулятор НДФЛ и зарплаты на руки](https://www.calcsouq.com/ru/russia-salary-tax-calculator/): Зарплата на руки по шкале 13–22%
+- [Ипотечный калькулятор: аннуитет и дифференцированный](https://www.calcsouq.com/ru/mortgage-calculator/): Платёж, переплата, график по годам
+- [Налоговый вычет за квартиру и ипотеку](https://www.calcsouq.com/ru/russia-property-tax-deduction-calculator/): Возврат НДФЛ за покупку жилья и проценты
+- [Расходы на покупку недвижимости](https://www.calcsouq.com/ru/property-buying-cost-calculator/): Госпошлина, нотариус, агент — по странам
+- [Изменить размер фото (пиксели и КБ)](https://www.calcsouq.com/ru/photo-resizer/): Обрезать, изменить размер, сжать до КБ
+- [JPG в PDF](https://www.calcsouq.com/ru/image-to-pdf/): Объединить фото в один PDF
+- [Калькулятор возраста](https://www.calcsouq.com/ru/age-calculator/): Точный возраст на любую дату
+- [Калькулятор процентов](https://www.calcsouq.com/ru/percentage-calculator/): Процент от числа, изменение, прибавить %
+
+## മലയാളം (ml)
+- [യുഎഇ ഫൈനൽ സെറ്റിൽമെന്റ് കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/uae-final-settlement-calculator/): ഗ്രാറ്റുവിറ്റി, അവധി, നോട്ടീസ്, ശമ്പളം — ഒറ്റയടിക്ക്
+- [യുഎഇ ഗ്രാറ്റുവിറ്റി കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/uae-gratuity-calculator/): പുതിയ ലേബർ നിയമപ്രകാരം ഗ്രാറ്റുവിറ്റി
+- [സ്വർണാഭരണ വില കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/gold-price-calculator/): നിരക്ക് × തൂക്കം + പണിക്കൂലി + VAT/GST
+- [തോല, പവൻ കൺവെർട്ടർ](https://www.calcsouq.com/ml/gold-tola-pavan-converter/): തോല, പവൻ, ഗ്രാം, ട്രോയ് ഔൺസ്
+- [സെന്റ്, ഏക്കർ കൺവെർട്ടർ](https://www.calcsouq.com/ml/kerala-land-converter/): സെന്റ്, ഏക്കർ, ആർ, ചതുരശ്ര അടി
+- [സ്ഥലം + വീട് ബജറ്റ് പ്ലാനർ (കേരളം)](https://www.calcsouq.com/ml/kerala-plot-house-budget-calculator/): സ്ഥലം, രജിസ്ട്രേഷൻ, നിർമ്മാണം — ഒറ്റ ബജറ്റ്
+- [ദിർഹം – രൂപ റെമിറ്റൻസ് കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/aed-to-inr-calculator/): കൂടുതൽ രൂപ കിട്ടുന്നത് ഏതിൽ
+- [PSC ഫോട്ടോ റീസൈസർ](https://www.calcsouq.com/ml/kerala-psc-photo-resizer/): 150 × 200, 30 KB-ൽ താഴെ, പേരും തീയതിയും

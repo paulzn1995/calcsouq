@@ -30,6 +30,22 @@
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
   els.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight) el.classList.add('in'); else io.observe(el); });
 })();
+(() => {
+  document.addEventListener('click', e => { document.querySelectorAll('details.lang[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); }); });
+  const L = document.documentElement.lang;
+  const M = { hi: ['यह पेज हिन्दी में भी उपलब्ध है।', 'हिन्दी में खोलें'], zh: ['本页面有中文版。', '切换到中文'], ru: ['Эта страница есть на русском языке.', 'Открыть на русском'], ml: ['ഈ പേജ് മലയാളത്തിലും ലഭ്യമാണ്.', 'മലയാളത്തിൽ തുറക്കുക'] };
+  let seen = '';
+  try { seen = localStorage.getItem('calcsouq:langbar') || ''; } catch (e) {}
+  const pref = (navigator.languages || [navigator.language || '']).map(x => String(x).slice(0, 2).toLowerCase());
+  const c = pref.find(x => M[x]);
+  if (!c || c === L || seen === c || (L !== 'en' && pref[0] === L)) return;
+  const alt = document.querySelector(`link[rel="alternate"][hreflang="${c}"]`);
+  const href = alt ? new URL(alt.href).pathname : '/' + c + '/';
+  const bar = document.createElement('div'); bar.className = 'langbar'; bar.lang = c;
+  bar.innerHTML = `<div class="wrap"><span>🌐 ${M[c][0]}</span><a class="go" href="${href}">${M[c][1]} →</a><button type="button" aria-label="Close">×</button></div>`;
+  bar.querySelector('button').onclick = () => { bar.remove(); try { localStorage.setItem('calcsouq:langbar', c); } catch (e) {} };
+  const h = document.querySelector('header.top'); if (h) h.after(bar);
+})();
 window.F = (n, d = 2) => (Number.isFinite(n) ? n : 0).toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
 window.FX = (n, d = 2) => (Number.isFinite(n) ? n : 0).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
 window.$ = id => document.getElementById(id);
