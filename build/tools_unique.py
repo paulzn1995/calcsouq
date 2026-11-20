@@ -138,7 +138,7 @@ faqs=[("How long does it take to save ₹1 crore working in the UAE?", "With ₹
 
 # ---------------- Kerala plot & house budget ----------------
 TOOLS.append(dict(
-group="india", slug="kerala-plot-house-budget-calculator", unique=True, icon="india",
+group="india", slug="kerala-plot-house-budget-calculator", icon="india",
 name="Kerala Plot & House Budget Planner",
 title="Kerala Land and House Cost Calculator: Plot, Registration, Construction",
 desc="Total cost of buying a plot and building a house in Kerala: price per cent, 8% stamp duty + 2% registration on fair value, broker, legal costs and construction per sq ft.",
@@ -176,6 +176,7 @@ function calc() {
 document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
 """,
 body="""
+<p class="hint">Buying elsewhere in India or abroad? Use the <a href="/property-buying-cost-calculator/">property buying cost calculator</a> with state and country rates.</p>
 <h2>What the budget includes</h2>
 <ul><li><strong>Land:</strong> plot size in cents × agreed price per cent.</li>
 <li><strong>Stamp duty and registration:</strong> 8% + 2% of the <em>higher</em> of the sale price and the government fair value.</li>

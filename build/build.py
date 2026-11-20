@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, share_bar, feedback, ICONS, SITE_NAME, TAGLINE
 from articles import ARTICLES
 import base
-from tools_more import TOOLS
+from tools_property import TOOLS
 from ml import ML, COMMON
 
 out = sys.argv[1]
@@ -129,7 +129,7 @@ home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'plac
 home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div></section>'
 home += '<p class="hint" style="margin-top:14px">Also in: ' + LANG_BAR + '</p>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
-_ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "kerala-plot-house-budget-calculator"]
+_ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "property-buying-cost-calculator"]
 uq = sorted([t for t in TOOLS if t.get("unique")], key=lambda t: _ord.index(t["slug"]) if t["slug"] in _ord else 99)
 home += '<h2 class="group-title" id="calculators">Only on CalcSouq</h2><p class="lede" style="font-size:15px;margin-top:-6px">Tools that combine several calculations you\'d otherwise do separately.</p><div class="grid">' + "".join(card(t) for t in uq) + '</div>'
 for g, gt in GROUPS:
