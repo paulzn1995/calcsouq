@@ -45,6 +45,7 @@
 - [Russia Salary Tax (NDFL) Calculator](https://www.calcsouq.com/russia-salary-tax-calculator/): Net salary on the 13–22% scale
 - [Russia Home Purchase Tax Refund Calculator](https://www.calcsouq.com/russia-property-tax-deduction-calculator/): Refund for the flat price and mortgage interest
 - [Mortgage Calculator (Equal Payments vs Equal Principal)](https://www.calcsouq.com/mortgage-calculator/): Annuity vs equal principal, total interest
+- [Futures & Options Margin Calculator](https://www.calcsouq.com/futures-options-margin-calculator/): Futures, spreads and option strategies, all markets
 
 ## हिन्दी (hi)
 - [फ़ोटो रीसाइज़र (KB और पिक्सेल)](https://www.calcsouq.com/hi/photo-resizer/): फ़ोटो को सही पिक्सेल और KB में बदलें
