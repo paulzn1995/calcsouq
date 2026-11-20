@@ -105,7 +105,7 @@ hd = "Free online calculators and tools: photo resizer, loan EMI, gold price, cu
 ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd}
 home = head(cfg, f"{SITE_NAME}: Free Online Calculators & Tools (Photo Resizer, EMI, Gold, Gratuity, Trading)", hd, "/",
             "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site])
-home += '<main class="wrap"><section class="hero"><h1>Free calculators and tools for money, work and everyday forms</h1>'
+home += '<main class="wrap"><section class="hero"><h1>Free calculators and tools for <em>money, work and everyday forms</em></h1>'
 home += '<p class="lede">Resize photos for applications, plan loans and savings, price gold, check salary and end-of-service pay, size trades and cost a property. Each tool shows its formula and sources, and works without sign-up.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. resize photo, EMI, gold, gratuity"')
 home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("Resize to 20 KB", "resize-photo-to-20kb"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Position size", "position-size-calculator")]) + '</div></section>'
