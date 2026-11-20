@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compound Interest Calculator &amp; FD Maturity Calculator (Monthly, Quarterly)</title>
+<meta name="description" content="Calculate compound interest and fixed deposit maturity with yearly, half-yearly, quarterly, monthly or daily compounding, plus optional monthly additions.">
+<meta name="keywords" content="compound interest calculator, fd calculator, fixed deposit calculator, fd maturity calculator, quarterly compounding calculator, savings growth calculator, interest calculator">
+<link rel="canonical" href="https://www.calcsouq.com/compound-interest-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:title" content="Compound Interest Calculator &amp; FD Maturity Calculator (Monthly, Quarterly)">
+<meta property="og:description" content="Calculate compound interest and fixed deposit maturity with yearly, half-yearly, quarterly, monthly or daily compounding, plus optional monthly additions.">
+<meta property="og:url" content="https://www.calcsouq.com/compound-interest-calculator/">
+<meta property="og:image" content="https://www.calcsouq.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CalcSouq">
+<meta name="google-adsense-account" content="ca-pub-4755763168748886">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4755763168748886" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/site.css?v=52980477">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Compound Interest & FD Calculator", "description": "Calculate compound interest and fixed deposit maturity with yearly, half-yearly, quarterly, monthly or daily compounding, plus optional monthly additions.", "url": "https://www.calcsouq.com/compound-interest-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Compound Interest & FD Calculator", "item": "https://www.calcsouq.com/compound-interest-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is FD maturity calculated?", "acceptedAnswer": {"@type": "Answer", "text": "With compound interest: principal × (1 + rate ÷ compounding periods) raised to the number of periods. Most Indian bank FDs compound quarterly."}}, {"@type": "Question", "name": "What is the effective annual rate?", "acceptedAnswer": {"@type": "Answer", "text": "The yearly return after compounding. 7% compounded quarterly equals 7.19% a year."}}, {"@type": "Question", "name": "Does this include tax?", "acceptedAnswer": {"@type": "Answer", "text": "No. Results are before tax."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
+<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg><input type="search" class="q" placeholder="Search calculators and guides" aria-label="Search calculators and guides" autocomplete="off"><div class="results" role="listbox"></div></div>
+<nav aria-label="Main"><a href="/#calculators">Calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#uae">Money, tax & salary</a></div>
+<h1>Compound interest and FD calculator</h1><p class="lede">See what a deposit grows to with compound interest, and how much of it is interest.</p>
+<div class="meta"><span>Updated 20 Nov 2026</span><span>Free, no sign-up</span><a href="#how">How it works</a></div>
+<section class="tool" aria-label="Compound Interest &amp; FD Calculator">
+<div class="inputs">
+ <div><label for="p">Starting amount</label><input id="p" inputmode="decimal" value="100000"></div>
+ <div class="row2"><div><label for="rate">Interest rate (% a year)</label><input id="rate" inputmode="decimal" value="7"></div>
+ <div><label for="yrs">Years</label><input id="yrs" inputmode="decimal" value="5"></div></div>
+ <div class="row2"><div><label for="cmp">Compounding</label><select id="cmp"><option value="1">Yearly</option><option value="2">Half-yearly</option><option value="4" selected>Quarterly</option><option value="12">Monthly</option><option value="365">Daily</option></select></div>
+ <div><label for="add">Add each month</label><input id="add" inputmode="decimal" value="0"></div></div>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">Maturity value</div><div class="big" id="out">—</div>
+ <ul class="lines" id="lines"></ul>
+ <p class="formula">A = P × (1 + r/n)<sup>n×t</sup>. Monthly additions are added at the end of each month. Before tax.</p>
+</div></section>
+<div class="share" aria-label="Share"><span>Share your result</span><a class="wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a><button type="button" class="native">Share</button><button type="button" class="copy"><span hidden></span>Copy link</button><button type="button" class="print">Print</button></div>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Advertisement</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Advertise on CalcSouq</b><span>Reach people planning their money, work and applications. Get in touch via the Contact page.</span></a></div></div></aside>
+<article id="how">
+<h2>Compound interest formula</h2>
+<p><strong>A = P × (1 + r ÷ n)<sup>n × t</sup></strong>, where P is the deposit, r the annual rate, n the number of times interest is added each year and t the number of years. The more often interest is compounded, the higher the <strong>effective annual rate</strong>.</p>
+<h3>Example: a 5-year fixed deposit</h3>
+<p>1,00,000 at 7% a year, compounded quarterly: 1,00,000 × (1 + 0.07 ÷ 4)<sup>20</sup> = <strong>1,41,478</strong>. Interest earned is 41,478 and the effective annual rate is 7.19%.</p>
+<h3>Things that change the real return</h3>
+<ul><li>Tax on interest (in India, FD interest is added to your income; TDS may be deducted).</li><li>Some banks pay interest out quarterly instead of reinvesting it; then use simple interest.</li><li>Breaking a deposit early usually reduces the rate.</li></ul>
+<div class="fb">Was this calculator useful? <button type="button" class="btn">Yes</button><button type="button" class="btn">No</button></div></article>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Advertisement</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Advertise on CalcSouq</b><span>Reach people planning their money, work and applications. Get in touch via the Contact page.</span></a></div></div></aside>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>How is FD maturity calculated?</summary><p>With compound interest: principal × (1 + rate ÷ compounding periods) raised to the number of periods. Most Indian bank FDs compound quarterly.</p></details><details><summary>What is the effective annual rate?</summary><p>The yearly return after compounding. 7% compounded quarterly equals 7.19% a year.</p></details><details><summary>Does this include tax?</summary><p>No. Results are before tax.</p></details></section>
+<section class="related"><h2>Related calculators</h2><div class="grid"><a class="card" href="/uae-final-settlement-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>UAE Final Settlement Calculator<em class="tag">New</em></b><span>Gratuity, leave, notice and salary in one statement</span></div></a><a class="card" href="/gulf-savings-return-planner/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Savings Goal Planner (Abroad to Home)<em class="tag">New</em></b><span>How long until you reach your savings target, with growth and currency</span></div></a><a class="card" href="/uae-gratuity-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div><div><b>UAE Gratuity Calculator</b><span>End-of-service benefit under the new labour law</span></div></a><a class="card" href="/uae-vat-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div><div><b>UAE VAT Calculator</b><span>Add or remove 5% VAT in AED</span></div></a><a class="card" href="/gold-price-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 18l2.5-6h11L20 18zM7.5 12L10 6h4l2.5 6"/></svg></div><div><b>Gold Jewellery Price Calculator</b><span>Rate × weight + making charge + VAT or GST</span></div></a><a class="card" href="/aed-to-inr-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div><div><b>AED to INR Remittance Calculator</b><span>Compare exchange houses by rupees received</span></div></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<p>© <span class="yr">2026</span> CalcSouq. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
+</div></footer>
+<script src="/assets/site.js?v=52980477"></script>
+<script>
+{
+function calc() {
+  const P = V('p'), r = V('rate') / 100, n = +$('cmp').value, t = V('yrs'), add = V('add');
+  const months = Math.round(t * 12), mr = Math.pow(1 + r / n, n / 12) - 1;
+  let bal = P; for (let i = 0; i < months; i++) bal = bal * (1 + mr) + add;
+  const inv = P + add * months, eff = (Math.pow(1 + r / n, n) - 1) * 100;
+  $('out').textContent = F(bal, 2);
+  $('lines').innerHTML = [['Total deposited', F(inv, 2)], ['Interest earned', F(bal - inv, 2)], ['Effective annual rate', F(eff, 2) + '%'], ['Simple interest would give', F(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+}
+document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
+}
+</script>
+</body>
+</html>

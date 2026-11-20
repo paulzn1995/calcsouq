@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, share_bar, feedback, ICONS, SITE_NAME, TAGLINE
 from articles import ARTICLES
 import base
-from tools_photo import TOOLS
+from tools_more import TOOLS
 from ml import ML, COMMON
 
 out = sys.argv[1]
@@ -19,7 +19,7 @@ base.AD["slot"] = sys.argv[5] if len(sys.argv) > 5 else ""
 host = cfg["url"].split("//")[1].split("/")[0].removeprefix("www.")
 EMAIL = "contact@" + host
 today = datetime.date.today()
-GROUPS = [("uae", "Salary, work & money"), ("docs", "Photos & documents"), ("trading", "Trading & investing"), ("india", "Property & land")]
+GROUPS = [("everyday", "Everyday calculators"), ("docs", "Photos & documents"), ("uae", "Money, tax & salary"), ("trading", "Trading & investing"), ("india", "Property & land")]
 SRC = {"uae-gratuity-calculator": [("UAE Ministry of Human Resources & Emiratisation (MOHRE)", "https://www.mohre.gov.ae")], "uae-leave-encashment-calculator": [("UAE Government portal: annual leave", "https://u.ae/en/information-and-services/jobs/employment-in-the-private-sector/types-of-leaves-and-entitlements-in-the-private-sector/annual-leave")], "uae-vat-calculator": [("UAE Federal Tax Authority", "https://tax.gov.ae")], "gold-price-calculator": [("UAE Federal Tax Authority", "https://tax.gov.ae")], "kerala-stamp-duty-calculator": [("Kerala Registration Department", "https://keralaregistration.gov.in")], "futures-tick-value-calculator": [("CME Group contract specifications", "https://www.cmegroup.com")]}
 
 if os.path.exists(out):
@@ -108,7 +108,7 @@ home = head(cfg, f"{SITE_NAME}: Free Online Calculators & Tools (Photo Resizer, 
 home += '<main class="wrap"><section class="hero"><h1>Free calculators and tools for <em>money, work and everyday forms</em></h1>'
 home += '<p class="lede">Resize photos for applications, plan loans and savings, price gold, check salary and end-of-service pay, size trades and cost a property. Each tool shows its formula and sources, and works without sign-up.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. resize photo, EMI, gold, gratuity"')
-home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("Resize to 20 KB", "resize-photo-to-20kb"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Position size", "position-size-calculator")]) + '</div></section>'
+home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div></section>'
 home += '<p class="hint" style="margin-top:14px">Also in Malayalam: <a href="/ml/" lang="ml">മലയാളം കാൽക്കുലേറ്ററുകൾ →</a></p>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
 _ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "kerala-plot-house-budget-calculator"]
@@ -116,7 +116,7 @@ uq = sorted([t for t in TOOLS if t.get("unique")], key=lambda t: _ord.index(t["s
 home += '<h2 class="group-title" id="calculators">Only on CalcSouq</h2><p class="lede" style="font-size:15px;margin-top:-6px">Tools that combine several calculations you\'d otherwise do separately.</p><div class="grid">' + "".join(card(t) for t in uq) + '</div>'
 for g, gt in GROUPS:
     home += f'<h2 id="{g}" class="group-title">{gt}</h2><div class="grid">' + "".join(card(t) for t in TOOLS if t["group"] == g and not t.get("unique")) + "</div>"
-    if g == "uae": home += ad()
+    if g == "docs": home += ad()
 home += '<h2 id="guides" class="group-title">Popular guides</h2><div class="grid">' + "".join(f'<a class="card" href="/guides/{a["slug"]}/"><div class="ic">{ICONS["guide"]}</div><div><b>{a["h1"]}</b></div></a>' for a in ARTICLES[:9]) + '</div><p><a href="/guides/">All guides →</a></p>'
 home += ad() + "</main>" + foot()
 w("index.html", home)

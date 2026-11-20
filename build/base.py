@@ -54,6 +54,15 @@ header nav a:hover{background:var(--soft)}
 .result{padding:24px;background:var(--soft);border-left:1px solid var(--line)}
 label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
 [hidden]{display:none!important}
+.pct-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.pct-row input,.pct-row select{width:96px;flex:0 0 auto}.pct-row b{font-weight:600;font-size:14.5px}
+.pct-row output{flex:1 1 100%;font:700 20px/1.2 var(--body);font-variant-numeric:tabular-nums;color:var(--ink)}
+.pdf-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}.pdf-list:empty{display:none}
+.pdf-list li{display:flex;align-items:center;gap:10px;padding:6px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.pdf-list img{width:44px;height:44px;object-fit:cover;border-radius:6px;flex:none}.pdf-list span{flex:1;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pdf-list button{flex:none;width:34px;height:34px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--ink);cursor:pointer;font-size:15px}
+.bmi-bar{position:relative;height:10px;border-radius:6px;margin:10px 0 4px;background:linear-gradient(90deg,#7fb3ff 0 14%,#3fbf7f 14% 40%,#f5c300 40% 60%,#ef6b5b 60%)}
+.bmi-bar i{position:absolute;top:-4px;width:4px;height:18px;border-radius:2px;background:var(--ink);transform:translateX(-50%);transition:left .4s cubic-bezier(.2,.7,.2,1)}
 .hint{font-size:13px;color:var(--mute);margin-top:5px;line-height:1.45}
 .pick-btn{position:relative;overflow:hidden}.pick-btn input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:0}
 .photo-pick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px;position:relative}.photo-pick .hint{margin:0;min-width:0;overflow-wrap:anywhere}

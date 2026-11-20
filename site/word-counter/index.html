@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter &amp; Character Counter: Words, Characters, Reading Time</title>
+<meta name="description" content="Count words, characters (with and without spaces), sentences and paragraphs, and see reading and speaking time and the most used words. Text stays on your device.">
+<meta name="keywords" content="word counter, character counter, word count tool, count characters online, letter counter, essay word count, sop word count, reading time calculator">
+<link rel="canonical" href="https://www.calcsouq.com/word-counter/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:title" content="Word Counter &amp; Character Counter: Words, Characters, Reading Time">
+<meta property="og:description" content="Count words, characters (with and without spaces), sentences and paragraphs, and see reading and speaking time and the most used words. Text stays on your device.">
+<meta property="og:url" content="https://www.calcsouq.com/word-counter/">
+<meta property="og:image" content="https://www.calcsouq.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CalcSouq">
+<meta name="google-adsense-account" content="ca-pub-4755763168748886">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4755763168748886" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/site.css?v=52980477">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Word & Character Counter", "description": "Count words, characters (with and without spaces), sentences and paragraphs, and see reading and speaking time and the most used words. Text stays on your device.", "url": "https://www.calcsouq.com/word-counter/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Word & Character Counter", "item": "https://www.calcsouq.com/word-counter/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How are words counted?", "acceptedAnswer": {"@type": "Answer", "text": "Each run of letters or numbers counts as one word; hyphenated words and contractions count as one."}}, {"@type": "Question", "name": "Does it count spaces as characters?", "acceptedAnswer": {"@type": "Answer", "text": "The Characters line includes spaces; the next line shows the count without spaces."}}, {"@type": "Question", "name": "Is my text saved?", "acceptedAnswer": {"@type": "Answer", "text": "Only in this browser tab, so it survives a refresh. Closing the tab or tapping Clear removes it."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
+<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg><input type="search" class="q" placeholder="Search calculators and guides" aria-label="Search calculators and guides" autocomplete="off"><div class="results" role="listbox"></div></div>
+<nav aria-label="Main"><a href="/#calculators">Calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#everyday">Everyday calculators</a></div>
+<h1>Word and character counter</h1><p class="lede">Paste or type your text to count words and characters for essays, statements of purpose, applications and posts.</p>
+<div class="meta"><span>Updated 20 Nov 2026</span><span>Free, no sign-up</span><a href="#how">How it works</a></div>
+<section class="tool" aria-label="Word &amp; Character Counter">
+<div class="inputs">
+ <label for="txt">Your text</label>
+ <textarea id="txt" rows="12" style="width:100%;font:16px/1.55 var(--body);padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical" placeholder="Type or paste text here"></textarea>
+ <p style="margin:0"><button type="button" class="btn" id="clr">Clear</button></p>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">Words</div><div class="big" id="out">0</div>
+ <ul class="lines" id="lines"></ul>
+ <div class="big-label" style="margin-top:16px">Most used words</div><p id="top" class="hint">—</p>
+</div></section>
+<div class="share" aria-label="Share"><span>Share your result</span><a class="wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a><button type="button" class="native">Share</button><button type="button" class="copy"><span hidden></span>Copy link</button><button type="button" class="print">Print</button></div>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Advertisement</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Advertise on CalcSouq</b><span>Reach people planning their money, work and applications. Get in touch via the Contact page.</span></a></div></div></aside>
+<article id="how">
+<h2>What is counted</h2>
+<ul><li><strong>Words:</strong> runs of letters or numbers, including words with apostrophes and hyphens (for example <em>don't</em> and <em>well-known</em> count as one word each).</li><li><strong>Characters:</strong> every letter, space and symbol. Many forms and social platforms limit characters, not words.</li><li><strong>Reading time:</strong> about 230 words a minute; <strong>speaking time:</strong> about 130 words a minute.</li></ul>
+<h3>Typical limits</h3>
+<div class="scroll"><table><thead><tr><th>Text</th><th>Usual length</th></tr></thead><tbody>
+<tr><td>Statement of purpose</td><td>800–1,000 words (check the university's limit)</td></tr><tr><td>Cover letter</td><td>250–400 words</td></tr><tr><td>Meta description for a web page</td><td>about 150–160 characters</td></tr></tbody></table></div>
+<p>Your text is counted in your browser and is not sent anywhere.</p>
+<div class="fb">Was this calculator useful? <button type="button" class="btn">Yes</button><button type="button" class="btn">No</button></div></article>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Advertisement</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Advertise on CalcSouq</b><span>Reach people planning their money, work and applications. Get in touch via the Contact page.</span></a></div></div></aside>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>How are words counted?</summary><p>Each run of letters or numbers counts as one word; hyphenated words and contractions count as one.</p></details><details><summary>Does it count spaces as characters?</summary><p>The Characters line includes spaces; the next line shows the count without spaces.</p></details><details><summary>Is my text saved?</summary><p>Only in this browser tab, so it survives a refresh. Closing the tab or tapping Clear removes it.</p></details></section>
+<section class="related"><h2>Related calculators</h2><div class="grid"><a class="card" href="/age-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>Age Calculator</b><span>Exact age on any date, next birthday</span></div></a><a class="card" href="/percentage-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Percentage Calculator</b><span>% of, % change, increase and decrease</span></div></a><a class="card" href="/date-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>Days Between Dates & Date Calculator</b><span>Days, working days, add or subtract days</span></div></a><a class="card" href="/bmi-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>BMI Calculator</b><span>BMI, category and healthy weight range</span></div></a><a class="card" href="/uae-final-settlement-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>UAE Final Settlement Calculator<em class="tag">New</em></b><span>Gratuity, leave, notice and salary in one statement</span></div></a><a class="card" href="/gulf-savings-return-planner/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Savings Goal Planner (Abroad to Home)<em class="tag">New</em></b><span>How long until you reach your savings target, with growth and currency</span></div></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<p>© <span class="yr">2026</span> CalcSouq. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
+</div></footer>
+<script src="/assets/site.js?v=52980477"></script>
+<script>
+{
+const STOP = new Set('the a an and or but of to in on at for with is are was were be been it this that as by from i you he she we they my your our their not no so if then than there here have has had do does did will would can could should'.split(' '));
+function calc() {
+  const t = $('txt').value, w = t.match(/[\p{L}\p{N}'’-]+/gu) || [], words = w.length;
+  const sent = (t.match(/[^.!?]+[.!?]+/g) || []).length || (t.trim() ? 1 : 0), paras = t.split(/\n\s*\n/).filter(p => p.trim()).length;
+  $('out').textContent = F(words, 0);
+  const mins = x => { const s = Math.round(words / x * 60); return s < 60 ? s + ' sec' : Math.floor(s / 60) + ' min ' + (s % 60) + ' sec'; };
+  $('lines').innerHTML = [['Characters', F(t.length, 0)], ['Characters (no spaces)', F(t.replace(/\s/g, '').length, 0)], ['Sentences', F(sent, 0)], ['Paragraphs', F(paras, 0)], ['Reading time', mins(230)], ['Speaking time', mins(130)]].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  const c = {}; w.forEach(x => { x = x.toLowerCase(); if (x.length > 2 && !STOP.has(x)) c[x] = (c[x] || 0) + 1; });
+  const top = Object.entries(c).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  $('top').textContent = top.length ? top.map(([k, v]) => k + ' (' + v + ')').join(', ') : '—';
+}
+try { $('txt').value = sessionStorage.getItem('wc') || ''; } catch (e) {}
+$('txt').addEventListener('input', () => { calc(); try { sessionStorage.setItem('wc', $('txt').value); } catch (e) {} });
+$('clr').addEventListener('click', () => { $('txt').value = ''; try { sessionStorage.removeItem('wc'); } catch (e) {} calc(); });
+calc();
+}
+</script>
+</body>
+</html>

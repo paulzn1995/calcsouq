@@ -39,3 +39,13 @@
 - Dubai rent increase calculator (RERA index rules – verify current rules)
 - NRI income tax estimator on Indian rent/interest (verify current slabs)
 - Compound interest / SIP calculator (AED and ₹)
+
+## High-demand tools to add next (need owner OK for anything with tax rules)
+- Income tax calculator India (new vs old regime) — rules change every Budget; verify on incometax.gov.in first
+- QR code generator (needs a QR encoder written in-page)
+- Unit converter (length, weight, temperature, area)
+- CGPA to percentage converter (university-specific formulas)
+- Compress PDF / merge PDF
+- Mortgage calculator (generic, any currency) and loan comparison
+- Retirement corpus calculator, PPF calculator, NPS calculator
+- Time zone converter
