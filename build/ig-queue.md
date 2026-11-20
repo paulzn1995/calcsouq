@@ -7,3 +7,4 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | Date | Type | Media | Topic / page | Status | Media id |
 |---|---|---|---|---|---|
 | 2026-11-20 | reel | 2026-11-20-final-settlement.mp4 | /uae-final-settlement-calculator/ | posted manually by Paulson | — |
+| 2026-11-20 | carousel (test) | 2026-11-21-welcome-1..4.jpg | / | awaiting approval (test post) | — |
