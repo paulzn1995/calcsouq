@@ -5,6 +5,25 @@
   const h = document.querySelector('header.top');
   const onScroll = () => h && h.classList.toggle('scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  if (!reduce) {
+  // Desktop ambience: drifting math symbols and parallax hero art
+  if (innerWidth >= 900) {
+    const fx = document.createElement('div'); fx.className = 'bgfx'; fx.setAttribute('aria-hidden', 'true');
+    const sy = ['%', '+', '÷', '×', '=', '∑', '$', '€', '₹', '¥', '£', '√', 'π', '%', '+', '−', '∞', '¢'];
+    sy.forEach((c, i) => { const e = document.createElement('span'); e.textContent = c;
+      e.style.cssText = `left:${(i * 53 + 7) % 100}vw;--s:${18 + (i * 7) % 26}px;--t:${45 + (i * 11) % 40}s;--dl:-${(i * 13) % 60}s;--x:${((i % 5) - 2) * 6}vw;--r:${((i % 7) - 3) * 30}deg`;
+      fx.appendChild(e); });
+    document.body.appendChild(fx);
+    const art = document.querySelector('.hero-art');
+    if (art) {
+      const ls = [...art.querySelectorAll('.pl')];
+      addEventListener('pointermove', e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+        ls.forEach(l => { const d = +l.dataset.d || 10; l.style.transform = `translate(${x * d}px,${y * d}px)`; }); }, { passive: true });
+      const keys = [...art.querySelectorAll('.key')]; let k = 0;
+      setInterval(() => { keys.forEach(x => x.classList.remove('on')); if (keys.length) keys[(k = (k * 7 + 3) % keys.length)].classList.add('on'); }, 650);
+    }
+  }
+  }
   if (reduce || !('IntersectionObserver' in window)) return;
   const els = [...document.querySelectorAll('main .grid > *, main .tool, main .group-title, main article > h2, main article > h3, main .faq, main .stall, main .related > h2, main .install, main .share')];
   els.forEach(el => { el.classList.add('rv'); const g = el.parentElement; if (g && g.classList.contains('grid')) el.style.setProperty('--d', (([...g.children].indexOf(el) % 3) * 0.07) + 's'); });

@@ -182,6 +182,37 @@ input,select{transition:border-color .2s,box-shadow .2s,background .2s}
 header.top{transition:box-shadow .3s,background .3s}header.top.scrolled{box-shadow:0 8px 24px -18px rgba(16,24,40,.5)}
 details{transition:background .2s}details[open] summary~*{animation:rise .35s cubic-bezier(.2,.7,.2,1) both}
 
+/* ---- Desktop layout: wider page, two-column hero with animated art ---- */
+@media(min-width:1280px){.wrap{max-width:1320px}}
+@media(min-width:1600px){.wrap{max-width:1440px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.hero-art{display:none}
+@media(min-width:1000px){
+ .hero.split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding:56px 0 28px}
+ .hero.split .hero-art{display:block;position:relative;width:100%;max-width:520px;justify-self:end;aspect-ratio:46/40;animation:rise .9s .2s cubic-bezier(.2,.7,.2,1) both}
+ .hero.split .hero-art svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 18px 22px rgba(16,24,40,.16))}
+ .hero.split h1{font-size:clamp(40px,3.6vw,56px);line-height:1.06}
+}
+.hero-art .pl{transition:transform .5s cubic-bezier(.2,.7,.2,1);transform-box:fill-box}
+.hero-art .f1{animation:fl 7s ease-in-out infinite}.hero-art .f2{animation:fl 8.5s -2s ease-in-out infinite}.hero-art .f3{animation:fl 6.2s -4s ease-in-out infinite}.hero-art .f4{animation:fl 9s -1s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-art .draw{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 5s 1s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:420}45%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-420}}
+.hero-art .bar{transform-box:fill-box;transform-origin:bottom;animation:bar 4s ease-in-out infinite}
+.hero-art .bar:nth-of-type(2){animation-delay:-.8s}.hero-art .bar:nth-of-type(3){animation-delay:-1.6s}.hero-art .bar:nth-of-type(4){animation-delay:-2.4s}
+@keyframes bar{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+.hero-art .coin{transform-box:fill-box;transform-origin:center;animation:coin 3.2s ease-in-out infinite}
+@keyframes coin{0%,100%{transform:translateY(0) scaleX(1)}40%{transform:translateY(-26px) scaleX(.2)}60%{transform:translateY(-26px) scaleX(1)}}
+.hero-art .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.hero-art .spin{transform-box:view-box;transform-origin:230px 200px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-art .blink{animation:blink 1.1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.hero-art .key{transition:fill .2s}.hero-art .key.on{fill:var(--gold)}
+.bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bgfx span{position:absolute;bottom:-60px;font:600 var(--s,28px)/1 Inter,system-ui,sans-serif;color:light-dark(rgba(21,23,26,.07),rgba(255,255,255,.06));animation:up var(--t,60s) linear infinite;animation-delay:var(--dl,0s)}
+@keyframes up{to{transform:translate3d(var(--x,0),-115vh,0) rotate(var(--r,40deg))}}
+@media(max-width:899px){.bgfx{display:none}}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
 """
@@ -193,6 +224,25 @@ JS = r"""// Shared helpers: formatting, remembered inputs, year.
   const h = document.querySelector('header.top');
   const onScroll = () => h && h.classList.toggle('scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  if (!reduce) {
+  // Desktop ambience: drifting math symbols and parallax hero art
+  if (innerWidth >= 900) {
+    const fx = document.createElement('div'); fx.className = 'bgfx'; fx.setAttribute('aria-hidden', 'true');
+    const sy = ['%', '+', '÷', '×', '=', '∑', '$', '€', '₹', '¥', '£', '√', 'π', '%', '+', '−', '∞', '¢'];
+    sy.forEach((c, i) => { const e = document.createElement('span'); e.textContent = c;
+      e.style.cssText = `left:${(i * 53 + 7) % 100}vw;--s:${18 + (i * 7) % 26}px;--t:${45 + (i * 11) % 40}s;--dl:-${(i * 13) % 60}s;--x:${((i % 5) - 2) * 6}vw;--r:${((i % 7) - 3) * 30}deg`;
+      fx.appendChild(e); });
+    document.body.appendChild(fx);
+    const art = document.querySelector('.hero-art');
+    if (art) {
+      const ls = [...art.querySelectorAll('.pl')];
+      addEventListener('pointermove', e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+        ls.forEach(l => { const d = +l.dataset.d || 10; l.style.transform = `translate(${x * d}px,${y * d}px)`; }); }, { passive: true });
+      const keys = [...art.querySelectorAll('.key')]; let k = 0;
+      setInterval(() => { keys.forEach(x => x.classList.remove('on')); if (keys.length) keys[(k = (k * 7 + 3) % keys.length)].classList.add('on'); }, 650);
+    }
+  }
+  }
   if (reduce || !('IntersectionObserver' in window)) return;
   const els = [...document.querySelectorAll('main .grid > *, main .tool, main .group-title, main article > h2, main article > h3, main .faq, main .stall, main .related > h2, main .install, main .share')];
   els.forEach(el => { el.classList.add('rv'); const g = el.parentElement; if (g && g.classList.contains('grid')) el.style.setProperty('--d', (([...g.children].indexOf(el) % 3) * 0.07) + 's'); });
@@ -408,3 +458,41 @@ ICONS = {
  "guide": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg>',
 }
 
+
+HERO_ART = """<div class="hero-art" aria-hidden="true"><svg viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd84d"/><stop offset="1" stop-color="#f5c300"/></linearGradient>
+</defs>
+<g class="spin" opacity=".55"><circle cx="230" cy="200" r="178" fill="none" stroke="var(--line)" stroke-dasharray="2 9"/><circle cx="408" cy="200" r="5" fill="var(--gold)"/><circle cx="52" cy="200" r="4" fill="#8aa0ff"/></g>
+<g class="pl" data-d="14"><g class="f2">
+ <rect x="268" y="40" width="170" height="120" rx="16" fill="var(--surface)" stroke="var(--line)"/>
+ <text x="286" y="66" font-size="12" font-weight="600" fill="var(--mute)" font-family="Inter,sans-serif">Savings growth</text>
+ <rect class="bar" x="290" y="112" width="16" height="34" rx="3" fill="#cfd8ff"/><rect class="bar" x="314" y="100" width="16" height="46" rx="3" fill="#b4c2ff"/><rect class="bar" x="338" y="90" width="16" height="56" rx="3" fill="#97abff"/><rect class="bar" x="362" y="76" width="16" height="70" rx="3" fill="url(#hg1)"/>
+ <path class="draw" d="M288 120 L320 106 L346 110 L372 86 L416 72" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="416" cy="72" r="4" fill="var(--gold)" stroke="var(--ink)" stroke-width="2"/></g></g>
+<g class="pl" data-d="26"><g class="f1">
+ <rect x="120" y="88" width="190" height="250" rx="22" fill="#15171a" stroke="rgba(255,255,255,.08)"/>
+ <rect x="136" y="104" width="158" height="58" rx="10" fill="#22262b"/>
+ <text x="282" y="128" text-anchor="end" font-size="11" fill="#9aa0a6" font-family="Inter,sans-serif">EMI per month</text>
+ <text x="282" y="151" text-anchor="end" font-size="22" font-weight="700" fill="#fff" font-family="Inter,sans-serif">12,483.20<tspan class="blink" fill="var(--gold)">|</tspan></text>
+ <g font-family="Inter,sans-serif" font-size="15" font-weight="600" text-anchor="middle">
+  <rect class="key" x="136" y="176" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="177" y="176" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="218" y="176" width="34" height="30" rx="8" fill="#2c3137"/><rect x="259" y="176" width="35" height="30" rx="8" fill="url(#hg1)"/>
+  <rect class="key" x="136" y="214" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="177" y="214" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="218" y="214" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="259" y="214" width="35" height="30" rx="8" fill="#2c3137"/>
+  <rect class="key" x="136" y="252" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="177" y="252" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="218" y="252" width="34" height="30" rx="8" fill="#2c3137"/><rect class="key" x="259" y="252" width="35" height="30" rx="8" fill="#2c3137"/>
+  <rect class="key" x="136" y="290" width="75" height="30" rx="8" fill="#2c3137"/><rect class="key" x="218" y="290" width="34" height="30" rx="8" fill="#2c3137"/><rect x="259" y="290" width="35" height="30" rx="8" fill="url(#hg1)"/>
+  <g fill="#e8eaed"><text x="153" y="196">7</text><text x="194" y="196">8</text><text x="235" y="196">9</text><text x="153" y="234">4</text><text x="194" y="234">5</text><text x="235" y="234">6</text><text x="276" y="234">−</text><text x="153" y="272">1</text><text x="194" y="272">2</text><text x="235" y="272">3</text><text x="276" y="272">+</text><text x="173" y="310">0</text><text x="235" y="310">.</text></g>
+  <text x="276" y="196" fill="#15171a">÷</text><text x="276" y="310" fill="#15171a">=</text></g></g></g>
+<g class="pl" data-d="18"><g class="f3">
+ <rect x="18" y="58" width="104" height="128" rx="14" fill="var(--surface)" stroke="var(--line)"/>
+ <rect x="32" y="72" width="76" height="80" rx="6" fill="#e9eefc"/><circle cx="70" cy="102" r="15" fill="#b4c2ff"/><path d="M44 152 Q70 116 96 152 Z" fill="#b4c2ff"/>
+ <text x="70" y="172" text-anchor="middle" font-size="9.5" font-weight="600" fill="var(--mute)" font-family="Inter,sans-serif">35×45 mm · 50 KB</text></g></g>
+<g class="pl" data-d="10"><g class="f4">
+ <ellipse cx="72" cy="330" rx="40" ry="11" fill="#d9a900"/><rect x="32" y="306" width="80" height="24" fill="#e6b400"/><ellipse cx="72" cy="306" rx="40" ry="11" fill="#d9a900"/>
+ <rect x="32" y="290" width="80" height="16" fill="#e6b400"/><ellipse cx="72" cy="290" rx="40" ry="11" fill="url(#hg1)"/>
+ <g class="coin"><ellipse cx="72" cy="252" rx="17" ry="17" fill="url(#hg1)" stroke="#d9a900" stroke-width="2"/><text x="72" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#8a6a00" font-family="Inter,sans-serif">$</text></g></g></g>
+<g class="pl" data-d="22"><g class="f2">
+ <g class="pulse"><circle cx="372" cy="258" r="40" fill="url(#hg1)"/><text x="372" y="270" text-anchor="middle" font-size="32" font-weight="800" fill="#15171a" font-family="Inter,sans-serif">%</text></g></g></g>
+<g class="pl" data-d="16"><g class="f3">
+ <rect x="318" y="318" width="128" height="46" rx="12" fill="var(--surface)" stroke="var(--line)"/>
+ <circle cx="340" cy="341" r="10" fill="#dff5e6"/><path d="M335 341 l4 4 l7 -8" fill="none" stroke="#1a8f4a" stroke-width="2.4" stroke-linecap="round"/>
+ <text x="358" y="338" font-size="10" fill="var(--mute)" font-family="Inter,sans-serif">Tax saved</text><text x="358" y="354" font-size="14" font-weight="700" fill="var(--ink)" font-family="Inter,sans-serif">+18,400</text></g></g>
+</svg></div>"""
