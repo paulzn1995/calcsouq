@@ -54,6 +54,12 @@ header nav a:hover{background:var(--soft)}
 .result{padding:24px;background:var(--soft);border-left:1px solid var(--line)}
 label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
 .hint{font-size:13px;color:var(--mute);margin-top:5px;line-height:1.45}
+.photo-pick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px;position:relative}.photo-pick .hint{margin:0;min-width:0;overflow-wrap:anywhere}
+.crop-wrap{display:flex;justify-content:center;margin:16px 0 0;padding:14px;background:var(--soft);border:1px solid var(--line);border-radius:12px}
+#pv{display:block;width:auto;height:auto;max-width:100%;max-height:58vh;touch-action:none;cursor:grab;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.photo-actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.photo-band{margin:4px 0 16px}.photo-band .row2{margin-top:10px}
+.chk{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;cursor:pointer}.chk input{width:20px;height:20px;accent-color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold)}
 input,select{width:100%;font:16px var(--body);min-height:46px;padding:10px 12px;border:1px solid light-dark(#cfcfca,#3a3d43);border-radius:10px;background:var(--surface);color:var(--ink)}
 input:focus,select:focus{outline:2px solid var(--focus);outline-offset:0;border-color:transparent}
 button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
@@ -328,6 +334,7 @@ def feedback():
     return '<div class="fb">Was this calculator useful? <button type="button" class="btn">Yes</button><button type="button" class="btn">No</button></div>'
 
 ICONS = {
+ "photo": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>',
  "uae": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>',
  "trading": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg>',
  "india": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',

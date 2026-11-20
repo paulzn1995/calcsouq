@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld, share_bar, feedback, ICONS, SITE_NAME, TAGLINE
 from articles import ARTICLES
 import base
-from tools_unique import TOOLS
+from tools_photo import TOOLS
 from ml import ML, COMMON
 
 out = sys.argv[1]
@@ -19,7 +19,7 @@ base.AD["slot"] = sys.argv[5] if len(sys.argv) > 5 else ""
 host = cfg["url"].split("//")[1].split("/")[0].removeprefix("www.")
 EMAIL = "contact@" + host
 today = datetime.date.today()
-GROUPS = [("uae", "UAE work & money"), ("trading", "Trading"), ("india", "India, Kerala & NRI")]
+GROUPS = [("uae", "UAE work & money"), ("trading", "Trading"), ("india", "India, Kerala & NRI"), ("docs", "Photos & documents")]
 SRC = {"uae-gratuity-calculator": [("UAE Ministry of Human Resources & Emiratisation (MOHRE)", "https://www.mohre.gov.ae")], "uae-leave-encashment-calculator": [("UAE Government portal: annual leave", "https://u.ae/en/information-and-services/jobs/employment-in-the-private-sector/types-of-leaves-and-entitlements-in-the-private-sector/annual-leave")], "uae-vat-calculator": [("UAE Federal Tax Authority", "https://tax.gov.ae")], "gold-price-calculator": [("UAE Federal Tax Authority", "https://tax.gov.ae")], "kerala-stamp-duty-calculator": [("Kerala Registration Department", "https://keralaregistration.gov.in")], "futures-tick-value-calculator": [("CME Group contract specifications", "https://www.cmegroup.com")]}
 
 if os.path.exists(out):
@@ -108,7 +108,7 @@ home = head(cfg, f"{SITE_NAME}: UAE & India Calculators (Gratuity, Final Settlem
 home += '<main class="wrap"><section class="hero"><h1>Calculators for working in the UAE and planning back home</h1>'
 home += '<p class="lede">Settlement and gratuity, gold, loans, remittances, trading risk and Kerala property, with the rules explained and sources linked.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. gratuity, gold tola, EMI"')
-home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Final settlement", "uae-final-settlement-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Gold price", "gold-price-calculator"), ("AED to INR", "aed-to-inr-calculator"), ("Lot size", "position-size-calculator"), ("Cent to sq ft", "kerala-land-converter")]) + '</div></section>'
+home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Final settlement", "uae-final-settlement-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Gold price", "gold-price-calculator"), ("AED to INR", "aed-to-inr-calculator"), ("Lot size", "position-size-calculator"), ("Cent to sq ft", "kerala-land-converter"), ("Photo resizer", "photo-resizer")]) + '</div></section>'
 home += '<p class="hint" style="margin-top:14px">മലയാളത്തിൽ വേണോ? <a href="/ml/" lang="ml">മലയാളം കാൽക്കുലേറ്ററുകൾ →</a></p>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
 uq = [t for t in TOOLS if t.get("unique")]
@@ -137,6 +137,7 @@ for a in ARTICLES:
 gi = head(cfg, f"Guides: UAE Gratuity, VAT, Gold, Forex Trading & Kerala Property · {SITE_NAME}", "Plain-English guides for expats and traders in the UAE and India: gratuity, VAT, gold, remittances, forex risk, futures and Kerala land.", "/guides/", "uae guides, gratuity guide, forex guide, kerala land guide", [])
 gi += '<main class="wrap"><section style="padding:36px 0 8px"><h1>Guides</h1><p class="lede">Short, exact answers to the questions behind our calculators.</p></section>'
 for g, gt in GROUPS:
+    if not any(a["group"] == g for a in ARTICLES): continue
     gi += f'<h2 class="group-title">{gt}</h2><div class="grid">' + "".join(f'<a class="card" href="/guides/{a["slug"]}/"><div class="ic">{ICONS["guide"]}</div><div><b>{a["h1"]}</b><span>{a["lede"][:110]}</span></div></a>' for a in ARTICLES if a["group"] == g) + "</div>"
 gi += ad() + "</main>" + foot()
 w("guides/index.html", gi); paths.append(("/guides/", "weekly", "0.8"))
