@@ -13,6 +13,7 @@ Owner: Paulson Jose (paulznjoz@gmail.com). Contact address on the site: contact@
 - Topic ideas waiting to be written: `build/backlog.md`
 
 ## Content rules
+- Positioning: CalcSouq is a general, worldwide site of free calculators and tools. In site-wide text (home, about, footer, descriptions, social posts) do not describe it as a site for expats, NRIs or Gulf/UAE residents, and do not say where it is made. Country-specific tools (UAE gratuity, Kerala land, NRI accounts) may name their country on their own pages.
 - Facts that can change (laws, tax rates, fees, contract specs, session times) must be checked against a current source with web search before writing. If unsure, leave it out.
 - Original writing only. No copied text, no fake reviews or testimonials, no invented statistics.
 - Each guide: clear H1 that matches a real search question, 300–600 words, at least one worked example or table, 2–4 FAQs, links to its calculator.
