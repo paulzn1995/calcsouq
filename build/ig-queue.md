@@ -10,8 +10,10 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-20 | carousel (test) | 2026-11-21-welcome-1..4.jpg | / | posted 17:35 Dubai (approved by Paulson in chat) | 18077928467771333 |
 | 2026-11-21 00:30 | reel | photo-rejected | — | rejected by Paulson | — |
 | 2026-11-21 00:30 | reel | jpg-to-pdf | — | rejected by Paulson | — |
-| 2026-11-21 00:21 | reel | 2026-11-21-sip-quiz.mp4 | /sip-calculator/ | posted (approved by Paulson in chat) | 18111084173365562 |
-| 2026-11-21 00:22 | reel | 2026-11-21-1000-traders.mp4 | /trading-strategy-simulator/ | posted (approved by Paulson in chat) | 18123070780988329 |
+| 2026-11-21 00:21 | reel | 2026-11-21-sip-quiz.mp4 | /sip-calculator/ | replaced (silent version deleted by Paulson) | 18111084173365562 |
+| 2026-11-21 00:22 | reel | 2026-11-21-1000-traders.mp4 | /trading-strategy-simulator/ | replaced (silent version deleted by Paulson) | 18123070780988329 |
+| 2026-11-21 00:29 | reel | 2026-11-21-sip-quiz-audio.mp4 | /sip-calculator/ | posted with soundtrack (approved) | 18117462449174214 |
+| 2026-11-21 00:29 | reel | 2026-11-21-1000-traders-audio.mp4 | /trading-strategy-simulator/ | posted with soundtrack (approved) | 18116309174128547 |
 
 ## Learnings
 - 2026-11-21 Paulson: prefers broad, intriguing content built on the site's complex calculations (quiz/guess formats, simulations) over single-tool demos.
