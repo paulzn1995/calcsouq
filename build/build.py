@@ -210,6 +210,15 @@ for sz in (192, 512):
     f = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", int(sz * .58))
     bb = d.textbbox((0, 0), "C", font=f); d.text(((sz - bb[2] - bb[0]) / 2, (sz - bb[3] - bb[1]) / 2), "C", font=f, fill="#111111")
     im.save(os.path.join(out, f"icon-{sz}.png"))
+og = Image.new("RGB", (1200, 630), "#f6f6f4"); d = ImageDraw.Draw(og)
+IF = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
+fb = ImageFont.truetype(IF if os.path.exists(IF) else "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 76)
+fr = ImageFont.truetype(IF.replace("Bold", "Regular") if os.path.exists(IF) else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 38)
+d.rounded_rectangle([80, 80, 190, 190], 28, fill="#f5c300"); d.text((135, 135), "C", font=fb, fill="#15171a", anchor="mm")
+d.text((220, 135), "CalcSouq", font=fb, fill="#15171a", anchor="lm")
+d.text((80, 300), "Free calculators & tools", font=fb, fill="#15171a"); d.text((80, 395), "UAE · India · Kerala · Trading · Photo resizer", font=fr, fill="#555a62")
+d.rectangle([80, 520, 280, 530], fill="#f5c300"); d.text((80, 560), "calcsouq.com", font=fr, fill="#15171a", anchor="lm")
+og.save(os.path.join(out, "og.png"))
 
 # Search index
 idx = [{"t": t["name"], "u": f"/{t['slug']}/", "c": "Calculator", "d": t["card"], "k": t["keywords"]} for t in TOOLS]
