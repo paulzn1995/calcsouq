@@ -8,3 +8,5 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 |---|---|---|---|---|---|
 | 2026-11-20 | reel | 2026-11-20-final-settlement.mp4 | /uae-final-settlement-calculator/ | posted manually by Paulson | — |
 | 2026-11-20 | carousel (test) | 2026-11-21-welcome-1..4.jpg | / | posted 17:35 Dubai (approved by Paulson in chat) | 18077928467771333 |
+| 2026-11-21 00:30 | reel | 2026-11-21-photo-rejected.mp4 | /kerala-psc-photo-resizer/ | awaiting approval | — |
+| 2026-11-21 00:30 | reel | 2026-11-21-jpg-to-pdf.mp4 | /image-to-pdf/ | awaiting approval | — |
