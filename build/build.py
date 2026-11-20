@@ -5,6 +5,7 @@ from base import CSS, JS, head, foot, ad, faq_ld, crumbs_ld, app_ld, article_ld,
 from articles import ARTICLES
 import base
 from tools_unique import TOOLS
+from ml import ML, COMMON
 
 out = sys.argv[1]
 _conf = json.load(open(os.path.join(os.path.dirname(__file__), "config.json")))
@@ -46,11 +47,12 @@ for t in TOOLS:
     p = f"/{t['slug']}/"
     paths.append((p, "weekly", "0.9"))
     faqs = t["faqs"]
-    page = head(cfg, t["title"], t["desc"], p, t["keywords"], [app_ld(cfg, t["name"], t["desc"], p), crumbs_ld(cfg, t["name"], p), faq_ld(faqs)])
+    alts = [("en", p), ("ml", "/ml" + p), ("x-default", p)] if t["slug"] in ML else None
+    page = head(cfg, t["title"], t["desc"], p, t["keywords"], [app_ld(cfg, t["name"], t["desc"], p), crumbs_ld(cfg, t["name"], p), faq_ld(faqs)], alts=alts)
     srcs = t.get("sources") or SRC.get(t["slug"], [])
     grp = dict(GROUPS)[t["group"]]
     page += f'<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#{t["group"]}">{grp}</a></div>\n<h1>{t["h1"]}</h1><p class="lede">{t["lede"]}</p>\n'
-    page += f'<div class="meta"><span>Updated {today:%d %b %Y}</span><span>Free, no sign-up</span>' + ('<a href="#sources">Sources</a>' if srcs else '<a href="#how">How it works</a>') + '</div>\n'
+    page += f'<div class="meta"><span>Updated {today:%d %b %Y}</span><span>Free, no sign-up</span>' + (f'<a href="/ml{p}" lang="ml">മലയാളം</a>' if alts else '') + ('<a href="#sources">Sources</a>' if srcs else '<a href="#how">How it works</a>') + '</div>\n'
     page += f'<section class="tool" aria-label="{html.escape(t["name"])}">{t["tool"]}</section>\n' + (share_bar() if t["slug"] != "market-hours" else "") + f'\n{ad()}\n'
     sb = ('<div class="sources" id="sources"><b>Sources</b><ul>' + "".join(f'<li><a href="{u}" rel="noopener">{n}</a></li>' for n, u in srcs) + '</ul></div>') if srcs else ""
     page += f'<article id="how">{t["body"]}{sb}{feedback()}</article>\n{ad()}\n'
@@ -63,6 +65,41 @@ for t in TOOLS:
     page += foot("<script>\n{" + t["js"] + "}\n</script>")
     w(p.strip("/") + "/index.html", page)
 
+
+# Malayalam pages
+def tr(s, reps, slug):
+    for a, b in reps:
+        s = s.replace(a, b)
+    return s
+TOOLS_ALL = {t["slug"]: t for t in TOOLS}
+def mlcard(slug):
+    m, t = ML[slug], TOOLS_ALL[slug]
+    return f'<a class="card" href="/ml/{slug}/"><div class="ic">{ic(t)}</div><div><b>{m["name"]}</b><span>{m["card"]}</span></div></a>'
+for slug, m in ML.items():
+    for a, _ in m["rep"]:
+        if a not in TOOLS_ALL[slug]["tool"] + TOOLS_ALL[slug]["js"]: print("  ml miss:", slug, repr(a[:60]))
+    t = TOOLS_ALL[slug]; p = f"/ml/{slug}/"; paths.append((p, "weekly", "0.8"))
+    alts = [("en", f"/{slug}/"), ("ml", p), ("x-default", f"/{slug}/")]
+    page = head(cfg, m["title"], m["desc"], p, m["keywords"], [app_ld(cfg, m["name"], m["desc"], p), crumbs_ld(cfg, m["name"], p), faq_ld(m["faqs"])], lang="ml", alts=alts)
+    page += f'<main class="wrap"><div class="crumbs"><a href="/ml/">മലയാളം</a> › {m["name"]}</div>\n<h1>{m["h1"]}</h1><p class="lede">{m["lede"]}</p>\n'
+    page += f'<div class="meta"><span>പുതുക്കിയത് {today:%d.%m.%Y}</span><span>Free, no sign-up</span><a href="/{slug}/" lang="en">English</a></div>\n'
+    page += f'<section class="tool" aria-label="{html.escape(m["name"])}">{tr(t["tool"], m["rep"], slug)}</section>\n' + share_bar() + f'\n{ad()}\n'
+    srcs = t.get("sources") or SRC.get(slug, [])
+    sb = ('<div class="sources" id="sources"><b>Sources</b><ul>' + "".join(f'<li><a href="{u}" rel="noopener">{n}</a></li>' for n, u in srcs) + '</ul></div>') if srcs else ""
+    page += f'<article id="how">{m["body"]}{sb}{feedback()}</article>\n{ad()}\n'
+    page += '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(f"<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>" for q, a in m["faqs"]) + "</section>\n"
+    page += '<section class="related"><h2>Related calculators</h2><div class="grid">' + "".join(mlcard(x) for x in ML if x != slug) + "</div></section></main>\n"
+    page += foot("<script>\n{" + tr(t["js"], m["rep"], slug) + "}\n</script>")
+    for a, b in COMMON: page = page.replace(a, b)
+    w(p.strip("/") + "/index.html", page)
+mh = head(cfg, "മലയാളം കാൽക്കുലേറ്ററുകൾ: ഗ്രാറ്റുവിറ്റി, സ്വർണം, സെന്റ്, ദിർഹം · CalcSouq", "യുഎഇ പ്രവാസികൾക്കും കേരളത്തിനും വേണ്ടിയുള്ള സൗജന്യ കാൽക്കുലേറ്ററുകൾ മലയാളത്തിൽ: ഫൈനൽ സെറ്റിൽമെന്റ്, ഗ്രാറ്റുവിറ്റി, സ്വർണ വില, പവൻ, സെന്റ്, വീട് ബജറ്റ്, ദിർഹം–രൂപ.", "/ml/",
+          "മലയാളം കാൽക്കുലേറ്റർ, ഗ്രാറ്റുവിറ്റി മലയാളം, പവൻ ഗ്രാം, സെന്റ് സ്ക്വയർ ഫീറ്റ്, ദിർഹം രൂപ", [], lang="ml", alts=[("en", "/"), ("ml", "/ml/"), ("x-default", "/")])
+mh += '<main class="wrap"><section class="hero"><h1>പ്രവാസികൾക്കും നാട്ടിലെ കാര്യങ്ങൾക്കും വേണ്ടിയുള്ള കാൽക്കുലേറ്ററുകൾ</h1><p class="lede">ഗ്രാറ്റുവിറ്റി, ഫൈനൽ സെറ്റിൽമെന്റ്, സ്വർണം, ഭൂമി അളവ്, വീട് ബജറ്റ്, നാട്ടിലേക്ക് പണം അയക്കൽ — നിയമങ്ങൾ വിശദീകരിച്ച്, മലയാളത്തിൽ.</p></section>'
+mh += '<div class="grid" style="margin-top:22px">' + "".join(mlcard(x) for x in ML) + '</div>' + ad()
+mh += '<p class="hint" style="margin-top:22px">കൂടുതൽ കാൽക്കുലേറ്ററുകൾ ഇംഗ്ലീഷിൽ: <a href="/" lang="en">CalcSouq home</a></p></main>' + foot()
+for a, b in COMMON: mh = mh.replace(a, b)
+w("ml/index.html", mh); paths.append(("/ml/", "weekly", "0.8"))
+
 # Home
 hd = "Free calculators for life in the UAE and back home in India: final settlement, gratuity, gold, EMI, remittances, trading risk and Kerala property costs."
 ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd}
@@ -72,6 +109,7 @@ home += '<main class="wrap"><section class="hero"><h1>Calculators for working in
 home += '<p class="lede">Settlement and gratuity, gold, loans, remittances, trading risk and Kerala property, with the rules explained and sources linked.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. gratuity, gold tola, EMI"')
 home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Final settlement", "uae-final-settlement-calculator"), ("Gratuity", "uae-gratuity-calculator"), ("Gold price", "gold-price-calculator"), ("AED to INR", "aed-to-inr-calculator"), ("Lot size", "position-size-calculator"), ("Cent to sq ft", "kerala-land-converter")]) + '</div></section>'
+home += '<p class="hint" style="margin-top:14px">മലയാളത്തിൽ വേണോ? <a href="/ml/" lang="ml">മലയാളം കാൽക്കുലേറ്ററുകൾ →</a></p>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
 uq = [t for t in TOOLS if t.get("unique")]
 home += '<h2 class="group-title" id="calculators">Only on CalcSouq</h2><p class="lede" style="font-size:15px;margin-top:-6px">Tools that combine several calculations you\'d otherwise do separately.</p><div class="grid">' + "".join(card(t) for t in uq) + '</div>'
@@ -156,6 +194,7 @@ for sz in (192, 512):
 
 # Search index
 idx = [{"t": t["name"], "u": f"/{t['slug']}/", "c": "Calculator", "d": t["card"], "k": t["keywords"]} for t in TOOLS]
+idx += [{"t": m["name"], "u": f"/ml/{k}/", "c": "മലയാളം", "d": m["card"], "k": m["keywords"]} for k, m in ML.items()]
 idx += [{"t": a["h1"], "u": f"/guides/{a['slug']}/", "c": "Guide", "d": a["lede"][:90], "k": a["keywords"]} for a in ARTICLES]
 w("search-index.json", json.dumps(idx, ensure_ascii=False))
 

@@ -216,8 +216,9 @@ SEARCH = ('<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidde
           '<input type="search" class="q" placeholder="Search calculators and guides" aria-label="Search calculators and guides" autocomplete="off"><div class="results" role="listbox"></div></div>')
 
 
-def head(cfg, title, desc, path, keywords, jsonld):
+def head(cfg, title, desc, path, keywords, jsonld, lang="en", alts=None):
     url = cfg["url"].rstrip("/") + path
+    hl = "".join(f'<link rel="alternate" hreflang="{l}" href="{cfg["url"].rstrip("/") + p}">\n' for l, p in (alts or []))
     ads = ""
     if cfg["adsense"]:
         ads = ('<meta name="google-adsense-account" content="%s">\n'
@@ -227,7 +228,7 @@ def head(cfg, title, desc, path, keywords, jsonld):
     ld = "".join('<script type="application/ld+json">%s</script>\n' % json.dumps(j, ensure_ascii=False) for j in jsonld)
     e = html.escape
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -235,7 +236,7 @@ def head(cfg, title, desc, path, keywords, jsonld):
 <meta name="description" content="{e(desc)}">
 <meta name="keywords" content="{e(keywords)}">
 <link rel="canonical" href="{e(url)}">
-<meta name="robots" content="index,follow,max-image-preview:large">
+{hl}<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{SITE_NAME}">
 <meta property="og:title" content="{e(title)}">
