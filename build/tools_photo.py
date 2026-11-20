@@ -12,8 +12,7 @@ lede="Crop, resize and compress your photo or signature to the exact size an onl
 card="Crop, resize, compress to KB, add name & date",
 tool="""
 <div class="photo-pick">
- <label class="btn primary" for="file">Choose photo</label>
- <input type="file" id="file" accept="image/*" style="position:absolute;width:1px;height:1px;opacity:0">
+ <label class="btn primary pick-btn">Choose photo<input type="file" id="file" accept="image/*"></label>
  <span class="hint" id="fname">JPG, PNG or WebP from your gallery or camera.</span>
 </div>
 <div class="inputs">
@@ -94,7 +93,7 @@ function preview() {
   pv.width = Math.round(w * k); pv.height = Math.round(h * k);
   pv.style.aspectRatio = w + ' / ' + h;
   draw(pc, pv.width, pv.height);
-  if (!img) { pc.fillStyle = '#8a8f98'; pc.textAlign = 'center'; pc.textBaseline = 'middle'; pc.font = '600 ' + Math.round(pv.width / 14) + 'px Inter, Arial, sans-serif'; pc.fillText('Choose a photo', pv.width / 2, pv.height / 2); }
+  if (!img) { pc.fillStyle = '#8a8f98'; pc.textAlign = 'center'; pc.textBaseline = 'middle'; pc.font = '600 ' + Math.round(pv.width / 14) + 'px Inter, Arial, sans-serif'; pc.fillText('Tap here to choose', pv.width / 2, pv.height / 2 - pv.width / 22); pc.fillText('a photo', pv.width / 2, pv.height / 2 + pv.width / 22); }
 }
 const enc = (c, type, q) => new Promise(r => c.toBlob(r, type, q));
 async function make() {
@@ -149,15 +148,19 @@ $('zoom').addEventListener('input', () => { zoom = V('zoom') / 100; later(); });
 $('br').addEventListener('input', later);
 $('rot').addEventListener('click', () => { rot = (rot + 90) % 360; if ($('preset').value === 'orig') applyPreset(); else later(); });
 $('reset').addEventListener('click', () => { ox = oy = 0; zoom = 1; $('zoom').value = 100; later(); });
-$('file').addEventListener('change', e => {
-  const f = e.target.files[0]; if (!f) return;
+$('file').addEventListener('change', e => { const f = e.target.files[0]; if (f) load(f); e.target.value = ''; });
+function load(f) {
   const u = URL.createObjectURL(f), im = new Image();
   im.onload = () => { img = im; rot = 0; ox = oy = 0; zoom = 1; $('zoom').value = 100; $('fname').textContent = f.name + ' · ' + im.width + ' × ' + im.height + ' px'; applyPreset(); };
   im.onerror = () => { $('fname').textContent = 'This file could not be opened. Use a JPG or PNG (iPhone HEIC photos: share as JPG first).'; };
   im.src = u;
-});
+}
 const pts = new Map(); let pinch = 0;
-pv.addEventListener('pointerdown', e => { pv.setPointerCapture(e.pointerId); pts.set(e.pointerId, [e.clientX, e.clientY]); });
+pv.addEventListener('click', () => { if (!img) $('file').click(); });
+pv.addEventListener('pointerdown', e => { if (!img) return; try { pv.setPointerCapture(e.pointerId); } catch (x) {} pts.set(e.pointerId, [e.clientX, e.clientY]); });
+const wrap = document.querySelector('.crop-wrap');
+wrap.addEventListener('dragover', e => e.preventDefault());
+wrap.addEventListener('drop', e => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f) load(f); });
 pv.addEventListener('pointermove', e => {
   if (!pts.has(e.pointerId) || !img) return;
   const r = pv.getBoundingClientRect(), [px, py] = pts.get(e.pointerId);
