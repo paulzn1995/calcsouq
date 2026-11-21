@@ -1,7 +1,7 @@
 # Instagram queue (@calcsouq)
 
 Planner (Sunday) adds items with status `awaiting approval`. Only Paulson can approve, by replying in the planner's chat; that session changes the status to `approved`.
-Auto-approval (Paulson, 21 Nov 2026): if Paulson does not reply within 15 minutes of an approval request, the items are approved automatically. Whoever sends the request writes the status as `awaiting approval (auto at YYYY-MM-DD HH:MM)` (Dubai time = send time + 15 min). If Paulson replies before then, his answer replaces the status (`approved`, `rejected`, edits). Once that time has passed, the poster treats the row as approved and records `posted (auto-approved)`.
+Auto-approval (Paulson, 21 Nov 2026): if Paulson does not reply within 15 minutes of an approval request, the items are approved automatically. This covers every item from every task or chat: daily reels and stories, news reels, the Sunday carousel and anything else. Whoever sends the request writes the status as `awaiting approval (auto at YYYY-MM-DD HH:MM)` (Dubai time = send time + 15 min). If Paulson replies before then, his answer replaces the status (`approved`, `rejected`, edits). Once that time has passed, the poster treats the row as approved and records `posted (auto-approved)`.
 Daily poster publishes the item for today only if its status is `approved` or its auto-approval time has passed, then sets `posted` with the media id.
 Media files live in build/static/media/ig/ and are served at https://www.calcsouq.com/media/ig/<file>.
 
