@@ -43,7 +43,7 @@ Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories
 | 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | posted 18:03 Dubai (approved), media 18119707631107659 |
 | 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | posted 19:03 Dubai (approved), media 18162405319502269 |
 | 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | approved |
-| 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | approved (Paulson 21 Nov 12:33, with fixes: hashtags swapped) |
+| 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | posted 21:03 Dubai (approved by Paulson 21 Nov 12:33; late, slot was missed), media 18117491987329290 |
 | 2026-11-21 | 22:30 | reel | no | 1000 | cinematic | 2026-11-21-rbi-emi-tenure.mp4 | /loan-emi-calculator/ | approved (Paulson 21 Nov 12:33) |
 | 2026-11-21 | 16:30 | reel | no | 0 | funk | 2026-11-21-first-follower.mp4 | / | posted 16:34 Dubai (Paulson asked in chat to create and post it), media 18119711036153466 |
 
