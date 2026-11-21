@@ -21,6 +21,8 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 - 2026-11-21 data (last 3 days): lowest skip (48%) and longest watch (5.4 s) = EMI reel with one concrete money question on frame 1; A/B/C quiz and long-text hooks were skipped 73–81%. Lead with a big number + question, show options after ~1 s, reveal by 9 s.
 - 2026-11-21 Trial Reels are refused by Instagram: account has too few followers. Post every reel as a normal reel until followers grow; retry trial once a week (if refused, post the same reel normally).
 
+- 2026-11-21 Paulson: wants reels with viral potential built on the latest news or rule changes (UAE/India money, visas, tax, gold, rupee), packed with facts most people don't know; cite the source/date in the caption and verify every figure before queueing.
+
 | 2026-11-21 | Reel | F&O margin calculator: futures, calendar spread, iron condor vs strangle, lot sizes | build/static/media/ig/2026-11-21-margin-calculator.mp4 | posted 2026-11-21, media 18143848828618251 |
 
 ## Topic calendar
