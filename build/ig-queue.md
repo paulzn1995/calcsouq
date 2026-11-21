@@ -21,7 +21,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 - 2026-11-21 data (last 3 days): lowest skip (48%) and longest watch (5.4 s) = EMI reel with one concrete money question on frame 1; A/B/C quiz and long-text hooks were skipped 73–81%. Lead with a big number + question, show options after ~1 s, reveal by 9 s.
 - 2026-11-21 Trial Reels are refused by Instagram: account has too few followers. Post every reel as a normal reel until followers grow; retry trial once a week (if refused, post the same reel normally).
 
-- 2026-11-21 Paulson: wants reels with viral potential built on the latest news or rule changes (UAE/India money, visas, tax, gold, rupee), packed with facts most people don't know; cite the source/date in the caption and verify every figure before queueing.
+- 2026-11-21 Paulson: wants reels with viral potential built on the latest news or rule changes, including international/global stories (markets, crypto, gold, oil, Fed) as well as UAE/India money, visas, tax and rupee,, packed with facts most people don't know; cite the source/date in the caption and verify every figure before queueing.
 
 | 2026-11-21 | Reel | F&O margin calculator: futures, calendar spread, iron condor vs strangle, lot sizes | build/static/media/ig/2026-11-21-margin-calculator.mp4 | posted 2026-11-21, media 18143848828618251 |
 
@@ -120,4 +120,37 @@ Link in bio → Loan EMI calculator
 Did your bank extend your tenure? 👇
 Example: full 20-year loan repriced at 8.25%; your rate and bank's spread will differ. Not financial advice.
 #homeloan #emi #rbi #reporate #interestrates #calcsouq
+```
+
+## 2026-11-22 international news reels (made in Paulson's chat 21 Nov; slots are Dubai time)
+Render: build/reels_2026_11_21_world.py. Sources in the script header.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | 10:30 | reel | no | 1000 | electro | 2026-11-21-bitcoin-half-off.mp4 | /percentage-calculator/ | awaiting approval |
+| 2026-11-22 | 14:30 | reel | no | 1000 | desi | 2026-11-21-gold-off-record.mp4 | /gold-price-calculator/ | awaiting approval |
+
+```captions
+[2026-11-22 10:30]
+Bitcoin is down 51% from its peak. How much does it need to get back?
+Peak: $126,198 (6 Oct 2025). 20 Nov 2026: about $61,300.
+$10,000 bought at the top is worth about $4,859 today.
+To break even it needs +106%, not +51%.
+The loss math: −20% needs +25%, −33% needs +50%, −50% needs +100%.
+Link in bio → Percentage change calculator
+Did you guess +51%? 👇
+Prices: Fortune, 20 Nov 2026. Crypto is volatile. Not financial advice.
+#bitcoin #crypto #btc #investing #lossmath #calcsouq
+
+[2026-11-22 14:30]
+Gold hit a record $5,590 an ounce on 28 Jan 2026. Now it's about $3,533 (21 Nov).
+100 g of gold, spot value:
+January peak: AED 66,003
+Today: AED 41,715
+That's 37% down. To get back to the record, gold needs +58%.
+Bought jewellery? Making charges usually aren't paid back when you sell. Coins and bars resell closest to spot.
+Link in bio → Gold price calculator
+Are you buying the dip or waiting? 👇
+Prices: MetalCharts, 21 Nov 2026 (spot, $1 = AED 3.6725). Shop prices differ. Not financial advice.
+#goldprice #dubaigold #gold #goldrate #investing #calcsouq
 ```
