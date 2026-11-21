@@ -41,8 +41,8 @@ Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories
 | 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | approved |
 | 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | approved |
 | 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | approved |
-| 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | awaiting approval |
-| 2026-11-21 | 22:30 | reel | no | 1000 | cinematic | 2026-11-21-rbi-emi-tenure.mp4 | /loan-emi-calculator/ | awaiting approval |
+| 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | approved (Paulson 21 Nov 12:33, with fixes: hashtags swapped) |
+| 2026-11-21 | 22:30 | reel | no | 1000 | cinematic | 2026-11-21-rbi-emi-tenure.mp4 | /loan-emi-calculator/ | approved (Paulson 21 Nov 12:33) |
 
 ```captions
 [2026-11-21 11:00]
@@ -108,7 +108,7 @@ That's ₹5,391 less per transfer, about ₹64,700 a year if you send monthly, b
 Link in bio → Compare remittance rates (AED to INR)
 Are you sending now or waiting? 👇
 Rates: rupee touched 92.995/$ on 20 Nov 2026 (Reuters); 2026 low 96.96 in late May (LKP Securities). Not financial advice.
-#aedtoinr #rupee #nri #remittance #uaeindians #calcsouq
+#aedtoinr #rupee #forex #moneytransfer #remittance #calcsouq
 
 [2026-11-21 22:30]
 RBI raised the repo rate (5.25% → 5.50%, 7 Oct 2026). Your EMI didn't change? Check your tenure.
@@ -127,8 +127,8 @@ Render: build/reels_2026_11_21_world.py. Sources in the script header.
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-22 | 10:30 | reel | no | 1000 | electro | 2026-11-21-bitcoin-half-off.mp4 | /percentage-calculator/ | awaiting approval |
-| 2026-11-22 | 14:30 | reel | no | 1000 | desi | 2026-11-21-gold-off-record.mp4 | /gold-price-calculator/ | awaiting approval |
+| 2026-11-22 | 10:30 | reel | no | 1000 | electro | 2026-11-21-bitcoin-half-off.mp4 | /percentage-calculator/ | approved (Paulson 21 Nov 12:33) |
+| 2026-11-22 | 14:30 | reel | no | 1000 | desi | 2026-11-21-gold-off-record.mp4 | /gold-price-calculator/ | approved (Paulson 21 Nov 12:33, with fixes: video re-rendered with verified $3,715 on 19 Nov) |
 
 ```captions
 [2026-11-22 10:30]
@@ -143,14 +143,14 @@ Prices: Fortune, 20 Nov 2026. Crypto is volatile. Not financial advice.
 #bitcoin #crypto #btc #investing #lossmath #calcsouq
 
 [2026-11-22 14:30]
-Gold hit a record $5,590 an ounce on 28 Jan 2026. Now it's about $3,533 (21 Nov).
+Gold hit a record $5,590 an ounce on 28 Jan 2026. On 19 Nov it was about $3,715.
 100 g of gold, spot value:
 January peak: AED 66,003
-Today: AED 41,715
-That's 37% down. To get back to the record, gold needs +58%.
+19 Nov: AED 43,864
+That's 34% down. To get back to the record, gold needs +50%.
 Bought jewellery? Making charges usually aren't paid back when you sell. Coins and bars resell closest to spot.
 Link in bio → Gold price calculator
 Are you buying the dip or waiting? 👇
-Prices: MetalCharts, 21 Nov 2026 (spot, $1 = AED 3.6725). Shop prices differ. Not financial advice.
+Prices: spot, 28 Jan and 19 Nov 2026 ($1 = AED 3.6725). Shop prices differ. Not financial advice.
 #goldprice #dubaigold #gold #goldrate #investing #calcsouq
 ```

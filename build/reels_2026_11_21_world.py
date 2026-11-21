@@ -1,7 +1,7 @@
 """CalcSouq international news reels for 2026-11-21 (bitcoin half off its high, gold 37% off its record).
 Sources (checked 21 Nov 2026):
   bitcoin: $61,321.59 at 7:15 a.m. ET 20 Nov 2026; all-time high $126,198.07 on 6 Oct 2025; $86,569.90 a year ago (Fortune, 20 Nov 2026).
-  gold:    record about $5,590/oz on 28 Jan 2026; $3,533/oz on 21 Nov 2026 (MetalCharts). AED peg 3.6725, 31.1035 g per troy oz.
+  gold:    record about $5,590/oz on 28 Jan 2026; about $3,715/oz on 19 Nov 2026 (USAGOLD daily report; Kitco ~$3,709–3,725, 18–19 Nov); earlier $3,533 figure could not be verified and was replaced. AED peg 3.6725, 31.1035 g per troy oz.
 Usage:
   python3 build/reels_2026_11_21_world.py <btc|gold> [t1,t2,...]   -> stills
   python3 build/reels_2026_11_21_world.py <btc|gold>               -> <name>_v.mp4 (silent)
@@ -16,7 +16,7 @@ BTC_NEED = BTC_ATH / BTC_NOW - 1           # +105.8%
 BTC_10K = 10000 * BTC_NOW / BTC_ATH        # $4,859
 
 PEG, OZ = 3.6725, 31.1035
-G_ATH, G_NOW = 5590, 3533
+G_ATH, G_NOW = 5590, 3715
 G_DROP = 1 - G_NOW / G_ATH                 # 36.8%
 G_NEED = G_ATH / G_NOW - 1                 # +58.2%
 G100_ATH = 100 / OZ * G_ATH * PEG          # AED 66,003
@@ -69,13 +69,13 @@ def gold_w(t):
     if t < 8.0:
         im = scene_bg(t, "night", 93); d = ImageDraw.Draw(im)
         kinetic(im, "100 g of gold (spot value)", 380, t, 3.4, 64, WHITE)
-        small(im, "Record 28 Jan 2026 vs 21 Nov 2026", 450, GOLD, 36)
+        small(im, "Record 28 Jan 2026 vs 19 Nov 2026", 450, GOLD, 36)
         row(im, 600, "January peak", AED(G100_ATH), t, 3.6)
-        row(im, 750, "Today ($3,533/oz)", AED(count(G100_ATH, G100_NOW, t, 4.8, 5.6)), t, 4.7, vcol=RED)
+        row(im, 750, "19 Nov ($3,715/oz)", AED(count(G100_ATH, G100_NOW, t, 4.8, 5.6)), t, 4.7, vcol=RED)
         row(im, 900, "Down", "−" + pc(G_DROP), t, 5.9, vcol=RED)
         coins_stack(d, 200, 1430, int(8 - 4 * seg(t, 4.8, 5.8)), 46); coins_stack(d, 880, 1430, int(8 - 4 * seg(t, 4.8, 5.8)), 46)
         souq(im, W / 2, 1280, 0.6, t, "shocked" if t > 6.0 else "thinking")
-        speech(im, W / 2 + 180, 1110, "That's AED 24,000 gone", 6.2, t, 38)
+        speech(im, W / 2 + 180, 1110, "That's AED 22,000 gone", 6.2, t, 38)
         return shake(im, t, 5.9, 18)
     if t < 11.0:
         im = scene_bg(t, "berry", 95); rays(im, W / 2, 640, t, GOLD, 26); d = ImageDraw.Draw(im)
