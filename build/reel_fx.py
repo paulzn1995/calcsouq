@@ -132,14 +132,14 @@ def speech(img, x, y, text, t0, t, size=46, fill=WHITE, ink=INK):
     if p > 0.8: d.text((x, y - h / 2), text, font=f, fill=ink, anchor="mm")
 
 # ---------- Props ----------
-def coin(d, x, y, r=50, face=GOLD):
+def coin(d, x, y, r=50, face=GOLD, sym="₹"):
     d.ellipse([x - r, y - r * 0.92 + r * 0.14, x + r, y + r * 0.92 + r * 0.14], fill=(190, 140, 0))
     d.ellipse([x - r, y - r * 0.92, x + r, y + r * 0.92], fill=face, outline=(200, 150, 0), width=max(2, int(r / 10)))
     d.ellipse([x - r * .68, y - r * .62, x + r * .68, y + r * .62], outline=(255, 235, 150), width=max(2, int(r / 14)))
-    d.text((x, y), "₹", font=F("k", r * 0.9), fill=(170, 115, 0), anchor="mm")
+    d.text((x, y), sym, font=F("k", r * 0.9), fill=(170, 115, 0), anchor="mm")
 
-def coins_stack(d, x, y, n, r=50):
-    for i in range(int(n)): coin(d, x, y - i * r * 0.32, r)
+def coins_stack(d, x, y, n, r=50, sym="₹"):
+    for i in range(int(n)): coin(d, x, y - i * r * 0.32, r, sym=sym)
 
 def note(img, x, y, w=260, rot=0, col=(110, 200, 140)):
     h = w * 0.48; n = Image.new("RGBA", (int(w), int(h)), (0, 0, 0, 0)); nd = ImageDraw.Draw(n)
