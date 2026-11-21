@@ -1,0 +1,251 @@
+1
+00:00:00,000 --> 00:00:03,385
+Nvidia, the chip maker at the heart of the AI boom,
+
+2
+00:00:03,385 --> 00:00:06,937
+has lost almost half its value in about seven weeks.
+
+3
+00:00:06,937 --> 00:00:09,818
+On Friday alone, it fell 14%.
+
+4
+00:00:09,818 --> 00:00:13,906
+The Nasdaq had its worst week since March 2020, and
+
+5
+00:00:13,906 --> 00:00:18,195
+the S&P 500 and the Dow slipped into a correction.
+
+6
+00:00:18,195 --> 00:00:19,402
+So what happened?
+
+7
+00:00:19,402 --> 00:00:21,211
+Is the AI bubble bursting?
+
+8
+00:00:21,211 --> 00:00:24,160
+And what does it mean for the future of AI?
+
+9
+00:00:24,160 --> 00:00:25,800
+Let's break it down.
+
+10
+00:00:26,300 --> 00:00:29,637
+In early October, Nvidia closed at a record of about
+
+11
+00:00:29,637 --> 00:00:34,954
+$239 a share, worth close to $6 trillion.
+
+12
+00:00:34,954 --> 00:00:39,948
+By Friday's close, it was down to about $125.
+
+13
+00:00:39,948 --> 00:00:42,866
+That's a fall of around 47%.
+
+14
+00:00:42,866 --> 00:00:47,470
+Last week alone, it dropped 23%, its worst week since
+
+15
+00:00:47,470 --> 00:00:49,780
+October 2008.
+
+16
+00:00:50,267 --> 00:00:51,663
+Reason one is money.
+
+17
+00:00:51,663 --> 00:00:55,438
+Big tech companies are spending hundreds of billions
+
+18
+00:00:55,438 --> 00:00:58,145
+of dollars on chips and data centres.
+
+19
+00:00:58,145 --> 00:01:01,921
+Investors are now asking a simple question: how fast
+
+20
+00:01:01,921 --> 00:01:04,842
+will all that spending turn into profit?
+
+21
+00:01:04,842 --> 00:01:08,475
+Nvidia's latest results beat expectations, but the
+
+22
+00:01:08,475 --> 00:01:10,042
+doubt didn't go away.
+
+23
+00:01:10,042 --> 00:01:13,676
+When a stock is priced for perfection, doubt alone
+
+24
+00:01:13,676 --> 00:01:15,187
+can push it down.
+
+25
+00:01:15,700 --> 00:01:17,301
+Reason two is politics.
+
+26
+00:01:17,301 --> 00:01:21,555
+After the US midterm elections on 3 November, investors
+
+27
+00:01:21,555 --> 00:01:25,170
+began to worry about tighter rules for AI and more
+
+28
+00:01:25,170 --> 00:01:27,864
+local opposition to new data centres.
+
+29
+00:01:27,864 --> 00:01:29,849
+Reason three is leadership.
+
+30
+00:01:29,849 --> 00:01:34,244
+On 12 November, Nvidia's co-founder and chief executive,
+
+31
+00:01:34,244 --> 00:01:37,718
+Jensen Huang, resigned after 33 years.
+
+32
+00:01:37,718 --> 00:01:41,475
+Finance chief Colette Kress is now interim CEO while
+
+33
+00:01:41,475 --> 00:01:44,540
+the board searches for a permanent one.
+
+34
+00:01:45,033 --> 00:01:46,970
+Reason four is interest rates.
+
+35
+00:01:46,970 --> 00:01:50,518
+Markets now expect the Federal Reserve to raise rates
+
+36
+00:01:50,518 --> 00:01:51,372
+in December.
+
+37
+00:01:51,372 --> 00:01:54,723
+Higher rates make future profits worth less today.
+
+38
+00:01:54,723 --> 00:01:58,140
+That hits fast-growing tech stocks hardest, because
+
+39
+00:01:58,140 --> 00:02:01,622
+so much of their value depends on profits many years
+
+40
+00:02:01,622 --> 00:02:02,513
+from now.
+
+41
+00:02:03,000 --> 00:02:04,710
+Here's the maths of a crash.
+
+42
+00:02:04,710 --> 00:02:09,141
+If you had put $1,000 into Nvidia at its October record,
+
+43
+00:02:09,141 --> 00:02:13,260
+it would now be worth about $525.
+
+44
+00:02:13,260 --> 00:02:17,067
+To get back to 1,000, the stock now has to rise about
+
+45
+00:02:17,067 --> 00:02:18,315
+91%.
+
+46
+00:02:18,315 --> 00:02:23,308
+In general, a 50% fall needs a 100% gain just to break
+
+47
+00:02:23,308 --> 00:02:23,920
+even.
+
+48
+00:02:24,433 --> 00:02:26,507
+So, is the AI bubble bursting?
+
+49
+00:02:26,507 --> 00:02:30,365
+Nobody knows for sure, but history offers two lessons.
+
+50
+00:02:30,365 --> 00:02:34,433
+After the dot-com bubble in 2000, the Nasdaq fell
+
+51
+00:02:34,433 --> 00:02:38,991
+nearly 80%, yet the internet kept growing and changed
+
+52
+00:02:38,991 --> 00:02:39,763
+the world.
+
+53
+00:02:39,763 --> 00:02:44,322
+Nvidia itself fell about two-thirds in 2022, before
+
+54
+00:02:44,322 --> 00:02:46,706
+AI demand sent it to new records.
+
+55
+00:02:46,706 --> 00:02:50,793
+Share prices and technology can move very differently.
+
+56
+00:02:51,300 --> 00:02:54,857
+What to watch next: how much big tech plans to spend
+
+57
+00:02:54,857 --> 00:02:58,514
+on AI next year, the Fed's decision in December, new
+
+58
+00:02:58,514 --> 00:03:02,309
+rules on AI and data centres, and who becomes Nvidia's
+
+59
+00:03:02,309 --> 00:03:02,999
+next CEO.
+
+60
+00:03:02,999 --> 00:03:06,588
+This video is for education, not investment advice.
+
+61
+00:03:06,588 --> 00:03:10,107
+To see how gains and losses really add up, try the
+
+62
+00:03:10,107 --> 00:03:13,488
+free percentage calculator at calcsouq.com.
+
+63
+00:03:13,488 --> 00:03:17,100
+And subscribe for more explainers like this one.
