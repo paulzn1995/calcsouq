@@ -11,7 +11,8 @@ P, N = 400000, 360
 def pay(r): i = r / 1200; return P * i / (1 - (1 + i) ** -N)
 A1, A2 = pay(6.25), pay(6.50)
 DM, DT = A2 - A1, (A2 - A1) * N            # ~$65/month, ~$23,545 over the loan
-DUR = 14
+SLOW = 1.75   # reading pace: every scene and animation 1.75x longer (Paulson: reels too fast to read)
+DUR = 14 * SLOW
 MUTE = (170, 176, 190)
 
 def row(im, y, label, val, t, t0, col=WHITE):
@@ -24,7 +25,7 @@ def row(im, y, label, val, t, t0, col=WHITE):
     d.text((x0 + 860, y), val, font=F("k", 60), fill=col, anchor="rm")
 
 def frame(i):
-    t = i / FPS
+    t = i / FPS / SLOW
     if t < 3.6:
         im = scene_bg(t, "night", 61); rays(im, W / 2, 620, t, GOLD, 22); d = ImageDraw.Draw(im)
         pill(im, W / 2, 300, "BREAKING · US FED", t, 0.0, RED, WHITE, 40)
@@ -67,5 +68,5 @@ if __name__ == "__main__":
     else:
         p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                               "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "/tmp/fed.tmp.mp4"], stdin=subprocess.PIPE)
-        for i in range(DUR * FPS): p.stdin.write(frame(i).convert("RGB").tobytes())
+        for i in range(int(DUR * FPS)): p.stdin.write(frame(i).convert("RGB").tobytes())
         p.stdin.close(); assert p.wait() == 0; os.replace("/tmp/fed.tmp.mp4", "/tmp/fed_v.mp4")

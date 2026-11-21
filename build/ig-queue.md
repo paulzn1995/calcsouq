@@ -18,6 +18,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-22 (Paulson, standing rule): reels were too fast to read. READING PACE for every reel: 18–25 s total; every line of text and every number stays fully visible for at least 3 s after it finishes animating in; no more than 2 new text items per beat; slower entrances (about 0.6 s); the reveal number holds 3–4 s; end card holds 4 s. Simple way: write the scene timings as before, then multiply time by SLOW = 1.75 (see build/reel_fed_hike.py) and scale the audio cues by the same factor.
 - 2026-11-21 Paulson: prefers broad, intriguing content built on the site's complex calculations (quiz/guess formats, simulations) over single-tool demos.
 - 2026-11-21 data (last 3 days): lowest skip (48%) and longest watch (5.4 s) = EMI reel with one concrete money question on frame 1; A/B/C quiz and long-text hooks were skipped 73–81%. Lead with a big number + question, show options after ~1 s, reveal by 9 s.
 - 2026-11-21 Trial Reels are refused by Instagram: account has too few followers. Post every reel as a normal reel until followers grow; retry trial once a week (if refused, post the same reel normally).
