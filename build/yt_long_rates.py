@@ -14,7 +14,6 @@ W, H, FPS = 1920, 1080, 30
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEXT = json.load(open(os.path.join(HERE, "youtube/long/2026-11-22-rates-rising/scenes.json")))
 AUDIO = {"S1": 22.48, "S2": 24.0, "S3": 28.4, "S4": 23.36, "S5": 26.64, "S6": 36.0, "S7": 15.84, "S8": 19.76}
-if os.path.exists("/tmp/ytl/audio.json"): AUDIO.update(json.load(open("/tmp/ytl/audio.json")))
 PAD = 0.7
 def L(s): return AUDIO[s] + PAD
 
@@ -404,7 +403,20 @@ def render(s, out_dir="/tmp/ytl"):
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    if a and a[0] == "--frame":
+    if a and a[0] == "--srt": pass
+    elif a and a[0] == "--frame":
         SCENES[a[1]](float(a[2])).convert("RGB").save(a[3])
     else:
         for s in a: render(s)
+
+def write_srt(path):
+    """Captions file for YouTube (upload as subtitles: helps search and viewers)."""
+    def ts(x): h, r = divmod(x, 3600); m, s = divmod(r, 60); return f"{int(h):02}:{int(m):02}:{int(s):02},{int(round((s % 1) * 1000)):03}"
+    off, n, out = 0.0, 1, []
+    for s in SCENES:
+        for t0, t1, line in captions(s):
+            out.append(f"{n}\n{ts(off + t0)} --> {ts(off + min(t1, AUDIO[s] + 0.2))}\n{line}\n"); n += 1
+        off += round(L(s) * FPS) / FPS
+    open(path, "w").write("\n".join(out)); print(path, n - 1, "captions")
+
+if __name__ == "__main__" and sys.argv[1:2] == ["--srt"]: write_srt(sys.argv[2])

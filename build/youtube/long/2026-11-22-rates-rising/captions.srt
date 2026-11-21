@@ -1,0 +1,275 @@
+1
+00:00:00,000 --> 00:00:03,423
+In October, India's central bank raised interest rates
+
+2
+00:00:03,423 --> 00:00:06,305
+for the first time in more than three years.
+
+3
+00:00:06,305 --> 00:00:09,827
+And in America, markets now expect the Federal Reserve
+
+4
+00:00:09,827 --> 00:00:11,620
+to raise rates in December.
+
+5
+00:00:11,620 --> 00:00:14,630
+After years of cuts, rates are going up again.
+
+6
+00:00:14,630 --> 00:00:17,961
+So what does that actually mean for your loan, your
+
+7
+00:00:17,961 --> 00:00:19,498
+rent, and your savings?
+
+8
+00:00:19,498 --> 00:00:22,680
+Let's walk through it, in about 4 minutes.
+
+9
+00:00:23,167 --> 00:00:26,099
+Think of a central bank as the bank for banks.
+
+10
+00:00:26,099 --> 00:00:29,454
+When your bank needs money overnight, it borrows at
+
+11
+00:00:29,454 --> 00:00:31,067
+the central bank's rate.
+
+12
+00:00:31,067 --> 00:00:35,002
+In India, that's the repo rate, now 5.5%.
+
+13
+00:00:35,002 --> 00:00:38,292
+In the United States, it's the federal funds rate,
+
+14
+00:00:38,292 --> 00:00:41,712
+now between 3.75% and 4%.
+
+15
+00:00:41,712 --> 00:00:45,131
+When that rate goes up, money becomes more expensive
+
+16
+00:00:45,131 --> 00:00:47,367
+for every bank in the country.
+
+17
+00:00:47,867 --> 00:00:51,588
+So why would anyone make money more expensive on purpose?
+
+18
+00:00:51,588 --> 00:00:52,972
+One word: inflation.
+
+19
+00:00:52,972 --> 00:00:56,662
+When prices rise too fast, a central bank raises rates,
+
+20
+00:00:56,662 --> 00:01:00,155
+so people borrow and spend a little less, and prices
+
+21
+00:01:00,155 --> 00:01:00,879
+cool down.
+
+22
+00:01:00,879 --> 00:01:05,360
+This year, oil jumped above $100 a barrel during the
+
+23
+00:01:05,360 --> 00:01:08,721
+conflict in West Asia, and that pushed up the cost
+
+24
+00:01:08,721 --> 00:01:12,081
+of almost everything that has to be made or moved.
+
+25
+00:01:12,081 --> 00:01:15,508
+Central banks are trying to stop that from becoming
+
+26
+00:01:15,508 --> 00:01:16,467
+permanent.
+
+27
+00:01:16,967 --> 00:01:18,028
+Here's the chain.
+
+28
+00:01:18,028 --> 00:01:20,222
+The central bank raises its rate.
+
+29
+00:01:20,222 --> 00:01:23,449
+Banks now pay more to borrow, so they charge more
+
+30
+00:01:23,449 --> 00:01:24,030
+to lend.
+
+31
+00:01:24,030 --> 00:01:27,579
+Floating-rate home loans, car loans and business loans
+
+32
+00:01:27,579 --> 00:01:28,482
+reset higher.
+
+33
+00:01:28,482 --> 00:01:31,773
+And companies paying more interest often pass some
+
+34
+00:01:31,773 --> 00:01:34,354
+of it on in their prices, and in rents.
+
+35
+00:01:34,354 --> 00:01:37,839
+It doesn't happen overnight, but within a few months,
+
+36
+00:01:37,839 --> 00:01:40,527
+it shows up in your monthly payments.
+
+37
+00:01:41,033 --> 00:01:42,497
+Let's put a number on it.
+
+38
+00:01:42,497 --> 00:01:46,466
+Take a $400,000 home loan, over 30 years.
+
+39
+00:01:46,466 --> 00:01:53,201
+At 6.25%, the payment is about $2,463 a month.
+
+40
+00:01:53,201 --> 00:01:58,192
+At 6.5%, it's about $2,528.
+
+41
+00:01:58,192 --> 00:02:02,161
+Just a quarter of a percent adds $65, every single
+
+42
+00:02:02,161 --> 00:02:02,582
+month.
+
+43
+00:02:02,582 --> 00:02:07,873
+That's about $23,500 over the life of the loan.
+
+44
+00:02:08,367 --> 00:02:11,620
+Now, many banks don't raise your payment at all.
+
+45
+00:02:11,620 --> 00:02:14,700
+Instead, they quietly make your loan longer.
+
+46
+00:02:14,700 --> 00:02:18,533
+Your EMI stays the same, but you pay for more months,
+
+47
+00:02:18,533 --> 00:02:20,791
+and that usually costs far more.
+
+48
+00:02:20,791 --> 00:02:25,035
+On a ₹50 lakh loan over 20 years, a quarter-point
+
+49
+00:02:25,035 --> 00:02:30,510
+rise means paying about ₹780 more each month, around
+
+50
+00:02:30,510 --> 00:02:32,974
+₹1.9 lakh extra in total.
+
+51
+00:02:32,974 --> 00:02:36,601
+Keep the same EMI instead, and the loan runs about
+
+52
+00:02:36,601 --> 00:02:39,407
+a year longer, costing nearly ₹5 lakh.
+
+53
+00:02:39,407 --> 00:02:43,035
+So if your bank extends your loan, ask about raising
+
+54
+00:02:43,035 --> 00:02:44,567
+the EMI instead.
+
+55
+00:02:45,067 --> 00:02:46,584
+There is good news too.
+
+56
+00:02:46,584 --> 00:02:50,494
+When rates rise, banks usually pay more on fixed deposits
+
+57
+00:02:50,494 --> 00:02:51,370
+and savings.
+
+58
+00:02:51,370 --> 00:02:54,875
+If you have cash sitting idle, it's worth comparing
+
+59
+00:02:54,875 --> 00:02:56,156
+deposit rates now.
+
+60
+00:02:56,156 --> 00:02:59,526
+Just remember, a higher rate only really helps if
+
+61
+00:02:59,526 --> 00:03:01,107
+it beats inflation.
+
+62
+00:03:01,600 --> 00:03:04,721
+So, rising rates mean dearer loans, a little relief
+
+63
+00:03:04,721 --> 00:03:08,252
+for savers, and a good reason to check your own numbers.
+
+64
+00:03:08,252 --> 00:03:10,915
+You can do that free at calcsouq.com.
+
+65
+00:03:10,915 --> 00:03:14,198
+Our mortgage and EMI calculators show exactly what
+
+66
+00:03:14,198 --> 00:03:15,995
+a rate change means for you.
+
+67
+00:03:15,995 --> 00:03:19,154
+If this helped, subscribe for more explainers like
+
+68
+00:03:19,154 --> 00:03:19,773
+this one.
+
+69
+00:03:19,773 --> 00:03:21,560
+See you in the next one.

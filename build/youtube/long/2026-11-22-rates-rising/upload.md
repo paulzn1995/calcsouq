@@ -1,4 +1,4 @@
-# Long video #1: upload details (waiting for Paulson's approval)
+# Long video #1: upload details (approved by Paulson 22 Nov; he uploads it himself)
 
 Final video: ElevenLabs flow Gd8TE6g98jokV4fMXnei, composition node hCHLaV64y4JH4wuuXgx3, generation rUBpZKcXjScSd9P6lAmv (1920x1080, 3:23).
 Parts: silent animation build/yt_long_rates.py -> /media/yt/2026-11-22-rates-rising-silent.mp4; 8 Bella (eleven_v4) narration clips; instrumental music (eleven_music_v2_5, 203 s).
@@ -22,10 +22,21 @@ India's central bank raised rates in October for the first time in more than thr
 Check your own numbers free (no sign-up): https://www.calcsouq.com
 Mortgage calculator: https://www.calcsouq.com/mortgage-calculator/
 
-Figures are worked examples for education only, not financial advice. Rates checked on 22 November 2026.
+Figures checked on 22 November 2026. Worked examples for education only, not financial advice.
+
+#InterestRates #HomeLoan #PersonalFinance
 
 ## Tags
 interest rates, rate hike, repo rate, RBI, Federal Reserve, Fed rate hike, inflation, home loan, mortgage, EMI, loan tenure, fixed deposit, personal finance explained, calcsouq
 
 ## Category
 Education
+
+## Language
+English
+
+## Thumbnail
+https://www.calcsouq.com/media/yt/2026-11-22-rates-rising/thumbnail.jpg
+
+## Captions (upload as English subtitles)
+https://www.calcsouq.com/media/yt/2026-11-22-rates-rising/captions.srt
