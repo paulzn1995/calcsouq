@@ -133,7 +133,6 @@ td{border-bottom:1px solid var(--line);padding:9px 6px}td.n,th.n{text-align:righ
 .share svg{width:17px;height:17px}
 .fb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;font-size:14px;color:var(--mute)}
 .install{display:none}.install.show{display:flex}
-footer.site .co{margin-top:6px;color:var(--ink)}
 footer.site{margin-top:64px;padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line);background:var(--surface)}
 footer.site nav{display:flex;flex-wrap:wrap;gap:4px 18px;margin-bottom:10px}footer.site a{color:var(--mute)}
 .scroll{overflow-x:auto}

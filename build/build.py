@@ -121,7 +121,7 @@ LANGROW = '<div class="langrow">' + base.GLOBE + '<span>Also in your language:</
 
 # Home
 hd = "Free online calculators and tools: photo resizer, loan EMI, gold price, currency, salary and end-of-service pay, trading risk and property costs. Formulas explained, sources linked, no sign-up."
-ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd, "publisher": {"@type": "Organization", "name": base.COMPANY, "url": cfg["url"].rstrip("/") + "/"}}
+ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd}
 home = head(cfg, f"{SITE_NAME}: Free Online Calculators & Tools (Photo Resizer, EMI, Gold, Gratuity, Trading)", hd, "/",
             "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site], alts=HOME_ALTS)
 home += '<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>Free calculators and tools for <em>money, work and everyday forms</em></h1>'
