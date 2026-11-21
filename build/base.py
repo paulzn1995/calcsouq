@@ -139,6 +139,7 @@ td{border-bottom:1px solid var(--line);padding:9px 6px}td.n,th.n{text-align:righ
 .share svg{width:17px;height:17px}
 .fb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;font-size:14px;color:var(--mute)}
 .install{display:none}.install.show{display:flex}
+footer.site .co{margin-top:6px;color:var(--ink)}
 footer.site{margin-top:64px;padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line);background:var(--surface)}
 footer.site nav{display:flex;flex-wrap:wrap;gap:4px 18px;margin-bottom:10px}footer.site a{color:var(--mute)}
 .scroll{overflow-x:auto}
@@ -390,6 +391,7 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
 
 VER = hashlib.md5((CSS + JS).encode()).hexdigest()[:8]
 
+COMPANY = "Amal Paulson & Rickson"
 NAV = [("Calculators", "/#calculators"), ("Guides", "/guides/"), ("About", "/about/")]
 LANG_UI = [("en", "English", "/"), ("hi", "हिन्दी", "/hi/"), ("zh", "中文", "/zh/"), ("ru", "Русский", "/ru/"), ("ml", "മലയാളം", "/ml/")]
 LOCALE = {"en": "en_GB", "hi": "hi_IN", "zh": "zh_CN", "ru": "ru_RU", "ml": "ml_IN"}
@@ -485,6 +487,7 @@ def foot(extra_js=""):
     return f"""<footer class="site"><div class="wrap">
 <nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/hi/" lang="hi">हिन्दी</a><a href="/zh/" lang="zh">中文</a><a href="/ru/" lang="ru">Русский</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
 <p>© <span class="yr">2026</span> {SITE_NAME}. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
+<p class="co">{SITE_NAME} is owned and operated by <b>{html.escape(COMPANY)}</b>.</p>
 </div></footer>
 <script src="/assets/site.js?v={VER}"></script>
 {extra_js}
