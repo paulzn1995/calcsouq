@@ -1,4 +1,4 @@
-# Daily long YouTube video: playbook (agent follows this exactly)
+# Long YouTube video (Mon, Wed, Fri): playbook (agent follows this exactly)
 
 Paulson approved video #1 (`long/2026-11-22-rates-rising/`) as the standard. **Paulson uploads every video himself.** The agent never uploads or posts anything to YouTube or any other platform.
 
@@ -84,8 +84,15 @@ Paulson approved video #1 (`long/2026-11-22-rates-rising/`) as the standard. **P
 - Add a row to `youtube/long/log.md` (date, topic, flow id, generation id, "ready for Paulson"). Commit and push.
 
 ## 9. Tell Paulson (he is often on his phone)
+Paulson wants to download the video inside Claude, not in ElevenLabs.
+- Get a fresh `full_res_url` (the direct content.mp4) with `creative_get_generations`.
+- Then try `curl -fL -o <folder>.mp4 "<full_res_url>"` in the shell.
+  - If it works, check the file with ffprobe (it should have video and audio, about 3 min), then send it with **SendUserFile** (display: attach), named `<YYYY-MM-DD>-<slug>.mp4`.
+  - If the proxy refuses (403), the host elevenlabsusercontent.com is not allowed for this session. Say so in one line and give the direct `full_res_url` instead. It opens and downloads straight in the phone browser with no ElevenLabs login, but it expires at about 04:00 Dubai, so tell him to download it soon. Also say that adding elevenlabsusercontent.com to Allowed domains (claude.ai → Settings → Capabilities) lets you attach the file in Claude.
+- Also send thumbnail.jpg and captions.srt with SendUserFile.
+
 Send ONE message, plus a push notification, containing:
-1. The video link to watch and download: the composition's `generation_url`.
+1. The video, attached as described above. If attaching failed, give the direct link and its expiry.
 2. The thumbnail and captions links.
 3. The title, description, tags and hashtags in copy-ready blocks.
 4. "Upload tip": the best time to publish is usually the agent's recommendation based on the topic's main audience (e.g. 6–8 pm in India = 4:30–6:30 pm Dubai; for US topics, 7–9 am Eastern = 4–6 pm Dubai).
