@@ -27,6 +27,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 | Reel | F&O margin calculator: futures, calendar spread, iron condor vs strangle, lot sizes | build/static/media/ig/2026-11-21-margin-calculator.mp4 | posted 2026-11-21, media 18143848828618251 |
 
 ## Topic calendar
+Milestone/meme posts: 0 → 1 follower 'Yipeee' reel (21 Nov).
 Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner (21 Nov).
 Ideas next: FD vs SIP, GST slabs, gratuity 21 vs 30 days, position sizing, compound interest doubling, BMI, working days to deadline.
 
@@ -44,7 +45,7 @@ Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories
 | 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | approved |
 | 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | approved (Paulson 21 Nov 12:33, with fixes: hashtags swapped) |
 | 2026-11-21 | 22:30 | reel | no | 1000 | cinematic | 2026-11-21-rbi-emi-tenure.mp4 | /loan-emi-calculator/ | approved (Paulson 21 Nov 12:33) |
-| 2026-11-21 | 16:30 | reel | no | 0 | funk | 2026-11-21-first-follower.mp4 | / | approved (Paulson asked in chat to create and post it, 21 Nov) |
+| 2026-11-21 | 16:30 | reel | no | 0 | funk | 2026-11-21-first-follower.mp4 | / | posted 16:34 Dubai (Paulson asked in chat to create and post it), media 18119711036153466 |
 
 ```captions
 [2026-11-21 11:00]
@@ -122,6 +123,14 @@ Link in bio → Loan EMI calculator
 Did your bank extend your tenure? 👇
 Example: full 20-year loan repriced at 8.25%; your rate and bank's spread will differ. Not financial advice.
 #homeloan #emi #rbi #reporate #interestrates #calcsouq
+
+[2026-11-21 first-follower]
+From 0 followers to 1 follower. Yipeeeeeeee 🎉
+To our one follower: you are literally the whole fan club. 🙏
+Want to be follower #2? We make free calculators for EMI, tax, gold, SIP, salary and more.
+Link in bio → calcsouq.com
+Tag someone who'd follow a calculator page 👇
+#firstfollower #smallbeginnings #growthjourney #relatable #startuplife #calcsouq
 ```
 
 ## 2026-11-22 international news reels (made in Paulson's chat 21 Nov; slots are Dubai time)
