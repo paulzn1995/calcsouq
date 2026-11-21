@@ -40,7 +40,7 @@ Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories
 | 2026-11-21 | 12:00 | story | — | — | — | 2026-11-21-story-gold-quiz.jpg | /gold-price-calculator/ | posted 12:03 Dubai (approved by Paulson in chat), media 18080585141724366 |
 | 2026-11-21 | 13:30 | reel | no | 2000 | cinematic | 2026-11-21-dubai-property-costs.mp4 | /property-buying-cost-calculator/ | posted 16:06 Dubai (approved; late, slot was missed), media 18501931339100504 |
 | 2026-11-21 | 16:00 | reel | yes | 1800 | pop | 2026-11-21-life-in-numbers.mp4 | /age-calculator/ | posted 16:06 Dubai (approved; trial refused: too few followers, posted as normal reel), media 17882995719553346 |
-| 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | approved |
+| 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | posted 18:03 Dubai (approved), media 18119707631107659 |
 | 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | approved |
 | 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | approved |
 | 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | approved (Paulson 21 Nov 12:33, with fixes: hashtags swapped) |
