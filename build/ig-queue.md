@@ -166,4 +166,4 @@ Prices: spot, 28 Jan and 19 Nov 2026 ($1 = AED 3.6725). Shop prices differ. Not 
 #goldprice #dubaigold #gold #goldrate #investing #calcsouq
 ```
 
-| 2026-11-22 | 00:20 | reel | no | 2800 | cinematic | 2026-11-22-fed-hike-mortgage.mp4 | /mortgage-calculator/ | approved (Paulson asked in chat 22 Nov 00:10: "create and post") — posting now |
+| 2026-11-22 | 00:20 | reel | no | 2800 | cinematic | 2026-11-22-fed-hike-mortgage.mp4 | /mortgage-calculator/ | posted 22 Nov 00:17 Dubai (Paulson asked in chat: "create and post"), media 18126261127933091 |
