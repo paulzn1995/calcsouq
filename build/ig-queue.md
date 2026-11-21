@@ -41,6 +41,8 @@ Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories
 | 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | approved |
 | 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | approved |
 | 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | approved |
+| 2026-11-21 | 20:00 | reel | no | 1000 | electro | 2026-11-21-rupee-93.mp4 | /compare-remittance-aed-to-inr/ | awaiting approval |
+| 2026-11-21 | 22:30 | reel | no | 1000 | cinematic | 2026-11-21-rbi-emi-tenure.mp4 | /loan-emi-calculator/ | awaiting approval |
 
 ```captions
 [2026-11-21 11:00]
@@ -96,4 +98,26 @@ Link in bio → Savings goal planner
 What's your target number? 👇
 Assumes ₹24 per AED, starting from zero, AED 8,000 basic for gratuity. Returns are not guaranteed. Not investment advice.
 #savingsgoal #onecrore #financialplanning #moneygoals #gratuity #calcsouq
+
+[2026-11-21 20:00]
+The rupee just hit 93 per dollar: its strongest since April. Great news? Not if you send money home.
+AED is pegged at 3.6725 per $, so a strong rupee means fewer rupees per dirham.
+AED 5,000 at the late-May low (₹96.96/$): ₹1,32,008
+AED 5,000 now (₹93.00/$): ₹1,26,617
+That's ₹5,391 less per transfer, about ₹64,700 a year if you send monthly, before your exchange house's margin.
+Link in bio → Compare remittance rates (AED to INR)
+Are you sending now or waiting? 👇
+Rates: rupee touched 92.995/$ on 20 Nov 2026 (Reuters); 2026 low 96.96 in late May (LKP Securities). Not financial advice.
+#aedtoinr #rupee #nri #remittance #uaeindians #calcsouq
+
+[2026-11-21 22:30]
+RBI raised the repo rate (5.25% → 5.50%, 7 Oct 2026). Your EMI didn't change? Check your tenure.
+₹50 lakh home loan, 20 years, 8.00% → 8.25%:
+A) EMI up ₹781 a month → about ₹1.88 lakh extra over the loan
+B) Same EMI, 12 more months → about ₹4.96 lakh extra
+A longer tenure costs about 2.6× more. You can ask your bank to raise the EMI instead (or do both).
+Link in bio → Loan EMI calculator
+Did your bank extend your tenure? 👇
+Example: full 20-year loan repriced at 8.25%; your rate and bank's spread will differ. Not financial advice.
+#homeloan #emi #rbi #reporate #interestrates #calcsouq
 ```
