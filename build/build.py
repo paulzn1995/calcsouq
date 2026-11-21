@@ -111,7 +111,7 @@ for code in LORDER:
         page = tr(page, L["common_rep"])
         w(p.strip("/") + "/index.html", page)
     mh = head(cfg, L["home_title"], L["home_desc"], f"/{code}/", L["home_kw"], [], lang=code, alts=HOME_ALTS)
-    mh += f'<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>{L["home_h1"]}</h1><p class="lede">{L["home_lede"]}</p><div class="langrow">' + base.GLOBE + "".join(f'<a href="{"/" if c == "en" else "/" + c + "/"}" lang="{c}">{n}</a>' for c, n, _ in base.LANG_UI if c != code) + '</div></div>' + base.HERO_ART + '</section>'
+    mh += f'<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>{L["home_h1"]}</h1><p class="lede">{L["home_lede"]}</p><div class="langrow">' + base.GLOBE + "".join(f'<a href="{"/" if c == "en" else "/" + c + "/"}" lang="{c}">{n}</a>' for c, n, _ in base.LANG_UI if c != code) + '</div>' + base.SOCIAL + '</div>' + base.HERO_ART + '</section>'
     mh += '<div class="grid" style="margin-top:22px">' + "".join(lcard(code, x) for x in T) + '</div>' + ad()
     mh += f'<p class="hint" style="margin-top:22px">{L["english_more"]} <a href="/" lang="en">CalcSouq (English)</a> · ' + " · ".join(lang_switch(code)[1:]) + '</p></main>' + foot()
     mh = tr(mh, L["common_rep"])
@@ -122,12 +122,14 @@ LANGROW = '<div class="langrow">' + base.GLOBE + '<span>Also in your language:</
 # Home
 hd = "Free online calculators and tools: photo resizer, loan EMI, gold price, currency, salary and end-of-service pay, trading risk and property costs. Formulas explained, sources linked, no sign-up."
 ld_site = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "description": hd}
+ld_org = {"@context": "https://schema.org", "@type": "Organization", "name": SITE_NAME, "url": cfg["url"].rstrip("/") + "/", "sameAs": [base.IG_URL, base.YT_URL]}
 home = head(cfg, f"{SITE_NAME}: Free Online Calculators & Tools (Photo Resizer, EMI, Gold, Gratuity, Trading)", hd, "/",
-            "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site], alts=HOME_ALTS)
+            "free online calculators, photo resizer, resize photo to kb, emi calculator, gold price calculator, gratuity calculator, final settlement calculator, position size calculator, currency calculator, land area converter", [ld_site, ld_org], alts=HOME_ALTS)
 home += '<main class="wrap"><section class="hero split"><div class="hero-txt"><h1>Free calculators and tools for <em>money, work and everyday forms</em></h1>'
 home += '<p class="lede">Resize photos for applications, plan loans and savings, price gold, check salary and end-of-service pay, size trades and cost a property. Each tool shows its formula and sources, and works without sign-up.</p>'
 home += base.SEARCH.replace('placeholder="Search calculators and guides"', 'placeholder="What do you want to calculate? e.g. resize photo, EMI, gold, gratuity"')
-home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div>' + LANGROW + '</div>' + base.HERO_ART + '</section>'
+home += '<div class="chips">' + "".join(f'<a href="/{x}/">{n}</a>' for n, x in [("Photo resizer", "photo-resizer"), ("JPG to PDF", "image-to-pdf"), ("Age", "age-calculator"), ("Percentage", "percentage-calculator"), ("SIP", "sip-calculator"), ("GST", "gst-calculator"), ("Loan EMI", "loan-emi-calculator"), ("Gold price", "gold-price-calculator")]) + '</div>' + LANGROW + base.SOCIAL + '</div>' + base.HERO_ART + '</section>'
+home += '<div class="ticker" aria-hidden="true"><div class="tk">' + ''.join(f'<span>{x}</span>' for x in [f"{len(TOOLS)//10*10}+ free tools", "No sign-up", "Runs in your browser", "Formulas and sources shown", "English · हिन्दी · 中文 · Русский · മലയാളം", "New explainers on YouTube"] * 2) + '</div></div>'
 home += '<div class="install card" style="margin:22px 0 0;align-items:center;flex-wrap:wrap"><div class="ic">' + ICONS["money"] + '</div><div style="flex:1 1 200px"><b>Add CalcSouq to your home screen</b><span>Open any calculator in one tap.</span><span class="ios" hidden> On iPhone: tap Share, then Add to Home Screen.</span></div><button type="button" class="btn primary">Install</button></div>'
 _ord = ["trading-strategy-simulator", "gulf-savings-return-planner", "uae-final-settlement-calculator", "property-buying-cost-calculator"]
 uq = sorted([t for t in TOOLS if t.get("unique")], key=lambda t: _ord.index(t["slug"]) if t["slug"] in _ord else 99)

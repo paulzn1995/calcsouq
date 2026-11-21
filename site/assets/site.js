@@ -7,10 +7,10 @@
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   if (!reduce) {
   // Desktop ambience: drifting math symbols and parallax hero art
-  if (innerWidth >= 900) {
+  {
     const fx = document.createElement('div'); fx.className = 'bgfx'; fx.setAttribute('aria-hidden', 'true');
     const sy = ['%', '+', '÷', '×', '=', '∑', '$', '€', '₹', '¥', '£', '√', 'π', '%', '+', '−', '∞', '¢'];
-    sy.forEach((c, i) => { const e = document.createElement('span'); e.textContent = c;
+    (innerWidth < 900 ? sy.slice(0, 9) : sy).forEach((c, i) => { const e = document.createElement('span'); e.textContent = c;
       e.style.cssText = `left:${(i * 53 + 7) % 100}vw;--s:${18 + (i * 7) % 26}px;--t:${45 + (i * 11) % 40}s;--dl:-${(i * 13) % 60}s;--x:${((i % 5) - 2) * 6}vw;--r:${((i % 7) - 3) * 30}deg`;
       fx.appendChild(e); });
     document.body.appendChild(fx);

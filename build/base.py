@@ -239,8 +239,37 @@ details{transition:background .2s}details[open] summary~*{animation:rise .35s cu
 .bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .bgfx span{position:absolute;bottom:-60px;font:600 var(--s,28px)/1 Inter,system-ui,sans-serif;color:light-dark(rgba(21,23,26,.07),rgba(255,255,255,.06));animation:up var(--t,60s) linear infinite;animation-delay:var(--dl,0s)}
 @keyframes up{to{transform:translate3d(var(--x,0),-115vh,0) rotate(var(--r,40deg))}}
-@media(max-width:899px){.bgfx{display:none}}
 
+
+
+/* ---- Social links ---- */
+.social{display:flex;flex-wrap:wrap;gap:8px}
+.social a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)!important;text-decoration:none;font-weight:650;font-size:14px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.social a svg{width:18px;height:18px}
+.social a.ig svg{color:#d6297a}.social a.yt svg{color:#e5251b}
+.social a:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 8px 18px -12px rgba(16,24,40,.45)}
+.follow{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin:6px 0 14px}.follow>span{font-weight:650;color:var(--ink)}
+.hero .social{margin-top:16px;animation:rise .7s .32s cubic-bezier(.2,.7,.2,1) both}
+/* ---- Premium first screen ---- */
+.ticker{position:relative;overflow:hidden;margin:26px 0 4px;border-block:1px solid var(--line);background:light-dark(rgba(255,255,255,.55),rgba(255,255,255,.03));-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ticker .tk{display:flex;width:max-content;gap:0;animation:tk 32s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;font-weight:650;font-size:15px;white-space:nowrap;color:var(--ink)}
+.ticker span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px light-dark(rgba(245,195,0,.18),rgba(245,195,0,.12))}
+@keyframes tk{to{transform:translateX(-50%)}}
+.hero.split::after{content:"";position:absolute;z-index:-1;pointer-events:none;inset:10px -20px 0;border-radius:32px;background:linear-gradient(135deg,light-dark(rgba(255,255,255,.75),rgba(255,255,255,.04)),light-dark(rgba(255,247,214,.55),rgba(245,195,0,.05)));border:1px solid light-dark(rgba(245,195,0,.25),rgba(245,195,0,.12));box-shadow:0 30px 60px -40px rgba(16,24,40,.35)}
+@media(max-width:999px){
+ .hero.split{display:flex;flex-direction:column;padding:22px 0 8px}
+ .hero.split::after{inset:4px -10px 0;height:auto;border-radius:24px}
+ .hero.split .hero-art{display:block;order:-1;width:min(78vw,300px);aspect-ratio:46/40;margin:2px auto 6px;animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+ .hero.split .hero-art svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 14px 18px rgba(16,24,40,.18))}
+ .hero.split .hero-txt{padding:0 6px}
+ .hero.split h1{font-size:clamp(28px,7.4vw,38px);line-height:1.1;text-align:center}
+ .hero.split .lede{text-align:center}
+ .hero.split .chips,.hero.split .social,.hero.split .langrow{justify-content:center}
+ .card:active{transform:scale(.97);border-color:var(--gold)}
+ .bgfx span{color:light-dark(rgba(21,23,26,.06),rgba(255,255,255,.05))}
+}
+@media(max-width:899px){.bgfx{display:block}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
 """
@@ -254,10 +283,10 @@ JS = r"""// Shared helpers: formatting, remembered inputs, year.
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   if (!reduce) {
   // Desktop ambience: drifting math symbols and parallax hero art
-  if (innerWidth >= 900) {
+  {
     const fx = document.createElement('div'); fx.className = 'bgfx'; fx.setAttribute('aria-hidden', 'true');
     const sy = ['%', '+', '÷', '×', '=', '∑', '$', '€', '₹', '¥', '£', '√', 'π', '%', '+', '−', '∞', '¢'];
-    sy.forEach((c, i) => { const e = document.createElement('span'); e.textContent = c;
+    (innerWidth < 900 ? sy.slice(0, 9) : sy).forEach((c, i) => { const e = document.createElement('span'); e.textContent = c;
       e.style.cssText = `left:${(i * 53 + 7) % 100}vw;--s:${18 + (i * 7) % 26}px;--t:${45 + (i * 11) % 40}s;--dl:-${(i * 13) % 60}s;--x:${((i % 5) - 2) * 6}vw;--r:${((i % 7) - 3) * 30}deg`;
       fx.appendChild(e); });
     document.body.appendChild(fx);
@@ -481,9 +510,18 @@ def ad(label="Advertisement"):
     return f'<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">{label}</div><div class="stall-body">{body}</div></div></aside>'
 
 
+IG_URL = "https://www.instagram.com/calcsouq/"
+YT_URL = "https://www.youtube.com/@calcsouq"
+_IG = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>'
+_YT = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5.2 3L10 15z" fill="currentColor"/></svg>'
+SOCIAL = (f'<div class="social"><a class="ig" href="{IG_URL}" target="_blank" rel="noopener me">{_IG}<span>Instagram</span></a>'
+          f'<a class="yt" href="{YT_URL}" target="_blank" rel="noopener me">{_YT}<span>YouTube</span></a></div>')
+
+
 def foot(extra_js=""):
     return f"""<footer class="site"><div class="wrap">
 <nav aria-label="Footer"><a href="/#calculators">All calculators</a><a href="/guides/">Guides</a><a href="/templates/">Templates</a><a href="/hi/" lang="hi">हिन्दी</a><a href="/zh/" lang="zh">中文</a><a href="/ru/" lang="ru">Русский</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">About</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<div class="follow"><span>Follow CalcSouq</span>{SOCIAL}</div>
 <p>© <span class="yr">2026</span> {SITE_NAME}. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
 </div></footer>
 <script src="/assets/site.js?v={VER}"></script>
