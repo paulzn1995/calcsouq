@@ -86,7 +86,7 @@ Paulson approved video #1 (`long/2026-11-22-rates-rising/`) as the standard. **P
 ## 8b. Instagram teaser (automatic — Paulson's standing rule, 22 Nov 2026)
 Every long video also gets an Instagram teaser reel that is posted automatically:
 - 1080x1920, 20–25 s, reading pace (AGENTS.md rule), made with build/reel_fx.py + build/reel_audio.py (reference: build/reel_nvda_teaser.py). Hook number first, 3–4 key points, one worked example, end on "Full explainer on YouTube · youtube.com/@calcsouq · link in bio". Same verified facts as the video.
-- Save to build/static/media/ig/<date>-<slug>-teaser.mp4 and add a row under "## YouTube teaser reels" in build/ig-queue.md, slot 17:30 Dubai the same day, status `approved (Paulson standing rule 22 Nov: YouTube teasers post automatically)`, with the caption block (hook, key numbers, "Full explainer on our YouTube: youtube.com/@calcsouq (link in bio)", tool link, sources/date, "Education only, not investment advice." when about money, 4–6 hashtags). The existing Instagram poster publishes it.
+- Save to build/static/media/ig/<date>-<slug>-teaser.mp4 and add a row under "## YouTube teaser reels" in build/ig-queue.md, slot 17:30 Dubai the same day, status exactly `approved` (the poster only publishes that exact word; the rule is Paulson's standing approval of 22 Nov), with the caption block (hook, key numbers, "Full explainer on our YouTube: youtube.com/@calcsouq (link in bio)", tool link, sources/date, "Education only, not investment advice." when about money, 4–6 hashtags). The existing Instagram poster publishes it.
 - Mention the teaser and its slot in the message to Paulson.
 
 ## 9. Tell Paulson (he is often on his phone)
