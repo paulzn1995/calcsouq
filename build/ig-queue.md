@@ -169,3 +169,30 @@ Prices: spot, 28 Jan and 19 Nov 2026 ($1 = AED 3.6725). Shop prices differ. Not 
 
 | 2026-11-22 | 00:20 | reel | no | 2800 | cinematic | 2026-11-22-fed-hike-mortgage.mp4 | /mortgage-calculator/ | posted 22 Nov 00:17 Dubai (Paulson asked in chat: "create and post"), media 18126261127933091 |
 | 2026-11-22 | 00:27 | reel | no | 4900 | cinematic | 2026-11-22-fed-hike-mortgage-slow.mp4 | /mortgage-calculator/ | posted 22 Nov 00:27 Dubai (Paulson: "post now"; reading-pace version, 24.5 s), media 18136312300685864. The 14 s version (18126261127933091) is still live until Paulson deletes it in the app |
+
+## YouTube teaser reels (Paulson, 22 Nov 03:09: "whenever we create a YouTube video make its insta post also with youtube link and post it automatically")
+Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pace) that ends "Full explainer on YouTube · youtube.com/@calcsouq · link in bio". The teaser row is created with status `approved (Paulson standing rule 22 Nov: YouTube teasers post automatically)` and the poster publishes it at its slot. Slot: same day, 17:30 Dubai (or the next free slot).
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | approved (Paulson standing rule 22 Nov: YouTube teasers post automatically) |
+
+[2026-11-22 17:30]
+```
+Nvidia just lost almost half its value 📉 Is the AI bubble bursting?
+
+From a ~$239 record (6 Oct) to $125.53 (20 Nov): about −47% in seven weeks. 4 reasons:
+1️⃣ Doubts that AI spending turns into profit fast enough
+2️⃣ Fears of tighter AI rules and data-centre pushback after the US midterms
+3️⃣ CEO Jensen Huang resigned on 12 Nov
+4️⃣ A Fed rate hike expected in December
+
+The maths: $1,000 at the record = about $525 now, and it needs +91% just to get back.
+
+▶️ Full 3-minute explainer on our YouTube: youtube.com/@calcsouq (link in bio)
+Work out any gain or loss: calcsouq.com/percentage-calculator
+
+Sources: company filing, AP/Reuters market reports, 20–21 Nov 2026. Education only, not investment advice.
+
+#nvidia #aibubble #stockmarket #nasdaq #calcsouq
+```
