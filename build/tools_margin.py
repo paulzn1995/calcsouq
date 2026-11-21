@@ -173,7 +173,7 @@ body="""
 <tr><td>NSE</td><td>Nifty 50</td><td>65</td></tr><tr><td>NSE</td><td>Nifty Bank</td><td>30</td></tr><tr><td>NSE</td><td>Nifty Financial Services</td><td>60</td></tr><tr><td>NSE</td><td>Nifty Midcap Select</td><td>120</td></tr><tr><td>NSE</td><td>Nifty Next 50</td><td>25</td></tr>
 <tr><td>BSE</td><td>Sensex</td><td>20 (25 for expiries from January 2027)</td></tr><tr><td>BSE</td><td>Bankex</td><td>30</td></tr><tr><td>BSE</td><td>Sensex 50</td><td>75</td></tr>
 <tr><td>LME</td><td>Copper, aluminium, zinc, lead</td><td>25 tonnes</td></tr><tr><td>LME</td><td>Nickel</td><td>6 tonnes</td></tr><tr><td>LME</td><td>Tin</td><td>5 tonnes</td></tr>
-<tr><td>CME</td><td>E-mini S&amp;P 500 / Micro</td><td>$50 / $5 × index</td></tr><tr><td>CME</td><td>E-mini Nasdaq-100 / Micro</td><td>$20 / $2 × index</td></tr><tr><td>CME</td><td>WTI crude oil</td><td>1,000 barrels</td></tr><tr><td>CME (COMEX)</td><td>Gold / Micro gold</td><td>100 / 10 troy oz</td></tr>
+<tr><td>CME</td><td>E-mini S&amp;P 500 / Micro</td><td>$50 / $5 × index</td></tr><tr><td>CME</td><td>E-mini Nasdaq-100 / Micro</td><td>$20 / $2 × index</td></tr><tr><td>CME</td><td>WTI crude oil</td><td>1,000 barrels</td></tr><tr><td>CME (CBOT)</td><td>E-mini Dow</td><td>$5 × index</td></tr><tr><td>CME (COMEX)</td><td>Gold / Micro gold</td><td>100 / 10 troy oz</td></tr><tr><td>CME (COMEX)</td><td>Silver</td><td>5,000 troy oz</td></tr>
 <tr><td>US options</td><td>Stock and ETF options</td><td>100 shares</td></tr></tbody></table></div>
 <p>Stock F&amp;O lot sizes in India change by exchange circular; enter the lot size shown in your order window.</p>
 <h3>US option margin rules (Cboe / FINRA minimum)</h3>
