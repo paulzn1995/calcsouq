@@ -33,12 +33,12 @@ Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-21 | 11:00 | reel | no | 2000 | desi | 2026-11-21-gold-hidden-cost.mp4 | /gold-price-calculator/ | posted 11:10 Dubai (approved by Paulson in chat), media 18102444311090136 |
-| 2026-11-21 | 12:00 | story | — | — | — | 2026-11-21-story-gold-quiz.jpg | /gold-price-calculator/ | awaiting approval |
-| 2026-11-21 | 13:30 | reel | no | 2000 | cinematic | 2026-11-21-dubai-property-costs.mp4 | /property-buying-cost-calculator/ | awaiting approval |
-| 2026-11-21 | 16:00 | reel | yes | 1800 | pop | 2026-11-21-life-in-numbers.mp4 | /age-calculator/ | awaiting approval |
-| 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | awaiting approval |
-| 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | awaiting approval |
-| 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | awaiting approval |
+| 2026-11-21 | 12:00 | story | — | — | — | 2026-11-21-story-gold-quiz.jpg | /gold-price-calculator/ | approved |
+| 2026-11-21 | 13:30 | reel | no | 2000 | cinematic | 2026-11-21-dubai-property-costs.mp4 | /property-buying-cost-calculator/ | approved |
+| 2026-11-21 | 16:00 | reel | yes | 1800 | pop | 2026-11-21-life-in-numbers.mp4 | /age-calculator/ | approved |
+| 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | approved |
+| 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | approved |
+| 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | approved |
 
 ```captions
 [2026-11-21 11:00]
