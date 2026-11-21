@@ -18,6 +18,80 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 
 ## Learnings
 - 2026-11-21 Paulson: prefers broad, intriguing content built on the site's complex calculations (quiz/guess formats, simulations) over single-tool demos.
+- 2026-11-21 data (last 3 days): lowest skip (48%) and longest watch (5.4 s) = EMI reel with one concrete money question on frame 1; A/B/C quiz and long-text hooks were skipped 73–81%. Lead with a big number + question, show options after ~1 s, reveal by 9 s.
 - 2026-11-21 Trial Reels are refused by Instagram: account has too few followers. Post every reel as a normal reel until followers grow; retry trial once a week (if refused, post the same reel normally).
 
 | 2026-11-21 | Reel | F&O margin calculator: futures, calendar spread, iron condor vs strangle, lot sizes | build/static/media/ig/2026-11-21-margin-calculator.mp4 | posted 2026-11-21, media 18143848828618251 |
+
+## Topic calendar
+Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner (21 Nov).
+Ideas next: FD vs SIP, GST slabs, gratuity 21 vs 30 days, position sizing, compound interest doubling, BMI, working days to deadline.
+
+## 2026-11-21 daily set (made by the daily Reels creator; slots are Dubai time)
+Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-21 | 11:00 | reel | no | 2000 | desi | 2026-11-21-gold-hidden-cost.mp4 | /gold-price-calculator/ | awaiting approval |
+| 2026-11-21 | 12:00 | story | — | — | — | 2026-11-21-story-gold-quiz.jpg | /gold-price-calculator/ | awaiting approval |
+| 2026-11-21 | 13:30 | reel | no | 2000 | cinematic | 2026-11-21-dubai-property-costs.mp4 | /property-buying-cost-calculator/ | awaiting approval |
+| 2026-11-21 | 16:00 | reel | yes | 1800 | pop | 2026-11-21-life-in-numbers.mp4 | /age-calculator/ | awaiting approval |
+| 2026-11-21 | 18:00 | story | — | — | — | 2026-11-21-story-sip-gap.jpg | /sip-calculator/ | awaiting approval |
+| 2026-11-21 | 19:00 | reel | no | 1600 | funk | 2026-11-21-sip-25-vs-30.mp4 | /sip-calculator/ | awaiting approval |
+| 2026-11-21 | 21:30 | reel | yes | 2000 | lofi | 2026-11-21-one-crore-planner.mp4 | /gulf-savings-return-planner/ | awaiting approval |
+
+```captions
+[2026-11-21 11:00]
+₹1 lakh of gold jewellery: what's the real bill?
+Gold value ₹1,00,000
++ making charge 12% = ₹12,000
++ GST 3% on gold AND making = ₹3,360
+Bill: ₹1,15,360. At 20% making it's ₹1,23,600.
+Link in bio → Gold price calculator (making charges + GST/VAT)
+Did you guess A, B or C? 👇
+Example: 22K, India, making 12%, GST 3%. Making charges vary by jeweller.
+#goldprice #goldjewellery #makingcharges #gstongold #22kgold #calcsouq
+
+[2026-11-21 13:30]
+Buying a AED 1.5M flat in Dubai? Here's the cash on top.
+DLD transfer fee 4%: AED 60,000
+Agent 2% + VAT: AED 31,500
+Trustee fee + VAT: AED 4,200 · admin & title deed: about AED 580
+Total: AED 96,280 (6.4% on top of the price)
+Link in bio → Property buying cost calculator
+Which fee surprised you most? 👇
+Cash purchase, before mortgage fees. Fees can change; check with the Dubai Land Department.
+#dubaiproperty #dubairealestate #dldfees #buyingahome #propertycosts #calcsouq
+
+[2026-11-21 16:00]
+Your life in numbers at 30
+30 years = 10,957 days = 262,968 hours
+1,565 weekends lived
+Weekdays left until 60: 7,826 (Mon–Fri, before holidays and leave)
+Link in bio → Age calculator (exact age, days lived, next birthday)
+What would you do with 1,565 more weekends? 👇
+Example: born 21 Nov 1996, counted to 21 Nov 2026.
+#agecalculator #lifeinnumbers #daysalive #timemanagement #motivation #calcsouq
+
+[2026-11-21 19:00]
+SIP at 25 vs 30: what 5 years of waiting costs
+₹5,000 a month until 60, at an assumed 12% a year:
+Start at 35 → about ₹95 lakh
+Start at 30 → about ₹1.76 crore
+Start at 25 → about ₹3.25 crore
+Gap: ₹1.48 crore, for only ₹3 lakh more invested.
+Link in bio → Step-up SIP calculator
+At what age did you start? 👇
+Illustration only. Returns are not guaranteed. Not investment advice.
+#sipcalculator #mutualfunds #compounding #startearly #personalfinance #calcsouq
+
+[2026-11-21 21:30]
+How long to save ₹1 crore on AED 3,000 a month?
+Just saving: 11 yrs 7 mo
+With 7% growth: 8 yrs 7 mo
+With 3% yearly raises + UAE gratuity too: 7 yrs 4 mo
+Link in bio → Savings goal planner
+What's your target number? 👇
+Assumes ₹24 per AED, starting from zero, AED 8,000 basic for gratuity. Returns are not guaranteed. Not investment advice.
+#savingsgoal #onecrore #financialplanning #moneygoals #gratuity #calcsouq
+```
