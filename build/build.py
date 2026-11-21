@@ -266,6 +266,22 @@ for c in LORDER:
     _ll += ["", f"## {LANGS[c]['native']} ({c})"] + [f"- [{m['name']}]({u}/{c}/{k}/): {m['card']}" for k, m in LANGS[c]["tools"].items()]
 w("llms.txt", "\n".join(_ll) + "\n")
 w(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
+# YouTube auto-upload feed: only items Paulson approved (build/youtube/uploads.json, status "approved").
+# Zapier: "RSS by Zapier - New item in feed" (https://www.calcsouq.com/youtube/feed.xml) -> "YouTube - Upload video" (file = enclosure URL).
+import email.utils as _eu
+try:
+    _yt = [x for x in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "youtube", "uploads.json"))) if x.get("status") == "approved"]
+except Exception:
+    _yt = []
+def _x(v): return html.escape(str(v), quote=True)
+_items = "".join(
+    f"<item><title>{_x(v['title'])}</title><guid isPermaLink=\"false\">calcsouq-yt-{_x(v['id'])}</guid>"
+    f"<link>{u}/media/yt/{_x(v['file'])}</link><description>{_x(v['description'])}</description>"
+    f"<category>{_x(', '.join(v.get('tags', [])))}</category>"
+    f"<pubDate>{_eu.format_datetime(datetime.datetime.fromisoformat(v['date'] + 'T12:00:00+04:00'))}</pubDate>"
+    f"<enclosure url=\"{u}/media/yt/{_x(v['file'])}\" type=\"video/mp4\" length=\"{v.get('bytes', 0)}\"/></item>\n" for v in _yt)
+w("youtube/feed.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>CalcSouq YouTube uploads</title>'
+  f'<link>{u}/</link><description>Approved videos for the CalcSouq YouTube channel</description>\n{_items}</channel></rss>\n')
 w("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {u}/sitemap.xml\n")
 pub = cfg["adsense"].removeprefix("ca-") if cfg["adsense"] else "pub-XXXXXXXXXXXXXXXX"
 w("ads.txt", f"google.com, {pub}, DIRECT, f08c47fec0942fa0\n")
