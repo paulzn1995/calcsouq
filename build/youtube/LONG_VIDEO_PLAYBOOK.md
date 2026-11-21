@@ -51,7 +51,7 @@ Paulson approved video #1 (`long/2026-11-22-rates-rising/`) as the standard. **P
 - **Render:** run two background processes (`python3 yt_long_<slug>.py S1 S3 …`), then concat with `ffmpeg -f concat -c copy` into `<date>-<slug>-silent.mp4`.
 - **Extra outputs:**
   - Captions: `python3 yt_long_<slug>.py --srt youtube/long/<folder>/captions.srt`
-  - Thumbnail: `python3 yt_thumb.py youtube/long/<folder>/thumbnail.jpg "LINE ONE" "LINE TWO" --hl WORD --tag "..." --stat "..." --prop ...`. Use big words and one honest number. Then look at it.
+  - Thumbnail (premium, realistic style — Paulson rejected the cartoon/mascot look for thumbnails): `python3 yt_thumb_pro.py youtube/long/<folder>/thumbnail.jpg --top "SUBJECT" --big "−47%" --sub "THE SEARCH QUESTION?" --trend down|up --start <v0> --end <v1> --tag "SHORT LABEL"`. One honest number, dark trading-screen look, no mascot, no logos, no real people. Look at it before using it.
 
 ## 6. Host the files
 - Copy the silent video, `thumbnail.jpg` and `captions.srt` to `build/static/media/yt/<date>-<slug>/`.
