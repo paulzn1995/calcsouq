@@ -53,4 +53,4 @@ Pavan calculator: https://www.calcsouq.com/gold-price-calculator/
 - Malayalam captions: https://www.calcsouq.com/media/yt/2026-11-22-gold-fall-malayalam/captions-ml.srt
 
 ## Best time to post
-Today before 7:30 pm Dubai (9 pm India) — the Instagram teaser goes out at 7:30 pm Dubai and points to YouTube. 7–9 pm India time, when Kerala and Gulf Malayali viewers are on YouTube.
+Today before 6 pm Dubai (7:30 pm India) — the Instagram teaser goes out at about 6 pm Dubai and points to YouTube. 7–9 pm India time, when Kerala and Gulf Malayali viewers are on YouTube.

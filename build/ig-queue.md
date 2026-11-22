@@ -176,7 +176,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | approved |
-| 2026-11-22 | 19:30 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | approved |
+| 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -198,7 +198,7 @@ Sources: company filing, AP/Reuters market reports, 20–21 Nov 2026. Education 
 #nvidia #aibubble #stockmarket #nasdaq #calcsouq
 ```
 
-[2026-11-22 19:30]
+[2026-11-22 17:45]
 ```
 സ്വർണ്ണം പണയം വെച്ചവർ കുടുങ്ങിയോ? 😟 Gold loan holders, watch this.
 
