@@ -226,7 +226,7 @@ Renders: build/reels_2026_11_22.py (reels, reading pace SLOW = 1.75, 23.4 s each
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-22 | 11:00 | reel | no | 500 | pop | 2026-11-22-working-days-left.mp4 | /date-calculator/ | posted (auto-approved) 22 Nov 11:05 Dubai, media 18124125247967161 |
-| 2026-11-22 | 12:00 | story | — | — | — | 2026-11-22-story-days-quiz.jpg | /date-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 12:00 | story | — | — | — | 2026-11-22-story-days-quiz.jpg | /date-calculator/ | posted (auto-approved) 22 Nov 12:04 Dubai, media 18125095810940672 |
 | 2026-11-22 | 13:30 | reel | yes | 500 | desi | 2026-11-22-fd-vs-sip.mp4 | /sip-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 | 2026-11-22 | 16:00 | reel | no | 500 | cinematic | 2026-11-22-uae-gratuity-10-years.mp4 | /uae-gratuity-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 | 2026-11-22 | 18:00 | story | — | — | — | 2026-11-22-story-rule-of-72.jpg | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
