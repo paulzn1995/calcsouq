@@ -30,6 +30,9 @@ The Malayalam video got about 15× the views. English money explainers compete w
    - world events explained for Malayali families (Fed, oil, wars, stock crashes) — always "what it means for your money".
 6. **Packaging:** Malayalam + English title (Malayalam first), description with chapters and the CalcSouq tool link, 15–20 mixed Malayalam/English tags, pinned comment with a question, end screen to the previous Malayalam video, add to a Malayalam playlist.
 
+## Visual quality
+- Every long video: 3–5 short photoreal 3D B-roll clips as chapter interstitials + premium local 3D-style graphics (see LONG_VIDEO_PLAYBOOK.md "3D B-roll").
+
 ## Shorts (daily, no ElevenLabs credits needed)
 - 2 Malayalam Shorts a day, vertical, text + music, reading pace: one teaser of the newest long video and one stand-alone "one number" Short (today's gold price move, EMI on ₹5 lakh, etc.).
 - Every Short ends with "മുഴുവൻ വീഡിയോ ചാനലിൽ" and Paulson links it to the long video ("Related video" when uploading).
@@ -38,7 +41,7 @@ The Malayalam video got about 15× the views. English money explainers compete w
 - Every long video gets a Malayalam teaser reel posted automatically at 17:45 Dubai (7:30 pm India).
 
 ## ElevenLabs credits
-- Starter plan: 40,000 characters a month, resets about 21 Dec. A 10-minute Malayalam video uses about 9,000–10,000 characters.
+- Paulson is upgrading the plan (22 Nov) to keep 2–3 long videos a week. A 10-minute Malayalam video uses about 9,000–10,000 characters for narration, plus credits for 3D B-roll.
 - Until Paulson upgrades: make a long video only when at least 10,000 characters remain; otherwise prepare the script, thumbnail and pack and tell him it is waiting for credits.
 
 ## Paulson's part (10 minutes a day)

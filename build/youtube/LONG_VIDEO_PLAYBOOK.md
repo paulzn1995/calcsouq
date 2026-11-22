@@ -110,3 +110,25 @@ Send ONE message, plus a push notification, containing:
 - Type passwords, or change AdSense or config.json.
 - Use expat/NRI/Gulf wording, or say where CalcSouq is made.
 - Use copyrighted music, characters, logos or photos of real people.
+
+## 3D B-roll (from 23 Nov 2026 — Paulson asked for real 3D visuals; plan upgraded)
+Goal: each long video gets 3–5 short cinematic 3D clips that make it feel premium, without losing the clean explainer style.
+
+**Where they go:** as 3–4 s chapter interstitials between scenes (music only, no narration), plus one 4–5 s clip right after the opening hook. Never over narration (the burnt-in subtitles would be hidden).
+
+**What to generate:** objects and places only, photoreal 3D look, slow camera move, 16:9, 1080p, no text, no logos, no people or faces, no real brands or banks:
+- gold bars falling / stacking on a dark reflective table; a bank vault door opening; gold coins pouring; a pawn ticket and gold chain on a counter (no shop names);
+- a glowing price chart rising/falling in 3D; a dollar and rupee coin on a see-saw; a city skyline at dusk with a red arrow;
+- one clip per chapter that matches it (e.g. Fed chapter: a columned government building silhouette, generic).
+
+**How (inside ElevenLabs, because the sandbox cannot download ElevenLabs files):**
+1. `creative_get_model_guide` for the video model, then pick a good-value model (e.g. veo-3.1-fast-generate-001, kling, seedance) and add one video-generation node per clip on the same flow. Ask for 4–5 s (shortest the model allows), no audio.
+2. Run `creative_run_flow_nodes` with **estimate_only first**. Keep the clips under ~30% of the credits the narration needs; if they would push credits below what the next two videos need, make fewer clips (minimum 1 for the hook).
+3. Host each rendered scene mp4 separately (build/static/media/yt/<folder>/S1.mp4 …) instead of only the joined file, attach each with `creative_attach_reference_file`.
+4. Composition video track = scene clips and B-roll clips in order, sequential (gap_before 0, a 0.4 s fade_in/fade_out on B-roll). Shift each narration clip's gap_before by the total B-roll length placed before it. Music track covers the full new length.
+5. Subtitles (.srt) must be shifted by the same amounts — regenerate them with the offsets.
+6. After the composition finishes, check `duration_secs` matches your computed total.
+
+**Local "3D" upgrades (free, in PIL):** shaded gold bars with highlights and reflections, slight perspective tilt, depth layers that move at different speeds (parallax), a slow camera push-in on key numbers, soft shadows and glow. Use these in every scene.
+
+**YouTube "AI use" answer:** if a video contains generated photoreal B-roll, tell Paulson to choose **Yes** on the AI-use screen (it is a realistic generated scene). Without B-roll, **No**.
