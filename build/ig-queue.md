@@ -339,7 +339,7 @@ Render: build/carousel_2026_11_25.py (7 slides, 1080x1350 JPEG). All figures are
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-25 | 13:30 | carousel | — | — | dark cheat sheet | 2026-11-25-emi-10-lakh-1..7.jpg | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-22 16:02) |
+| 2026-11-25 | 13:30 | carousel | — | — | dark cheat sheet | 2026-11-25-emi-10-lakh-1..7.jpg | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-22 15:58) |
 
 ```captions
 [2026-11-25 13:30]
