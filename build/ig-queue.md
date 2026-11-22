@@ -222,7 +222,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | approved |
+| 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | posted 22 Nov 18:05 Dubai (approved: YouTube teaser rule), media 18116533043132278 |
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | approved |
 
 [2026-11-22 17:30]
@@ -273,7 +273,7 @@ Renders: build/reels_2026_11_22.py (reels, reading pace SLOW = 1.75, 23.4 s each
 | 2026-11-22 | 11:00 | reel | no | 500 | pop | 2026-11-22-working-days-left.mp4 | /date-calculator/ | posted (auto-approved) 22 Nov 11:05 Dubai, media 18124125247967161 |
 | 2026-11-22 | 12:00 | story | — | — | — | 2026-11-22-story-days-quiz.jpg | /date-calculator/ | posted (auto-approved) 22 Nov 12:04 Dubai, media 18125095810940672 |
 | 2026-11-22 | 13:30 | reel | yes | 500 | desi | 2026-11-22-fd-vs-sip.mp4 | /sip-calculator/ | posted (auto-approved) 22 Nov 16:05 Dubai as a normal reel (trial refused: too few followers), media 17920088349545514 |
-| 2026-11-22 | 16:00 | reel | no | 500 | cinematic | 2026-11-22-uae-gratuity-10-years.mp4 | /uae-gratuity-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 16:00 | reel | no | 500 | cinematic | 2026-11-22-uae-gratuity-10-years.mp4 | /uae-gratuity-calculator/ | posted (auto-approved) 22 Nov 18:05 Dubai, media 18175007167463653 |
 | 2026-11-22 | 18:00 | story | — | — | — | 2026-11-22-story-rule-of-72.jpg | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 | 2026-11-22 | 19:00 | reel | yes | 500 | funk | 2026-11-22-rule-of-72.mp4 | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 | 2026-11-22 | 21:30 | reel | no | 500 | electro | 2026-11-22-position-size.mp4 | /position-size-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
