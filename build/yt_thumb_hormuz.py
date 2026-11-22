@@ -77,20 +77,31 @@ def stroked(xy, text, font, fill, sw=14, anchor="ls", sc=(0, 0, 0)):
     d.text(xy, text, font=font, fill=fill, anchor=anchor, stroke_width=sw, stroke_fill=sc)
 
 # tag
-f = F("k", 64); tw = d.textlength("HORMUZ · OIL WAR", font=f)
-d.rounded_rectangle([110, 110, 110 + tw + 80, 214], 18, fill=(230, 30, 30)); d.text((150, 163), "HORMUZ · OIL WAR", font=f, fill=(255, 255, 255), anchor="lm")
-# line 1 Malayalam
-stroked((100, 470), "ഈ കടൽ അടഞ്ഞാൽ?", MF(200), (255, 255, 255), 14)
-# huge number with glow
-big = "39 KM"; fb = F("k", 460)
-gl = Image.new("L", (W, H), 0); ImageDraw.Draw(gl).text((90, 960), big, font=fb, fill=255, anchor="ls")
-img.paste((255, 200, 0), (0, 0), gl.filter(ImageFilter.GaussianBlur(40)).point(lambda v: int(v * .55))); d = ImageDraw.Draw(img)
-stroked((90, 960), big, fb, (255, 214, 0), 18)
-# bottom strip
-fs = MF(92); txt = "പെട്രോൾ · ഗ്യാസ് · EMI കൂടുമോ?"; tw = d.textlength(txt, font=fs)
-d.rounded_rectangle([100, 1050, 100 + tw + 90, 1210], 26, fill=(230, 30, 30))
-d.text((145, 1145), txt, font=fs, fill=(255, 255, 255), anchor="lm")
+f = F("k", 64); tw = d.textlength("HORMUZ CRISIS", font=f)
+d.rounded_rectangle([110, 110, 110 + tw + 80, 214], 18, fill=(230, 30, 30)); d.text((150, 163), "HORMUZ CRISIS", font=f, fill=(255, 255, 255), anchor="lm")
+import argparse
+ap = argparse.ArgumentParser(); ap.add_argument("out"); ap.add_argument("--l1", default="ഈ കടലും"); ap.add_argument("--l2", default="നിങ്ങളുടെ കാശും!")
+ap.add_argument("--strip", default="പെട്രോൾ ₹114 · ഗ്യാസ് +₹89 · EMI?"); ap.add_argument("--rupee", action="store_true")
+A = ap.parse_args()
+def fit(text, size, maxw):
+    while d.textlength(text, font=MF(size)) > maxw and size > 60: size -= 6
+    return MF(size)
+f1 = fit(A.l1, 250, 1350); stroked((95, 470), A.l1, f1, (255, 255, 255), 16)
+f2 = fit(A.l2, 270, 1720)
+gl = Image.new("L", (W, H), 0); ImageDraw.Draw(gl).text((90, 860), A.l2, font=f2, fill=255, anchor="ls")
+img.paste((255, 200, 0), (0, 0), gl.filter(ImageFilter.GaussianBlur(36)).point(lambda v: int(v * .6))); d = ImageDraw.Draw(img)
+stroked((90, 860), A.l2, f2, (255, 214, 0), 18)
+if A.rupee:  # glowing rupee coin above the fire
+    cx, cy, r = 2120, 360, 170
+    cg = Image.new("L", (W, H), 0); ImageDraw.Draw(cg).ellipse([cx - r - 60, cy - r - 60, cx + r + 60, cy + r + 60], fill=255)
+    img.paste((255, 190, 40), (0, 0), cg.filter(ImageFilter.GaussianBlur(60)).point(lambda v: int(v * .7))); d = ImageDraw.Draw(img)
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(232, 170, 30), outline=(120, 70, 0), width=14)
+    d.ellipse([cx - r + 26, cy - r + 26, cx + r - 26, cy + r - 26], outline=(255, 225, 120), width=8)
+    d.text((cx, cy + 8), "₹", font=F("k", 230), fill=(120, 60, 0), anchor="mm")
+fs = fit(A.strip, 92, 1500); tw = d.textlength(A.strip, font=fs)
+d.rounded_rectangle([90, 1000, 90 + tw + 90, 1160], 26, fill=(230, 30, 30))
+d.text((135, 1095), A.strip, font=fs, fill=(255, 255, 255), anchor="lm")
 d.text((W - 60, H - 50), "calcsouq.com", font=F("b", 44), fill=(235, 235, 240), anchor="rs")
 
 out = img.resize((1280, 720), Image.LANCZOS).filter(ImageFilter.UnsharpMask(1.2, 60, 2))
-out.save(sys.argv[1] if len(sys.argv) > 1 else "/tmp/thumb.jpg", quality=94); print("ok")
+out.save(A.out, quality=94); print("ok")

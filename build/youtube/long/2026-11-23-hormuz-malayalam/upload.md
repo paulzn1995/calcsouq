@@ -6,7 +6,7 @@ Includes 4 AI-generated photoreal B-roll clips (tanker, refinery, fuel nozzle, k
 Facts checked 22 Nov 2026 (sources in sources.md).
 
 ## Title
-ഈ കടൽ അടഞ്ഞാൽ നമ്മൾ? ഹോർമുസ് പ്രതിസന്ധി, പെട്രോൾ, ഗ്യാസ്, EMI | Strait of Hormuz Explained
+ഈ കടലും നിങ്ങളുടെ കാശും! ഹോർമുസ് പ്രതിസന്ധി: പെട്രോൾ, ഗ്യാസ്, EMI | Strait of Hormuz Explained
 
 ## Description
 വെറും 39 കിലോമീറ്റർ വീതിയുള്ള ഒരു കടൽ വഴി — ലോകത്തിലെ എണ്ണയുടെയും ഗ്യാസിന്റെയും അഞ്ചിലൊന്ന് കടന്നുപോയിരുന്നത് ഇതിലൂടെയാണ്. ഇന്ന് അവിടെ ടാങ്കറുകൾ കത്തുന്നു. നമ്മുടെ പെട്രോൾ വില, പാചകവാതക വില, രൂപ, EMI — ഇതെല്ലാം എങ്ങനെ ബാധിക്കുന്നു, അടുത്ത മാസങ്ങളിൽ എന്ത് സംഭവിക്കാം — ലളിതമായി.
