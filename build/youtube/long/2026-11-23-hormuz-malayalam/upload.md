@@ -1,6 +1,6 @@
 # Long video #4 (Malayalam): Strait of Hormuz and your money (upload pack)
 
-Final video: ElevenLabs flow bivLJpUTpdur26rgOZYm (composition eFISnJKhlieqfLo5Zncp, generation T1xml5ZgjxfsLTIGNYdH), 1920x1080, 7:08.
+Final video: ElevenLabs flow bivLJpUTpdur26rgOZYm (composition vUqcv0SwGPMivjyawiEq, generation W05L1bZbqRv1gKdBgbVk), 1920x1080, 7:08.
 Voice: Mahendran J (Malayalam, eleven_v3). English subtitles burnt in; English + Malayalam caption files too.
 Includes 4 AI-generated photoreal B-roll clips (tanker, refinery, fuel nozzle, kitchen stove) → **AI use: Yes**.
 Facts checked 22 Nov 2026 (sources in sources.md).

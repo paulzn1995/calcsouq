@@ -132,3 +132,4 @@ Goal: each long video gets 3–5 short cinematic 3D clips that make it feel prem
 **Local "3D" upgrades (free, in PIL):** shaded gold bars with highlights and reflections, slight perspective tilt, depth layers that move at different speeds (parallax), a slow camera push-in on key numbers, soft shadows and glow. Use these in every scene.
 
 **YouTube "AI use" answer:** if a video contains generated photoreal B-roll, tell Paulson to choose **Yes** on the AI-use screen (it is a realistic generated scene). Without B-roll, **No**.
+- Lesson (22 Nov, Hormuz video): many small per-scene mp4s failed the composition's content-policy check ("reference file could not be checked"). Join scenes into a few segments (split only where B-roll goes) with `-c copy -movflags +faststart` and attach those. Video clips cannot have fades (audio only). Three back-to-back music clips (609 s) for a 428 s video: check that the output duration matches the video.
