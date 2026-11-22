@@ -224,6 +224,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | posted 22 Nov 18:05 Dubai (approved: YouTube teaser rule), media 18116533043132278 |
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
+| 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -357,4 +358,21 @@ Which rate did your bank quote? 👇
 
 Reducing-balance EMI, monthly rests, before processing fees and insurance. Rates shown are examples, not offers. Not financial advice.
 #emi #homeloan #personalloan #carloan #loancalculator #calcsouq
+```
+
+[2026-11-23 17:45]
+```
+ഈ കടൽ അടഞ്ഞാൽ നമ്മൾ? 🌊 വെറും 39 കിലോമീറ്റർ — ഹോർമുസ് കടലിടുക്ക്.
+
+യുദ്ധത്തിന് മുമ്പ് ലോകത്തിലെ എണ്ണയുടെയും ഗ്യാസിന്റെയും അഞ്ചിലൊന്ന് ഇതുവഴിയാണ് പോയിരുന്നത്. ചരിത്രത്തിലെ ഏറ്റവും വലിയ എണ്ണ-ഗ്യാസ് തടസ്സമെന്ന് IEA.
+⛽ Petrol (Kochi): ≈₹106 → ≈₹114 in a year
+🔥 Kitchen LPG: +₹89 since March
+🏦 RBI repo: 5.5%
+
+▶️ മുഴുവൻ വീഡിയോ (Malayalam, English subtitles): youtube.com/@calcsouq (link in bio)
+EMI calculator: calcsouq.com/loan-emi-calculator
+
+Figures checked 22 Nov 2026 (IEA, Kpler, PTI, Upstox). Education only, not financial advice.
+
+#hormuz #petrolprice #lpg #malayalam #calcsouq
 ```

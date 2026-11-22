@@ -15,9 +15,10 @@ W, H = 2560, 1440  # draw at 2x, downscale
 
 ap = argparse.ArgumentParser(); ap.add_argument("out"); ap.add_argument("--big", default="−47%"); ap.add_argument("--top", default="NVIDIA")
 ap.add_argument("--sub", default="IS THE AI BUBBLE BURSTING?"); ap.add_argument("--trend", default="down"); ap.add_argument("--start", type=float, default=239)
-ap.add_argument("--end", type=float, default=125); ap.add_argument("--tag", default=""); ap.add_argument("--chip", default="AI"); ap.add_argument("--seed", type=int, default=7); ap.add_argument("--prop", default="chip")
+ap.add_argument("--end", type=float, default=125); ap.add_argument("--tag", default=""); ap.add_argument("--chip", default="AI"); ap.add_argument("--seed", type=int, default=7); ap.add_argument("--prop", default="chip"); ap.add_argument("--acc", default="")
 a = ap.parse_args()
 down = a.trend == "down"; ACC = (235, 60, 60) if down else (40, 200, 120)
+if a.acc == "red": ACC = (235, 60, 60)
 
 # background: deep navy with vignette and screen glow
 img = Image.new("RGB", (W, H), (6, 8, 14)); d = ImageDraw.Draw(img)
@@ -69,8 +70,23 @@ if a.prop == "gold":
         g2.polygon([(x + tp/2, y - h/2), (x + w/2, y + h/2), (x + w/2 - 26, y + h/2), (x + tp/2 - 16, y - h/2 + 22)], fill=(170, 120, 20, 255))
     gg = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(gg).ellipse([cx - 520, cy - 300, cx + 400, cy + 260], fill=(255, 190, 60, 120))
     gg = gg.filter(ImageFilter.GaussianBlur(90)); img.paste(gg, (0, 0), gg); img.paste(gb, (0, 0), gb); d = ImageDraw.Draw(img)
+if a.prop == "barrel":  # shaded steel oil barrels with a fire glow behind
+    gg = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(gg).ellipse([cx - 600, cy - 420, cx + 460, cy + 260], fill=(255, 110, 30, 150))
+    gg = gg.filter(ImageFilter.GaussianBlur(110)); img.paste(gg, (0, 0), gg)
+    br = Image.new("RGBA", (W, H), (0, 0, 0, 0)); b2 = ImageDraw.Draw(br)
+    for (dx, dy, base) in [(-390, 40, (150, 28, 28)), (-90, 60, (30, 34, 42)), (210, 30, (150, 28, 28))]:
+        x0b, y0b, wb, hb = cx + dx - 150, cy + dy - 240, 260, 400
+        for i in range(wb):
+            f = i / wb; light = 0.35 + 0.95 * max(0, 1 - abs(f - 0.32) / 0.5) ** 1.6
+            col = tuple(min(255, int(c * light + 40 * max(0, 1 - abs(f - 0.3) / 0.08))) for c in base)
+            b2.line([(x0b + i, y0b + 18), (x0b + i, y0b + hb - 18)], fill=col + (255,))
+        b2.ellipse([x0b, y0b, x0b + wb, y0b + 40], fill=tuple(int(c * .7) for c in base) + (255,), outline=(200, 200, 205, 255), width=4)
+        for fr in (.33, .66):
+            yy = y0b + hb * fr; b2.line([(x0b, yy), (x0b + wb, yy)], fill=(15, 15, 18, 200), width=10); b2.line([(x0b, yy - 6), (x0b + wb, yy - 6)], fill=(230, 230, 235, 120), width=3)
+        b2.ellipse([x0b, y0b + hb - 40, x0b + wb, y0b + hb], outline=(20, 20, 24, 255), width=4)
+    img.paste(br, (0, 0), br); d = ImageDraw.Draw(img)
 chip = Image.new("RGBA", (W, H), (0, 0, 0, 0)); c2 = ImageDraw.Draw(chip)
-if a.prop == "gold": cx = -9999
+if a.prop in ("gold", "barrel"): cx = -9999
 chip = Image.new("RGBA", (W, H), (0, 0, 0, 0)); c2 = ImageDraw.Draw(chip)
 for k in range(7):
     o = -150 + k * 50

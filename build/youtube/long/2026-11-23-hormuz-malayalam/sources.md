@@ -1,0 +1,19 @@
+# Sources (checked 22 Nov 2026)
+- Hormuz width: 21 nautical miles (≈39 km) at narrowest; inbound/outbound lanes 2 miles each (<4 km): IEA Strait of Hormuz factsheet (Feb 2026); US EIA.
+- About one fifth of global oil and LNG passed through Hormuz before the war; ~15 mb/d crude in 2025: IEA via CNBC (16 Nov 2026); ČTK/oEnergetice (19 Nov 2026).
+- War began with US–Israeli strikes on Iran on 28 Feb 2026; Iran restricted Hormuz shipping: Reuters via Free Malaysia Today (12 Mar 2026); AFP via BSS (19 Nov 2026).
+- Tanker fires this week; Iran says vessels hit mines (Iranian claims, not independently verified): Drop Site News summary (19 Nov 2026); Geopolitics Unplugged (22 Nov 2026).
+- UN: at least 25 seafarers killed in and around Hormuz since February (to 11 Nov): Al Jazeera (14 Nov 2026), UN briefing.
+- IEA World Energy Outlook 2026 (19 Nov): biggest disruption to oil and gas trade in history; 2.8 billion barrels of oil and 60 bcm gas lost; 1978–79 revolution ≈1 billion barrels; "energy world will never be the same": Jerusalem Post/Reuters; ČTK; Hydrocarbon Processing.
+- Hormuz crude flow ≈8.5 mb/d in November, about half of pre-war; Middle East exports incl. pipelines 64% of pre-war (Kpler): Drop Site News (19 Nov 2026).
+- IEA emergency release of 400 million barrels (March); Europe "about six weeks" of jet fuel warning; fertiliser/helium/petrochemicals disrupted: Gulf Times/Bloomberg (Mar 2026); Scripps News; AP via SM Daily Journal.
+- Brent: end-Jan $70.69; Oct high $117.34; 20 Nov close $92.57 (−21% from peak); IEA sees Q4 surplus: Wikipedia oil-market chronology; Benzinga (22 Nov); IBTimes (21 Nov); CNBC (16 Nov).
+- India: imports ~88% of crude; ~45–52% via Hormuz pre-war; ~70% now routed elsewhere; 40+ supplier countries; LPG ~60% imported, ~90% of imports via Hormuz; no strategic LPG reserve: S&P Global; Atlantic Council; India Briefing; The National (5 Nov 2026); ORF; Outlook Business.
+- Kochi petrol: ₹105.55 (7 Nov 2025) → ₹113.53 (Nov 2026); other trackers show up to ₹115.34: Upstox; Goodreturns; calxo.
+- Worked example: (113.53 − 105.55) = ₹7.98/L × 40 L = ₹319/month ≈ ₹3,830/year.
+- Domestic LPG: +₹60 (7 Mar), +₹29 (7 Jun); Delhi ₹942 in Nov 2026 (₹853 before); commercial 19 kg up three months in a row (₹2,820 Delhi, 1 Nov); OMCs losing ≈₹700/cylinder (June, govt data via TOI): Goodreturns; Deccan Chronicle; Outlook Business.
+- Rupee record low ≈96.97/$ (May 2026); 93.32 close on 19 Nov: ThePrint/PTI; Scroll.
+- RBI repo raised 25 bp to 5.50% on 7 Oct 2026; next MPC 2–4 Dec: SCC Online; Moneylife; ANI.
+- Gulf bypass pipelines: only Saudi Arabia and UAE: MUFG chokepoint brief.
+- At least 40 Gulf energy assets severely damaged (IEA's Birol): The Independent via AOL.
+- UN Security Council: US/Bahrain draft on Hormuz under negotiation; China/Russia may veto: The New Arab; CBS News.
