@@ -419,7 +419,7 @@ KEYS["china-income-tax-calculator"] = ["Monthly salary before tax (¥)", "Contri
  "First-home loan interest (1,000)", "Rent, large city (1,500)", "Rent, mid-size city (1,100)", "Rent, smaller city (800)", ">Continuing education</label>", "Degree study (400 a month)",
  "Other monthly deductions (¥)", "e.g. private pension, enterprise annuity.", "Average take-home pay a month", "<th>Month</th>", "<th>Tax withheld</th>", "<th>Take-home</th>",
  "['Social insurance a month'", "['Housing fund a month'", "['Special deductions a month'", "['Income tax for the year'", "['Take-home for the year'", "['Tax as % of salary'"]
-KEYS["mortgage-calculator"] = [">Loan amount<", "Interest rate (% a year)", ">Years</label>", ">Equal monthly payment<", "<th>Equal payments</th>", "<th>Equal principal</th>",
+KEYS["mortgage-calculator"] = [">Loan amount<", "Interest (% a year)", ">Years</label>", ">Equal monthly payment<", "<th>Equal payments</th>", "<th>Equal principal</th>",
  "['Monthly payment'", "['Total interest'", "['Total repaid'", "'Equal principal saves '", "' in interest, but the first payment is '", "' higher.'",
  "<th>Year</th>", "<th>Equal payments: balance</th>", "<th>Equal principal: balance</th>"]
 KEYS["russia-salary-tax-calculator"] = ["Monthly salary before tax (₽)", "Annual bonus (₽)", "Paid in December.", "Children (first and second)", ">None<", ">One<", ">Two<",
@@ -478,7 +478,7 @@ LANGS["ru"]["tools"]["mortgage-calculator"] = dict(
 <h3>Пример</h3><p>6 000 000 ₽ под 6% на 20 лет: аннуитет около 42 986 ₽ в месяц, переплата около 4,3 млн ₽. Дифференцированный: первый платёж 55 000 ₽, последний около 25 125 ₽, переплата около 3,6 млн ₽.</p>
 <p>Большинство банков в России выдают ипотеку с аннуитетными платежами. Досрочное погашение в первые годы сильнее всего снижает переплату.</p>""",
  faqs=[("Какой платёж выгоднее?", "Дифференцированный: долг уменьшается быстрее, и переплата ниже. Аннуитет даёт меньший платёж в начале."), ("Как уменьшить переплату?", "Вносить досрочные платежи как можно раньше и выбирать уменьшение срока, а не платежа.")],
- tr=[">Сумма кредита<", "Ставка (% годовых)", ">Срок, лет</label>", ">Аннуитетный платёж<", "<th>Аннуитет</th>", "<th>Дифференцированный</th>",
+ tr=[">Сумма кредита<", "Ставка (% годовых)", ">Срок, лет</label>", ">Аннуитетный платёж<", "<th>Аннуитет</th>", "<th>Дифферен&shy;цированный</th>",
   "['Платёж в месяц'", "['Переплата'", "['Всего выплат'", "'Дифференцированный платёж экономит '", "' на процентах, но первый платёж больше на '", "'.'",
   "<th>Год</th>", "<th>Аннуитет: остаток долга</th>", "<th>Дифф.: остаток долга</th>"])
 

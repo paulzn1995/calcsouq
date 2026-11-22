@@ -256,6 +256,7 @@ details{transition:background .2s}details[open] summary~*{animation:rise .35s cu
  .hero.split::after{inset:4px -10px 0;height:auto;border-radius:24px}
  .hero.split .hero-art{display:block;order:-1;width:min(78vw,300px);aspect-ratio:46/40;margin:2px auto 6px;animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
  .hero.split .hero-art svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 14px 18px rgba(16,24,40,.18))}
+ .hero.split .hero-art{width:min(56vw,300px)} /* phones: smaller art so the search box sits higher on the first screen */
  .hero.split .hero-txt{padding:0 6px}
  .hero.split h1{font-size:clamp(28px,7.4vw,38px);line-height:1.1;text-align:center}
  .hero.split .lede{text-align:center}

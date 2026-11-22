@@ -1,12 +1,12 @@
-"""Instagram teaser reel for YouTube long video #4 (Malayalam: Strait of Hormuz and your money). 1080x1920, reading pace, ~24.5 s.
+"""Instagram teaser reel for YouTube long video #4 (Malayalam: Strait of Hormuz and your money). 1080x1920, reading pace, ~25 s.
 Render: python3 reel_gold_ml_teaser.py out_silent.mp4 ; then reel_audio.py with CUES below.
 """
 import sys, os, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from reel_fx import *
 from PIL import ImageFont
-DUR = 24.5
-CUES = "0:boom,1.2:tick*8,3.4:hit,6.0:whoosh,6.6:pop,8.2:pop,9.8:pop,13.0:whoosh,14.4:coin*4,16.0:fail,19.0:swoosh,20.4:success"
+DUR = 25.0
+CUES = "0:boom,1.2:tick*8,3.4:hit,6.0:whoosh,6.8:pop,8.2:pop,9.6:pop,13.4:whoosh,14.6:coin*4,16.2:fail,19.6:swoosh,20.8:success"
 _MLF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "Manjari-Bold.ttf")
 def MF(s): return ImageFont.truetype(_MLF, int(s), layout_engine=ImageFont.Layout.RAQM)
 
@@ -28,9 +28,9 @@ def bar(img, cx, cy, s):
 def card(img, y, txt, i, t, t0):
     p = back(seg(t, t0, t0 + .6))
     if p <= 0: return
-    x = 110 + (1 - p) * 80; d = ImageDraw.Draw(img)
-    shadow(img, (x, y - 70, 970, y + 70), 36, 16, 80, (0, 8)); d = ImageDraw.Draw(img)
-    d.rounded_rectangle([x, y - 70, 970, y + 70], 36, fill=WHITE)
+    x = 110 + (1 - p) * 80; r = x + 860; d = ImageDraw.Draw(img)  # whole card slides, so text never overruns the right edge
+    shadow(img, (x, y - 70, r, y + 70), 36, 16, 80, (0, 8)); d = ImageDraw.Draw(img)
+    d.rounded_rectangle([x, y - 70, r, y + 70], 36, fill=WHITE)
     d.ellipse([x + 26, y - 40, x + 106, y + 40], fill=GOLD); d.text((x + 66, y), str(i), font=F("k", 48), fill=INK, anchor="mm")
     d.text((x + 134, y), txt, font=F("b", 46), fill=INK, anchor="lm")
 
@@ -44,30 +44,30 @@ def frame(t):
         if t > 3.0: pill(img, W / 2, 820, "Strait of Hormuz · 1/5 of world oil", t, 3.0, WHITE, INK, 46, 40)
         for k in range(3): barrel(img, W / 2 + (k - 1) * 300, 1160, back(seg(t, .4 + k * .2, 1.0 + k * .2)))
         if t > 3.4: shake(img, t, 3.4, 12, 0.4)
-    elif t < 13.0:
+    elif t < 13.4:
         ml(img, "നമ്മുടെ പോക്കറ്റ്", 380, t, 6.0, 110, WHITE)
         d = ImageDraw.Draw(img); d.text((W / 2, 480), "What it costs you", font=F("b", 56), fill=GOLD, anchor="mm")
-        for i, (txt, t0) in enumerate([("Petrol (Kochi) ₹106 → ₹114", 6.6), ("Kitchen LPG +₹89 since March", 8.2), ("RBI repo up to 5.5%", 9.8)]):
+        for i, (txt, t0) in enumerate([("Petrol (Kochi) ₹106 → ₹114", 6.8), ("Kitchen LPG +₹89 since March", 8.2), ("RBI repo up to 5.5%", 9.6)]):
             card(img, 680 + i * 190, txt, i + 1, t, t0)
-    elif t < 19.0:
-        ml(img, "ചരിത്രത്തിലെ ഏറ്റവും വലുത്", 380, t, 13.0, 74, GOLD)
+    elif t < 19.6:
+        ml(img, "ചരിത്രത്തിലെ ഏറ്റവും വലുത്", 380, t, 13.4, 74, GOLD)
         d = ImageDraw.Draw(img); d.text((W / 2, 480), "IEA: biggest oil & gas disruption ever", font=F("b", 46), fill=WHITE, anchor="mm")
-        p = back(seg(t, 13.6, 14.1))
+        p = back(seg(t, 13.9, 14.4))
         if p > 0:
             box = (140, 600, 940, 1000); shadow(img, box, 40, 18, 90, (0, 10)); d = ImageDraw.Draw(img); d.rounded_rectangle(box, 40, fill=WHITE)
             d.text((540, 680), "Oil lost from the Gulf", font=F("b", 44), fill=(100, 105, 115), anchor="mm")
-            v = count(0, 2.8, t, 14.4, 16.0); d.text((540, 830), f"{v:.1f} bn", font=F("k", 150), fill=RED, anchor="mm")
+            v = count(0, 2.8, t, 14.6, 16.2); d.text((540, 830), f"{v:.1f} bn", font=F("k", 150), fill=RED, anchor="mm")
             d.text((540, 950), "barrels · 1979 crisis: ~1 bn", font=F("b", 40), fill=(100, 105, 115), anchor="mm")
-        if t > 16.2: pill(img, W / 2, 1140, "Petrol · gas · rupee · EMI", t, 16.2, RED, WHITE, 52, 46)
+        if t > 16.4: pill(img, W / 2, 1140, "Petrol · gas · rupee · EMI", t, 16.4, RED, WHITE, 52, 46)
     else:
-        ml(img, "അടുത്തത് എന്ത്?", 330, t, 19.0, 104, WHITE)
-        ml(img, "മുഴുവൻ വീഡിയോ കാണുക", 460, t, 19.3, 72, GOLD)
+        ml(img, "അടുത്തത് എന്ത്?", 330, t, 19.6, 104, WHITE)
+        ml(img, "മുഴുവൻ വീഡിയോ കാണുക", 460, t, 19.9, 72, GOLD)
         d = ImageDraw.Draw(img)
-        if t > 19.6: d.text((W / 2, 580), "What could happen next", font=F("b", 52), fill=WHITE, anchor="mm")
-        if t > 19.6: d.text((W / 2, 650), "Malayalam · English subtitles", font=F("b", 42), fill=(200, 200, 210), anchor="mm")
-        barrel(img, W / 2, 880, 1.2 * back(seg(t, 19.2, 19.8)))
-        pill(img, W / 2, 1110, "Watch on YouTube", t, 20.4, (230, 33, 23), WHITE, 58, 52)
-        if t > 21.0: d = ImageDraw.Draw(img); d.text((W / 2, 1240), "youtube.com/@calcsouq · link in bio", font=F("b", 44), fill=WHITE, anchor="mm")
+        if t > 20.2: d.text((W / 2, 580), "What could happen next", font=F("b", 52), fill=WHITE, anchor="mm")
+        if t > 20.2: d.text((W / 2, 650), "Malayalam · English subtitles", font=F("b", 42), fill=(200, 200, 210), anchor="mm")
+        barrel(img, W / 2, 880, 1.2 * back(seg(t, 19.8, 20.4)))
+        pill(img, W / 2, 1110, "Watch on YouTube", t, 20.8, (230, 33, 23), WHITE, 58, 52)
+        if t > 21.2: d = ImageDraw.Draw(img); d.text((W / 2, 1240), "youtube.com/@calcsouq · link in bio", font=F("b", 44), fill=WHITE, anchor="mm")
     return img
 
 def barrel(img, cx, cy, s):

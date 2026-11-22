@@ -262,6 +262,7 @@ details{transition:background .2s}details[open] summary~*{animation:rise .35s cu
  .hero.split::after{inset:4px -10px 0;height:auto;border-radius:24px}
  .hero.split .hero-art{display:block;order:-1;width:min(78vw,300px);aspect-ratio:46/40;margin:2px auto 6px;animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
  .hero.split .hero-art svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 14px 18px rgba(16,24,40,.18))}
+ .hero.split .hero-art{width:min(56vw,300px)} /* phones: smaller art so the search box sits higher on the first screen */
  .hero.split .hero-txt{padding:0 6px}
  .hero.split h1{font-size:clamp(28px,7.4vw,38px);line-height:1.1;text-align:center}
  .hero.split .lede{text-align:center}
@@ -396,7 +397,13 @@ window.V = id => parseFloat(String($(id).value).replace(/,/g, '')) || 0;
     const run = () => load().then(ix => {
       const q = inp.value.trim().toLowerCase(); if (!q) { res.classList.remove('open'); return; }
       const ws = q.split(/\s+/);
-      const hits = ix.map(it => { const hay = (it.t + ' ' + it.k + ' ' + it.d).toLowerCase(); let sc = 0; for (const w of ws) { if (!hay.includes(w)) return null; sc += it.t.toLowerCase().includes(w) ? 3 : 1; } return [sc + (it.c === 'Calculator' ? 1 : 0), it]; })
+      // rank: word-start match in the title > inside the title > word-start in keywords > anywhere; prefer pages in the current language
+      const L = (document.documentElement.lang || 'en').slice(0, 2), other = /^\/(hi|zh|ru|ml)\//;
+      const ws0 = ws.map(w => new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+      const hits = ix.map(it => { const t = it.t.toLowerCase(), hay = (it.t + ' ' + it.k + ' ' + it.d).toLowerCase(); let sc = 0;
+          for (let i = 0; i < ws.length; i++) { const w = ws[i]; if (!hay.includes(w)) return null; sc += ws0[i].test(t) ? 6 : t.includes(w) ? 2 : ws0[i].test(hay) ? 2 : 1; }
+          const inLang = L === 'en' ? !other.test(it.u) : it.u.startsWith('/' + L + '/');
+          return [sc + (it.c === 'Calculator' ? 1 : 0) + (inLang ? 2 : 0), it]; })
         .filter(Boolean).sort((a, b) => b[0] - a[0]).slice(0, 8).map(x => x[1]);
       sel = 0;
       res.innerHTML = hits.length ? hits.map((h, i) => `<a href="${h.u}"${i ? '' : ' class="sel"'}>${esc(h.t)}<small>${h.c} · ${esc(h.d)}</small></a>`).join('') : '<p>No matches. Try "gratuity", "gold", "EMI" or "lot size".</p>';

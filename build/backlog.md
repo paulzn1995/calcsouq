@@ -49,3 +49,8 @@
 - Mortgage calculator (generic, any currency) and loan comparison
 - Retirement corpus calculator, PPF calculator, NPS calculator
 - Time zone converter
+
+## UX ideas from the end-of-day QA (22 Nov 2026)
+- Malayalam gold price calculator opens on UAE (AED 320/g); AGENTS.md says ml→India. Default it to India with a verified current Kerala 22K gram rate (needs a fresh rate check, so not done in QA).
+- Search aliases: add a short `a` (aliases) field to search-index entries ("20kb" → resize-photo-to-20kb, "housing loan" → mortgage/EMI) so exact-intent pages rank above the generic tool.
+- Home hero on phones: the 6-line lede still pushes the search box to ~620 px; a one-sentence phone lede would put search inside the first 500 px.

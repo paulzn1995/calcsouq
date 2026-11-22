@@ -28,7 +28,12 @@ def clamp(v, a=0, b=1): return max(a, min(b, v))
 def seg(t, a, b): return clamp((t - a) / (b - a))
 def ease(t): t = clamp(t); return 1 - (1 - t) ** 3
 def eio(t): t = clamp(t); return 4 * t ** 3 if t < .5 else 1 - (-2 * t + 2) ** 3 / 2
-def back(t): t = clamp(t); c = 1.70158; return 1 + (c + 1) * (t - 1) ** 3 + c * (t - 1) ** 2
+def back(t):
+    # exact 0 at the start: the formula gives ~1e-16 there, which made `if p > 0` items flash in early, offset
+    t = clamp(t)
+    if t <= 0: return 0.0
+    if t >= 1: return 1.0
+    c = 1.70158; return 1 + (c + 1) * (t - 1) ** 3 + c * (t - 1) ** 2
 def elastic(t):
     t = clamp(t)
     if t in (0, 1): return t

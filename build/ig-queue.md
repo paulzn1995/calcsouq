@@ -18,6 +18,9 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-22 EOD QA (toolkit bug, fixed): reel_fx.back() returned ~1e-16 instead of 0 at its start, so every `if p > 0` element (cards, pills, kinetic words) appeared early in its offset/half-drawn state, e.g. all 3 Hormuz cards popped in at once and the end-card title words showed before their beat. Fixed in reel_fx.py; before queueing, check `python3 <reel>.py --frame <t0-0.1>` shows nothing for the next item.
+- 2026-11-22 EOD data: the slower 23–25 s reading-pace reels held people longer (avg watch 3.4–5.2 s: working days 5.2 s/64% skip, gold-loan ML teaser 4.8 s with 1 save, FD vs SIP 4.0 s) than the old 13.5 s news cuts (gold off record 2.1 s, 87% skip). Keep the pace rule; the personal-number hook still wins, UAE labour maths is weakest (gratuity: 39 reach, 76% skip).
+- 2026-11-22 EOD legibility: secondary lines at 40 px or less ("barrels · 1979 crisis", phone mock-up field labels, "Each loss = that % of the current balance") are too small to read on a phone. Keep any text a viewer must read at 44 px or more; if a phone mock-up holds the key number, repeat it in a pill beside the phone (as position-size did with 0.40 lots).
 - 2026-11-22 WEEKLY (16–22 Nov, Windsor): 14 reels + 1 carousel, ~1,300 views, ~1,100 reach (summed), 3,679 non-follower views; followers 0 → 11. Top 5: Bitcoin −51% needs +106% (69% skip, 18.4 s avg watch: loss maths keeps people), Life at 30 (55%, 5.6 s), Working days left (63%, 5.7 s), F&O margin (70%, 4.4 s, 1 save), SIP ₹68 lakh gap (139 views, most). Bottom 5: Fed hike mortgage (90% skip, 2.8 s), First follower meme (88%), Rupee 93 remittance (84%, 2.6 s), Gold making + GST (83%), UAE final settlement (80%).
 - Wins: personal time/age numbers and "the maths most people get wrong" (loss recovery, % traps) with one question on frame 1. Loses: rate/FX/market-news hooks and long text lists; milestone memes. Topic-wise: life/date > trading maths > SIP > news.
 - Slots: the 11:00 Dubai reels had the best watch time (working days, Bitcoin); late-night posts (00:30–02:00 Dubai) got good views early but higher skip. Sample is small; keep 11:00 for the strongest idea.
@@ -224,7 +227,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | posted 22 Nov 18:05 Dubai (approved: YouTube teaser rule), media 18116533043132278 |
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
-| 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | approved |
+| 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | approved (quality re-render 22 Nov EOD: cards were entering together and LPG line overran its card; now staggered 6.8/8.2/9.6 s, 25.0 s; same facts and caption) |
 
 [2026-11-22 17:30]
 ```

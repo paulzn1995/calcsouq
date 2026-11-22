@@ -195,7 +195,7 @@ card="Annuity vs equal principal, total interest",
 tool="""
 <div class="inputs">
  <div class="row3"><div><label for="P">Loan amount</label><input id="P" inputmode="decimal" value="300000"></div>
- <div><label for="r">Interest rate (% a year)</label><input id="r" inputmode="decimal" value="6"></div>
+ <div><label for="r">Interest (% a year)</label><input id="r" inputmode="decimal" value="6"></div>
  <div><label for="n">Years</label><input id="n" inputmode="decimal" value="25"></div></div>
 </div>
 <div class="result" aria-live="polite">
