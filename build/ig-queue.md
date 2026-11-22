@@ -18,6 +18,11 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-22 WEEKLY (16–22 Nov, Windsor): 14 reels + 1 carousel, ~1,300 views, ~1,100 reach (summed), 3,679 non-follower views; followers 0 → 11. Top 5: Bitcoin −51% needs +106% (69% skip, 18.4 s avg watch: loss maths keeps people), Life at 30 (55%, 5.6 s), Working days left (63%, 5.7 s), F&O margin (70%, 4.4 s, 1 save), SIP ₹68 lakh gap (139 views, most). Bottom 5: Fed hike mortgage (90% skip, 2.8 s), First follower meme (88%), Rupee 93 remittance (84%, 2.6 s), Gold making + GST (83%), UAE final settlement (80%).
+- Wins: personal time/age numbers and "the maths most people get wrong" (loss recovery, % traps) with one question on frame 1. Loses: rate/FX/market-news hooks and long text lists; milestone memes. Topic-wise: life/date > trading maths > SIP > news.
+- Slots: the 11:00 Dubai reels had the best watch time (working days, Bitcoin); late-night posts (00:30–02:00 Dubai) got good views early but higher skip. Sample is small; keep 11:00 for the strongest idea.
+- Trial vs normal: Instagram still refuses trial reels (11 followers), so all were normal; keep one trial attempt a week. Auto-approved vs hand-approved: only one auto-approved reel so far (working days: 63% skip, 5.7 s, above average); no sign the approval route matters.
+- Rules for 23–29 Nov: (1) every reel opens on a personal number or a "most people get this wrong" maths question, no news-rate hooks; (2) no reel without a reveal by ~9 s (reading pace still 18–25 s); (3) one save-bait cheat-sheet slide per week (carousel Wed 13:30) to grow saves, which are near zero.
 - 2026-11-22 (Paulson, standing rule): reels were too fast to read. READING PACE for every reel: 18–25 s total; every line of text and every number stays fully visible for at least 3 s after it finishes animating in; no more than 2 new text items per beat; slower entrances (about 0.6 s); the reveal number holds 3–4 s; end card holds 4 s. Simple way: write the scene timings as before, then multiply time by SLOW = 1.75 (see build/reel_fed_hike.py) and scale the audio cues by the same factor.
 - 2026-11-22 data (last 3 days): 'Life in numbers at 30' won clearly (51% skip, 5.8 s avg watch) vs 69–89% skip for everything else; the news/rate reels did worst (85–87% skip). Personal 'your life/your time' hooks beat market news. Today: lead with a personal-number quiz (working days left) and keep the question visible on frame 1.
 - 2026-11-21 Paulson: prefers broad, intriguing content built on the site's complex calculations (quiz/guess formats, simulations) over single-tool demos.
@@ -29,10 +34,50 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 | Reel | F&O margin calculator: futures, calendar spread, iron condor vs strangle, lot sizes | build/static/media/ig/2026-11-21-margin-calculator.mp4 | posted 2026-11-21, media 18143848828618251 |
 
 ## Topic calendar
-Milestone/meme posts: 0 → 1 follower 'Yipeee' reel (21 Nov).
-Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner (21 Nov).
-Used 22 Nov: working days left in 2026, FD vs SIP 15 yrs, UAE gratuity 10 yrs (21 vs 30 days), Rule of 72 doubling, position size / 10 losses in a row.
-Ideas next: GST slabs (check current rates first), BMI, salary hike vs inflation, credit card minimum payment trap, home loan prepayment, age facts at 25/40.
+Week 23–29 Nov 2026 (Sunday planner, 22 Nov). Slots are Dubai time: 11:00, 13:30, 16:00, 19:00, 21:30 (Wed: 11:00, 14:30, 16:00, 19:00, 21:30; carousel at 13:30). Rows marked VERIFY contain facts that change: check a current official source the morning you render, or drop the figure.
+Timely: JEE Main 2027 S1 late registration 23–26 Nov (₹500 late fee), correction 27–29 Nov, exam 20–28 Jan 2027 (NTA via Testbook); CAT 2026 on Sun 29 Nov; UAE Eid Al Etihad: private sector Wed 2–Thu 3 Dec, public sector 2–4 Dec (MoHRE, Gulf News/Khaleej Times 13 Nov); India advance tax 3rd instalment 15 Dec (75%); belated ITR and GSTR-9 31 Dec; Black Friday/White Friday 27 Nov; UAE salary days ~25–30 Nov.
+
+| Day | Slot | Tool page | Hook (frame 1) | Angle | Trial |
+|---|---|---|---|---|---|
+| Mon 23 | 11:00 | /age-calculator/ | When do you turn 10,000 days old? | 10,000 days ≈ 27 y 4 m; example birth date → exact date; "most people pass it without noticing" | no |
+| Mon 23 | 13:30 | /photo-resizer/ | JEE Main form: late window closes 26 Nov. Photo rejected? | Resize photo/signature to exact KB on your phone, files never uploaded. VERIFY sizes in the NTA bulletin | no |
+| Mon 23 | 16:00 | /percentage-calculator/ | Down 50%, then up 50%. Are you back to even? | ₹1,000 → ₹500 → ₹750; order doesn't matter (up then down also ₹750) | no |
+| Mon 23 | 19:00 | /compound-interest-calculator/ | ₹100 a day for 30 years becomes…? | ₹36,500 a year at 0% / 7% / 12% (illustrative rates) | no |
+| Mon 23 | 21:30 | /risk-reward-calculator/ | What win rate do you need at 1:3? | Break-even win rate: 1:1 50%, 1:2 33%, 1:3 25% (before costs) | no |
+| Tue 24 | 11:00 | /date-calculator/ | UAE National Day: 1 day of leave = 5 days off | Private sector off Wed 2–Thu 3 Dec; take Fri 4 → Wed–Sun. VERIFY no change since 13 Nov | no |
+| Tue 24 | 13:30 | /gst-calculator/ | ₹118 bill incl. 18% GST: how much is GST? | ₹18, not ₹21.24 (reverse-GST trap: divide by 1.18) | no |
+| Tue 24 | 16:00 | /age-calculator/ | You turn 1 billion seconds old at…? | 31 y 8 m (≈ 11,574 days); example birth date → date and weekday | no |
+| Tue 24 | 19:00 | /gold-tola-pavan-converter/ | 1 pavan, 1 tola, 1 troy ounce: which is heaviest? | 8 g < 11.66 g < 31.10 g; quiz then reveal | no |
+| Tue 24 | 21:30 | /trading-strategy-simulator/ | 100 traders, same coin-flip strategy. How many end up? | 50% win rate, 1:1.5 RR, 1% risk: spread of results (run the simulator, quote its output) | no |
+| Wed 25 | 11:00 | /age-calculator/ | The UAE turns 55 on 2 Dec. How many days old is it? | 2 Dec 1971 (Thu) → 2 Dec 2026 (Wed) = 20,089 days; "how many days old are you?" | no |
+| Wed 25 | 14:30 | /kerala-land-converter/ | How many sq ft is a 5-cent plot? | 1 cent = 435.6 sq ft → 2,178 sq ft; 100 cents = 1 acre | no |
+| Wed 25 | 16:00 | /percentage-calculator/ | 8% raise, 6% inflation. What's your real raise? | 1.08 ÷ 1.06 − 1 = 1.89%, not 2% (illustrative rates) | yes (weekly retry; if refused, post normally) |
+| Wed 25 | 19:00 | /bmi-calculator/ | Same BMI 24.9: 160 cm vs 185 cm | 63.7 kg vs 85.2 kg; BMI is a screening number only | no |
+| Wed 25 | 21:30 | /forex-pip-value-calculator/ | 1 pip on a standard lot: EUR/USD vs USD/JPY vs gold | $10 vs ~$6–7 vs $10 per $0.10 on 100 oz. VERIFY USD/JPY rate and contract size that day | no |
+| Thu 26 | 11:00 | /date-calculator/ | CAT is on Sunday. How many hours are left? | Countdown from Thu 11:00 to Sun 29 Nov; hours of sleep vs revision split | no |
+| Thu 26 | 13:30 | /uae-leave-encashment-calculator/ | 10 unused leave days on AED 8,000 basic = ? | Basic ÷ 30 × days = AED 2,667. VERIFY basis (basic pay, Decree-Law 33/2021) | no |
+| Thu 26 | 16:00 | /percentage-calculator/ | 437 out of 500: what percentage? | 87.4%; and the CGPA × 9.5 rule. VERIFY board rule before using CGPA | no |
+| Thu 26 | 19:00 | /compound-interest-calculator/ | Pay only the minimum due on ₹50,000? | Card interest ~3–4% a month compounds to 40%+ a year. VERIFY a current bank rate | no |
+| Thu 26 | 21:30 | /futures-tick-value-calculator/ | 1 tick on Nifty vs crude vs gold futures | Lot × tick size. VERIFY current lot sizes and tick sizes | no |
+| Fri 27 | 11:00 | /percentage-calculator/ | 50% off + extra 20% off = 70% off? | No: 60% off (₹1,000 → ₹500 → ₹400). Black/White Friday | no |
+| Fri 27 | 13:30 | /signature-resizer/ | JEE correction window is open. Signature too big? | Resize to exact KB in the browser. VERIFY sizes in the NTA bulletin | no |
+| Fri 27 | 16:00 | /age-calculator/ | Exact age on 1 Jan 2027? Exams check this, not your birthday | "Age as on date" with an example cut-off; one day can make you ineligible | no |
+| Fri 27 | 19:00 | /gulf-savings-return-planner/ | Payday: save 20% of AED 6,000 for 5 years = ? | AED 1,200 × 60 at 0% vs 5% (illustrative) | no |
+| Fri 27 | 21:30 | /risk-reward-calculator/ | 70% win rate and still losing money? | Avg win $50, avg loss $150 → expectancy −$10 a trade | no |
+| Sat 28 | 11:00 | /age-calculator/ | What day of the week were you born? | Quiz with three famous dates, then "check yours" | no |
+| Sat 28 | 13:30 | /kerala-stamp-duty-calculator/ | ₹50 lakh plot in Kerala: cash on top? | Stamp duty + registration fee. VERIFY current Kerala rates (8% + 2%?) | no |
+| Sat 28 | 16:00 | /image-to-pdf/ | 5 phone photos → 1 PDF under 1 MB? | Quiz on size, then the demo (offline, no upload) | no |
+| Sat 28 | 19:00 | /compound-interest-calculator/ | ₹150 coffee a day for 20 years = ? | ₹54,750 a year invested at 10% (illustrative) | no |
+| Sat 28 | 21:30 | /market-hours/ | London–New York overlap: what time in Dubai and India? | US winter time from 1 Nov. VERIFY session times | no |
+| Sun 29 | 11:00 | /age-calculator/ | Born on 29 Feb? How many real birthdays have you had? | Born 29 Feb 2000 → 6 (2004…2024); next 2028 | no |
+| Sun 29 | 13:30 | /mortgage-calculator/ | Equal EMI vs equal principal: which costs less? | Same loan, two schedules: interest difference and first-month payment | no |
+| Sun 29 | 16:00 | /percentage-calculator/ | CAT done. 99 percentile = 99% marks? | Percentile is rank-based, not marks; simple 10-person example | no |
+| Sun 29 | 19:00 | /date-calculator/ | Resign today with 30 days' notice: last working day? | Calendar days vs working days; date reveal | no |
+| Sun 29 | 21:30 | /forex-margin-calculator/ | 1 lot of gold at 1:100 leverage needs how much margin? | Price × 100 oz ÷ 100. VERIFY spot price that morning | no |
+
+Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner, rupee 93, RBI EMI tenure (21 Nov).
+Used 22 Nov: working days left in 2026, FD vs SIP 15 yrs, UAE gratuity 10 yrs (21 vs 30 days), Rule of 72 doubling, position size / 10 losses in a row, Bitcoin −51% loss maths, gold off record, Fed hike mortgage, Nvidia teaser, gold loan (ML) teaser.
+Planned 25 Nov carousel: EMI on ₹10 lakh at 5 rates (5/10/20 years, per-₹1-lakh shortcut).
 
 ## 2026-11-21 daily set (made by the daily Reels creator; slots are Dubai time)
 Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N.
@@ -287,4 +332,29 @@ Link in bio → Position size calculator (forex and gold)
 What do you risk per trade? 👇
 Example: standard lot, $10 a pip, each loss a % of the current balance, before spread and commission. Education only, not investment advice.
 #positionsizing #forextrading #riskmanagement #lotsize #tradingtips #calcsouq
+```
+
+## 2026-11-25 carousel (Sunday planner, 22 Nov)
+Render: build/carousel_2026_11_25.py (7 slides, 1080x1350 JPEG). All figures are reducing-balance EMI maths, computed by two independent methods in the script (formula and amortisation bisection; it asserts they agree within ₹1).
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-25 | 13:30 | carousel | — | — | dark cheat sheet | 2026-11-25-emi-10-lakh-1..7.jpg | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-22 16:02) |
+
+```captions
+[2026-11-25 13:30]
+EMI on a ₹10 lakh loan at 8%, 9%, 10%, 11% and 12% 📌 Save this for your next loan quote.
+
+5 years at 10%: EMI ₹21,247, interest ₹2.75 lakh
+10 years at 10%: EMI ₹13,215, interest ₹5.86 lakh
+20 years at 10%: EMI ₹9,650, interest ₹13.16 lakh
+
+The longer loan cuts the EMI by ₹11,597 but adds ₹10.41 lakh of interest.
+Shortcut on slide 6: EMI per ₹1 lakh. Multiply by your loan in lakh.
+
+Link in bio → Loan EMI calculator (any amount, rate and tenure)
+Which rate did your bank quote? 👇
+
+Reducing-balance EMI, monthly rests, before processing fees and insurance. Rates shown are examples, not offers. Not financial advice.
+#emi #homeloan #personalloan #carloan #loancalculator #calcsouq
 ```
