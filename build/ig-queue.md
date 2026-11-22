@@ -141,7 +141,7 @@ Render: build/reels_2026_11_21_world.py. Sources in the script header.
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-22 | 10:30 | reel | no | 1000 | electro | 2026-11-21-bitcoin-half-off.mp4 | /percentage-calculator/ | approved (Paulson 21 Nov 12:33) |
+| 2026-11-22 | 10:30 | reel | no | 1000 | electro | 2026-11-21-bitcoin-half-off.mp4 | /percentage-calculator/ | posted 22 Nov 11:05 Dubai (approved by Paulson 21 Nov 12:33), media 17972236698198157 |
 | 2026-11-22 | 14:30 | reel | no | 1000 | desi | 2026-11-21-gold-off-record.mp4 | /gold-price-calculator/ | approved (Paulson 21 Nov 12:33, with fixes: video re-rendered with verified $3,715 on 19 Nov) |
 
 ```captions
@@ -225,7 +225,7 @@ Renders: build/reels_2026_11_22.py (reels, reading pace SLOW = 1.75, 23.4 s each
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-22 | 11:00 | reel | no | 500 | pop | 2026-11-22-working-days-left.mp4 | /date-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 11:00 | reel | no | 500 | pop | 2026-11-22-working-days-left.mp4 | /date-calculator/ | posted (auto-approved) 22 Nov 11:05 Dubai, media 18124125247967161 |
 | 2026-11-22 | 12:00 | story | — | — | — | 2026-11-22-story-days-quiz.jpg | /date-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 | 2026-11-22 | 13:30 | reel | yes | 500 | desi | 2026-11-22-fd-vs-sip.mp4 | /sip-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 | 2026-11-22 | 16:00 | reel | no | 500 | cinematic | 2026-11-22-uae-gratuity-10-years.mp4 | /uae-gratuity-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
