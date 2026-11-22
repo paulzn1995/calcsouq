@@ -89,7 +89,9 @@ def stroked(xy, text, font, fill, sw=10, anchor="ls"):
 if a.tag:
     f = F("k", 58, a.tag); tw = d.textlength(a.tag, font=f); d.rounded_rectangle([110, 120, 110 + tw + 70, 210], 14, fill=ACC); d.text((145, 166), a.tag, font=f, fill=(255, 255, 255), anchor="lm")
 ML_TOP = any("\u0d00" <= ch <= "\u0d7f" for ch in a.top); OFF_Y = 80 if ML_TOP else 0
-stroked((100, 430), a.top, F("k", 230, a.top), (255, 255, 255))
+tsz = 230
+while d.textlength(a.top, font=F("k", tsz, a.top)) > 2380 and tsz > 120: tsz -= 6
+stroked((100, 430), a.top, F("k", tsz, a.top), (255, 255, 255))
 size = 470
 while d.textlength(a.big, font=F("k", size)) > 1250: size -= 10
 # big number with glow

@@ -176,6 +176,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | approved |
+| 2026-11-22 | 19:30 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -195,4 +196,24 @@ Work out any gain or loss: calcsouq.com/percentage-calculator
 Sources: company filing, AP/Reuters market reports, 20–21 Nov 2026. Education only, not investment advice.
 
 #nvidia #aibubble #stockmarket #nasdaq #calcsouq
+```
+
+[2026-11-22 19:30]
+```
+സ്വർണ്ണം പണയം വെച്ചവർ കുടുങ്ങിയോ? 😟 Gold loan holders, watch this.
+
+ജനുവരിയിൽ ഒരു പവന് ₹1,31,000-ൽ അധികം. ഇന്ന് ഏകദേശം ₹92,000. പവന് ഏകദേശം ₹39,000 കുറവ്.
+Same loan, cheaper gold → your LTV goes up → the bank may ask for margin.
+
+എന്തുകൊണ്ട് സ്വർണ്ണം കുറയുന്നു?
+1️⃣ US Fed: more rate hikes expected
+2️⃣ Dollar near a 19-month high
+3️⃣ Stock crash: investors sold gold for cash
+
+▶️ ബാങ്ക് വിളിക്കും മുൻപ് മുഴുവൻ വീഡിയോ കാണുക: youtube.com/@calcsouq (link in bio). Malayalam, with English subtitles.
+Pavan price calculator: calcsouq.com/gold-price-calculator
+
+Kerala 22K rates 21 Nov 2026; RBI gold loan rules from 1 Apr 2026. Education only, not financial advice.
+
+#goldrate #goldloan #keralagoldrate #സ്വർണ്ണവില #calcsouq
 ```
