@@ -19,6 +19,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 
 ## Learnings
 - 2026-11-22 (Paulson, standing rule): reels were too fast to read. READING PACE for every reel: 18–25 s total; every line of text and every number stays fully visible for at least 3 s after it finishes animating in; no more than 2 new text items per beat; slower entrances (about 0.6 s); the reveal number holds 3–4 s; end card holds 4 s. Simple way: write the scene timings as before, then multiply time by SLOW = 1.75 (see build/reel_fed_hike.py) and scale the audio cues by the same factor.
+- 2026-11-22 data (last 3 days): 'Life in numbers at 30' won clearly (51% skip, 5.8 s avg watch) vs 69–89% skip for everything else; the news/rate reels did worst (85–87% skip). Personal 'your life/your time' hooks beat market news. Today: lead with a personal-number quiz (working days left) and keep the question visible on frame 1.
 - 2026-11-21 Paulson: prefers broad, intriguing content built on the site's complex calculations (quiz/guess formats, simulations) over single-tool demos.
 - 2026-11-21 data (last 3 days): lowest skip (48%) and longest watch (5.4 s) = EMI reel with one concrete money question on frame 1; A/B/C quiz and long-text hooks were skipped 73–81%. Lead with a big number + question, show options after ~1 s, reveal by 9 s.
 - 2026-11-21 Trial Reels are refused by Instagram: account has too few followers. Post every reel as a normal reel until followers grow; retry trial once a week (if refused, post the same reel normally).
@@ -30,7 +31,8 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 ## Topic calendar
 Milestone/meme posts: 0 → 1 follower 'Yipeee' reel (21 Nov).
 Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner (21 Nov).
-Ideas next: FD vs SIP, GST slabs, gratuity 21 vs 30 days, position sizing, compound interest doubling, BMI, working days to deadline.
+Used 22 Nov: working days left in 2026, FD vs SIP 15 yrs, UAE gratuity 10 yrs (21 vs 30 days), Rule of 72 doubling, position size / 10 losses in a row.
+Ideas next: GST slabs (check current rates first), BMI, salary hike vs inflation, credit card minimum payment trap, home loan prepayment, age facts at 25/40.
 
 ## 2026-11-21 daily set (made by the daily Reels creator; slots are Dubai time)
 Renders: build/reels_2026_11_21.py (reels), build/stories_2026_11_21.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N.
@@ -216,4 +218,73 @@ Pavan price calculator: calcsouq.com/gold-price-calculator
 Kerala 22K rates 21 Nov 2026; RBI gold loan rules from 1 Apr 2026. Education only, not financial advice.
 
 #goldrate #goldloan #keralagoldrate #സ്വർണ്ണവില #calcsouq
+```
+
+## 2026-11-22 daily set (made by the daily Reels creator; slots are Dubai time)
+Renders: build/reels_2026_11_22.py (reels, reading pace SLOW = 1.75, 23.4 s each), build/stories_2026_11_22.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | 11:00 | reel | no | 500 | pop | 2026-11-22-working-days-left.mp4 | /date-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 12:00 | story | — | — | — | 2026-11-22-story-days-quiz.jpg | /date-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 13:30 | reel | yes | 500 | desi | 2026-11-22-fd-vs-sip.mp4 | /sip-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 16:00 | reel | no | 500 | cinematic | 2026-11-22-uae-gratuity-10-years.mp4 | /uae-gratuity-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 18:00 | story | — | — | — | 2026-11-22-story-rule-of-72.jpg | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 19:00 | reel | yes | 500 | funk | 2026-11-22-rule-of-72.mp4 | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 21:30 | reel | no | 500 | electro | 2026-11-22-position-size.mp4 | /position-size-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+
+```captions
+[2026-11-22 11:00]
+How many working days are left in 2026?
+From 23 Nov to 31 Dec: 39 days left.
+10 of them are weekend days.
+That leaves 29 working days: about 232 hours at 8 a day.
+89% of this year's 261 working days are already gone.
+Link in bio → Days between dates calculator (working days included)
+Which goal are you finishing before 31 Dec? 👇
+Counted Monday to Friday, before public holidays and leave.
+#workingdays #yearend #productivity #goals2026 #datecalculator #calcsouq
+
+[2026-11-22 13:30]
+FD vs SIP: ₹10,000 a month for 15 years
+You put in: ₹18 lakh
+FD/RD at 7%: about ₹31.6 lakh
+SIP at an assumed 12%: about ₹50.5 lakh
+Gap: about ₹18.9 lakh. The FD rate is fixed; SIP returns are market-linked and can be lower (or negative).
+Link in bio → SIP calculator and compound interest calculator
+What did you guess: A, B or C? 👇
+Illustration only: RD at 7% compounded quarterly, SIP at 12% compounded monthly, before tax. Returns are not guaranteed. Not investment advice.
+#fdvssip #sipcalculator #fixeddeposit #mutualfunds #personalfinance #calcsouq
+
+[2026-11-22 16:00]
+UAE gratuity after 10 years on AED 10,000 basic
+Years 1–5: 21 days' basic a year = AED 7,000 a year → AED 35,000
+Years 6–10: 30 days' basic a year = AED 10,000 a year → AED 50,000
+Total: AED 85,000. Every year after year 5 pays 43% more.
+Capped at 2 years' basic (AED 240,000).
+Link in bio → UAE gratuity calculator
+Did you guess B? 👇
+Private sector, Federal Decree-Law 33 of 2021 (Art. 51); basic salary only, day rate = basic ÷ 30. General information, not legal advice.
+#uaegratuity #endofservice #uaelabourlaw #dubaijobs #uaesalary #calcsouq
+
+[2026-11-22 19:00]
+How long does it take to double your money at 8%?
+Rule of 72: 72 ÷ 8 = 9 years.
+₹1 lakh at 8% a year → ₹1,99,900 after 9 years
+Wait 27 years and it doubles 3 times: about ₹7.99 lakh
+At 6% it takes about 12 years; at 12% about 6.
+Link in bio → Compound interest calculator
+What rate are you earning right now? 👇
+Compounded yearly, before tax, example rates. Returns are not guaranteed. Not investment advice.
+#ruleof72 #compoundinterest #doubleyourmoney #moneytips #investing101 #calcsouq
+
+[2026-11-22 21:30]
+$10,000 account, 1% risk: how many lots?
+Risk $100 ÷ (25-pip stop × $10 a pip per lot) = 0.40 lots on EUR/USD
+Trade 1 full lot with the same stop and one loss costs $250 (2.5%).
+10 losses in a row: risking 1% a trade leaves $9,044; risking 5% leaves $5,987.
+Link in bio → Position size calculator (forex and gold)
+What do you risk per trade? 👇
+Example: standard lot, $10 a pip, each loss a % of the current balance, before spread and commission. Education only, not investment advice.
+#positionsizing #forextrading #riskmanagement #lotsize #tradingtips #calcsouq
 ```
