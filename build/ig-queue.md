@@ -276,7 +276,7 @@ Renders: build/reels_2026_11_22.py (reels, reading pace SLOW = 1.75, 23.4 s each
 | 2026-11-22 | 13:30 | reel | yes | 500 | desi | 2026-11-22-fd-vs-sip.mp4 | /sip-calculator/ | posted (auto-approved) 22 Nov 16:05 Dubai as a normal reel (trial refused: too few followers), media 17920088349545514 |
 | 2026-11-22 | 16:00 | reel | no | 500 | cinematic | 2026-11-22-uae-gratuity-10-years.mp4 | /uae-gratuity-calculator/ | posted (auto-approved) 22 Nov 18:05 Dubai, media 18175007167463653 |
 | 2026-11-22 | 18:00 | story | — | — | — | 2026-11-22-story-rule-of-72.jpg | /compound-interest-calculator/ | posted (auto-approved) 22 Nov 19:04 Dubai, media 18072661472606429 |
-| 2026-11-22 | 19:00 | reel | yes | 500 | funk | 2026-11-22-rule-of-72.mp4 | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
+| 2026-11-22 | 19:00 | reel | yes | 500 | funk | 2026-11-22-rule-of-72.mp4 | /compound-interest-calculator/ | posted (auto-approved) 22 Nov 21:04 Dubai as a normal reel (trial refused: too few followers), media 18119805218591886 |
 | 2026-11-22 | 21:30 | reel | no | 500 | electro | 2026-11-22-position-size.mp4 | /position-size-calculator/ | awaiting approval (auto at 2026-11-22 09:52) |
 
 ```captions
