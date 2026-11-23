@@ -1,5 +1,23 @@
 # Guide backlog (remove a line once the guide is published)
 
+
+## Ranked by expected revenue impact (strategist, 23 Nov 2026; re-ranked every Monday)
+1. Merge PDF (+ reorder/delete pages) — Thu this week; huge search volume, file tool AI cannot replace.
+2. QR code generator (URL, Wi-Fi, WhatsApp, UPI text; PNG/SVG) — Tue this week; high steady demand, makes a file.
+3. Compress PDF to a target size (e.g. under 200 KB / 1 MB for forms) — exam and visa portals cap PDF size; pairs with merge PDF.
+4. India income tax calculator, new vs old regime FY 2026-27 — highest ad value we can build; owner OK + verify slabs on incometax.gov.in.
+5. Exam photo/signature presets: JEE Main, NEET, CUET, SSC, UPSC, IBPS — cheap landing pages on existing resizers; exam season Dec–Mar.
+6. Split PDF / extract pages — same library as merge; long-tail "extract pages from pdf".
+7. PDF to JPG (page images, in browser) — big volume; needed for portals that only take images.
+8. Advance tax / tax instalment planner (India 15 Dec, 15 Mar; UK 31 Jan payment on account) — personal multi-step result, high RPM; verify rules.
+9. Malayalam versions of EMI, SIP, age and percentage — regional-language gap; supports Malayalam YouTube. Then Arabic for UAE tools.
+10. Loan comparison / prepayment calculator (any currency) — high-RPM loans topic; personal result AI answers handle poorly.
+11. Image compressor / convert (JPG↔PNG↔WebP, HEIC to JPG) — high volume file tools, client-side.
+12. CGPA to percentage (university-specific formulas) — strong India student demand; must cite each university's rule.
+13. Retirement corpus / PPF / NPS calculators — high-RPM finance; personal plan output.
+14. Time zone converter / meeting planner — steady global demand; multi-person result beats a one-line AI answer.
+15. Unit converter — moved down: Google and AI answers absorb simple conversions; build only as a light hub for internal links.
+
 ## UAE
 - Annual leave encashment UAE: how unused leave is paid at end of service
 - Notice period rules in UAE (new labour law)
