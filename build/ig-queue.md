@@ -230,7 +230,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | posted 22 Nov 18:05 Dubai (approved: YouTube teaser rule), media 18116533043132278 |
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
 | 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 18:05 Dubai (approved: YouTube teaser rule), media 17981614515172878 |
-| 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | approved |
+| 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 19:06 Dubai (approved: YouTube teaser rule), media 18018958883968828 |
 | 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | approved |
 
 [2026-11-22 17:30]
@@ -283,7 +283,7 @@ Renders: build/reels_2026_11_23.py (reels, reading pace SLOW = 1.75, 23.1 s each
 | 2026-11-23 | 13:30 | reel | no | 3500 | cinematic | 2026-11-23-flat-rate-trap.mp4 | /loan-emi-calculator/ | posted (auto-approved) 16:06 Dubai, media 18002230269031431 |
 | 2026-11-23 | 16:00 | reel | yes | 3500 | funk | 2026-11-23-down-50-up-50.mp4 | /percentage-calculator/ | posted (auto-approved) 16:06 Dubai as normal reel (trial refused: too few followers), media 18648202270039938 |
 | 2026-11-23 | 18:00 | story | — | — | — | 2026-11-23-story-flat-rate.jpg | /loan-emi-calculator/ | posted (auto-approved) 18:05 Dubai, media 18117285725156224 |
-| 2026-11-23 | 19:00 | reel | yes | 3500 | desi | 2026-11-23-100-a-day-30-years.mp4 | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-23 09:47) |
+| 2026-11-23 | 19:00 | reel | yes | 3500 | desi | 2026-11-23-100-a-day-30-years.mp4 | /compound-interest-calculator/ | posted (auto-approved) 19:06 Dubai as normal reel (trial refused: too few followers), media 18024351173729091 |
 | 2026-11-23 | 21:30 | reel | no | 3500 | electro | 2026-11-23-break-even-win-rate.mp4 | /risk-reward-calculator/ | awaiting approval (auto at 2026-11-23 09:47) |
 
 ```captions
