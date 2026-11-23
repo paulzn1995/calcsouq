@@ -1,6 +1,7 @@
 # Long video #5 (Malayalam): Will your home loan EMI rise again? RBI 4 Dec (upload pack)
 
-Final video: ElevenLabs flow 6VujFSxLKgktQJbRw1IF (composition and generation ids in log.md), 1920x1080, about 8:20.
+Final video: ElevenLabs flow 6VujFSxLKgktQJbRw1IF (composition uOtuOFDqLOpiGY1XVbES, generation 94sZbbHZESahtcYLSmwj), 1920x1080, 8:20.
+Music: stock bed 0:00–3:23 and 4:57–8:20 (fades); the music clip cannot be trimmed, so the middle 94 s are narration only.
 Voice: Mahendran J (Malayalam, eleven_v3). English subtitles burnt in; English + Malayalam caption files too.
 Includes 1 AI-generated photoreal B-roll clip (a house at dusk, after the opening hook) → **AI use: Yes**.
 Facts checked 23 Nov 2026 (sources in sources.md). EMI examples computed in Python.
