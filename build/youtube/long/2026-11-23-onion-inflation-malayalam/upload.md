@@ -1,6 +1,6 @@
 # Short video (Malayalam): Onion +116% and your kitchen bill (upload pack)
 
-Final video: ElevenLabs flow BFuaW2eBilvJJSVvWF8z (composition: see log), 1920x1080, about 1:40.
+Final video: ElevenLabs flow BFuaW2eBilvJJSVvWF8z (composition QczjiV5tNV2rLeyoizzW, generation vVU8ajjGEskIwTRKZkiI), 1920x1080, 1:40. Background music is CalcSouq's own synthesised bed (reel_audio.py, lofi), baked into segB.mp4.
 Voice: Mahendran J (Malayalam, eleven_v3). English subtitles burnt in; English + Malayalam caption files too.
 No AI-generated realistic footage (all drawn graphics) → **AI use: No**.
 Facts checked 23 Nov 2026 (sources in sources.md). Made in credit-saving mode (ElevenLabs credits nearly used up).
