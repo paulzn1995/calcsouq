@@ -506,3 +506,11 @@ Figures checked 23 Nov 2026 (MoSPI CPI, RBI, SBI/PNB rate notices, Business Stan
 
 #homeloan #emi #rbi #malayalam #calcsouq
 ```
+
+## 2026-11-23 NVDA / AI premarket news (Paulson asked 18:17 Dubai: "push a few posts fast"). Render: build/reels_2026_11_23_nvda.py (sources in header)
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-23 | 18:30 | reel | no | 3000 | electro | 2026-11-23-nvda-29-premarket.mp4 | /percentage-calculator/ | approved (posting now, Paulson's request) |
+| 2026-11-23 | 18:35 | reel | no | 3000 | pop | 2026-11-23-ai-stocks-premarket.mp4 | /percentage-calculator/ | approved (posting now, Paulson's request) |
+| 2026-11-23 | 18:40 | story | — | — | — | 2026-11-23-story-nvda-29.jpg | /percentage-calculator/ | approved (posting now, Paulson's request) |
