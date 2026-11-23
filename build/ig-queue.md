@@ -339,6 +339,29 @@ Before spreads, commission and slippage. Education only, not investment advice.
 #riskreward #tradingtips #forextrading #riskmanagement #daytrading #calcsouq
 ```
 
+## 2026-11-23 YouTube Shorts → Instagram (made by the daily Shorts agent; slots are Dubai time)
+Best of the 3 world-news Shorts (build/yt_shorts_2026_11_23.py, pack build/youtube/2026-11-23-pack.md), posted automatically under Paulson's standing rule (YouTube teasers/shorts post automatically). 21:30 was already taken by the break-even win-rate reel, so this goes at 22:00.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-23 | 22:00 | reel | no | 4000 | cinematic | 2026-11-23-sensex-1484-crash-short.mp4 | /percentage-calculator/ | approved |
+
+```captions
+[2026-11-23 22:00]
+ഷെയറിൽ ഇട്ടവർക്ക് ഇന്ന് എത്ര പോയി? 📉 Sensex −1,484 today.
+
+Sensex closed at 82,436 (−1.77%) and Nifty 50 at 25,350 (−1.75%) on 23 Nov.
+Why: the US AI-stock sell-off spread to Asia; banks and metals fell most.
+Your money: ₹1 lakh in a Nifty index fund ≈ ₹1,750 less tonight (a paper loss until you sell).
+Markets are shut on 24 Nov (Guru Nanak Jayanti) and reopen on Wednesday.
+
+▶️ Daily world money news in Malayalam: youtube.com/@calcsouq (link in bio)
+Work out any gain or loss: calcsouq.com/percentage-calculator
+
+Sources: BSE/NSE close via Business Standard, NationPath, InCred, 23 Nov 2026. Education only, not investment advice.
+#sensex #nifty #stockmarketcrash #sharemarket #calcsouq
+```
+
 ## 2026-11-22 daily set (made by the daily Reels creator; slots are Dubai time)
 Renders: build/reels_2026_11_22.py (reels, reading pace SLOW = 1.75, 23.4 s each), build/stories_2026_11_22.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N.
 
