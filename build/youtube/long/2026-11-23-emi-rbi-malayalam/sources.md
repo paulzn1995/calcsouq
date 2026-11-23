@@ -1,0 +1,16 @@
+# Sources (checked 23 Nov 2026)
+- RBI raised repo 25 bp to 5.50% on 7 Oct 2026; stance "calibrated tightening"; first hike since Feb 2023; Governor Malhotra: rate cuts off the table in the near term; reasons: deficient monsoon, El Niño, high energy prices: Business Standard (7–8 Oct 2026), Oneindia (7 Oct 2026), LoansJagat (16 Nov 2026).
+- 2025: repo cut from 6.50% to 5.25% (125 bp in total), last cut 5 Dec 2025: Business Standard (5 Dec 2025); Deccan Herald; Upstox.
+- October 2026 CPI 6.09% (Sept 5.54%), 24-month high, above the 6% upper limit; target 4%, band 2–6%; food inflation 8.94%; onion +116.22%, garlic +60.74%, ginger +48.32%: Free Press Journal (12 Nov 2026), ThePrint (12 Nov 2026), Business Standard (13 Nov 2026).
+- MPC 2–4 Dec 2026, decision 4 Dec; ICRA's Aditi Nayar: a 25 bp hike "appears almost certain"; Barclays, Emkay, IDFC First Bank: 25 bp in Dec and Feb → 6%; SBI Research: 50% chance the cycle ends at 5.75%; Brent from over $117 to below $95: ThePrint, Business Standard (13 Nov), LoansJagat (16 Nov), IANS/DT Next (17 Nov).
+- PNB RLLR 8.10% → 8.35% from 8 Oct 2026; Bank of Baroda BRLLR raised to 8.15% from 8 Oct: PSU Connect (7 Oct 2026); Business Today "PNB, BOB others hike rates" (8 Oct 2026).
+- SBI raised EBLR/RLLR 25 bp from 15 Oct 2026; regular home loan 7.50–8.80%: Business Today (18 and 21 Oct 2026); Zee Biz; DT Next.
+- External-benchmark (repo-linked) floating loans since 1 Oct 2019, reset at least once every three months: RBI circular (4 Sep 2019) via Business Standard; Tata Capital guide (updated 3 Nov 2026). Many older floating loans reset yearly: Analytics Insight (19 Aug 2026).
+- At reset, lenders must offer: raise EMI, extend tenure, or switch to fixed rate: RBI (Aug 2023) via Business Standard (18 Aug 2023); Tata Capital guide.
+- No prepayment/foreclosure charges on floating-rate loans to individuals: RBI rules via Tata Capital guide (Pre-payment Charges Directions 2025); ICICI Bank home loan FAQ.
+- FD rates: banks set deposit rates individually and were slow to follow the October hike; RBI August data: fresh loans 8.61%, fresh deposits 5.67%: The Federal (21 Oct 2026). Some banks have since raised FD rates: Upstox (Nov 2026), newskarnataka (Indian Bank, 24 Oct 2026).
+- Worked EMI examples computed in Python (standard EMI formula, monthly rests); the formula reproduces Business Today's ₹50 lakh/20 y 8%→8.25% example (₹41,822 → ₹42,603) and Oneindia's ₹50 lakh/30 y 7.25%→7.5% example (₹34,109 → ₹34,961).
+  - ₹30 lakh, 20 y: 7.25% ₹23,711 · 7.50% ₹24,168 (+₹457) · 7.75% ₹24,628 (+₹917) · 8.00% ₹25,093 (+₹1,382/month, +₹16,584/year).
+  - 7.25% → 8.00% on 20 y: ₹20 lakh +₹921 · ₹50 lakh +₹2,303 · ₹75 lakh +₹3,455.
+  - Keep EMI ₹23,711 at 8%: 279.1 months (+39 months, ≈23.3 years); extra paid ≈ ₹9.27 lakh vs ≈ ₹3.32 lakh if the EMI is raised instead.
+  - Prepay ₹1 lakh now at 8%, same EMI ₹25,093: ends ≈18.5 months sooner, interest saved ≈ ₹3.65 lakh.

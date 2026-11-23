@@ -85,8 +85,24 @@ if a.prop == "barrel":  # shaded steel oil barrels with a fire glow behind
             yy = y0b + hb * fr; b2.line([(x0b, yy), (x0b + wb, yy)], fill=(15, 15, 18, 200), width=10); b2.line([(x0b, yy - 6), (x0b + wb, yy - 6)], fill=(230, 230, 235, 120), width=3)
         b2.ellipse([x0b, y0b + hb - 40, x0b + wb, y0b + hb], outline=(20, 20, 24, 255), width=4)
     img.paste(br, (0, 0), br); d = ImageDraw.Draw(img)
+if a.prop == "house":  # lit 3D house at dusk with a rising red arrow (home-loan topics)
+    gg = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(gg).ellipse([cx - 640, cy - 520, cx + 420, cy + 240], fill=(255, 150, 60, 130))
+    gg = gg.filter(ImageFilter.GaussianBlur(110)); img.paste(gg, (0, 0), gg)
+    hs = Image.new("RGBA", (W, H), (0, 0, 0, 0)); h2 = ImageDraw.Draw(hs)
+    fw, fh, sw, x0h, y0h = 420, 300, 210, cx - 420, cy - 200
+    h2.polygon([(x0h, y0h), (x0h + fw, y0h), (x0h + fw, y0h + fh), (x0h, y0h + fh)], fill=(236, 226, 208, 255))
+    h2.polygon([(x0h + fw, y0h), (x0h + fw + sw, y0h - sw * .35), (x0h + fw + sw, y0h + fh - sw * .35), (x0h + fw, y0h + fh)], fill=(170, 158, 140, 255))
+    h2.polygon([(x0h - 40, y0h + 10), (x0h + fw / 2, y0h - 190), (x0h + fw + 40, y0h + 10)], fill=(176, 70, 48, 255))
+    h2.polygon([(x0h + fw / 2, y0h - 190), (x0h + fw / 2 + sw, y0h - 190 - sw * .35), (x0h + fw + sw + 30, y0h - sw * .35 + 8), (x0h + fw + 40, y0h + 10)], fill=(120, 44, 32, 255))
+    for wx in (x0h + 50, x0h + fw - 140): h2.rectangle([wx, y0h + 70, wx + 90, y0h + 160], fill=(255, 205, 110, 255), outline=(90, 80, 70, 255), width=6)
+    h2.rectangle([x0h + fw / 2 - 48, y0h + fh - 150, x0h + fw / 2 + 48, y0h + fh], fill=(96, 64, 44, 255))
+    img.paste(hs, (0, 0), hs)
+    ar = Image.new("RGBA", (W, H), (0, 0, 0, 0)); a2 = ImageDraw.Draw(ar); ax, ay = cx + 210, cy - 40
+    a2.line([(ax - 260, ay + 200), (ax + 60, ay - 300)], fill=ACC + (255,), width=46)
+    a2.polygon([(ax + 130, ay - 400), (ax - 30, ay - 330), (ax + 120, ay - 240)], fill=ACC + (255,))
+    agl = ar.filter(ImageFilter.GaussianBlur(24)); img.paste(agl, (0, 0), agl); img.paste(ar, (0, 0), ar); d = ImageDraw.Draw(img)
 chip = Image.new("RGBA", (W, H), (0, 0, 0, 0)); c2 = ImageDraw.Draw(chip)
-if a.prop in ("gold", "barrel"): cx = -9999
+if a.prop in ("gold", "barrel", "house"): cx = -9999
 chip = Image.new("RGBA", (W, H), (0, 0, 0, 0)); c2 = ImageDraw.Draw(chip)
 for k in range(7):
     o = -150 + k * 50

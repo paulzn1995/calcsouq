@@ -1,0 +1,299 @@
+1
+00:00:00,000 --> 00:00:06,176
+A family with a thirty lakh rupee home loan could pay over thirteen hundred rupees more in EMI every month.
+
+2
+00:00:06,176 --> 00:00:12,771
+The Reserve Bank raised rates in October, and many economists expect another rise on the fourth of December.
+
+3
+00:00:12,771 --> 00:00:15,889
+So the question is: will our EMI go up again?
+
+4
+00:00:15,889 --> 00:00:28,060
+By the end of this video you will know what the repo rate is, how it reaches your loan, the silent tenure trap, and what you can do now.
+
+5
+00:00:34,320 --> 00:00:36,202
+First, what is the repo rate?
+
+6
+00:00:36,202 --> 00:00:44,156
+When banks need money for a short time, they borrow from the Reserve Bank. The interest they pay is the repo rate.
+
+7
+00:00:44,156 --> 00:00:49,924
+When the repo rate rises, money costs banks more, and they pass that cost on to our loans.
+
+8
+00:00:49,924 --> 00:01:00,306
+Since 2019, new floating-rate home loans from banks must be linked to an outside benchmark, and most banks chose the repo rate.
+
+9
+00:01:00,306 --> 00:01:06,860
+This is called the EBLR, or repo-linked lending rate. When the repo moves, it moves too.
+
+10
+00:01:07,020 --> 00:01:11,526
+Last year, in 2025, the story was the opposite.
+
+11
+00:01:11,526 --> 00:01:18,218
+The Reserve Bank cut the repo from six and a half percent to five and a quarter. A total cut of one and a quarter percent.
+
+12
+00:01:18,218 --> 00:01:22,789
+Many people's EMIs fell, or their loans were set to end sooner.
+
+13
+00:01:22,789 --> 00:01:28,487
+But on the seventh of October this year, the Reserve Bank raised the repo by a quarter percent, to five and a half.
+
+14
+00:01:28,487 --> 00:01:33,656
+It was the first rise since February 2023.
+
+15
+00:01:33,656 --> 00:01:39,720
+Governor Sanjay Malhotra said rate cuts are off the table in the near term.
+
+16
+00:01:39,887 --> 00:01:44,180
+Why raise rates? One word: inflation.
+
+17
+00:01:44,180 --> 00:01:52,557
+In October, India's retail inflation hit six point zero nine percent, a twenty-four month high.
+
+18
+00:01:52,557 --> 00:02:01,285
+The Reserve Bank's target is four percent, with a tolerance band of two to six. That upper limit has now been crossed.
+
+19
+00:02:01,285 --> 00:02:09,943
+Food inflation is eight point nine four percent. Onion prices have more than doubled in a year, up a hundred and sixteen percent.
+
+20
+00:02:09,943 --> 00:02:15,011
+Garlic is up more than sixty percent, ginger forty-eight percent.
+
+21
+00:02:15,011 --> 00:02:20,854
+The Reserve Bank pointed to a weak monsoon, El Niño and high energy prices.
+
+22
+00:02:20,854 --> 00:02:27,067
+Higher rates slow borrowing and spending, and that is meant to cool prices.
+
+23
+00:02:27,220 --> 00:02:31,817
+The next policy meeting runs from the second to the fourth of December, with the decision on the fourth.
+
+24
+00:02:31,817 --> 00:02:38,050
+ICRA's chief economist says another quarter-point rise in December appears almost certain.
+
+25
+00:02:38,050 --> 00:02:47,495
+Barclays, Emkay and IDFC First Bank expect a quarter point each in December and February. That would take the repo to six percent.
+
+26
+00:02:47,495 --> 00:02:53,414
+But SBI Research sees a fifty percent chance the cycle stops at five and three quarters.
+
+27
+00:02:53,414 --> 00:03:01,788
+Oil falling from over a hundred and seventeen dollars a barrel to below ninety-five, and a steadier rupee, give some relief.
+
+28
+00:03:01,788 --> 00:03:10,400
+So most expect another rise and differ only on how far. These are expectations, not certainties.
+
+29
+00:03:10,553 --> 00:03:15,762
+How does a repo rise reach your loan? Look at what happened in October.
+
+30
+00:03:15,762 --> 00:03:27,448
+The next day, the eighth of October, PNB raised its repo-linked rate from eight point one to eight point three five percent. Bank of Baroda raised its rate the same day.
+
+31
+00:03:27,448 --> 00:03:36,864
+On the fifteenth of October SBI raised its EBLR by a quarter percent too. SBI's regular home loan rates are now seven and a half to eight point eight percent.
+
+32
+00:03:36,864 --> 00:03:46,681
+On existing loans, the new rate arrives on your loan's reset date. For repo-linked loans that is at least once every three months.
+
+33
+00:03:46,681 --> 00:03:54,761
+Many older MCLR loans reset only once a year, so changes reach them more slowly.
+
+34
+00:03:54,761 --> 00:03:58,533
+On fixed-rate loans, the rate does not change during the fixed period.
+
+35
+00:03:58,687 --> 00:04:06,966
+Now the maths. A thirty lakh rupee loan with twenty years left, at seven and a quarter percent before October.
+
+36
+00:04:06,966 --> 00:04:10,755
+The EMI is about twenty-three thousand seven hundred rupees.
+
+37
+00:04:10,755 --> 00:04:16,579
+After October's rise, at seven and a half percent, the EMI goes up by about four hundred and fifty-seven rupees.
+
+38
+00:04:16,579 --> 00:04:22,193
+If December adds another and it reaches seven and three quarters, the rise is about nine hundred and seventeen rupees.
+
+39
+00:04:22,193 --> 00:04:30,823
+If February adds one more and the repo reaches six percent, the loan is at eight percent and the EMI about twenty-five thousand and ninety-three rupees.
+
+40
+00:04:30,823 --> 00:04:40,015
+That is thirteen hundred and eighty-two rupees a month more than before October, over sixteen and a half thousand a year.
+
+41
+00:04:40,015 --> 00:04:45,227
+This example assumes the bank passes on every rise in full.
+
+42
+00:04:45,387 --> 00:04:51,719
+A bigger loan means a bigger rise. Over twenty years, going from seven and a quarter to eight percent:
+
+43
+00:04:51,719 --> 00:04:56,621
+On twenty lakh, about nine hundred and twenty-one rupees more a month.
+
+44
+00:04:56,621 --> 00:05:00,843
+On fifty lakh, about two thousand three hundred and three rupees.
+
+45
+00:05:00,843 --> 00:05:05,813
+On seventy-five lakh, about three thousand four hundred and fifty-five rupees.
+
+46
+00:05:05,813 --> 00:05:13,127
+A simple rule of thumb: each quarter-point rise adds about fifteen rupees a month for every lakh borrowed.
+
+47
+00:05:13,287 --> 00:05:21,024
+But many people won't see a higher EMI, because banks often keep the EMI the same and stretch the loan instead.
+
+48
+00:05:21,024 --> 00:05:22,292
+This is the silent trap.
+
+49
+00:05:22,292 --> 00:05:29,562
+In our thirty lakh example, keeping the EMI at twenty-three thousand seven hundred while the rate goes to eight percent:
+
+50
+00:05:29,562 --> 00:05:35,632
+The twenty-year loan becomes about twenty-three and a quarter years: thirty-nine more months of EMI.
+
+51
+00:05:35,632 --> 00:05:40,701
+In total you pay about nine lakh twenty-seven thousand rupees more.
+
+52
+00:05:40,701 --> 00:05:47,505
+If you raise the EMI instead and keep the term, the extra is only about three lakh thirty-two thousand.
+
+53
+00:05:47,505 --> 00:05:53,842
+The same rate rise, but about six lakh rupees difference depending on the path you choose.
+
+54
+00:05:53,842 --> 00:06:02,947
+RBI rules say that at reset, your bank must offer you the option to raise the EMI, extend the term, or switch to a fixed rate.
+
+55
+00:06:03,087 --> 00:06:08,584
+What about savers? If loan rates rise, do fixed deposit rates rise straight away?
+
+56
+00:06:08,584 --> 00:06:17,639
+Not always. Each bank sets its own deposit rates, and banks that don't need money are in no hurry to pay more.
+
+57
+00:06:17,639 --> 00:06:27,275
+In RBI data for August, the average rate on new loans was eight point six one percent, but on new deposits only five point six seven.
+
+58
+00:06:27,275 --> 00:06:34,131
+An existing FD keeps its rate until maturity. You get a new rate only when you renew or open a fresh one.
+
+59
+00:06:34,131 --> 00:06:40,187
+So it is worth comparing a few banks before you renew.
+
+60
+00:06:40,353 --> 00:06:43,965
+No need to panic. Here are four things you can do now.
+
+61
+00:06:43,965 --> 00:06:52,124
+One: ask your bank for your current rate, outstanding amount, remaining term and next reset date, and write them down.
+
+62
+00:06:52,124 --> 00:06:59,147
+Two: check whether your term has been stretched. If you can afford it, ask to raise the EMI a little instead.
+
+63
+00:06:59,147 --> 00:07:04,096
+Three: even a small prepayment saves a lot. We will see that next.
+
+64
+00:07:04,096 --> 00:07:11,520
+Four: compare other banks' offers, but count processing and legal fees too.
+
+65
+00:07:11,520 --> 00:07:18,173
+This is not financial advice. Check your loan papers and talk to your bank before deciding.
+
+66
+00:07:18,320 --> 00:07:20,469
+Here is the power of prepayment.
+
+67
+00:07:20,469 --> 00:07:28,096
+At eight percent, on the thirty lakh loan, if you prepay one lakh now and keep the same EMI:
+
+68
+00:07:28,096 --> 00:07:30,939
+The loan ends about eighteen and a half months sooner.
+
+69
+00:07:30,939 --> 00:07:34,960
+You save about three lakh sixty-four thousand rupees in interest.
+
+70
+00:07:34,960 --> 00:07:41,893
+Pay one lakh, save over three and a half lakh, because interest is heaviest in the early years of a loan.
+
+71
+00:07:41,893 --> 00:07:49,820
+And under RBI rules, banks may not charge individuals a prepayment penalty on floating-rate home loans.
+
+72
+00:07:49,987 --> 00:07:58,289
+In short: inflation crossed six percent, the RBI raised rates in October, and another rise on the fourth of December is likely.
+
+73
+00:07:58,289 --> 00:08:04,611
+Your EMI may rise, or your term may quietly stretch, and the second costs more.
+
+74
+00:08:04,611 --> 00:08:10,933
+Work out your own loan's EMI with the free calculator on calcsouq.com.
+
+75
+00:08:10,933 --> 00:08:19,727
+What is your home loan rate now? Tell us in the comments. If this helped, share it with your family and subscribe.

@@ -228,6 +228,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-22 | 17:30 | reel | no | 3500 | cinematic | 2026-11-22-nvidia-ai-crash-teaser.mp4 | /percentage-calculator/ | posted 22 Nov 18:05 Dubai (approved: YouTube teaser rule), media 18116533043132278 |
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
 | 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | approved (quality re-render 22 Nov EOD: cards were entering together and LPG line overran its card; now staggered 6.8/8.2/9.6 s, 25.0 s; same facts and caption) |
+| 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -378,4 +379,21 @@ EMI calculator: calcsouq.com/loan-emi-calculator
 Figures checked 22 Nov 2026 (IEA, Kpler, PTI, Upstox). Education only, not financial advice.
 
 #hormuz #petrolprice #lpg #malayalam #calcsouq
+```
+
+[2026-11-23 18:00]
+```
+ഹോം ലോൺ EMI വീണ്ടും കൂടുമോ? 🏠 ഡിസംബർ 4-ന് റിസർവ് ബാങ്ക് തീരുമാനം.
+
+₹30 ലക്ഷം ലോൺ, 20 വർഷം: റിപ്പോ 6% ആയാൽ EMI മാസം ≈ +₹1,382 (ഒക്ടോബറിന് മുമ്പുള്ളതിനേക്കാൾ).
+📈 Inflation 6.09% in October (above the RBI's 6% limit)
+🏦 Repo 5.25% → 5.50% on 7 Oct; most forecasters expect another 0.25% on 4 Dec
+⚠️ Same EMI, longer loan: +39 months and ≈ ₹9.3 lakh more paid (raising the EMI instead ≈ ₹3.3 lakh)
+
+▶️ മുഴുവൻ വീഡിയോ (Malayalam, English subtitles): youtube.com/@calcsouq (link in bio)
+Check your own EMI: calcsouq.com/loan-emi-calculator
+
+Figures checked 23 Nov 2026 (MoSPI CPI, RBI, SBI/PNB rate notices, Business Standard, ThePrint). Example assumes full pass-through. Education only, not financial advice.
+
+#homeloan #emi #rbi #malayalam #calcsouq
 ```
