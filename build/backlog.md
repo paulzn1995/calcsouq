@@ -5,7 +5,7 @@
 1. Merge PDF (+ reorder/delete pages) — Thu this week; huge search volume, file tool AI cannot replace.
 2. QR code generator (URL, Wi-Fi, WhatsApp, UPI text; PNG/SVG) — Tue this week; high steady demand, makes a file.
 3. Compress PDF to a target size (e.g. under 200 KB / 1 MB for forms) — exam and visa portals cap PDF size; pairs with merge PDF.
-4. India income tax calculator, new vs old regime FY 2026-27 — highest ad value we can build; owner OK + verify slabs on incometax.gov.in.
+4. India income tax calculator, new vs old regime FY 2026-27 — APPROVED by owner 23 Nov; scheduled Tue 1 Dec; highest ad value we can build; verify slabs on incometax.gov.in.
 5. Exam photo/signature presets: JEE Main, NEET, CUET, SSC, UPSC, IBPS — cheap landing pages on existing resizers; exam season Dec–Mar.
 6. Split PDF / extract pages — same library as merge; long-tail "extract pages from pdf".
 7. PDF to JPG (page images, in browser) — big volume; needed for portals that only take images.
@@ -59,7 +59,7 @@
 - Compound interest / SIP calculator (AED and ₹)
 
 ## High-demand tools to add next (need owner OK for anything with tax rules)
-- Income tax calculator India (new vs old regime) — rules change every Budget; verify on incometax.gov.in first
+- Income tax calculator India (new vs old regime) — approved 23 Nov; rules change every Budget; verify on incometax.gov.in first
 - QR code generator (needs a QR encoder written in-page)
 - Unit converter (length, weight, temperature, area)
 - CGPA to percentage converter (university-specific formulas)
