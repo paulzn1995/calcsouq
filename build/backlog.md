@@ -17,6 +17,9 @@
 13. Retirement corpus / PPF / NPS calculators — high-RPM finance; personal plan output.
 14. Time zone converter / meeting planner — steady global demand; multi-person result beats a one-line AI answer.
 15. Unit converter — moved down: Google and AI answers absorb simple conversions; build only as a light hub for internal links.
+16. Reel-to-tool prefill links (e.g. /compound-interest-calculator/?daily=100&years=30) — UX: viewers from a reel land on default numbers (₹1 lakh, 5 years) instead of the scenario they just watched; prefilled inputs answer them in one tap. (EOD QA 23 Nov)
+17. Hindi state names in the property cost tool's state list (/hi/property-buying-cost-calculator/) — UX: "Tamil Nadu", "Uttar Pradesh" still show in English on the Hindi page. (EOD QA 23 Nov)
+18. "Updated · Free · languages" meta line: move the language links into one compact "Also in: हिन्दी · 中文 · Русский" row — UX: on phones it wraps into two ragged lines above the tool. (EOD QA 23 Nov)
 
 ## UAE
 - Annual leave encashment UAE: how unused leave is paid at end of service

@@ -18,6 +18,9 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-23 EOD data: big animated number + one object on frame 1 won today: Hormuz ML teaser (39 km counting up, barrels) 51.5% skip, 4.6 s avg watch, our best skip rate yet; EMI/RBI ML teaser 66%, 1 save. Static-headline A/B/C quizzes lost: flat-rate trap 89% skip / 1.8 s, ₹100 a day 83% / 2.2 s, down 50 up 50 75%. Do more: open on one huge counting number (new reel_fx.hook_number) and move the A/B/C pills after it, or drop them.
+- 2026-11-23 EOD hooks: jargon in the hook ("10% flat") was skipped fastest (89%); say the money result in plain words on frame 1 (e.g. "₹1 lakh loan, ₹30,000 interest") and keep the term for the reveal.
+- 2026-11-23 EOD pace: the hold that gets cut is the last reveal before the end card (onion teaser "+₹140" was on screen 1.6 s; re-rendered to 3.2 s). Before rendering, run reel_fx.pace_report(timeline, DUR); after rendering, `python3 build/reel_fx.py sheet in.mp4 out.jpg` makes a 1 fps contact sheet to check every line.
 - 2026-11-22 EOD QA (toolkit bug, fixed): reel_fx.back() returned ~1e-16 instead of 0 at its start, so every `if p > 0` element (cards, pills, kinetic words) appeared early in its offset/half-drawn state, e.g. all 3 Hormuz cards popped in at once and the end-card title words showed before their beat. Fixed in reel_fx.py; before queueing, check `python3 <reel>.py --frame <t0-0.1>` shows nothing for the next item.
 - 2026-11-22 EOD data: the slower 23–25 s reading-pace reels held people longer (avg watch 3.4–5.2 s: working days 5.2 s/64% skip, gold-loan ML teaser 4.8 s with 1 save, FD vs SIP 4.0 s) than the old 13.5 s news cuts (gold off record 2.1 s, 87% skip). Keep the pace rule; the personal-number hook still wins, UAE labour maths is weakest (gratuity: 39 reach, 76% skip).
 - 2026-11-22 EOD legibility: secondary lines at 40 px or less ("barrels · 1979 crisis", phone mock-up field labels, "Each loss = that % of the current balance") are too small to read on a phone. Keep any text a viewer must read at 44 px or more; if a phone mock-up holds the key number, repeat it in a pill beside the phone (as position-size did with 0.40 lots).
@@ -231,7 +234,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
 | 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 18:05 Dubai (approved: YouTube teaser rule), media 17981614515172878 |
 | 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 19:06 Dubai (approved: YouTube teaser rule), media 18018958883968828 |
-| 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | approved |
+| 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | approved (quality re-render 23 Nov EOD: "+₹140" reveal now holds 3.2 s, 23.6 s; same facts and caption) |
 
 [2026-11-22 17:30]
 ```

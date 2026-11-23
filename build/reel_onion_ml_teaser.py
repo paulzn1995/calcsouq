@@ -12,11 +12,14 @@ _RF.W, _RF.H = _SZ  # the 16:9 helpers resize reel_fx on import; restore 1080x19
 for _m in [m for m in list(sys.modules.values()) if m and getattr(m, '__name__', '').startswith('reel_')]:
     if hasattr(_m, 'W') and _m.__name__ != 'reel_audio': _m.W, _m.H = _SZ
 W, H = _SZ
-DUR = 22.0
-CUES = "0:boom,1.0:tick*10,2.8:hit,6.0:whoosh,6.8:pop,8.2:pop,9.6:pop,13.0:whoosh,14.0:coin*4,17.2:swoosh,18.2:success"
+HOLD = 1.6  # EOD QA 23 Nov: keep "+₹140" on screen 3.2 s (was 1.6 s) before the end card
+DUR = 22.0 + HOLD
+CUES = "0:boom,1.0:tick*10,2.8:hit,6.0:whoosh,6.8:pop,8.2:pop,9.6:pop,13.0:whoosh,14.0:coin*4,18.8:swoosh,19.8:success"
 
 def frame(t):
     img = scene_bg(t, "night", 43)
+    if t >= 17.2 + HOLD: t -= HOLD
+    elif t >= 17.2: t = 17.19
     if t < 6.0:
         ml(img, "ഉള്ളി വില", 300, t, 0.1, 110, WHITE)
         ml(img, "ഇരട്ടിയായി!", 440, t, 0.5, 120, GOLD)

@@ -283,3 +283,36 @@ def endcard(img, t, t0, title, tool_line="Free · no sign-up · private", theme_
     p = ease(seg(u, .3, .7)); d.text((W / 2, 850 + 20 * (1 - p)), tool_line, font=F("s", 44), fill=WHITE, anchor="mm")
     pill(img, W / 2, 1010, "calcsouq.com", t, t0 + .45, GOLD, INK, 64, 70)
     if u > 0.9: d.text((W / 2, 1140), "Link in bio ↗", font=F("b", 46), fill=WHITE, anchor="mm")
+
+# --- added by EOD QA 23 Nov 2026 -------------------------------------------------------------
+def hook_number(img, t, t0, t1, v0, v1, y, fmt="{:,.0f}", size=200, col=RED, shake_amt=12):
+    """Frame-1 hook that wins on our account (Hormuz 51% skip, Bitcoin 15 s watch): one huge number
+    counting up from t0 to t1, then a small shake as it lands. fmt gets the current value, e.g. "+{:.0f}%"."""
+    if t < t0: return
+    d = ImageDraw.Draw(img); d.text((W / 2, y), fmt.format(count(v0, v1, t, t0, t1)), font=F("k", size), fill=col, anchor="mm")
+    if t >= t1: shake(img, t, t1, shake_amt, 0.4)
+
+def pace_report(timeline, dur):
+    """Check the READING PACE rule before rendering. timeline = [(label, t_in, t_out, kind)], kind in
+    "text" | "reveal" | "end". Returns a list of problems (empty = OK). Rules: 18-25 s total; every text
+    visible >= 3 s; reveal 3-4 s or more; end card >= 4 s; at most 2 items starting within the same 0.5 s."""
+    bad = []
+    if not 18 <= dur <= 25: bad.append(f"duration {dur:.1f}s not in 18-25 s")
+    for lab, a, b, kind in timeline:
+        need = {"text": 3.0, "reveal": 3.0, "end": 4.0}.get(kind, 3.0)
+        if b - a < need: bad.append(f"{lab!r} on screen {b - a:.1f}s < {need:.0f}s")
+    starts = sorted(a for _, a, _, _ in timeline)
+    for i in range(len(starts) - 2):
+        if starts[i + 2] - starts[i] < 0.5: bad.append(f"3 items start within 0.5 s at {starts[i]:.1f}s")
+    return bad
+
+def contact_sheet(mp4, out, fps=1, cols=6):
+    """1 frame a second with timestamps, for a quick pace/legibility check: python3 build/reel_fx.py sheet in.mp4 out.jpg"""
+    import subprocess
+    vf = f"fps={fps},scale=270:480,drawtext=text='%{{pts\\:hms}}':x=5:y=5:fontsize=22:fontcolor=red:box=1,tile={cols}x5:padding=4"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-vf", vf, "-frames:v", "1", out], check=True)
+    return out
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) == 4 and sys.argv[1] == "sheet": print(contact_sheet(sys.argv[2], sys.argv[3]))

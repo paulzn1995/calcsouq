@@ -42,7 +42,7 @@ header nav a:hover{background:var(--soft)}
 .crumbs{font-size:13.5px;color:var(--mute);padding-top:22px}.crumbs a{color:var(--mute)}
 .lede{color:var(--mute);font-size:17px;max-width:64ch;margin:0 0 8px}
 .meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13.5px;color:var(--mute);margin:0 0 22px}
-.meta a{color:var(--mute)}
+.meta a{color:var(--mute);display:inline-block;padding:10px 3px;margin:-10px -3px}
 .tool{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
 .inputs{padding:24px;display:grid;gap:16px;align-content:start}
 .result{padding:24px;background:var(--soft);border-left:1px solid var(--line)}
@@ -50,6 +50,7 @@ label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
 [hidden]{display:none!important}
 .pct-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 .pct-row input,.pct-row select{width:96px;flex:0 0 auto}.pct-row b{font-weight:600;font-size:14.5px}
+@media(max-width:480px){.pct-row{padding:10px;gap:6px}.pct-row input{width:74px;padding-left:10px;padding-right:8px}}
 .pct-row output{flex:1 1 100%;font:700 20px/1.2 var(--body);font-variant-numeric:tabular-nums;color:var(--ink)}
 .pdf-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}.pdf-list:empty{display:none}
 .pdf-list li{display:flex;align-items:center;gap:10px;padding:6px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
@@ -99,11 +100,11 @@ article p,article li{line-height:1.7}
 table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14.5px}
 th{text-align:left;font-weight:600;color:var(--mute);border-bottom:1px solid var(--line);padding:8px 6px;font-size:13px}
 td{border-bottom:1px solid var(--line);padding:9px 6px}td.n,th.n{text-align:right;white-space:nowrap}
-.faq details{border-bottom:1px solid var(--line);padding:14px 0}
-.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq details{border-bottom:1px solid var(--line);padding:0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;min-height:44px}
 .faq summary::after{content:"+";color:var(--mute);font-size:20px;line-height:1}
 .faq details[open] summary::after{content:"–"}
-.faq details p{margin:8px 0 0;color:var(--mute)}
+.faq details p{margin:0 0 14px;color:var(--mute)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
 .card{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:var(--ink);transition:border-color .2s,box-shadow .2s}
 .card:hover{border-color:light-dark(#c9c9c3,#44474e);box-shadow:0 4px 14px -8px rgba(0,0,0,.2)}

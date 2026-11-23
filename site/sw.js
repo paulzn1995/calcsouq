@@ -1,6 +1,6 @@
 // CalcSouq service worker: pages network-first, assets cache-first, offline fallback to cache.
-const C = 'calcsouq-964e0797';
-self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(C).then(c => c.addAll(['/', '/assets/site.css?v=964e0797', '/assets/site.js?v=964e0797']))); });
+const C = 'calcsouq-586db9fc';
+self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(C).then(c => c.addAll(['/', '/assets/site.css?v=586db9fc', '/assets/site.js?v=586db9fc']))); });
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== C).map(k => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', e => {
   const r = e.request, u = new URL(r.url);
