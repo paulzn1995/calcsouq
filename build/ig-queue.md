@@ -25,6 +25,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 - Wins: personal time/age numbers and "the maths most people get wrong" (loss recovery, % traps) with one question on frame 1. Loses: rate/FX/market-news hooks and long text lists; milestone memes. Topic-wise: life/date > trading maths > SIP > news.
 - Slots: the 11:00 Dubai reels had the best watch time (working days, Bitcoin); late-night posts (00:30–02:00 Dubai) got good views early but higher skip. Sample is small; keep 11:00 for the strongest idea.
 - Trial vs normal: Instagram still refuses trial reels (11 followers), so all were normal; keep one trial attempt a week. Auto-approved vs hand-approved: only one auto-approved reel so far (working days: 63% skip, 5.7 s, above average); no sign the approval route matters.
+- 2026-11-23 data (last 3 days): personal time/age numbers and loss/% maths still win (Life at 30 56% skip 5.5 s, Rule of 72 60% 5.4 s, working days 65% 5.2 s, Bitcoin −51% 66% 15 s avg); news/rate hooks lose (Fed 89%, gold off record 87%, rupee 84%). Today: all 5 are 'maths most people get wrong' quizzes with a personal number, answer shown by ~5 s.
 - Rules for 23–29 Nov: (1) every reel opens on a personal number or a "most people get this wrong" maths question, no news-rate hooks; (2) no reel without a reveal by ~9 s (reading pace still 18–25 s); (3) one save-bait cheat-sheet slide per week (carousel Wed 13:30) to grow saves, which are near zero.
 - 2026-11-22 (Paulson, standing rule): reels were too fast to read. READING PACE for every reel: 18–25 s total; every line of text and every number stays fully visible for at least 3 s after it finishes animating in; no more than 2 new text items per beat; slower entrances (about 0.6 s); the reveal number holds 3–4 s; end card holds 4 s. Simple way: write the scene timings as before, then multiply time by SLOW = 1.75 (see build/reel_fed_hike.py) and scale the audio cues by the same factor.
 - 2026-11-22 data (last 3 days): 'Life in numbers at 30' won clearly (51% skip, 5.8 s avg watch) vs 69–89% skip for everything else; the news/rate reels did worst (85–87% skip). Personal 'your life/your time' hooks beat market news. Today: lead with a personal-number quiz (working days left) and keep the question visible on frame 1.
@@ -79,6 +80,7 @@ Timely: JEE Main 2027 S1 late registration 23–26 Nov (₹500 late fee), correc
 | Sun 29 | 21:30 | /forex-margin-calculator/ | 1 lot of gold at 1:100 leverage needs how much margin? | Price × 100 oz ÷ 100. VERIFY spot price that morning | no |
 
 Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner, rupee 93, RBI EMI tenure (21 Nov).
+Used 23 Nov: 10,000 days old, flat vs reducing rate (10% flat = 17.9%), down 50% up 50%, ₹100 a day for 30 years, break-even win rate at 1:3.
 Used 22 Nov: working days left in 2026, FD vs SIP 15 yrs, UAE gratuity 10 yrs (21 vs 30 days), Rule of 72 doubling, position size / 10 losses in a row, Bitcoin −51% loss maths, gold off record, Fed hike mortgage, Nvidia teaser, gold loan (ML) teaser.
 Planned 25 Nov carousel: EMI on ₹10 lakh at 5 rates (5/10/20 years, per-₹1-lakh shortcut).
 
@@ -268,6 +270,72 @@ Pavan price calculator: calcsouq.com/gold-price-calculator
 Kerala 22K rates 21 Nov 2026; RBI gold loan rules from 1 Apr 2026. Education only, not financial advice.
 
 #goldrate #goldloan #keralagoldrate #സ്വർണ്ണവില #calcsouq
+```
+
+## 2026-11-23 daily set (made by the daily Reels creator; slots are Dubai time)
+Renders: build/reels_2026_11_23.py (reels, reading pace SLOW = 1.75, 23.1 s each, answer revealed at ~4.5–6 s), build/stories_2026_11_23.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N. The calendar's 13:30 JEE photo-resizer demo was swapped for the flat-rate loan quiz (Paulson prefers complex-calculation quizzes over single-tool demos).
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-23 | 11:00 | reel | no | 3500 | pop | 2026-11-23-10000-days-old.mp4 | /age-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+| 2026-11-23 | 12:00 | story | — | — | — | 2026-11-23-story-10000-days.jpg | /age-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+| 2026-11-23 | 13:30 | reel | no | 3500 | cinematic | 2026-11-23-flat-rate-trap.mp4 | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+| 2026-11-23 | 16:00 | reel | yes | 3500 | funk | 2026-11-23-down-50-up-50.mp4 | /percentage-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+| 2026-11-23 | 18:00 | story | — | — | — | 2026-11-23-story-flat-rate.jpg | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+| 2026-11-23 | 19:00 | reel | yes | 3500 | desi | 2026-11-23-100-a-day-30-years.mp4 | /compound-interest-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+| 2026-11-23 | 21:30 | reel | no | 3500 | electro | 2026-11-23-break-even-win-rate.mp4 | /risk-reward-calculator/ | awaiting approval (auto at 2026-11-23 10:00) |
+
+```captions
+[2026-11-23 11:00]
+When do you turn 10,000 days old?
+10,000 days = 27 years 4 months and a bit (about 27.4 years).
+Born 15 July 1999? Your 10,000th day is Monday 30 Nov 2026.
+20,000 days ≈ 54.8 years. 30,000 days ≈ 82.1 years.
+Link in bio → Age calculator (exact age and total days lived)
+How many days old are you today? 👇
+Days counted from the birth date to the chosen date, as the age calculator does.
+#agecalculator #10000days #lifeinnumbers #birthday #howoldami #calcsouq
+
+[2026-11-23 13:30]
+"10% flat" loan: what's the real interest rate?
+₹1 lakh for 3 years at 10% flat: interest ₹30,000, EMI ₹3,611.
+Flat interest is charged on the full loan for all 3 years, even as you repay it.
+The same EMI on a reducing balance = about 17.9% a year.
+A true 10% reducing-balance loan: EMI ₹3,227, interest ₹16,162.
+Link in bio → Loan EMI calculator
+Has a lender ever quoted you a "flat" rate? 👇
+Example figures, before processing fees and insurance. Always ask for the reducing-balance rate (APR). Not financial advice.
+#flatrate #personalloan #emicalculator #loantips #interestrate #calcsouq
+
+[2026-11-23 16:00]
+Down 50%, then up 50%: are you back to even?
+No. ₹1,000 → ₹500 → ₹750. You're still 25% down.
+Up 50% first? ₹1,000 → ₹1,500 → ₹750. Same result.
+After a 50% fall you need +100% to get back.
+Link in bio → Percentage change calculator
+Did you guess A, B or C? 👇
+Simple percentage maths, any currency or asset. Not investment advice.
+#percentage #lossmath #investing101 #stockmarket #mathtricks #calcsouq
+
+[2026-11-23 19:00]
+₹100 a day for 30 years becomes…?
+₹3,000 a month for 30 years = ₹10.8 lakh put in.
+At 7% a year: about ₹36.6 lakh
+At an assumed 12% a year: about ₹1.05 crore
+Link in bio → Compound interest calculator (with monthly additions)
+What would you skip to save ₹100 a day? 👇
+Illustration only: ₹3,000 added at the end of each month, compounded monthly, before tax. Returns are not guaranteed. Not investment advice.
+#compoundinterest #savemoney #sip #moneytips #personalfinance #calcsouq
+
+[2026-11-23 21:30]
+Risk 1 to make 3: what win rate breaks even?
+Just 25%. Breakeven win rate = 1 ÷ (1 + R).
+1:1 → 50% · 1:2 → 33% · 1:3 → 25%
+3 wins in 10 trades at 1:3 = +2R (9R won − 7R lost).
+Link in bio → Risk–reward calculator
+What risk–reward do you trade? 👇
+Before spreads, commission and slippage. Education only, not investment advice.
+#riskreward #tradingtips #forextrading #riskmanagement #daytrading #calcsouq
 ```
 
 ## 2026-11-22 daily set (made by the daily Reels creator; slots are Dubai time)
