@@ -278,7 +278,7 @@ Renders: build/reels_2026_11_23.py (reels, reading pace SLOW = 1.75, 23.1 s each
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-23 | 11:00 | reel | no | 3500 | pop | 2026-11-23-10000-days-old.mp4 | /age-calculator/ | posted (auto-approved) 11:06 Dubai, media 18164753548500786 |
-| 2026-11-23 | 12:00 | story | — | — | — | 2026-11-23-story-10000-days.jpg | /age-calculator/ | awaiting approval (auto at 2026-11-23 09:47) |
+| 2026-11-23 | 12:00 | story | — | — | — | 2026-11-23-story-10000-days.jpg | /age-calculator/ | posted (auto-approved) 12:10 Dubai, media 18654865579053282 |
 | 2026-11-23 | 13:30 | reel | no | 3500 | cinematic | 2026-11-23-flat-rate-trap.mp4 | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-23 09:47) |
 | 2026-11-23 | 16:00 | reel | yes | 3500 | funk | 2026-11-23-down-50-up-50.mp4 | /percentage-calculator/ | awaiting approval (auto at 2026-11-23 09:47) |
 | 2026-11-23 | 18:00 | story | — | — | — | 2026-11-23-story-flat-rate.jpg | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-23 09:47) |
