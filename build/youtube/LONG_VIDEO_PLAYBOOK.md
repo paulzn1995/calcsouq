@@ -133,3 +133,9 @@ Goal: each long video gets 3–5 short cinematic 3D clips that make it feel prem
 
 **YouTube "AI use" answer:** if a video contains generated photoreal B-roll, tell Paulson to choose **Yes** on the AI-use screen (it is a realistic generated scene). Without B-roll, **No**.
 - Lesson (22 Nov, Hormuz video): many small per-scene mp4s failed the composition's content-policy check ("reference file could not be checked"). Join scenes into a few segments (split only where B-roll goes) with `-c copy -movflags +faststart` and attach those. Video clips cannot have fades (audio only). The composition lasts as long as its longest track: three 203 s music clips made a 428 s video 609 s long. Never let music run past the video; use two clips and let it fade out (or leave the end card without music).
+
+## Thumbnails (Paulson, 23 Nov 2026: "all the videos have the same thumbnail", wants real photos and no fixed red theme)
+- Use `build/yt_thumb_photo.py`, not the dark candlestick template: a photoreal scene that matches the topic (house for loans, jewellery counter for gold, tanker for oil…), made in ElevenLabs (e.g. bytedance-seedream-5-pro, 16:9, no people/text/logos; about 818 credits per image), with the Malayalam question in 2 lines, one big number and a short white sub-line.
+- Change the accent colour every video (yellow, teal, orange, lime, sky blue…); keep red only when the story is a crash.
+- The sandbox cannot download ElevenLabs files; `creative_get_generations` saves a 768x432 preview into the tool-results folder, which is the background file to use (`--shift 0.2` slides the subject right so the text sits over sky).
+- Example: youtube/long/2026-11-23-emi-rbi-malayalam/thumbnail.jpg
