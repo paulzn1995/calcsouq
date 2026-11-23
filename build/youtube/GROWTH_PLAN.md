@@ -1,5 +1,9 @@
 # YouTube growth plan (set 22 Nov 2026)
 
+> **CREDIT-SAVING MODE (Paulson, 23 Nov 2026) — in force until he says otherwise or ElevenLabs credits are back above 12,000:**
+> - Long-video agent: do NOT generate anything in ElevenLabs. Only research the topic, write the script, thumbnail and upload pack, save them, and tell Paulson it is ready to produce when credits return.
+> - Shorts agent: 3 Shorts a day on the top world news worth watching (no narration, no credits) — this is the channel's main output for now.
+
 **Goal (Paulson):** 4,000 public watch hours + 1,000 subscribers in 1–3 months, so the channel can join the YouTube Partner Programme. Every YouTube/Instagram agent reads this file first.
 
 ## What the data says (22 Nov, first day)
