@@ -231,6 +231,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
 | 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | approved (quality re-render 22 Nov EOD: cards were entering together and LPG line overran its card; now staggered 6.8/8.2/9.6 s, 25.0 s; same facts and caption) |
 | 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | approved |
+| 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -448,6 +449,23 @@ Figures checked 22 Nov 2026 (IEA, Kpler, PTI, Upstox). Education only, not finan
 
 #hormuz #petrolprice #lpg #malayalam #calcsouq
 ```
+
+[2026-11-24 19:30]
+```
+ഉള്ളി വില ഇരട്ടിയായി! 🧅 ഒരു വർഷം കൊണ്ട് +116%.
+
+പക്ഷേ ഉരുളക്കിഴങ്ങിന് വില കുറഞ്ഞു. എന്തുകൊണ്ട്?
+🧄 Garlic +61% · Ginger +48%
+🍲 Food inflation 8.94% · CPI 6.09% (above RBI's 6%)
+🏠 Example: 4 kg a month, ₹120 → ₹260
+
+▶️ മുഴുവൻ വീഡിയോ (Malayalam, English subtitles): youtube.com/@calcsouq (link in bio)
+Percentage calculator: calcsouq.com/percentage-calculator
+
+Figures checked 23 Nov 2026 (MoSPI/PIB, ThePrint). Kitchen figures are an example. Education only.
+#OnionPrice #Inflation #Kerala #MalayalamNews #CalcSouq
+```
+
 
 [2026-11-23 18:00]
 ```

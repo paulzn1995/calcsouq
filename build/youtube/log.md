@@ -9,3 +9,4 @@
 | 2026-11-22 | life.mp4 | — | see upload pack | — | ready for Paulson to upload |
 | 2026-11-22 | 2026-11-22-gold-loan-ltv-short.mp4 | — | സ്വർണ്ണം പണയം വെച്ചവർ കുടുങ്ങിയോ? Gold Loan LTV 98% #Shorts | സ്വർണ്ണം · Gold (Malayalam) | ready for Paulson to upload |
 | 2026-11-22 | 2026-11-22-10-pavan-92000-short.mp4 | — | 10 പവൻ ഇപ്പോൾ എത്ര കുറവ്? Gold ₹92,000 cheaper #Shorts | സ്വർണ്ണം · Gold (Malayalam) | ready for Paulson to upload |
+| 2026-11-23 | onion-inflation (segA.mp4, ElevenLabs composition) | — | ഉള്ളി വില ഇരട്ടിയായി! അടുക്കള ബിൽ എത്ര കൂടും? \| Onion Price +116% Explained | ഉള്ളി · Inflation (Malayalam) | composing; then ready for Paulson to upload |
