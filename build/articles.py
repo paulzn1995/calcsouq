@@ -440,3 +440,101 @@ A(group="india", slug="are-to-cent-conversion", tool="kerala-land-converter",
 """,
   faqs=[("How many cents are in 1 are?", "About 2.471 cents."),
         ("How many ares are in 10 cents?", "About 4.05 ares.")])
+
+# ---------------- Loans: rate rises (answer pages, 24 Nov 2026) ----------------
+import math as _m
+
+def _emi(P, a, n):
+    r = a / 1200
+    return P * r * (1 + r) ** n / ((1 + r) ** n - 1)
+
+def _months(P, a, E):
+    r = a / 1200
+    return _m.log(E / (E - P * r)) / _m.log(1 + r)
+
+def _inr(x):
+    return f"₹{x:,.0f}"
+
+def _ym(m):
+    m = _m.ceil(m - 1e-9); y, mo = divmod(m, 12)
+    return f"{y} yr {mo} mo" if mo else f"{y} yr"
+
+_P, _N, _A0 = 5_000_000, 240, 8.5
+_E0 = _emi(_P, _A0, _N)
+_I0 = _E0 * _N - _P
+_ROWS = []
+for _a in (8.75, 9.0, 9.25):
+    _e = _emi(_P, _a, _N); _mo = _months(_P, _a, _E0)
+    _ROWS.append(dict(a=_a, emi=_e, emi_up=_e - _E0, int_emi=_e * _N - _P, mo=_mo, int_ten=_E0 * _mo - _P))
+_R1 = _ROWS[0]
+def _lakh(x):
+    return f"₹{x/1e5:.2f} L"
+
+EMI_VS_TENURE_TABLE = ('<div class="scroll"><table><thead><tr><th>Rate</th><th class="n">A: EMI</th><th class="n">A: interest</th>'
+    '<th class="n">B: tenure</th><th class="n">B: interest</th><th class="n">B costs more</th></tr></thead><tbody>'
+    + "".join(f'<tr><td>{r["a"]:.2f}%</td><td class="n">{_inr(r["emi"])}</td><td class="n">{_lakh(r["int_emi"])}</td>'
+              f'<td class="n">{_ym(r["mo"])}</td><td class="n">{_lakh(r["int_ten"])}</td><td class="n">{_lakh(r["int_ten"] - r["int_emi"])}</td></tr>' for r in _ROWS)
+    + "</tbody></table></div>")
+
+A(group="uae", slug="higher-emi-or-longer-tenure-after-rate-hike", tool="loan-emi-calculator",
+  title="Rate Hike on Your Home Loan: Higher EMI or Longer Tenure? (Worked Example)",
+  h1="After a rate hike, should you pay a higher EMI or extend the tenure?",
+  desc="When your loan rate goes up, the bank can raise your EMI or stretch the tenure. A worked ₹50 lakh example shows how much more interest a longer tenure costs.",
+  keywords="higher emi or longer tenure, rate hike emi or tenure, increase emi or tenure home loan, bank increased tenure instead of emi, repo rate hike home loan tenure, home loan tenure extended after rate hike",
+  lede="Keeping the same EMI feels painless, but every extra month of tenure is a month of interest. Paying the higher EMI almost always costs less in total.",
+  body=f"""
+<h2>The short answer</h2>
+<p>If your budget can take it, choose the <strong>higher EMI</strong>. The loan ends on the original date and you pay less interest. Extending the tenure keeps the instalment the same, but the extra months are paid at the new, higher rate, so the total cost rises by much more than the EMI increase suggests.</p>
+<p>Many banks extend the tenure by default on floating-rate loans, because it needs no change to your standing instruction. Check your latest loan statement for the remaining tenure, not only the EMI.</p>
+<h2>Worked example: ₹50 lakh over 20 years</h2>
+<p>Loan of {_inr(_P)} at {_A0}% for 20 years. EMI {_inr(_E0)}, total interest {_inr(_I0)}. Now the rate rises at the very start. You can either pay a higher EMI for the same 20 years (option A) or keep paying {_inr(_E0)} for longer (option B).</p>
+{EMI_VS_TENURE_TABLE}
+<p class="hint">A = pay a higher EMI for the original 20 years; B = keep the {_inr(_E0)} EMI and extend. L = lakh (₹1,00,000). Calculated with the standard reducing-balance EMI formula; the rate change is applied to the full balance from month one. Real loans part-way through will see smaller numbers, but the same pattern.</p>
+<h2>What the table shows</h2>
+<p>A 0.25 percentage point rise adds only {_inr(_R1["emi_up"])} a month to the EMI. Keeping the old EMI instead adds about {_m.ceil(_R1["mo"] - _N)} months to the loan and {_inr(_R1["int_ten"] - _R1["int_emi"])} more interest than option A. After three such rises the tenure grows by more than three years.</p>
+<p>The reason is simple: with a fixed EMI, a larger share of each payment goes to interest, so the balance falls more slowly. Close to the point where the EMI only covers the interest, small rate rises push the tenure out sharply.</p>
+<h2>When extending can make sense</h2>
+<ul><li>Your monthly budget truly cannot absorb the higher EMI.</li>
+<li>You expect a bonus or lump sum and plan to prepay soon, which shortens the tenure again.</li>
+<li>You are young enough that a longer loan still ends well before retirement. Banks usually cap the loan at a maximum age.</li></ul>
+<h2>A middle path</h2>
+<p>Keep the old EMI but make a small part-prepayment once a year, or ask the bank to raise the EMI by a part of the increase. Use the calculator with your outstanding balance, new rate and remaining months to see both options before you call your lender.</p>
+""",
+  faqs=[("Why did my home loan tenure increase instead of my EMI?", "On floating-rate loans many lenders keep the EMI unchanged and extend the tenure when rates rise. You can usually ask them to raise the EMI instead; check your loan agreement and the lender's process."),
+        ("Is a higher EMI or a longer tenure cheaper after a rate hike?", f"A higher EMI. In our ₹50 lakh, 20-year example, a 0.25 point rise costs {_inr(_R1['int_ten'] - _R1['int_emi'])} more in interest if you extend the tenure instead."),
+        ("Can I switch back to a higher EMI later?", "Usually yes, by request to the lender or by making part-prepayments. In India, RBI rules bar prepayment charges on floating-rate loans taken by individuals for non-business purposes; elsewhere, check your loan terms."),
+        ("Does this apply to loans outside India?", "Yes. The maths is the same for any reducing-balance loan in any currency; only the rates and lender rules differ.")])
+
+_LOANS = (2_000_000, 3_000_000, 5_000_000, 7_500_000, 10_000_000)
+_Q = []
+for _L in _LOANS:
+    _d = _emi(_L, 8.75, 240) - _emi(_L, 8.5, 240)
+    _Q.append((_L, _emi(_L, 8.5, 240), _d, _d * 240))
+QUARTER_TABLE = ('<div class="scroll"><table><thead><tr><th>Loan</th><th class="n">EMI at 8.50%</th><th class="n">Extra EMI at 8.75%</th><th class="n">Extra interest over 20 yrs</th></tr></thead><tbody>'
+    + "".join(f'<tr><td>₹{L/1e5:g} lakh</td><td class="n">{_inr(e)}</td><td class="n">+{_inr(d)}</td><td class="n">{_inr(t)}</td></tr>' for L, e, d, t in _Q)
+    + "</tbody></table></div>")
+_Q50 = _Q[2]
+_SIMPLE = _Q50[0] * 0.0025 / 12
+
+A(group="uae", slug="how-much-does-a-quarter-point-rate-rise-cost", tool="loan-emi-calculator",
+  title="How Much Does a 0.25% Rate Rise Cost on a Home Loan? (Table by Loan Size)",
+  h1="How much does a 0.25% interest rate rise cost on a home loan?",
+  desc="A 0.25 percentage point rate rise adds about ₹160 a month per ₹10 lakh on a 20-year loan at 8.5%. See the table for ₹20 lakh to ₹1 crore and how to work out your own loan.",
+  keywords="0.25 rate hike emi impact, 25 bps repo hike home loan emi, how much will emi increase, repo rate hike emi calculator, 0.25 percent increase home loan cost, emi increase per lakh",
+  lede="A quarter-point rise sounds tiny. On a long loan it adds a small amount each month and a surprisingly large amount in total.",
+  body=f"""
+<h2>The short answer</h2>
+<p>On a 20-year loan, moving from 8.50% to 8.75% raises the EMI by about <strong>{_inr(_Q[0][2] / 2)} per ₹10 lakh borrowed</strong>. For a {_inr(_Q50[0])} loan that is {_inr(_Q50[2])} a month, or {_inr(_Q50[3])} extra over the full 20 years, if you keep the tenure unchanged.</p>
+<h2>Table by loan size</h2>
+{QUARTER_TABLE}
+<p class="hint">20-year reducing-balance loans, rate change applied from month one. Figures rounded to the nearest rupee.</p>
+<h2>Worked example</h2>
+<p>A quick shortcut is 0.25% of the loan divided by 12: {_inr(_Q50[0])} × 0.25% ÷ 12 = {_inr(_SIMPLE)}. The true increase is lower, {_inr(_Q50[2])}, because the extra interest is spread over 240 payments while the balance falls. The shortcut is a fair upper bound for long loans.</p>
+<p>The real figure for you depends on three things: your outstanding balance, the months left, and whether the lender raises the EMI or extends the tenure. Extending the tenure costs more in total; see our guide on <a href="/guides/higher-emi-or-longer-tenure-after-rate-hike/">higher EMI or longer tenure</a>.</p>
+<h2>Why rates are in the news</h2>
+<p>In India, the Reserve Bank raised the repo rate by 0.25 points to 5.50% in October 2026, and October retail inflation came in at 6.09%, above the 6% upper tolerance band. The next policy decision is due on 4 December 2026. Loans linked to an external benchmark such as the repo rate usually reset at the next reset date set in your loan agreement, not on the day of the announcement.</p>
+<p>Elsewhere the same arithmetic applies to any floating-rate mortgage: put your balance, new rate and remaining term into the calculator.</p>
+""",
+  faqs=[("How much does EMI increase for a 0.25% rate rise on ₹50 lakh?", f"About {_inr(_Q50[2])} a month on a 20-year loan moving from 8.50% to 8.75%, if the tenure stays the same."),
+        ("When will my EMI change after a repo rate rise?", "Repo-linked loans change on the reset date in your loan agreement, often the start of the next month or quarter. Your lender will confirm the new rate."),
+        ("Does a 0.25% rise cost more on a longer loan?", "Yes. The longer the remaining term, the more months the higher rate applies to, so the total extra interest is larger.")])
