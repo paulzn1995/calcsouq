@@ -653,7 +653,7 @@ Education only, not investment advice.
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-25 | 00:50 | reel | no | 2000 | lofi | 2026-11-25-3d-night-calls.mp4 | / | approved (posting now, Paulson's request) |
+| 2026-11-25 | 00:50 | reel | no | 2000 | lofi | 2026-11-25-3d-night-calls.mp4 | / | posted 00:5x Dubai (Paulson asked), media 18111912173267093 |
 | 2026-11-26 | 17:30 | reel | no | 2000 | desi | 2026-11-25-3d-amma-wedding-gold.mp4 | /gold-price-calculator/ | approved |
 | 2026-11-27 | 17:30 | reel | no | 2000 | cinematic | 2026-11-25-3d-rice-tin.mp4 | / | approved |
 
