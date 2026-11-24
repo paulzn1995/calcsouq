@@ -593,7 +593,7 @@ Assumptions: 50% win rate, win 1.5R, lose 1R, risk 1% of balance, costs 0.05R, 1
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-24 | 13:45 | reel | no | 9000 | cinematic | 2026-11-24-father-shoes.mp4 | / | approved (posting now, Paulson's request) |
+| 2026-11-24 | 13:45 | reel | no | 9000 | cinematic | 2026-11-24-father-shoes.mp4 | / | posted 13:5x Dubai (Paulson asked), media 17928953472199454 |
 | 2026-11-24 | 20:30 | reel | no | 9000 | cinematic | 2026-11-24-house-road.mp4 | / | approved |
 | 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | approved |
 
