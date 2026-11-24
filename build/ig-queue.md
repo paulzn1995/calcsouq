@@ -18,6 +18,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-24 data (last 3 days): the Hormuz teaser (one huge counting number on frame 1) is still the best skip rate (51%), then Life at 30 (56%) and working days (65%); the jargon hook "10% flat" was the worst ever (97% skip, 1.6 s) and 10,000 days old did 71% / 4.7 s. Today: every reel opens on one big counting number in plain words (1,000,000,000 seconds, ₹118, 5 days off, 31.1 g, 100 traders) with the A/B/C pills arriving after it.
 - 2026-11-23 EOD data: big animated number + one object on frame 1 won today: Hormuz ML teaser (39 km counting up, barrels) 51.5% skip, 4.6 s avg watch, our best skip rate yet; EMI/RBI ML teaser 66%, 1 save. Static-headline A/B/C quizzes lost: flat-rate trap 89% skip / 1.8 s, ₹100 a day 83% / 2.2 s, down 50 up 50 75%. Do more: open on one huge counting number (new reel_fx.hook_number) and move the A/B/C pills after it, or drop them.
 - 2026-11-23 EOD hooks: jargon in the hook ("10% flat") was skipped fastest (89%); say the money result in plain words on frame 1 (e.g. "₹1 lakh loan, ₹30,000 interest") and keep the term for the reveal.
 - 2026-11-23 EOD pace: the hold that gets cut is the last reveal before the end card (onion teaser "+₹140" was on screen 1.6 s; re-rendered to 3.2 s). Before rendering, run reel_fx.pace_report(timeline, DUR); after rendering, `python3 build/reel_fx.py sheet in.mp4 out.jpg` makes a 1 fps contact sheet to check every line.
@@ -84,6 +85,7 @@ Timely: JEE Main 2027 S1 late registration 23–26 Nov (₹500 late fee), correc
 
 Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders, EMI 10 vs 20 years, F&O margin, UAE final settlement (20–21 Nov); gold making + GST, Dubai property fees, life in numbers at 30, SIP at 25 vs 30, ₹1 crore savings planner, rupee 93, RBI EMI tenure (21 Nov).
 Used 23 Nov: 10,000 days old, flat vs reducing rate (10% flat = 17.9%), down 50% up 50%, ₹100 a day for 30 years, break-even win rate at 1:3.
+Used 24 Nov: 1 billion seconds old, GST inside ₹118 (reverse GST), UAE National Day 1 leave = 5 days off, 1 ounce = 3.9 pavan, 100 traders same strategy.
 Used 22 Nov: working days left in 2026, FD vs SIP 15 yrs, UAE gratuity 10 yrs (21 vs 30 days), Rule of 72 doubling, position size / 10 losses in a row, Bitcoin −51% loss maths, gold off record, Fed hike mortgage, Nvidia teaser, gold loan (ML) teaser.
 Planned 25 Nov carousel: EMI on ₹10 lakh at 5 rates (5/10/20 years, per-₹1-lakh shortcut).
 
@@ -517,3 +519,73 @@ Figures checked 23 Nov 2026 (MoSPI CPI, RBI, SBI/PNB rate notices, Business Stan
 | 2026-11-23 | 18:30 | reel | no | 3000 | electro | 2026-11-23-nvda-29-premarket.mp4 | /percentage-calculator/ | posted 18:2x Dubai (Paulson asked), media 17941741677403756 |
 | 2026-11-23 | 18:35 | reel | no | 3000 | pop | 2026-11-23-ai-stocks-premarket.mp4 | /percentage-calculator/ | posted (Paulson asked), media 18119208430829536 |
 | 2026-11-23 | 18:40 | story | — | — | — | 2026-11-23-story-nvda-29.jpg | /percentage-calculator/ | posted (Paulson asked), media 18402889363203070 |
+
+## 2026-11-24 daily set (made by the daily Reels creator; slots are Dubai time)
+Renders: build/reels_2026_11_24.py (reels, reading pace SLOW = 1.75, 23.1 s each, frame 1 = one big counting number per the 23 Nov learning; answer revealed at ~6 s), build/stories_2026_11_24.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N. Calendar swap: the strongest idea by data (personal age number: 1 billion seconds) moved to 11:00; UAE National Day leave moved to 16:00. National Day dates re-checked 24 Nov (MoHRE via The National / Gulf News, 13 and 17 Nov: private sector paid holiday Wed 2–Thu 3 Dec 2026).
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-24 | 11:00 | reel | no | 4500 | cinematic | 2026-11-24-billion-seconds.mp4 | /age-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 12:00 | story | — | — | — | 2026-11-24-story-billion-seconds.jpg | /age-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 13:30 | reel | yes | 4500 | desi | 2026-11-24-gst-inside-118.mp4 | /gst-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 16:00 | reel | no | 4500 | funk | 2026-11-24-national-day-5-days.mp4 | /date-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 18:00 | story | — | — | — | 2026-11-24-story-national-day.jpg | /date-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 19:00 | reel | yes | 4500 | pop | 2026-11-24-ounce-in-pavan.mp4 | /gold-tola-pavan-converter/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 21:30 | reel | no | 4500 | electro | 2026-11-24-100-traders.mp4 | /trading-strategy-simulator/ | awaiting approval (auto at 2026-11-24 09:49) |
+
+```captions
+[2026-11-24 11:00]
+When do you turn 1 billion seconds old?
+1,000,000,000 seconds = 11,574 days = 31 years 8 months (about 31.7 years).
+Born 1 Jan 1996? Your billion-second day is Thursday 9 Sep 2027.
+2 billion seconds ≈ 63.4 years.
+Link in bio → Age calculator (exact age and total days lived)
+Have you passed your billion yet? 👇
+Counted from midnight on the birth date; leap years included.
+#agecalculator #billionseconds #lifeinnumbers #birthday #howoldami #calcsouq
+
+[2026-11-24 12:00]
+(story) Quiz: You turn 1,000,000,000 seconds old at…? A 21 years · B 31 years 8 months · C 41 years. Answer in today's reel. calcsouq.com
+
+[2026-11-24 13:30]
+₹118 bill with 18% GST: how much is the GST?
+₹18, not ₹21.24.
+The ₹118 already includes GST, so divide: 118 × 18 ÷ 118 = ₹18. Price before GST = ₹100.
+Any rate: GST inside a bill = bill × rate ÷ (100 + rate).
+Link in bio → GST calculator (add or remove GST)
+Did you guess A, B or C? 👇
+Simple arithmetic on an 18% slab; your item's GST rate may differ.
+#gst #gstcalculator #gstindia #reversegst #mathtricks #calcsouq
+
+[2026-11-24 16:00]
+UAE National Day: 1 day of leave = 5 days off
+Private sector paid holiday: Wed 2 and Thu 3 Dec.
+Take Friday 4 Dec as leave → off from Wed 2 to Sun 6 Dec.
+Link in bio → Date calculator (days between dates, working days)
+Where are you spending the long weekend? 👇
+For a Monday–Friday job with Sat–Sun off. Holiday dates as announced by MoHRE (13 Nov 2026); check your employer's notice.
+#uaenationalday #eidaletihad #uaeholidays #longweekend #dubailife #calcsouq
+
+[2026-11-24 18:00]
+(story) UAE National Day: 1 day of leave = 5 days off. Take Fri 4 Dec · off Wed 2 → Sun 6. calcsouq.com
+
+[2026-11-24 19:00]
+1 ounce of gold = how many pavan?
+Almost 4: 1 troy ounce = 31.10 g ÷ 8 g = 3.9 pavan.
+Lightest to heaviest: 1 pavan (sovereign) 8 g · 1 tola 11.66 g · 1 troy ounce 31.10 g.
+1 ounce ≈ 2.67 tola.
+Link in bio → Gold tola and pavan converter
+Do you buy gold in grams, pavan or tola? 👇
+The international gold price is quoted per troy ounce, not the everyday 28.35 g ounce.
+#gold #goldrate #pavan #tola #keralagold #calcsouq
+
+[2026-11-24 21:30]
+100 traders, same coin-flip strategy: how many end up?
+In one run of our simulator, 90 finished in profit and 10 lost money, with the same rules.
+Best +63%, worst −8%. Someone had 15 losses in a row.
+Same edge (+0.2R a trade after costs), different luck.
+Link in bio → Trading strategy simulator (1,000 runs, drawdowns, losing streaks)
+What's your longest losing streak? 👇
+Assumptions: 50% win rate, win 1.5R, lose 1R, risk 1% of balance, costs 0.05R, 100 trades each. Results change every run (89–97 of 100 in profit across 300 repeats). Education only, not investment advice.
+#tradingsimulator #riskmanagement #tradingpsychology #forextrading #daytrading #calcsouq
+```
