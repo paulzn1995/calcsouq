@@ -40,6 +40,7 @@
 - [Days Between Dates & Date Calculator](https://www.calcsouq.com/date-calculator/): Days, working days, add or subtract days
 - [Word & Character Counter](https://www.calcsouq.com/word-counter/): Words, characters, reading time
 - [BMI Calculator](https://www.calcsouq.com/bmi-calculator/): BMI, category and healthy weight range
+- [QR Code Generator](https://www.calcsouq.com/qr-code-generator/): Wi-Fi, WhatsApp, link and UPI codes, PNG/SVG
 - [Property Buying Cost Calculator](https://www.calcsouq.com/property-buying-cost-calculator/): Stamp duty, registration and fees for your country
 - [China Salary Income Tax Calculator](https://www.calcsouq.com/china-income-tax-calculator/): Take-home pay after tax and social insurance
 - [Russia Salary Tax (NDFL) Calculator](https://www.calcsouq.com/russia-salary-tax-calculator/): Net salary on the 13–22% scale

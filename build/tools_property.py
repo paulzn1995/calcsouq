@@ -1,5 +1,5 @@
 # Worldwide property buying cost calculator: country (and Indian state) presets, every rate editable.
-from tools_more import TOOLS
+from tools_qr import TOOLS
 
 TOOLS.append(dict(
 group="india", slug="property-buying-cost-calculator", unique=True, icon="india",
