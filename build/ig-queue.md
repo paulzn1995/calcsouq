@@ -242,6 +242,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 18:05 Dubai (approved: YouTube teaser rule), media 17981614515172878 |
 | 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 19:06 Dubai (approved: YouTube teaser rule), media 18018958883968828 |
 | 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | posted 24 Nov 21:05 Dubai (approved: YouTube teaser rule; quality re-render 23 Nov EOD), media 18085449521722911 |
+| 2026-11-25 | 19:30 | reel | no | 3000 | cinematic | 2026-11-25-100rs-ml-teaser.mp4 | /sip-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -688,4 +689,17 @@ Nobody knew how much was there. Then one day, there was a new bicycle.
 You grew up. She is still saving for you. ❤️
 Tag the person who saved for you without telling anyone 👇
 #amma #mother #savings #nostalgia #90skids #CalcSouq
+```
+
+```captions
+[2026-11-25 19:30]
+ഒരു ദിവസം ₹100 കൊണ്ട് ജീവിക്കാൻ പറ്റുമോ? 🤔 30 ദിവസത്തെ പരീക്ഷണം.
+
+Day 1, 12 noon: the plan already failed. Tea ₹12, bus ₹10, a hotel meal ₹90+.
+Then a ₹30 meal and a ₹33 rice secret. But the real twist is rent.
+
+▶️ മുഴുവൻ വീഡിയോ (Malayalam, English subtitles): youtube.com/@calcsouq (link in bio)
+What's YOUR daily number? Comment 👇
+Real 2026 Kerala prices from news reports; Appu is a fictional animated character.
+#100RupeesChallenge #Kerala #MalayalamReels #Budget #CalcSouq
 ```
