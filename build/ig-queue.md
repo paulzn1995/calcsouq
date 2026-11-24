@@ -529,8 +529,8 @@ Renders: build/reels_2026_11_24.py (reels, reading pace SLOW = 1.75, 23.1 s each
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-24 | 11:00 | reel | no | 4500 | cinematic | 2026-11-24-billion-seconds.mp4 | /age-calculator/ | posted (auto-approved) 11:04 Dubai, media 18136703135504650 |
 | 2026-11-24 | 12:00 | story | — | — | — | 2026-11-24-story-billion-seconds.jpg | /age-calculator/ | posted (auto-approved) 12:04 Dubai, media 17983014477152833 |
-| 2026-11-24 | 13:30 | reel | yes | 4500 | desi | 2026-11-24-gst-inside-118.mp4 | /gst-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
-| 2026-11-24 | 16:00 | reel | no | 4500 | funk | 2026-11-24-national-day-5-days.mp4 | /date-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 13:30 | reel | yes | 4500 | desi | 2026-11-24-gst-inside-118.mp4 | /gst-calculator/ | posted (auto-approved) 16:11 Dubai as normal reel (trial refused: too few followers), media 18399910276164819 |
+| 2026-11-24 | 16:00 | reel | no | 4500 | funk | 2026-11-24-national-day-5-days.mp4 | /date-calculator/ | posted (auto-approved) 16:11 Dubai, media 18436323061146948 |
 | 2026-11-24 | 18:00 | story | — | — | — | 2026-11-24-story-national-day.jpg | /date-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
 | 2026-11-24 | 19:00 | reel | yes | 4500 | pop | 2026-11-24-ounce-in-pavan.mp4 | /gold-tola-pavan-converter/ | awaiting approval (auto at 2026-11-24 09:49) |
 | 2026-11-24 | 21:30 | reel | no | 4500 | electro | 2026-11-24-100-traders.mp4 | /trading-strategy-simulator/ | awaiting approval (auto at 2026-11-24 09:49) |
