@@ -647,3 +647,45 @@ Age 55. Which one are you becoming? Tell us in the comments 👇
 Education only, not investment advice.
 #savings #sip #money #future #financialfreedom #CalcSouq
 ```
+
+## Daily 3D curiosity reels
+2026-11-25 nostalgia set (Paulson asked 25 Nov 00:28; approved 00:44 "publish the insta videos, one today"). Render: build/reels_2026_11_25_nostalgia.py (sources in header), images build/reel_assets/2026-11-25/ (ElevenLabs flow IrYfOAQOPzHCumV3oI7z).
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-25 | 00:50 | reel | no | 2000 | lofi | 2026-11-25-3d-night-calls.mp4 | / | approved (posting now, Paulson's request) |
+| 2026-11-26 | 17:30 | reel | no | 2000 | desi | 2026-11-25-3d-amma-wedding-gold.mp4 | /gold-price-calculator/ | approved |
+| 2026-11-27 | 17:30 | reel | no | 2000 | cinematic | 2026-11-25-3d-rice-tin.mp4 | / | approved |
+
+```captions
+[2026-11-25 00:50]
+Why did our families wait till late at night to make a phone call? 📞
+
+Because long-distance (STD) calls were charged at a quarter of the normal rate late at night. So everyone waited by the phone, and every call was short.
+Every word mattered.
+
+Today calls are free. Call them anyway. ❤️
+Tag someone who remembers night calls 👇
+(Night-rate hours changed over the years; the quarter-rate night tariff came in the late 1980s.)
+#90skids #nostalgia #stdbooth #family #memories #CalcSouq
+
+[2026-11-26 17:30]
+1990. Amma's wedding. 10 pavan of gold. ✨
+
+Then: about ₹25,600 (24K average, ₹3,200 per 10 g in 1990)
+Now: about ₹11 lakh (24K around ₹1.4 lakh per 10 g, Nov 2026)
+The gold never changed. Its price grew about 44 times.
+
+Ask your amma what her wedding gold cost and tell us in the comments 👇
+Jewellery bills also include 22K pricing and making charges, so real bills differ. Check today's value: calcsouq.com/gold-price-calculator
+#gold #keralawedding #nostalgia #amma #90skids #CalcSouq
+
+[2026-11-27 17:30]
+Every month, Amma hid a few coins in the rice tin. 🍚
+
+Nobody knew how much was there. Then one day, there was a new bicycle.
+
+You grew up. She is still saving for you. ❤️
+Tag the person who saved for you without telling anyone 👇
+#amma #mother #savings #nostalgia #90skids #CalcSouq
+```
