@@ -15,6 +15,7 @@ Owner: Paulson Jose (paulznjoz@gmail.com). Contact address on the site: contact@
 - Topic ideas waiting to be written: `build/backlog.md`
 
 ## Content rules
+- Social content direction (Paulson, 24 Nov 2026): read `build/CONTENT_STRATEGY.md` before making any reel, Short or video. Curiosity first: new information people watch and share; cinematic 3D curiosity reels (Format A) daily when ElevenLabs credits allow; every post opens a curiosity gap and ends with a share or comment prompt.
 - Reels and videos (Paulson's standing rule): viewers must be able to read everything in one viewing. Not too fast, not too slow: 18–25 s per reel, every line and number visible at least 3 s after it appears, at most 2 new text items at once, reveal holds 3–4 s, end card 4 s. Reference: build/reel_fed_hike.py (SLOW = 1.75).
 - Positioning: CalcSouq is a general, worldwide site of free calculators and tools. In site-wide text (home, about, footer, descriptions, social posts) do not describe it as a site for expats, NRIs or Gulf/UAE residents, and do not say where it is made. Country-specific tools (UAE gratuity, Kerala land, NRI accounts) may name their country on their own pages.
 - Facts that can change (laws, tax rates, fees, contract specs, session times) must be checked against a current source with web search before writing. If unsure, leave it out.
