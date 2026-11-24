@@ -22,6 +22,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 - 2026-11-23 EOD data: big animated number + one object on frame 1 won today: Hormuz ML teaser (39 km counting up, barrels) 51.5% skip, 4.6 s avg watch, our best skip rate yet; EMI/RBI ML teaser 66%, 1 save. Static-headline A/B/C quizzes lost: flat-rate trap 89% skip / 1.8 s, ₹100 a day 83% / 2.2 s, down 50 up 50 75%. Do more: open on one huge counting number (new reel_fx.hook_number) and move the A/B/C pills after it, or drop them.
 - 2026-11-23 EOD hooks: jargon in the hook ("10% flat") was skipped fastest (89%); say the money result in plain words on frame 1 (e.g. "₹1 lakh loan, ₹30,000 interest") and keep the term for the reveal.
 - 2026-11-23 EOD pace: the hold that gets cut is the last reveal before the end card (onion teaser "+₹140" was on screen 1.6 s; re-rendered to 3.2 s). Before rendering, run reel_fx.pace_report(timeline, DUR); after rendering, `python3 build/reel_fx.py sheet in.mp4 out.jpg` makes a 1 fps contact sheet to check every line.
+- 2026-11-24 PAULSON'S DIRECTION (shown a viral 3D metaphor reel: 2.4M likes, 255K shares): stop posting only numbers. Mix in emotional story reels that people tag, share and comment on: an AI-generated 3D still or two of original characters (sacrifice, patience, family, the effort behind the result), a slow camera move and crossfade reveal, at most 3 short lines, and an end prompt to tag someone or answer 'which one are you?'. No brand logos in images (check bags and signs). Template: build/reels_2026_11_24_emotion.py. Images cost ~206 ElevenLabs credits each (gemini-3.1-flash-lite-image 1K); with credits low, reuse build/reel_assets/ images or draw scenes in code. Aim for about 1 story reel for every 2 number reels.
 - 2026-11-22 EOD QA (toolkit bug, fixed): reel_fx.back() returned ~1e-16 instead of 0 at its start, so every `if p > 0` element (cards, pills, kinetic words) appeared early in its offset/half-drawn state, e.g. all 3 Hormuz cards popped in at once and the end-card title words showed before their beat. Fixed in reel_fx.py; before queueing, check `python3 <reel>.py --frame <t0-0.1>` shows nothing for the next item.
 - 2026-11-22 EOD data: the slower 23–25 s reading-pace reels held people longer (avg watch 3.4–5.2 s: working days 5.2 s/64% skip, gold-loan ML teaser 4.8 s with 1 save, FD vs SIP 4.0 s) than the old 13.5 s news cuts (gold off record 2.1 s, 87% skip). Keep the pace rule; the personal-number hook still wins, UAE labour maths is weakest (gratuity: 39 reach, 76% skip).
 - 2026-11-22 EOD legibility: secondary lines at 40 px or less ("barrels · 1979 crisis", phone mock-up field labels, "Each loss = that % of the current balance") are too small to read on a phone. Keep any text a viewer must read at 44 px or more; if a phone mock-up holds the key number, repeat it in a pill beside the phone (as position-size did with 0.40 lots).
@@ -588,4 +589,38 @@ Link in bio → Trading strategy simulator (1,000 runs, drawdowns, losing streak
 What's your longest losing streak? 👇
 Assumptions: 50% win rate, win 1.5R, lose 1R, risk 1% of balance, costs 0.05R, 100 trades each. Results change every run (89–97 of 100 in profit across 300 repeats). Education only, not investment advice.
 #tradingsimulator #riskmanagement #tradingpsychology #forextrading #daytrading #calcsouq
+## 2026-11-24 emotional story reels (Paulson asked 13:34 Dubai: "posts should go viral … people share and like"). Render: build/reels_2026_11_24_emotion.py
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-24 | 13:45 | reel | no | 9000 | cinematic | 2026-11-24-father-shoes.mp4 | / | approved (posting now, Paulson's request) |
+| 2026-11-24 | 20:30 | reel | no | 9000 | cinematic | 2026-11-24-house-road.mp4 | / | approved |
+| 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | approved |
+
+```captions
+[2026-11-24 13:45]
+Everyone clapped for the degree. Nobody looked at the shoes that paid for it. ❤️
+
+Some people wear old shoes for years so we can walk into rooms they never could.
+
+Tag the person who did this for you. 👇
+#father #parents #sacrifice #family #motivation #CalcSouq
+
+[2026-11-24 20:30]
+They clapped for the house. They never saw the road. 🏡
+
+The old bike. The packed lunch. The holidays skipped. The small savings, every single month, for years.
+
+Respect the walk, not just the house.
+Share this with someone who's walking that road right now. 🙏
+#home #dream #savings #hardwork #family #CalcSouq
+
+[2026-11-25 13:00]
+Age 25. Same salary. One spent it. One planted it. 🌱
+
+Age 55. Which one are you becoming? Tell us in the comments 👇
+
+₹5,000 a month from 25 to 55 at an assumed 12% a year ≈ ₹1.76 crore. Returns are not guaranteed; try your own numbers: calcsouq.com/sip-calculator
+Education only, not investment advice.
+#savings #sip #money #future #financialfreedom #CalcSouq
 ```
