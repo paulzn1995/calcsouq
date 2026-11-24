@@ -526,7 +526,7 @@ Renders: build/reels_2026_11_24.py (reels, reading pace SLOW = 1.75, 23.1 s each
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-24 | 11:00 | reel | no | 4500 | cinematic | 2026-11-24-billion-seconds.mp4 | /age-calculator/ | posted (auto-approved) 11:04 Dubai, media 18136703135504650 |
-| 2026-11-24 | 12:00 | story | — | — | — | 2026-11-24-story-billion-seconds.jpg | /age-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
+| 2026-11-24 | 12:00 | story | — | — | — | 2026-11-24-story-billion-seconds.jpg | /age-calculator/ | posted (auto-approved) 12:04 Dubai, media 17983014477152833 |
 | 2026-11-24 | 13:30 | reel | yes | 4500 | desi | 2026-11-24-gst-inside-118.mp4 | /gst-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
 | 2026-11-24 | 16:00 | reel | no | 4500 | funk | 2026-11-24-national-day-5-days.mp4 | /date-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
 | 2026-11-24 | 18:00 | story | — | — | — | 2026-11-24-story-national-day.jpg | /date-calculator/ | awaiting approval (auto at 2026-11-24 09:49) |
