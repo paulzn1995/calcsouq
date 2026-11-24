@@ -1,6 +1,8 @@
 # Long video (Malayalam): ₹100 a day in Kochi, a 30-day animated experiment (upload pack)
 
 Length 8:13, 1920x1080. 21 narrated scenes (ElevenLabs flow xIQdFvxv4IA1bxpleMvH, voice Mahendran J, eleven_v3, Malayalam), 40 AI-generated 3D stills, English subtitles burnt in, English + Malayalam caption files, CalcSouq's own music bed.
+
+Final video: ElevenLabs generation wBQea5slqRAhHXZEfdvf (composition node sOXC0RDUA51jhIVnllOm on flow xIQdFvxv4IA1bxpleMvH). Download it from https://elevenlabs.io/app/image-video/history?modality=video&generationId=wBQea5slqRAhHXZEfdvf
 Appu is a fictional animated character; every price is from 2026 news reports (sources.md).
 **AI use: Yes** (AI-generated realistic-looking animated scenes).
 
