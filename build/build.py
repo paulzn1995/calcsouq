@@ -77,7 +77,7 @@ for t in TOOLS:
     srcs = t.get("sources") or SRC.get(t["slug"], [])
     grp = dict(GROUPS)[t["group"]]
     page += f'<main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#{t["group"]}">{grp}</a></div>\n<h1>{t["h1"]}</h1><p class="lede">{t["lede"]}</p>\n'
-    page += f'<div class="meta"><span>Updated {today:%d %b %Y}</span><span>Free, no sign-up</span>' + "".join(lang_switch("en", t["slug"])) if alts else "" + ('<a href="#sources">Sources</a>' if srcs else '<a href="#how">How it works</a>') + '</div>\n'
+    page += f'<div class="meta"><span>Updated {today:%d %b %Y}</span><span>Free, no sign-up</span>' + ("".join(lang_switch("en", t["slug"])) if alts else "") + ('<a href="#sources">Sources</a>' if srcs else '<a href="#how">How it works</a>') + '</div>\n'
     page += f'<section class="tool" aria-label="{html.escape(t["name"])}">{t["tool"]}</section>\n' + (share_bar() if t["slug"] != "market-hours" else "") + f'\n{ad()}\n'
     sb = ('<div class="sources" id="sources"><b>Sources</b><ul>' + "".join(f'<li><a href="{u}" rel="noopener">{n}</a></li>' for n, u in srcs) + '</ul></div>') if srcs else ""
     page += f'<article id="how">{t["body"]}{sb}{feedback()}</article>\n{ad()}\n'

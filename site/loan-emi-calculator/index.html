@@ -31,7 +31,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="/assets/site.css?v=586db9fc">
+<link rel="stylesheet" href="/assets/site.css?v=b7706094">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Loan EMI Calculator (AED & ₹)", "description": "Calculate your monthly EMI, total interest and total payment for any loan in AED or rupees. Works for UAE personal and car loans and Indian home loans.", "url": "https://www.calcsouq.com/loan-emi-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "en"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Loan EMI Calculator (AED & ₹)", "item": "https://www.calcsouq.com/loan-emi-calculator/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the EMI on a 100,000 loan at 6.5% for 4 years?", "acceptedAnswer": {"@type": "Answer", "text": "About 2,371 per month, with total interest of around 13,800."}}, {"@type": "Question", "name": "What is the difference between flat and reducing interest?", "acceptedAnswer": {"@type": "Answer", "text": "A flat rate charges interest on the full original loan for the whole term; a reducing rate charges interest only on the balance still owed, so it costs less for the same headline rate."}}], "inLanguage": "en"}</script>
@@ -45,7 +45,7 @@
 </div></header>
 <main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#uae">Money, tax & salary</a></div>
 <h1>Loan EMI calculator</h1><p class="lede">See your monthly instalment, total interest and total cost for a reducing-balance loan.</p>
-<a href="#how">How it works</a></div>
+<div class="meta"><span>Updated 24 Nov 2026</span><span>Free, no sign-up</span><a href="#how">How it works</a></div>
 <section class="tool" aria-label="Loan EMI Calculator (AED &amp; ₹)">
 <div class="inputs">
  <div><label>Currency</label><div class="seg" id="cur"><button type="button" data-v="AED " aria-pressed="true">AED</button><button type="button" data-v="₹" aria-pressed="false">₹ INR</button></div></div>
@@ -76,16 +76,16 @@
 <div class="follow"><span>Follow CalcSouq</span><div class="social"><a class="ig" href="https://www.instagram.com/calcsouq/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a class="yt" href="https://www.youtube.com/@calcsouq" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5.2 3L10 15z" fill="currentColor"/></svg><span>YouTube</span></a></div></div>
 <p>© <span class="yr">2026</span> CalcSouq. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
 </div></footer>
-<script src="/assets/site.js?v=586db9fc"></script>
+<script src="/assets/site.js?v=b7706094"></script>
 <script>
 {
 const cur = seg('cur', () => calc());
 function calc() {
   const P = V('amt'), r = V('rate') / 1200, n = Math.round(V('yrs') * 12), c = cur();
   const emi = !n ? 0 : r ? P * r * (1 + r) ** n / ((1 + r) ** n - 1) : P / n, tot = emi * n;
-  const d = c === '₹' ? 0 : 2;
-  $('out').textContent = c + F(emi, d);
-  $('lines').innerHTML = [['Months', n], ['Total interest', c + F(tot - P, d)], ['Total payment', c + F(tot, d)], ['Interest as % of loan', F(P ? (tot - P) / P * 100 : 0, 1) + '%']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  const d = c === '₹' ? 0 : 2, M = (v, k) => c === '₹' ? F(v, k) : FX(v, k);
+  $('out').textContent = c + M(emi, d);
+  $('lines').innerHTML = [['Months', n], ['Total interest', c + M(tot - P, d)], ['Total payment', c + M(tot, d)], ['Interest as % of loan', F(P ? (tot - P) / P * 100 : 0, 1) + '%']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
 }
 document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
 }

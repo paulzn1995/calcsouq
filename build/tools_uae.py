@@ -29,14 +29,14 @@ const calc = () => {
   if (yrs < 1) { $('out').textContent = 'AED 0.00'; L.innerHTML = ''; M.textContent = 'Less than one year of continuous service, so no gratuity is due.'; return; }
   const y1 = Math.min(yrs, 5), y2 = Math.max(yrs - 5, 0), p1 = daily * 21 * y1, p2 = daily * 30 * y2, cap = b * 24;
   const raw = p1 + p2, tot = Math.min(raw, cap);
-  $('out').textContent = 'AED ' + F(tot);
+  $('out').textContent = 'AED ' + FX(tot);
   M.textContent = raw > cap ? 'Capped at two years of basic salary.' : 'Paid within 14 days of the end of your contract.';
   L.innerHTML = [
     ['Service counted', F(yrs, 2) + ' years (' + days.toLocaleString() + ' days)'],
-    ['Daily basic wage', 'AED ' + F(daily)],
-    ['First 5 years: 21 days × ' + F(y1, 2) + ' yrs', 'AED ' + F(p1)],
-    ['After 5 years: 30 days × ' + F(y2, 2) + ' yrs', 'AED ' + F(p2)],
-    ['Maximum (24 × basic)', 'AED ' + F(cap)]
+    ['Daily basic wage', 'AED ' + FX(daily)],
+    ['First 5 years: 21 days × ' + F(y1, 2) + ' yrs', 'AED ' + FX(p1)],
+    ['After 5 years: 30 days × ' + F(y2, 2) + ' yrs', 'AED ' + FX(p2)],
+    ['Maximum (24 × basic)', 'AED ' + FX(cap)]
   ].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
 };
 document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
@@ -92,8 +92,8 @@ function calc() {
   $('amtLabel').textContent = m === 'add' ? 'Amount before VAT (AED)' : 'Amount including VAT (AED)';
   const net = m === 'add' ? a : a / (1 + r), vat = net * r, gross = net + vat;
   $('bigLabel').textContent = m === 'add' ? 'Total including VAT' : 'Amount before VAT';
-  $('out').textContent = 'AED ' + F(m === 'add' ? gross : net);
-  $('lines').innerHTML = [['Net amount', net], ['VAT at ' + (r * 100) + '%', vat], ['Gross amount', gross]].map(([k, v]) => `<li><span>${k}</span><b>AED ${F(v)}</b></li>`).join('');
+  $('out').textContent = 'AED ' + FX(m === 'add' ? gross : net);
+  $('lines').innerHTML = [['Net amount', net], ['VAT at ' + (r * 100) + '%', vat], ['Gross amount', gross]].map(([k, v]) => `<li><span>${k}</span><b>AED ${FX(v)}</b></li>`).join('');
   $('formula').textContent = m === 'add' ? `Gross = net × ${1 + r}` : `Net = gross ÷ ${1 + r}; VAT = gross − net`;
 }
 document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
@@ -154,6 +154,7 @@ function calc() {
   const rate = $('is24').checked ? V('rate') * PUR[k] / PUR[24] : V('rate');
   const gold = rate * V('wt'), making = mk() === 'pct' ? gold * V('mkv') / 100 : V('mkv') * V('wt');
   const tax = (gold + making) * V('tax') / 100, tot = gold + making + tax;
+  const F = c === 'uae' ? FX : window.F;
   $('out').textContent = cur + F(tot);
   $('lines').innerHTML = [[`${k}K rate per gram`, rate], ['Gold value', gold], ['Making charge', making], [(c === 'uae' ? 'VAT ' : 'GST ') + V('tax') + '%', tax]].map(([a, v]) => `<li><span>${a}</span><b>${cur}${F(v)}</b></li>`).join('');
   $('note').textContent = c === 'uae' ? 'UAE: 5% VAT applies to the full price of jewellery, including making charges. Tourists can reclaim it at departure.' : 'India: 3% GST applies to the value of the jewellery, including making charges.';

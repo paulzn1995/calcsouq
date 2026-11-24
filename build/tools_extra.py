@@ -25,8 +25,8 @@ tool="""
 js=r"""
 function calc() {
   const b = V('basic'), daily = b / 30, earned = Math.min(V('months'), 12) * 2.5, days = Math.max(V('carried') + earned - V('taken'), 0);
-  $('out').textContent = 'AED ' + F(daily * days);
-  $('lines').innerHTML = [['Daily basic wage', 'AED ' + F(daily)], ['Leave earned this year', F(earned, 1) + ' days'], ['Unused days to be paid', F(days, 1) + ' days']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  $('out').textContent = 'AED ' + FX(daily * days);
+  $('lines').innerHTML = [['Daily basic wage', 'AED ' + FX(daily)], ['Leave earned this year', F(earned, 1) + ' days'], ['Unused days to be paid', F(days, 1) + ' days']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
 }
 document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
 """,
@@ -119,9 +119,9 @@ const cur = seg('cur', () => calc());
 function calc() {
   const P = V('amt'), r = V('rate') / 1200, n = Math.round(V('yrs') * 12), c = cur();
   const emi = !n ? 0 : r ? P * r * (1 + r) ** n / ((1 + r) ** n - 1) : P / n, tot = emi * n;
-  const d = c === '₹' ? 0 : 2;
-  $('out').textContent = c + F(emi, d);
-  $('lines').innerHTML = [['Months', n], ['Total interest', c + F(tot - P, d)], ['Total payment', c + F(tot, d)], ['Interest as % of loan', F(P ? (tot - P) / P * 100 : 0, 1) + '%']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  const d = c === '₹' ? 0 : 2, M = (v, k) => c === '₹' ? F(v, k) : FX(v, k);
+  $('out').textContent = c + M(emi, d);
+  $('lines').innerHTML = [['Months', n], ['Total interest', c + M(tot - P, d)], ['Total payment', c + M(tot, d)], ['Interest as % of loan', F(P ? (tot - P) / P * 100 : 0, 1) + '%']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
 }
 document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
 """,

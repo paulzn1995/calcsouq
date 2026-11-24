@@ -31,7 +31,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="/assets/site.css?v=586db9fc">
+<link rel="stylesheet" href="/assets/site.css?v=b7706094">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "UAE Leave Encashment Calculator", "description": "Calculate payment for unused annual leave in the UAE under Federal Decree-Law 33 of 2021: based on basic salary, including leave earned in your final part year.", "url": "https://www.calcsouq.com/uae-leave-encashment-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "en"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "UAE Leave Encashment Calculator", "item": "https://www.calcsouq.com/uae-leave-encashment-calculator/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is leave encashment calculated on basic or gross salary in UAE?", "acceptedAnswer": {"@type": "Answer", "text": "On basic salary, under Article 19 of Cabinet Resolution No. 1 of 2022."}}, {"@type": "Question", "name": "Do I get paid for unused leave if I resign?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Unused leave, including leave earned in your final part year, must be paid when your service ends."}}, {"@type": "Question", "name": "How many annual leave days do UAE employees get?", "acceptedAnswer": {"@type": "Answer", "text": "30 calendar days for each completed year of service, earned pro rata in a part year."}}], "inLanguage": "en"}</script>
@@ -45,7 +45,7 @@
 </div></header>
 <main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#uae">Money, tax & salary</a></div>
 <h1>UAE leave encashment calculator</h1><p class="lede">Work out what you should be paid for unused annual leave when you leave a job in the UAE, or when your employer pays leave in cash.</p>
-<a href="#sources">Sources</a></div>
+<div class="meta"><span>Updated 24 Nov 2026</span><span>Free, no sign-up</span><a href="#sources">Sources</a></div>
 <section class="tool" aria-label="UAE Leave Encashment Calculator">
 <div class="inputs">
  <div><label for="basic">Basic monthly salary (AED)</label><input id="basic" inputmode="decimal" value="8000"><div class="hint">Leave encashment uses basic salary only.</div></div>
@@ -78,13 +78,13 @@
 <div class="follow"><span>Follow CalcSouq</span><div class="social"><a class="ig" href="https://www.instagram.com/calcsouq/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a class="yt" href="https://www.youtube.com/@calcsouq" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5.2 3L10 15z" fill="currentColor"/></svg><span>YouTube</span></a></div></div>
 <p>© <span class="yr">2026</span> CalcSouq. Results are estimates for general information, not legal, tax or investment advice. Found a mistake? Email contact@calcsouq.com.</p>
 </div></footer>
-<script src="/assets/site.js?v=586db9fc"></script>
+<script src="/assets/site.js?v=b7706094"></script>
 <script>
 {
 function calc() {
   const b = V('basic'), daily = b / 30, earned = Math.min(V('months'), 12) * 2.5, days = Math.max(V('carried') + earned - V('taken'), 0);
-  $('out').textContent = 'AED ' + F(daily * days);
-  $('lines').innerHTML = [['Daily basic wage', 'AED ' + F(daily)], ['Leave earned this year', F(earned, 1) + ' days'], ['Unused days to be paid', F(days, 1) + ' days']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  $('out').textContent = 'AED ' + FX(daily * days);
+  $('lines').innerHTML = [['Daily basic wage', 'AED ' + FX(daily)], ['Leave earned this year', F(earned, 1) + ' days'], ['Unused days to be paid', F(days, 1) + ' days']].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
 }
 document.querySelectorAll('.inputs input').forEach(i => i.addEventListener('input', calc)); calc();
 }

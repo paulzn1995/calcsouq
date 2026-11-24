@@ -34,7 +34,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="/assets/site.css?v=586db9fc">
+<link rel="stylesheet" href="/assets/site.css?v=b7706094">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "സ്വർണാഭരണ വില കാൽക്കുലേറ്റർ", "description": "ആഭരണത്തിന്റെ അന്തിമ വില കണക്കാക്കാം: ഗ്രാം നിരക്ക് × തൂക്കം + പണിക്കൂലി + യുഎഇ 5% VAT അല്ലെങ്കിൽ ഇന്ത്യ 3% GST. 24K, 22K, 21K, 18K.", "url": "https://www.calcsouq.com/ml/gold-price-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "ml"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "സ്വർണാഭരണ വില കാൽക്കുലേറ്റർ", "item": "https://www.calcsouq.com/ml/gold-price-calculator/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ദുബായിൽ ആഭരണ വില എങ്ങനെ കണക്കാക്കും?", "acceptedAnswer": {"@type": "Answer", "text": "പ്യൂരിറ്റിയുടെ ഗ്രാം നിരക്ക് × തൂക്കം, അതിനോട് പണിക്കൂലി ചേർത്ത്, ആകെ തുകയ്ക്ക് 5% VAT."}}, {"@type": "Question", "name": "പണിക്കൂലിക്ക് VAT ഉണ്ടോ?", "acceptedAnswer": {"@type": "Answer", "text": "ഉണ്ട്. യുഎഇയിൽ പണിക്കൂലി ഉൾപ്പെടെ മുഴുവൻ വിലയ്ക്കും 5% VAT."}}], "inLanguage": "ml"}</script>
@@ -84,7 +84,7 @@
 <div class="follow"><span>Follow CalcSouq</span><div class="social"><a class="ig" href="https://www.instagram.com/calcsouq/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a class="yt" href="https://www.youtube.com/@calcsouq" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5.2 3L10 15z" fill="currentColor"/></svg><span>YouTube</span></a></div></div>
 <p>© <span class="yr">2026</span> CalcSouq. ഫലങ്ങൾ പൊതുവിവരത്തിനുള്ള ഏകദേശ കണക്കുകളാണ്; നിയമ, നികുതി, നിക്ഷേപ ഉപദേശമല്ല. തെറ്റ് കണ്ടാൽ contact@calcsouq.com-ൽ അറിയിക്കുക.</p>
 </div></footer>
-<script src="/assets/site.js?v=586db9fc"></script>
+<script src="/assets/site.js?v=b7706094"></script>
 <script>
 {
 const PUR = { 24: 0.999, 22: 0.916, 21: 0.875, 18: 0.75 };
@@ -99,6 +99,7 @@ function calc() {
   const rate = $('is24').checked ? V('rate') * PUR[k] / PUR[24] : V('rate');
   const gold = rate * V('wt'), making = mk() === 'pct' ? gold * V('mkv') / 100 : V('mkv') * V('wt');
   const tax = (gold + making) * V('tax') / 100, tot = gold + making + tax;
+  const F = c === 'uae' ? FX : window.F;
   $('out').textContent = cur + F(tot);
   $('lines').innerHTML = [[`${k}K ഗ്രാം നിരക്ക്`, rate], ['സ്വർണ വില', gold], ['പണിക്കൂലി', making], [(c === 'uae' ? 'VAT ' : 'GST ') + V('tax') + '%', tax]].map(([a, v]) => `<li><span>${a}</span><b>${cur}${F(v)}</b></li>`).join('');
   $('note').textContent = c === 'uae' ? 'യുഎഇ: പണിക്കൂലി ഉൾപ്പെടെ മുഴുവൻ വിലയ്ക്കും 5% VAT. ടൂറിസ്റ്റുകൾക്ക് മടങ്ങുമ്പോൾ തിരികെ ലഭിക്കും.' : 'ഇന്ത്യ: പണിക്കൂലി ഉൾപ്പെടെ ആഭരണ വിലയ്ക്ക് 3% GST.';

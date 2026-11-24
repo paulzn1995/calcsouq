@@ -40,8 +40,8 @@ function calc() {
   if (!isNaN(s) && !isNaN(e) && e > s) { yrs = (Math.round((e - s) / 864e5) + 1 - V('unpaid')) / 365; if (yrs >= 1) gr = Math.min(b / 30 * (21 * Math.min(yrs, 5) + 30 * Math.max(yrs - 5, 0)), b * 24); }
   const leave = b / 30 * V('leave'), sal = g / 30 * V('saldays'), notice = g / 30 * V('nshort') * ($('nwho').value === 'employer' ? 1 : -1), other = V('other'), ded = V('ded');
   const tot = gr + leave + sal + notice + other - ded;
-  $('out').textContent = 'AED ' + F(tot);
-  const row = (a, v, cls) => `<li${cls ? ' class="' + cls + '"' : ''}><span>${a}</span><b>${v < 0 ? '−' : ''}AED ${F(Math.abs(v))}</b></li>`;
+  $('out').textContent = 'AED ' + FX(tot);
+  const row = (a, v, cls) => `<li${cls ? ' class="' + cls + '"' : ''}><span>${a}</span><b>${v < 0 ? '−' : ''}AED ${FX(Math.abs(v))}</b></li>`;
   $('lines').innerHTML = row(`Gratuity (${F(yrs, 2)} yrs)${yrs < 1 ? ', under 1 year' : ''}`, gr) + row('Unused leave', leave) + row('Unpaid salary days', sal) + (V('nshort') ? row('Notice pay', notice) : '') + (other ? row('Other amounts', other) : '') + (ded ? row('Deductions', -ded) : '') + row('Total', tot, 'total');
 }
 document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
