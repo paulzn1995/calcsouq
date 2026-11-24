@@ -238,7 +238,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-22 | 17:45 | reel | no | 1500 | cinematic | 2026-11-22-gold-loan-ml-teaser.mp4 | /gold-price-calculator/ | posted 22 Nov 19:04 Dubai (approved: YouTube teaser rule), media 18129571402917476 |
 | 2026-11-23 | 17:45 | reel | no | 1500 | cinematic | 2026-11-23-hormuz-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 18:05 Dubai (approved: YouTube teaser rule), media 17981614515172878 |
 | 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 19:06 Dubai (approved: YouTube teaser rule), media 18018958883968828 |
-| 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | approved (quality re-render 23 Nov EOD: "+₹140" reveal now holds 3.2 s, 23.6 s; same facts and caption) |
+| 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | posted 24 Nov 21:05 Dubai (approved: YouTube teaser rule; quality re-render 23 Nov EOD), media 18085449521722911 |
 
 [2026-11-22 17:30]
 ```
@@ -614,7 +614,7 @@ Sources: Saxo, 10 Things, IC Markets, Tickmill market reports, 23–24 Nov 2026.
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-24 | 13:45 | reel | no | 9000 | cinematic | 2026-11-24-father-shoes.mp4 | / | posted 13:5x Dubai (Paulson asked), media 17928953472199454 |
-| 2026-11-24 | 20:30 | reel | no | 9000 | cinematic | 2026-11-24-house-road.mp4 | / | approved |
+| 2026-11-24 | 20:30 | reel | no | 9000 | cinematic | 2026-11-24-house-road.mp4 | / | posted 21:05 Dubai (approved), media 17896875063683883 |
 | 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | approved |
 
 ```captions
