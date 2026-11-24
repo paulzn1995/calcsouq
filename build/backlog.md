@@ -18,6 +18,9 @@
 14. Time zone converter / meeting planner — steady global demand; multi-person result beats a one-line AI answer.
 15. Unit converter — moved down: Google and AI answers absorb simple conversions; build only as a light hub for internal links.
 16. Reel-to-tool prefill links (e.g. /compound-interest-calculator/?daily=100&years=30) — UX: viewers from a reel land on default numbers (₹1 lakh, 5 years) instead of the scenario they just watched; prefilled inputs answer them in one tap. (EOD QA 23 Nov)
+17. Render tool results before first paint — layout shift: mortgage CLS 0.27–0.34 at desktop, market hours 0.21, property cost 0.10 on phones, because the page paints before site.js and the tool script fill tables. Move the helpers (F, FX, V, seg, remembered inputs) into a small script before the tool and run each tool script right after its section. (EOD QA 24 Nov)
+18. Loan EMI in any currency (USD, EUR, GBP, SAR, …) with matching number format — worldwide positioning; today it offers only AED and ₹. (EOD QA 24 Nov)
+19. Signature/photo resizer: land inside the preset's KB range automatically — a plain signature at 140×60 JPG comes out ~3–7 KB, below the 10 KB minimum, and the visitor must guess new sizes. (EOD QA 24 Nov)
 17. Hindi state names in the property cost tool's state list (/hi/property-buying-cost-calculator/) — UX: "Tamil Nadu", "Uttar Pradesh" still show in English on the Hindi page. (EOD QA 23 Nov)
 18. "Updated · Free · languages" meta line: move the language links into one compact "Also in: हिन्दी · 中文 · Русский" row — UX: on phones it wraps into two ragged lines above the tool. (EOD QA 23 Nov)
 

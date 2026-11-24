@@ -306,10 +306,29 @@ def pace_report(timeline, dur):
         if starts[i + 2] - starts[i] < 0.5: bad.append(f"3 items start within 0.5 s at {starts[i]:.1f}s")
     return bad
 
+# Instagram Reels safe area on a 1080x1920 frame: the top bar and the bottom caption/username/buttons cover text.
+SAFE_TOP, SAFE_BOTTOM, SAFE_SIDE, MIN_TEXT_PX = 250, 380, 60, 44
+
+def layout_report(items):
+    """Check text placement before rendering. items = [(label, y_centre, font_px)] (or (label, y, px, lines)).
+    Flags text in the top/bottom zones Instagram covers and text a viewer must read set below 44 px.
+    Returns a list of problems (empty = OK)."""
+    bad = []
+    for it in items:
+        lab, y, px = it[:3]; n = it[3] if len(it) > 3 else 1
+        top, bot = y - px * n * 0.6, y + px * n * 0.6
+        if px < MIN_TEXT_PX: bad.append(f"{lab!r} at {px}px < {MIN_TEXT_PX}px (too small on a phone)")
+        if top < SAFE_TOP: bad.append(f"{lab!r} top {top:.0f} inside the top {SAFE_TOP}px Instagram covers")
+        if bot > H - SAFE_BOTTOM: bad.append(f"{lab!r} bottom {bot:.0f} inside the bottom {SAFE_BOTTOM}px (caption/buttons)")
+    return bad
+
 def contact_sheet(mp4, out, fps=1, cols=6):
-    """1 frame a second with timestamps, for a quick pace/legibility check: python3 build/reel_fx.py sheet in.mp4 out.jpg"""
+    """1 frame a second with timestamps, for a quick pace/legibility check: python3 build/reel_fx.py sheet in.mp4 out.jpg
+    Red lines mark the edges of the Instagram-covered zones (SAFE_TOP / SAFE_BOTTOM): no text should sit inside them."""
     import subprocess
-    vf = f"fps={fps},scale=270:480,drawtext=text='%{{pts\\:hms}}':x=5:y=5:fontsize=22:fontcolor=red:box=1,tile={cols}x5:padding=4"
+    t, b = SAFE_TOP * 480 // 1920, SAFE_BOTTOM * 480 // 1920
+    vf = (f"fps={fps},scale=270:480,drawbox=x=0:y={t}:w=iw:h=2:color=red:t=fill,drawbox=x=0:y=ih-{b}:w=iw:h=2:color=red:t=fill,"
+          f"drawtext=text='%{{pts\\:hms}}':x=5:y=5:fontsize=22:fontcolor=red:box=1,tile={cols}x5:padding=4")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-vf", vf, "-frames:v", "1", out], check=True)
     return out
 

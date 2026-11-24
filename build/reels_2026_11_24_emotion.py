@@ -97,14 +97,15 @@ def friends(t):
     A = lambda: cam("C1", seg(t, 0, 7), 1.05, 1.22, .5, .55, .5, .5)
     B = lambda: cam("C2", seg(t, 6.2, 18), 1.0, 1.12, .5, .5, .5, .48)
     im = grade(xfade(t, A, B, 6.2), .6, .7)
-    line(im, "Age 25. Same salary.", 200, t, 0.4, t1=6.0)
-    line(im, "One spent it. One planted it.", 300, t, 2.2, 66, (255, 214, 102), t1=6.0)
-    line(im, "Age 55.", 210, t, 7.0, 96)
-    line(im, "Which one are you becoming?", 1480, t, 9.6, 66)
-    line(im, "₹5,000 a month from 25 to 55 at an assumed 12% ≈ ₹1.76 crore", 1650, t, 12.0, 38, (230, 230, 235), font="b")
+    # EOD quality re-render 24 Nov: text moved out of Instagram's covered zones, footnote 38 -> 46 px, 17 -> 19.5 s
+    line(im, "Age 25. Same salary.", 300, t, 0.4, t1=6.0)
+    line(im, "One spent it. One planted it.", 400, t, 2.2, 66, (255, 214, 102), t1=6.0)
+    line(im, "Age 55.", 310, t, 7.0, 96)
+    line(im, "Which one are you becoming?", 1290, t, 9.6, 66)
+    line(im, "₹5,000 a month from 25 to 55 at an assumed 12% ≈ ₹1.76 crore", 1460, t, 12.0, 46, (235, 235, 240), font="b")
     mark(im); return im
 
-DUR = {"father": 16.0, "house": 17.0, "friends": 17.0}
+DUR = {"father": 16.0, "house": 17.0, "friends": 19.5}
 FN = {"father": father, "house": house, "friends": friends}
 
 if __name__ == "__main__":

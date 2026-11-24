@@ -18,6 +18,9 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-24 EOD data: 1 billion seconds is our best reel yet (33% skip, 8.4 s avg watch, 172 views): personal life number counting up on frame 1. The Malayalam onion teaser got our first real shares (13, 48% skip): an everyday price shock (kitchen item, local language) is what people forward. The father's-shoes story reel did worst of the day (92% skip, 2.1 s; house-road 59% on 44 views): story reels still need a readable hook in the first second, not a slow fade into a line at the top edge.
+- 2026-11-24 EOD layout: several reels put headlines at y≈170–230 (under Instagram's top bar) and footnotes at y≈1560–1650 (under the caption and buttons). Keep all text between y 250 and 1540 and at 44 px or more: run reel_fx.layout_report([(label, y, px, lines)]) before rendering; the contact sheet (`reel_fx.py sheet`) now draws red lines at those edges. two-friends was re-rendered this way (19.5 s).
+- 2026-11-24 EOD crossposts: the Nvidia Short went to Instagram at 25.5 s with a YouTube "Subscribe" end card. For Instagram copies, end on a share/comment prompt and keep 18–25 s.
 - 2026-11-24 PAULSON (13:54): content must be NEW information that people watch out of curiosity and SHARE so others learn. Daily creator: make the 19:00 reel a cinematic 3D curiosity reel per build/CONTENT_STRATEGY.md (Format A, template build/reels_2026_11_24_emotion.py) whenever ElevenLabs has 900+ credits; otherwise draw it in code and say 3D is waiting for credits. Every reel: curiosity gap in second 1, answer inside, share/comment prompt at the end.
 - 2026-11-24 data (last 3 days): the Hormuz teaser (one huge counting number on frame 1) is still the best skip rate (51%), then Life at 30 (56%) and working days (65%); the jargon hook "10% flat" was the worst ever (97% skip, 1.6 s) and 10,000 days old did 71% / 4.7 s. Today: every reel opens on one big counting number in plain words (1,000,000,000 seconds, ₹118, 5 days off, 31.1 g, 100 traders) with the A/B/C pills arriving after it.
 - 2026-11-23 EOD data: big animated number + one object on frame 1 won today: Hormuz ML teaser (39 km counting up, barrels) 51.5% skip, 4.6 s avg watch, our best skip rate yet; EMI/RBI ML teaser 66%, 1 save. Static-headline A/B/C quizzes lost: flat-rate trap 89% skip / 1.8 s, ₹100 a day 83% / 2.2 s, down 50 up 50 75%. Do more: open on one huge counting number (new reel_fx.hook_number) and move the A/B/C pills after it, or drop them.
@@ -615,7 +618,7 @@ Sources: Saxo, 10 Things, IC Markets, Tickmill market reports, 23–24 Nov 2026.
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-24 | 13:45 | reel | no | 9000 | cinematic | 2026-11-24-father-shoes.mp4 | / | posted 13:5x Dubai (Paulson asked), media 17928953472199454 |
 | 2026-11-24 | 20:30 | reel | no | 9000 | cinematic | 2026-11-24-house-road.mp4 | / | posted 21:05 Dubai (approved), media 17896875063683883 |
-| 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | approved |
+| 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | approved (quality re-render 24 Nov EOD: 17 → 19.5 s, text moved out of IG-covered top/bottom zones, footnote 38 → 46 px; same words, numbers and caption) |
 
 ```captions
 [2026-11-24 13:45]
