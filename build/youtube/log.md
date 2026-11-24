@@ -13,3 +13,6 @@
 | 2026-11-23 | 2026-11-23-sensex-1484-crash-short.mp4 | — | ഷെയറിൽ ഇട്ടവർക്ക് ഇന്ന് എത്ര പോയി? Sensex −1,484 #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
 | 2026-11-23 | 2026-11-23-gold-92800-rebound-short.mp4 | — | സ്വർണ്ണം വീണ്ടും കയറുന്നോ? Gold ₹92,800 a pavan #Shorts | സ്വർണ്ണം · Gold (Malayalam) | ready for Paulson to upload |
 | 2026-11-23 | 2026-11-23-nasdaq-5pct-crash-short.mp4 | — | US ഫണ്ടിൽ ₹1 ലക്ഷം ഇട്ടിരുന്നോ? Nasdaq −5.28% #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
+| 2026-11-24 | 2026-11-24-nvidia-31pct-day-short.mp4 | — | ഒറ്റ ദിവസം 31% കയറിയോ? Nvidia +31.5% in a day #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
+| 2026-11-24 | 2026-11-24-brent-89-oil-fall-short.mp4 | — | എണ്ണ വില ഇടിയുന്നോ? Brent $109 → $89 in a month #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
+| 2026-11-24 | 2026-11-24-gold-93720-two-days-short.mp4 | — | സ്വർണ്ണം 2 ദിവസം കൊണ്ട് ₹2,000 കൂടി! Gold ₹93,720 #Shorts | സ്വർണ്ണം · Gold (Malayalam) | ready for Paulson to upload |

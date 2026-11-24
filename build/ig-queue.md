@@ -590,6 +590,25 @@ Link in bio → Trading strategy simulator (1,000 runs, drawdowns, losing streak
 What's your longest losing streak? 👇
 Assumptions: 50% win rate, win 1.5R, lose 1R, risk 1% of balance, costs 0.05R, 100 trades each. Results change every run (89–97 of 100 in profit across 300 repeats). Education only, not investment advice.
 #tradingsimulator #riskmanagement #tradingpsychology #forextrading #daytrading #calcsouq
+## 2026-11-24 YouTube Shorts → Instagram (made by the daily Shorts agent; slots are Dubai time)
+Best of the 3 world-news Shorts (build/yt_shorts_2026_11_24.py, pack build/youtube/2026-11-24-pack.md), posted automatically under Paulson's standing rule (YouTube teasers/shorts post automatically). 21:30 was already taken by the 100-traders reel, so this goes at 22:00.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-24 | 22:00 | reel | no | 4000 | electro | 2026-11-24-nvidia-31pct-day-short.mp4 | /percentage-calculator/ | approved |
+
+```captions
+[2026-11-24 22:00]
+Can a giant company jump 31% in ONE day? 🚀 Nvidia just did.
+
+Mon 23 Nov: Nvidia shares +31.5% after its board brought back the CEO who had quit less than 2 weeks earlier. The Nasdaq Composite rose 6.51% the same day.
+₹1 lakh in a Nasdaq-tracking fund: ₹94,720 after Friday's −5.28%, about ₹1,00,886 after Monday's +6.51%. Big swings go both ways.
+
+Send this to the friend who checks the market every hour 👇
+Sources: Saxo, 10 Things, IC Markets, Tickmill market reports, 23–24 Nov 2026. Education only, not investment advice.
+#nvidia #nasdaq #stockmarket #aistocks #money #calcsouq
+```
+
 ## 2026-11-24 emotional story reels (Paulson asked 13:34 Dubai: "posts should go viral … people share and like"). Render: build/reels_2026_11_24_emotion.py
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
