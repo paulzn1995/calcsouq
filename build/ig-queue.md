@@ -754,7 +754,7 @@ Renders: build/reels_2026_11_25.py (reels, reading pace SLOW = 1.75, 23.1 s each
 | 2026-11-25 | 12:00 | story | — | — | — | 2026-11-25-story-uae-55-quiz.jpg | /age-calculator/ | posted (auto-approved) 12:04 Dubai, media 18135735658756539 |
 | 2026-11-25 | 14:30 | reel | yes | 4500 | desi | 2026-11-25-5-cent-plot-sqft.mp4 | /kerala-land-converter/ | posted 16:06 Dubai (auto-approved; trial refused, too few followers, posted as normal reel), media 18438692359196677 |
 | 2026-11-25 | 16:00 | reel | yes | 4500 | cinematic | 2026-11-25-real-raise.mp4 | /percentage-calculator/ | posted 18:07 Dubai (auto-approved; trial refused, too few followers, posted as normal reel), media 18019712993976049 |
-| 2026-11-25 | 18:00 | story | — | — | — | 2026-11-25-story-raise-vs-inflation.jpg | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 18:00 | story | — | — | — | 2026-11-25-story-raise-vs-inflation.jpg | /percentage-calculator/ | posted (auto-approved) 19:04 Dubai, media 17980651785151293 |
 | 2026-11-25 | 20:30 | reel | no | 4500 | lofi | 2026-11-25-same-bmi-24-9.mp4 | /bmi-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 21:30 | reel | no | 4500 | electro | 2026-11-25-70pct-win-losing.mp4 | /risk-reward-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 
