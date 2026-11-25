@@ -275,13 +275,15 @@ tool="""
  <p class="formula">A = P × (1 + r/n)<sup>n×t</sup>. Monthly additions are added at the end of each month. Before tax.</p>
 </div>""",
 js=r"""
+const LOC = { zh: 'zh-CN', ru: 'ru-RU' }[document.documentElement.lang];
+const G = (v, d) => LOC ? (Number.isFinite(v) ? v : 0).toLocaleString(LOC, { minimumFractionDigits: d, maximumFractionDigits: d }) : F(v, d);
 function calc() {
   const P = V('p'), r = V('rate') / 100, n = +$('cmp').value, t = V('yrs'), add = V('add');
   const months = Math.round(t * 12), mr = Math.pow(1 + r / n, n / 12) - 1;
   let bal = P; for (let i = 0; i < months; i++) bal = bal * (1 + mr) + add;
   const inv = P + add * months, eff = (Math.pow(1 + r / n, n) - 1) * 100;
-  $('out').textContent = F(bal, 2);
-  $('lines').innerHTML = [['Total deposited', F(inv, 2)], ['Interest earned', F(bal - inv, 2)], ['Effective annual rate', F(eff, 2) + '%'], ['Simple interest would give', F(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => """ + ROW + r""").join('');
+  $('out').textContent = G(bal, 2);
+  $('lines').innerHTML = [['Total deposited', G(inv, 2)], ['Interest earned', G(bal - inv, 2)], ['Effective annual rate', G(eff, 2) + '%'], ['Simple interest would give', G(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => """ + ROW + r""").join('');
 }
 document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
 """,
@@ -297,58 +299,118 @@ faqs=[("How is FD maturity calculated?", "With compound interest: principal × (
       ("What is the effective annual rate?", "The yearly return after compounding. 7% compounded quarterly equals 7.19% a year."),
       ("Does this include tax?", "No. Results are before tax.")]))
 
-# ---------------- GST calculator (India) ----------------
+# ---------------- GST / VAT calculator (India and other countries) ----------------
 TOOLS.append(dict(
 group="uae", slug="gst-calculator", icon="money",
-name="GST Calculator (India, 2026 Rates)",
-title="GST Calculator India 2026: Add or Remove GST (5%, 18%, 40%), CGST & SGST",
-desc="Add GST to a price or remove it from a GST-inclusive amount at the current slabs of 5%, 18% and 40%, with the CGST/SGST or IGST split.",
-keywords="gst calculator, gst calculator india, reverse gst calculator, gst inclusive calculator, cgst sgst calculator, gst 18 percent calculator, gst 5 percent, new gst rates 2026",
-h1="GST calculator (India)",
-lede="Add GST to a price, or work back from a GST-inclusive total, using the rate slabs in force since 22 September 2025.",
-card="Add or remove GST, CGST/SGST split",
+name="GST & VAT Calculator (India and other countries)",
+title="GST Calculator India 2026 & VAT Calculator by Country: Add or Remove GST/VAT",
+desc="Add GST or VAT to a price, or remove it from a tax-inclusive amount. India GST slabs (5%, 18%, 40%) with CGST/SGST or IGST, plus VAT and GST rates for the UAE, Saudi Arabia, UK, EU, China, Russia, Australia and more. Every rate editable.",
+keywords="gst calculator, gst calculator india, reverse gst calculator, vat calculator, add vat, remove vat, vat calculator uk, uae vat calculator, cgst sgst calculator, gst 18 percent calculator, vat 22 russia, china vat calculator",
+h1="GST and VAT calculator",
+lede="Choose the country, then add tax to a price or work back from a tax-inclusive total. India shows the CGST/SGST or IGST split. Every rate can be changed.",
+card="Add or remove GST/VAT in any country",
+sources=[("CBIC GST portal (India)", "https://cbic-gst.gov.in"), ("UAE Federal Tax Authority", "https://tax.gov.ae"), ("GOV.UK: VAT rates", "https://www.gov.uk/guidance/rates-of-vat-on-different-goods-and-services"),
+         ("State Taxation Administration (China)", "https://www.chinatax.gov.cn"), ("Federal Tax Service of Russia", "https://www.nalog.gov.ru"), ("PwC Worldwide Tax Summaries: VAT rates", "https://taxsummaries.pwc.com/quick-charts/value-added-tax-vat-rates")],
 tool="""
 <div class="inputs">
- <div><label for="amt">Amount (₹)</label><input id="amt" inputmode="decimal" value="10000"></div>
- <div><label>This amount is</label><div class="seg" id="mode"><button type="button" data-v="ex" aria-pressed="true">Before GST</button><button type="button" data-v="in" aria-pressed="false">Including GST</button></div></div>
- <div class="row2"><div><label for="rate">GST rate</label><select id="rate"><option value="5">5%</option><option value="18" selected>18%</option><option value="40">40%</option><option value="3">3% (gold, silver)</option><option value="0">0% (nil)</option><option value="c">Other</option></select></div>
- <div><label for="crate">Other rate (%)</label><input id="crate" inputmode="decimal" value="12"></div></div>
- <div><label>Supply</label><div class="seg" id="sup"><button type="button" data-v="intra" aria-pressed="true">Within the state</button><button type="button" data-v="inter" aria-pressed="false">Between states</button></div></div>
+ <div class="row2"><div><label for="ctry">Country</label><select id="ctry">
+  <option value="IN">India</option><option value="AE">United Arab Emirates</option><option value="SA">Saudi Arabia</option><option value="OM">Oman</option><option value="BH">Bahrain</option>
+  <option value="GB">United Kingdom</option><option value="DE">Germany</option><option value="FR">France</option><option value="CN">China</option><option value="RU">Russia</option>
+  <option value="AU">Australia</option><option value="NZ">New Zealand</option><option value="SG">Singapore</option><option value="JP">Japan</option><option value="XX">Other country</option></select></div>
+ <div><label for="amt">Amount (<span id="cl">₹</span>)</label><input id="amt" inputmode="decimal" value="10000"></div></div>
+ <div><label>This amount is</label><div class="seg" id="mode"><button type="button" data-v="ex" aria-pressed="true">Before tax</button><button type="button" data-v="in" aria-pressed="false">Including tax</button></div></div>
+ <div class="row2"><div><label for="rate">Tax rate</label><select id="rate"></select></div>
+ <div><label for="crate">Your rate (%)</label><input id="crate" inputmode="decimal" value="12"></div></div>
+ <div id="supw"><label>Supply</label><div class="seg" id="sup"><button type="button" data-v="intra" aria-pressed="true">Within the state</button><button type="button" data-v="inter" aria-pressed="false">Between states</button></div></div>
+ <p class="hint" id="note"></p>
 </div>
 <div class="result" aria-live="polite">
- <div class="big-label" id="lbl">Price including GST</div><div class="big" id="out">—</div>
+ <div class="big-label" id="lbl">Price including tax</div><div class="big" id="out">—</div>
  <ul class="lines" id="lines"></ul>
  <p class="formula">Add: amount × (1 + rate). Remove: amount ÷ (1 + rate). Check your item's rate before invoicing.</p>
 </div>""",
 js=r"""
+const STD = 'standard', RED = 'reduced', ZERO = 'zero-rated';
+const C = {
+  IN: { c: '₹', l: 'en-IN', t: 'GST', r: [[5, ''], [18, ''], [40, 'luxury and sin goods'], [3, 'gold, silver'], [0, 'nil-rated']], d: 18,
+        n: 'Slabs in force since 22 September 2025. Within a state GST is split equally into CGST and SGST; between states it is all IGST.' },
+  AE: { c: 'AED ', l: 'en-AE', t: 'VAT', r: [[5, STD], [0, ZERO]], d: 5 },
+  SA: { c: 'SAR ', l: 'en-SA', t: 'VAT', r: [[15, STD], [0, ZERO]], d: 15 },
+  OM: { c: 'OMR ', l: 'en-OM', t: 'VAT', r: [[5, STD], [0, ZERO]], d: 5 },
+  BH: { c: 'BHD ', l: 'en-BH', t: 'VAT', r: [[10, STD], [0, ZERO]], d: 10 },
+  GB: { c: '£', l: 'en-GB', t: 'VAT', r: [[20, STD], [5, RED], [0, ZERO]], d: 20 },
+  DE: { c: '€', l: 'de-DE', t: 'VAT', r: [[19, STD], [7, RED]], d: 19 },
+  FR: { c: '€', l: 'fr-FR', t: 'VAT', r: [[20, STD], [10, RED], [5.5, RED], [2.1, RED]], d: 20 },
+  CN: { c: '¥', l: 'zh-CN', t: 'VAT', r: [[13, 'goods'], [9, 'transport, construction, property'], [6, 'most services'], [3, 'small-scale taxpayers'], [0, 'exports']], d: 13,
+        n: 'China VAT Law in force from 1 January 2026: 13% for most goods, 9% for transport, construction, property and farm goods, 6% for most services; small-scale taxpayers pay 3%.' },
+  RU: { c: '₽', s: 1, l: 'ru-RU', t: 'VAT', r: [[22, STD], [10, 'food, children’s goods, medicines'], [0, 'exports'], [5, 'simplified system (USN)'], [7, 'simplified system (USN)']], d: 22,
+        n: 'Russia: 22% from 1 January 2026; 10% and 0% remain. Simplified-system (USN) payers above the income threshold may use 5% or 7% without input VAT.' },
+  AU: { c: 'A$', l: 'en-AU', t: 'GST', r: [[10, STD], [0, 'GST-free']], d: 10 },
+  NZ: { c: 'NZ$', l: 'en-NZ', t: 'GST', r: [[15, STD], [0, ZERO]], d: 15 },
+  SG: { c: 'S$', l: 'en-SG', t: 'GST', r: [[9, STD], [0, ZERO]], d: 9 },
+  JP: { c: '¥', l: 'ja-JP', t: 'Consumption tax', r: [[10, STD], [8, 'food and drink, newspapers']], d: 10 },
+  XX: { c: '', l: undefined, t: 'Tax', r: [], d: 'c' }
+};
+const GEN = 'Standard and main reduced rates. The rate depends on the item or service; confirm it with your tax authority.';
+const TZ = { 'Asia/Kolkata': 'IN', 'Asia/Calcutta': 'IN', 'Asia/Dubai': 'AE', 'Asia/Riyadh': 'SA', 'Asia/Muscat': 'OM', 'Asia/Bahrain': 'BH', 'Europe/London': 'GB', 'Europe/Berlin': 'DE', 'Europe/Paris': 'FR',
+  'Asia/Shanghai': 'CN', 'Asia/Chongqing': 'CN', 'Asia/Urumqi': 'CN', 'Europe/Moscow': 'RU', 'Europe/Samara': 'RU', 'Asia/Yekaterinburg': 'RU', 'Asia/Novosibirsk': 'RU', 'Asia/Krasnoyarsk': 'RU', 'Asia/Irkutsk': 'RU', 'Asia/Vladivostok': 'RU',
+  'Australia/Sydney': 'AU', 'Australia/Melbourne': 'AU', 'Australia/Brisbane': 'AU', 'Australia/Perth': 'AU', 'Australia/Adelaide': 'AU', 'Pacific/Auckland': 'NZ', 'Asia/Singapore': 'SG', 'Asia/Tokyo': 'JP' };
+const LG = { hi: 'IN', ml: 'IN', zh: 'CN', ru: 'RU' };
 const mode = seg('mode', () => calc()), sup = seg('sup', () => calc());
-function calc() {
-  const rv = $('rate').value, r = (rv === 'c' ? V('crate') : +rv) / 100, a = V('amt');
-  $('crate').closest('div').style.opacity = rv === 'c' ? 1 : .45;
-  const base = mode() === 'ex' ? a : a / (1 + r), gst = base * r, tot = base + gst;
-  $('lbl').textContent = mode() === 'ex' ? 'Price including GST' : 'Price before GST';
-  $('out').textContent = '₹' + F(mode() === 'ex' ? tot : base);
-  const split = sup() === 'intra' ? [['CGST (' + F(r * 50, 2) + '%)', '₹' + F(gst / 2)], ['SGST (' + F(r * 50, 2) + '%)', '₹' + F(gst / 2)]] : [['IGST (' + F(r * 100, 2) + '%)', '₹' + F(gst)]];
-  $('lines').innerHTML = [['Taxable value', '₹' + F(base)], ...split, ['Total GST', '₹' + F(gst)], ['Total', '₹' + F(tot)]].map(([a, v]) => """ + ROW + r""").join('');
+let K = 'IN';
+const M = v => { const x = C[K], s = (Number.isFinite(v) ? v : 0).toLocaleString(x.l, { minimumFractionDigits: 2, maximumFractionDigits: 2 }); return x.s ? s + ' ' + x.c : x.c + s; };
+function setCountry() {
+  K = $('ctry').value; const x = C[K];
+  $('rate').innerHTML = x.r.map(([v, d]) => `<option value="${v}">${v}%${d ? ' (' + d + ')' : ''}</option>`).join('') + '<option value="c">' + 'Other rate' + '</option>';
+  $('rate').value = String(x.d);
+  $('cl').textContent = x.c.trim() || '—';
+  $('supw').hidden = K !== 'IN';
+  $('note').textContent = x.n || (K === 'XX' ? 'Enter the rate that applies in your country.' : GEN);
+  calc();
 }
-document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
+function calc() {
+  const x = C[K], rv = $('rate').value, r = (rv === 'c' ? V('crate') : +rv) / 100, a = V('amt');
+  $('crate').closest('div').style.opacity = rv === 'c' ? 1 : .45;
+  const base = mode() === 'ex' ? a : a / (1 + r), tax = base * r, tot = base + tax, pc = F(r * 100, 2).replace(/\.00$/, '');
+  $('lbl').textContent = mode() === 'ex' ? 'Price including tax' : 'Price before tax';
+  $('out').textContent = M(mode() === 'ex' ? tot : base);
+  const split = K !== 'IN' ? [[x.t + ' (' + pc + '%)', M(tax)]] : sup() === 'intra' ? [['CGST (' + F(r * 50, 2) + '%)', M(tax / 2)], ['SGST (' + F(r * 50, 2) + '%)', M(tax / 2)], ['Total GST', M(tax)]] : [['IGST (' + pc + '%)', M(tax)]];
+  $('lines').innerHTML = [['Net amount', M(base)], ...split, ['Total', M(tot)], ['Tax as % of the total', F(tot ? tax / tot * 100 : 0, 2) + '%']].map(([a, v]) => """ + ROW + r""").join('');
+}
+$('ctry').addEventListener('change', setCountry);
+document.querySelectorAll('.inputs input, #rate').forEach(i => i.addEventListener('input', calc));
+let d = LG[document.documentElement.lang] || TZ[(Intl.DateTimeFormat().resolvedOptions().timeZone || '')] || 'IN';
+try { const q = new URLSearchParams(location.search).get('country'); if (q && C[q.toUpperCase()]) d = q.toUpperCase(); } catch (e) {}
+$('ctry').value = d; setCountry();
 """,
 body="""
-<h2>GST rates since 22 September 2025</h2>
-<p>Under the GST 2.0 changes recommended by the 56th GST Council meeting, most goods and services now fall into two main slabs, <strong>5%</strong> and <strong>18%</strong>, with a <strong>40%</strong> rate for a narrow list of luxury and "sin" goods and <strong>0%</strong> for nil-rated essentials. The old 12% and 28% slabs were largely removed. Some special rates remain, such as 3% on gold and silver.</p>
-<h3>Adding and removing GST</h3>
-<div class="scroll"><table><thead><tr><th>Task</th><th>Formula</th><th>Example at 18%</th></tr></thead><tbody>
-<tr><td>Add GST</td><td>amount × 1.18</td><td>₹10,000 → ₹11,800</td></tr>
-<tr><td>Remove GST</td><td>amount ÷ 1.18</td><td>₹11,800 → ₹10,000</td></tr>
-<tr><td>GST inside an inclusive price</td><td>amount × 18 ÷ 118</td><td>₹11,800 → ₹1,800</td></tr></tbody></table></div>
-<h3>CGST, SGST and IGST</h3>
-<p>For a sale within one state, GST is split equally between central (CGST) and state (SGST) tax. For a sale between states, the whole amount is IGST.</p>
-<p>Rates depend on the HSN/SAC classification of the item; check the current rate notification for your product or service.</p>
+<h2>GST and VAT rates used here</h2>
+<p>GST and VAT work the same way for a buyer: tax is added on top of the net price. The calculator fills in the usual rates for the country you pick; choose <em>Other rate</em> to type any rate.</p>
+<div class="scroll"><table><thead><tr><th>Country</th><th>Tax</th><th>Standard</th><th>Other rates</th></tr></thead><tbody>
+<tr><td>India</td><td>GST</td><td>18%</td><td>5%, 40%, 3% (gold, silver), 0%</td></tr>
+<tr><td>United Arab Emirates</td><td>VAT</td><td>5%</td><td>0%</td></tr>
+<tr><td>Saudi Arabia</td><td>VAT</td><td>15%</td><td>0%</td></tr>
+<tr><td>Oman / Bahrain</td><td>VAT</td><td>5% / 10%</td><td>0%</td></tr>
+<tr><td>United Kingdom</td><td>VAT</td><td>20%</td><td>5%, 0%</td></tr>
+<tr><td>Germany / France</td><td>VAT</td><td>19% / 20%</td><td>7% / 10%, 5.5%, 2.1%</td></tr>
+<tr><td>China</td><td>VAT</td><td>13%</td><td>9%, 6%, 3% (small-scale), 0%</td></tr>
+<tr><td>Russia</td><td>VAT (НДС)</td><td>22% from 2026</td><td>10%, 0%; 5% or 7% (USN)</td></tr>
+<tr><td>Australia / New Zealand / Singapore</td><td>GST</td><td>10% / 15% / 9%</td><td>0%</td></tr>
+<tr><td>Japan</td><td>Consumption tax</td><td>10%</td><td>8% (food and drink)</td></tr></tbody></table></div>
+<h3>Adding and removing tax: worked example at 18%</h3>
+<div class="scroll"><table><thead><tr><th>Task</th><th>Formula</th><th>Example</th></tr></thead><tbody>
+<tr><td>Add tax</td><td>amount × 1.18</td><td>10,000 → 11,800</td></tr>
+<tr><td>Remove tax</td><td>amount ÷ 1.18</td><td>11,800 → 10,000</td></tr>
+<tr><td>Tax inside an inclusive price</td><td>amount × 18 ÷ 118</td><td>11,800 → 1,800</td></tr></tbody></table></div>
+<p>A common mistake is to take 18% off an inclusive price: 11,800 − 18% = 9,676, which is wrong. Always divide by 1 plus the rate.</p>
+<h3>India: CGST, SGST and IGST</h3>
+<p>Since 22 September 2025 most goods and services in India fall into two main GST slabs, 5% and 18%, with 40% for a short list of luxury and "sin" goods. For a sale within one state, GST is split equally between central (CGST) and state (SGST) tax. For a sale between states, the whole amount is IGST.</p>
+<p>Rates change with budgets and depend on the exact item (HSN/SAC code in India). Check the current rate with your tax authority before you issue an invoice.</p>
 """,
-faqs=[("What are the GST rates in India in 2026?", "The main slabs are 5% and 18%, with 40% for selected luxury and sin goods and 0% for nil-rated items, effective from 22 September 2025."),
-      ("How do I remove GST from a price?", "Divide the GST-inclusive price by 1 plus the rate. At 18%, ₹11,800 ÷ 1.18 = ₹10,000."),
-      ("How is GST split into CGST and SGST?", "For sales within a state, half of the GST is CGST and half is SGST. Sales between states carry IGST at the full rate.")],
-sources=[("CBIC GST portal", "https://cbic-gst.gov.in"), ("Press Information Bureau: 56th GST Council recommendations", "https://pib.gov.in")]))
+faqs=[("What are the GST rates in India in 2026?", "The main slabs are 5% and 18%, with 40% for selected luxury and sin goods and 0% for nil-rated items, in force since 22 September 2025."),
+      ("How do I remove GST or VAT from a price?", "Divide the tax-inclusive price by 1 plus the rate. At 18%, 11,800 ÷ 1.18 = 10,000. At 20% VAT, 120 ÷ 1.2 = 100."),
+      ("How is GST split into CGST and SGST?", "For sales within a state, half of the GST is CGST and half is SGST. Sales between states carry IGST at the full rate."),
+      ("Which country does the calculator open on?", "It picks a country from the page language or your device's time zone. Change it in the Country list, or add ?country=GB (or another code) to the address.")]))
 
 # ---------------- Days between dates ----------------
 TOOLS.append(dict(

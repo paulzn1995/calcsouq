@@ -538,3 +538,70 @@ A(group="uae", slug="how-much-does-a-quarter-point-rate-rise-cost", tool="loan-e
   faqs=[("How much does EMI increase for a 0.25% rate rise on ₹50 lakh?", f"About {_inr(_Q50[2])} a month on a 20-year loan moving from 8.50% to 8.75%, if the tenure stays the same."),
         ("When will my EMI change after a repo rate rise?", "Repo-linked loans change on the reset date in your loan agreement, often the start of the next month or quarter. Your lender will confirm the new rate."),
         ("Does a 0.25% rise cost more on a longer loan?", "Yes. The longer the remaining term, the more months the higher rate applies to, so the total extra interest is larger.")])
+
+# ---------------- Everyday / documents (25 Nov 2026) ----------------
+A(group="everyday", slug="how-to-calculate-percentage-of-marks", tool="percentage-calculator",
+  title="How to Calculate Percentage of Marks (With Examples for 5 and 6 Subjects)",
+  h1="How to calculate percentage of marks",
+  desc="Percentage of marks = marks obtained ÷ total marks × 100. Worked examples for 5 and 6 subjects, best of five, a single subject, and how to find the marks you need for a target percentage.",
+  keywords="how to calculate percentage of marks, percentage of marks formula, marks percentage calculator, how to calculate percentage of 5 subjects, percentage of 6 subjects, best of five percentage, how to find percentage of marks out of 500",
+  lede="One formula covers every case: add the marks you got, divide by the maximum marks, multiply by 100.",
+  body="""
+<h2>The formula</h2>
+<p><strong>Percentage = (marks obtained ÷ total maximum marks) × 100</strong></p>
+<p>Add your marks across all the subjects that count, add the maximum marks for the same subjects, divide the first total by the second and multiply by 100. Round only at the end.</p>
+<h2>Worked example: 5 subjects out of 100 each</h2>
+<div class="scroll"><table><thead><tr><th>Subject</th><th class="n">Marks</th><th class="n">Out of</th></tr></thead><tbody>
+<tr><td>English</td><td class="n">78</td><td class="n">100</td></tr><tr><td>Mathematics</td><td class="n">91</td><td class="n">100</td></tr>
+<tr><td>Science</td><td class="n">85</td><td class="n">100</td></tr><tr><td>Social science</td><td class="n">72</td><td class="n">100</td></tr>
+<tr><td>Second language</td><td class="n">88</td><td class="n">100</td></tr>
+<tr><td><b>Total</b></td><td class="n"><b>414</b></td><td class="n"><b>500</b></td></tr></tbody></table></div>
+<p>414 ÷ 500 × 100 = <strong>82.8%</strong>.</p>
+<h2>6 subjects, or papers with different maximum marks</h2>
+<p>With six subjects out of 100, divide by 600. If the papers carry different maximum marks (for example 80 for theory and 20 for practical), do not average the separate percentages. Add the real marks and the real maximums: 65/80 and 18/20 make 83/100, which is 83%, while averaging 81.25% and 90% would give a wrong 85.6%.</p>
+<h2>Best of five</h2>
+<p>Some boards and admission forms ask for the percentage of your best five subjects. Drop the subject with the lowest marks, then use a total out of 500. If the example above had a sixth subject with 60 marks, best of five is still 414 out of 500, or 82.8%, while all six give 474 out of 600, or 79%. Always check which subjects your form says must be included; some insist on a language.</p>
+<h2>Marks you need for a target percentage</h2>
+<p>Turn the formula round: <strong>marks needed = target % × total marks ÷ 100</strong>. To reach 75% in a 500-mark exam you need 375 marks. If you already have 290 from four papers, the last 100-mark paper needs 85.</p>
+<h2>CGPA and grades</h2>
+<p>A CGPA or grade point is not a percentage. Universities and boards use their own conversion rules, so use the formula printed on your marksheet or in your university's regulations rather than a general multiplier.</p>
+<p>The <a href="/percentage-calculator/">percentage calculator</a> does the division for you: enter the marks obtained as X and the total as Y in the "X is what % of Y" row.</p>
+""",
+  faqs=[("How do I calculate percentage of marks out of 500?", "Divide your total marks by 500 and multiply by 100. For example, 414 ÷ 500 × 100 = 82.8%."),
+        ("Should I average the percentages of each subject?", "Only if every subject has the same maximum marks. Otherwise add the actual marks and the actual maximums first, then divide."),
+        ("How do I calculate percentage for 6 subjects?", "Add the marks of all six subjects, divide by the total maximum (600 if each is out of 100) and multiply by 100."),
+        ("Can I convert CGPA to percentage with this formula?", "No. CGPA conversion depends on the rule set by your board or university; check your marksheet or its regulations.")])
+
+A(group="docs", slug="how-to-make-a-wifi-qr-code", tool="qr-code-generator",
+  title="How to Make a QR Code for Your Wi-Fi (Free, Works on iPhone and Android)",
+  h1="How to make a QR code for your Wi-Fi",
+  desc="Make a Wi-Fi QR code that lets guests join your network by pointing their phone camera at it. Step by step, what to enter for security type and hidden networks, and what to do if it fails.",
+  keywords="how to make a qr code for wifi, wifi qr code generator, wifi qr code, share wifi password qr code, qr code for wifi password, wifi qr code not working, guest wifi qr code",
+  lede="A Wi-Fi QR code holds your network name, password and security type. Guests scan it with the phone camera and join without typing anything.",
+  body="""
+<h2>Step by step</h2>
+<ol><li>Open the <a href="/qr-code-generator/">QR code generator</a> and choose <em>Wi-Fi network</em>.</li>
+<li>Type the <strong>network name (SSID)</strong> exactly as it appears in your phone's Wi-Fi list. Capital letters and spaces count.</li>
+<li>Type the <strong>password</strong> exactly. It is case-sensitive.</li>
+<li>Pick the <strong>security type</strong>. Almost every home router today uses WPA2 or WPA3, so choose <em>WPA / WPA2 / WPA3</em>. Choose <em>None</em> only for an open network with no password.</li>
+<li>Tick <em>Hidden network</em> only if your router does not broadcast its name.</li>
+<li>Download the code as PNG to share on a phone, or SVG or the 2048 px PNG to print.</li>
+<li>Test it: forget the network on one phone, then scan the code with its camera.</li></ol>
+<h2>What the code contains</h2>
+<p>A Wi-Fi QR code is plain text in a standard format that phone cameras recognise:</p>
+<div class="scroll"><table><thead><tr><th>Network</th><th>Text inside the code</th></tr></thead><tbody>
+<tr><td>Name <em>Home 5G</em>, password <em>blue;sky</em>, WPA2</td><td><code>WIFI:T:WPA;S:Home 5G;P:blue\;sky;;</code></td></tr>
+<tr><td>Open café network <em>Cafe Guest</em></td><td><code>WIFI:T:nopass;S:Cafe Guest;;</code></td></tr></tbody></table></div>
+<p>Special characters such as <code>;</code> <code>,</code> <code>:</code> <code>\\</code> and <code>"</code> must be escaped with a backslash, as in the first row. The generator does this for you, which is the most common reason hand-made codes fail.</p>
+<h2>If the code does not work</h2>
+<ul><li><strong>Wrong name or password:</strong> one wrong capital letter or a trailing space is enough to fail. Copy them from the router label or settings.</li>
+<li><strong>Wrong security type:</strong> an old router set to WEP needs <em>WEP</em>; a modern one needs <em>WPA</em>.</li>
+<li><strong>Printed too small or low contrast:</strong> print it at least 3 cm wide, dark on a light background.</li>
+<li><strong>You changed the password:</strong> the code stores the old one. Make and print a new code.</li></ul>
+<h2>Is it safe?</h2>
+<p>Anyone who scans the code, or photographs it, gets your password. For visitors, put the code on a separate guest network if your router offers one, and do not post a photo of it online. The CalcSouq generator builds the code in your browser and does not save the password.</p>
+""",
+  faqs=[("Do I need an app to scan a Wi-Fi QR code?", "Usually not. Current iPhone and Android camera apps recognise Wi-Fi QR codes and offer to join the network."),
+        ("Which security type should I choose?", "WPA / WPA2 / WPA3 for nearly all home and office routers. Choose WEP only for very old routers and None for open networks."),
+        ("Does a Wi-Fi QR code expire?", "No. It keeps working until you change the network name or password."),
+        ("Can I print a Wi-Fi QR code?", "Yes. Download the SVG or the 2048 px PNG for sharp printing, and print it at least 3 cm wide.")])
