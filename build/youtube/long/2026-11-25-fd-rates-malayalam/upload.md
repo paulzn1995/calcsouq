@@ -2,7 +2,8 @@
 
 Length 8:42 (522 s), 1920x1080. 15 narrated scenes (ElevenLabs flow yBL3NIBSw9qf1kGrhq0H, voice Mahendran J, eleven_v3, Malayalam), English subtitles burnt in, English + Malayalam caption files, CalcSouq's own music bed.
 Includes 4 AI-generated photoreal 3D B-roll clips (vault door, glowing bar columns, hourglass, safe-deposit boxes; no people, text or logos) → **AI use: Yes**.
-Final video: see "Video" below. Facts checked 25 Nov 2026 (sources.md).
+Final video: ElevenLabs generation VtjtafB1vtqo6Asvmna8 (composition node SJBQOgYFHvYCYy5gFbdo on flow yBL3NIBSw9qf1kGrhq0H), 521.99 s. Download: https://elevenlabs.io/app/image-video/history?modality=video&generationId=VtjtafB1vtqo6Asvmna8
+Music: stock bed 0:00–3:23 and 5:19–8:42 (fades); the clip cannot be trimmed, so the middle is narration only. Facts checked 25 Nov 2026 (sources.md).
 
 ## Title
 FD ഇപ്പോൾ ഇടണോ, കാത്തിരിക്കണോ? 7.2% പലിശ | FD Rates Nov 2026
