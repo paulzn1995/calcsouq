@@ -597,6 +597,27 @@ Link in bio → Trading strategy simulator (1,000 runs, drawdowns, losing streak
 What's your longest losing streak? 👇
 Assumptions: 50% win rate, win 1.5R, lose 1R, risk 1% of balance, costs 0.05R, 100 trades each. Results change every run (89–97 of 100 in profit across 300 repeats). Education only, not investment advice.
 #tradingsimulator #riskmanagement #tradingpsychology #forextrading #daytrading #calcsouq
+## 2026-11-25 YouTube Shorts → Instagram (made by the daily Shorts agent; slots are Dubai time)
+Best of the 3 world-news Shorts (build/yt_shorts_2026_11_25.py, pack build/youtube/2026-11-25-pack.md), posted automatically under Paulson's standing rule (YouTube teasers/shorts post automatically). 21:30 was already taken by the 70% win-rate reel, so this goes at 22:00. Instagram copy (short 4 in the script) ends on a share/comment card instead of the YouTube "Subscribe" card; 25 s.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-25 | 22:00 | reel | no | 4000 | desi | 2026-11-25-gold-2360-one-go-short.mp4 | /gold-price-calculator/ | approved |
+
+```captions
+[2026-11-25 22:00]
+One pavan of gold fell ₹2,360 in ONE go today 📉
+
+Kerala 22K gold, 25 Nov: ₹11,420 a gram, ₹91,360 a pavan (−₹2,360 from ₹93,720 yesterday), the lowest rate this month.
+10 pavan at home? About ₹23,600 less in one day.
+Why: a stronger US dollar and bets on another US rate hike. Buying jewellery? Making charges + 3% GST come on top.
+
+Buy now or wait? Tell us below, and send this to someone planning to buy gold 👇
+Link in bio → Pavan price calculator
+Sources: Siraj Live, Oneindia Malayalam, 24–25 Nov 2026. Education only, not investment advice.
+#goldrate #keralagold #goldprice #സ്വർണ്ണവില #money #calcsouq
+```
+
 ## 2026-11-24 YouTube Shorts → Instagram (made by the daily Shorts agent; slots are Dubai time)
 Best of the 3 world-news Shorts (build/yt_shorts_2026_11_24.py, pack build/youtube/2026-11-24-pack.md), posted automatically under Paulson's standing rule (YouTube teasers/shorts post automatically). 21:30 was already taken by the 100-traders reel, so this goes at 22:00.
 

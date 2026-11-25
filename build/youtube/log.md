@@ -16,3 +16,6 @@
 | 2026-11-24 | 2026-11-24-nvidia-31pct-day-short.mp4 | — | ഒറ്റ ദിവസം 31% കയറിയോ? Nvidia +31.5% in a day #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
 | 2026-11-24 | 2026-11-24-brent-89-oil-fall-short.mp4 | — | എണ്ണ വില ഇടിയുന്നോ? Brent $109 → $89 in a month #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
 | 2026-11-24 | 2026-11-24-gold-93720-two-days-short.mp4 | — | സ്വർണ്ണം 2 ദിവസം കൊണ്ട് ₹2,000 കൂടി! Gold ₹93,720 #Shorts | സ്വർണ്ണം · Gold (Malayalam) | ready for Paulson to upload |
+| 2026-11-25 | 2026-11-25-gold-2360-one-go-short.mp4 | — | പവന് ഒറ്റയടിക്ക് ₹2,360 കുറഞ്ഞു! Gold ₹91,360 #Shorts | സ്വർണ്ണം · Gold (Malayalam) | ready for Paulson to upload |
+| 2026-11-25 | 2026-11-25-sensex-1502-jump-short.mp4 | — | ഷെയർ വിപണി ഇന്ന് എത്ര കയറി? Sensex +1,502 #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
+| 2026-11-25 | 2026-11-25-bitcoin-58600-half-short.mp4 | — | ബിറ്റ്കോയിൻ പകുതിയിലും താഴെ? Bitcoin $58,600 #Shorts | ലോക പണവാർത്ത · World Money News (Malayalam) | ready for Paulson to upload |
