@@ -245,7 +245,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 19:06 Dubai (approved: YouTube teaser rule), media 18018958883968828 |
 | 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | posted 24 Nov 21:05 Dubai (approved: YouTube teaser rule; quality re-render 23 Nov EOD), media 18085449521722911 |
 | 2026-11-25 | 19:30 | reel | no | 3000 | cinematic | 2026-11-25-100rs-ml-teaser.mp4 | /sip-calculator/ | approved |
-| 2026-11-25 | 17:45 | reel | no | 1500 | cinematic | 2026-11-25-fd-ml-teaser.mp4 | /compound-interest-calculator/ | approved |
+| 2026-11-25 | 17:45 | reel | no | 1500 | cinematic | 2026-11-25-fd-ml-teaser.mp4 | /compound-interest-calculator/ | posted 25 Nov 18:07 Dubai (approved: YouTube teaser rule), media 18119550557015812 |
 
 [2026-11-22 17:30]
 ```
@@ -753,7 +753,7 @@ Renders: build/reels_2026_11_25.py (reels, reading pace SLOW = 1.75, 23.1 s each
 | 2026-11-25 | 11:00 | reel | no | 4500 | pop | 2026-11-25-uae-55-days-old.mp4 | /age-calculator/ | posted 11:05 Dubai (auto-approved), media 18134269337484185 |
 | 2026-11-25 | 12:00 | story | — | — | — | 2026-11-25-story-uae-55-quiz.jpg | /age-calculator/ | posted (auto-approved) 12:04 Dubai, media 18135735658756539 |
 | 2026-11-25 | 14:30 | reel | yes | 4500 | desi | 2026-11-25-5-cent-plot-sqft.mp4 | /kerala-land-converter/ | posted 16:06 Dubai (auto-approved; trial refused, too few followers, posted as normal reel), media 18438692359196677 |
-| 2026-11-25 | 16:00 | reel | yes | 4500 | cinematic | 2026-11-25-real-raise.mp4 | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 16:00 | reel | yes | 4500 | cinematic | 2026-11-25-real-raise.mp4 | /percentage-calculator/ | posted 18:07 Dubai (auto-approved; trial refused, too few followers, posted as normal reel), media 18019712993976049 |
 | 2026-11-25 | 18:00 | story | — | — | — | 2026-11-25-story-raise-vs-inflation.jpg | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 20:30 | reel | no | 4500 | lofi | 2026-11-25-same-bmi-24-9.mp4 | /bmi-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 21:30 | reel | no | 4500 | electro | 2026-11-25-70pct-win-losing.mp4 | /risk-reward-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
