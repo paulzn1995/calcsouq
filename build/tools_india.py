@@ -25,12 +25,13 @@ tool=f"""
 </div>""",
 js=r"""
 const U = """ + UJS + r""";
+const pl = n => /feet$/i.test(n) ? n : n + 's';
 function calc() {
   const sq = V('val') * U[$('unit').value][1];
   const tgt = $('unit').value === 'sqft' ? 'cent' : 'sqft';
-  $('bigLabel').textContent = 'In ' + U[tgt][0].toLowerCase() + 's';
+  $('bigLabel').textContent = 'In ' + pl(U[tgt][0]).toLowerCase();
   $('out').textContent = F(sq / U[tgt][1], tgt === 'sqft' ? 0 : 3);
-  $('lines').innerHTML = Object.entries(U).filter(([k]) => k !== $('unit').value).map(([k, [n, f]]) => `<li><span>${n}s</span><b>${F(sq / f, sq / f < 10 ? 4 : 2)}</b></li>`).join('');
+  $('lines').innerHTML = Object.entries(U).filter(([k]) => k !== $('unit').value).map(([k, [n, f]]) => `<li><span>${pl(n)}</span><b>${F(sq / f, sq / f < 10 ? 4 : 2)}</b></li>`).join('');
 }
 document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
 """,

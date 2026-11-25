@@ -2,7 +2,7 @@
 # applied to the English tool's HTML and JS. Pages are published under /ml/<slug>/.
 
 COMMON = [
-    ("Search calculators and guides", "കാൽക്കുലേറ്ററുകളും ഗൈഡുകളും തിരയുക"),
+    ("Search calculators and guides", "കാൽക്കുലേറ്ററുകൾ തിരയുക"),
     (">Calculators</a>", ">കാൽക്കുലേറ്ററുകൾ</a>"), (">Guides</a>", ">ഗൈഡുകൾ</a>"), (">About</a>", ">ഞങ്ങളെക്കുറിച്ച്</a>"),
     ("Share your result", "ഫലം ഷെയർ ചെയ്യൂ"), (">Copy link<", ">ലിങ്ക് കോപ്പി<"), (">Print<", ">പ്രിന്റ്<"), (">Share<", ">ഷെയർ<"),
     ("Was this calculator useful?", "ഈ കാൽക്കുലേറ്റർ ഉപകാരപ്പെട്ടോ?"), (">Yes<", ">ഉവ്വ്<"), (">No<", ">ഇല്ല<"),
@@ -146,7 +146,7 @@ card="സെന്റ്, ഏക്കർ, ആർ, ചതുരശ്ര അട�
 rep=[("1 cent = 435.6 sq ft = 40.47 m². 100 cents = 1 acre. 1 are = 2.471 cents.", "1 സെന്റ് = 435.6 ച.അടി = 40.47 m². 100 സെന്റ് = 1 ഏക്കർ. 1 ആർ = 2.471 സെന്റ്."),
      ("In square feet", "ചതുരശ്ര അടിയിൽ"), (">Area<", ">വിസ്തീർണം<"), (">Unit<", ">യൂണിറ്റ്<"), ("Square feet", "ചതുരശ്ര അടി"), ("Square metre", "ചതുരശ്ര മീറ്റർ"),
      ("Square yard", "ചതുരശ്ര വാര"), ("Hectare", "ഹെക്ടർ"), ("Acre", "ഏക്കർ"), ("Cent", "സെന്റ്"), ('"Are"', '"ആർ"'), (">Are<", ">ആർ<"),
-     ("'In ' + U[tgt][0].toLowerCase() + 's'", "U[tgt][0] + ' (ഫലം)'"), ("<span>${n}s</span>", "<span>${n}</span>")],
+     ("'In ' + pl(U[tgt][0]).toLowerCase()", "U[tgt][0] + ' (ഫലം)'"), ("<span>${pl(n)}</span>", "<span>${n}</span>")],
 body="""
 <h2>കേരളത്തിലെ ഭൂമി അളവുകൾ</h2>
 <div class="scroll"><table><thead><tr><th>യൂണിറ്റ്</th><th class="n">ചതുരശ്ര അടി</th><th class="n">സെന്റ്</th></tr></thead><tbody>

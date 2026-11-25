@@ -58,14 +58,14 @@ def gold(t):
     line(im, "Same gold today: about ₹11 lakh", 1400, t, 8.8, 58, GOLD, t1=12.6)
     line(im, "The gold never changed.", 310, t, 13.4, 70)
     line(im, "Its price grew about 44 times.", 405, t, 14.6, 62, GOLD)
-    line(im, "Ask your amma what her wedding gold cost.", 1430, t, 16.6, 46, font="b")
-    line(im, "24K average price, 1990 vs Nov 2026", 1500, t, 16.6, 30, (215, 215, 220), font="b")
+    line(im, "Ask your amma what her wedding gold cost.", 1370, t, 16.6, 46, font="b")
+    line(im, "24K average price, 1990 vs Nov 2026", 1490, t, 16.6, 44, (215, 215, 220), font="b")  # EOD QA 25 Nov: was 30 px and collided with the wrapped line above
     mark(im); return im
 
 def tin(t):
     im = grade(seq(t, [("R1", 0, 6.5, 1.0, 1.2, .5, .5, .55, .48), ("R2", 5.8, 12, 1.25, 1.0, .5, .6, .5, .55),
-                        ("R3", 11.3, 18, 1.0, 1.18, .5, .6, .4, .55), ("R4", 17.3, 25, 1.2, 1.0, .5, .55, .5, .5)]))
-    line(im, "Every month, Amma hid", 310, t, 0.3, 70, t1=5.6)
+                        ("R3", 11.3, 18, 1.0, 1.18, .5, .6, .4, .55), ("R4", 17.3, 25, 1.2, 1.0, .5, .55, .5, .5)]), .75, .65)  # EOD QA 25 Nov: stronger top scrim, gold line sat on bright steam
+    line(im, "Every month, Amma hid", 310, t, -0.7, 70, t1=5.6)  # readable on frame 1
     line(im, "a few coins in the rice tin.", 405, t, 1.3, 66, GOLD, t1=5.6)
     line(im, "Nobody knew how much was there.", 310, t, 6.4, 62, t1=11.1)
     line(im, "Then one day, there was a new bicycle.", 310, t, 11.9, 62, t1=17.1)

@@ -18,6 +18,9 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-25 EOD data: the two Malayalam teasers that opened on a dim still with the hook fading in were today's weakest (₹100-a-day 85% skip / 1.3 s; FD 77% / 2.4 s), while the UAE 20,089-days reel (61%, 5.2 s, 119 views) and 1 billion seconds (32%, 8.5 s, 177 views, still #1) keep winning on one big personal number. For teasers built on reels_2026_11_24_emotion.line(), start the hook line at t0 = −0.7 so it is fully readable on frame 1, and put the money number in it.
+- 2026-11-25 EOD audio: the gold-loan ML teaser was rendered silent (the teaser scripts write video only). After rendering any reel_*_teaser.py, always run `python3 build/reel_audio.py in.mp4 out.mp4 --style cinematic --cues ...` then run `python3 build/reel_fx.py check <file>.mp4` (new: checks 1080x1920, 18–25 s and a non-silent audio track) before queueing; Paulson deleted silent reels before.
+- 2026-11-25 EOD facts: a "today" price inside a reel goes stale fast when gold moves (amma's-wedding reel said 80 g 24K ≈ ₹11 lakh from mid-Nov rates; by 25 Nov it was ≈ ₹10 lakh), so it was put on hold. For scheduled reels, write the date the price is from ("Nov 2026 average", "on 15 Nov") rather than "today", or re-check the rate the morning it posts.
 - 2026-11-25 data (last 3 days): 1 billion seconds is still the clear winner (32% skip, 8.4 s avg watch, 176 views), then 1 ounce = 3.9 pavan (54%, 4.6 s) and Hormuz (52%): personal-number count-ups and unit/weight conversions win; story/emotion reels (father's shoes 92%) and reverse-GST (81%) lag, shares still 0. Today: two life/unit conversions (UAE 20,089 days old, 5 cents = 2,178 sq ft) plus raise-vs-inflation, same-BMI and 70% win-rate maths, all opening on one counting number.
 - 2026-11-24 EOD data: 1 billion seconds is our best reel yet (33% skip, 8.4 s avg watch, 172 views): personal life number counting up on frame 1. The Malayalam onion teaser got our first real shares (13, 48% skip): an everyday price shock (kitchen item, local language) is what people forward. The father's-shoes story reel did worst of the day (92% skip, 2.1 s; house-road 59% on 44 views): story reels still need a readable hook in the first second, not a slow fade into a line at the top edge.
 - 2026-11-24 EOD layout: several reels put headlines at y≈170–230 (under Instagram's top bar) and footnotes at y≈1560–1650 (under the caption and buttons). Keep all text between y 250 and 1540 and at 44 px or more: run reel_fx.layout_report([(label, y, px, lines)]) before rendering; the contact sheet (`reel_fx.py sheet`) now draws red lines at those edges. two-friends was re-rendered this way (19.5 s).
@@ -246,7 +249,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | posted 24 Nov 21:05 Dubai (approved: YouTube teaser rule; quality re-render 23 Nov EOD), media 18085449521722911 |
 | 2026-11-25 | 19:30 | reel | no | 3000 | cinematic | 2026-11-25-100rs-ml-teaser.mp4 | /sip-calculator/ | posted 25 Nov 21:10 Dubai (approved: YouTube teaser rule), media 17881136370566992 |
 | 2026-11-25 | 17:45 | reel | no | 1500 | cinematic | 2026-11-25-fd-ml-teaser.mp4 | /compound-interest-calculator/ | posted 25 Nov 18:07 Dubai (approved: YouTube teaser rule), media 18119550557015812 |
-| 2026-11-26 | 20:30 | reel | no | 1500 | cinematic | 2026-11-25-gold-loan-danger-ml-teaser.mp4 | /gold-price-calculator/ | approved |
+| 2026-11-26 | 20:30 | reel | no | 1500 | cinematic | 2026-11-25-gold-loan-danger-ml-teaser.mp4 | /gold-price-calculator/ | approved (quality re-render 25 Nov EOD: file had no audio track; added soundtrack, hook line fully visible on frame 1, stronger top scrim, 44 px footnote; same facts and caption) |
 
 [2026-11-22 17:30]
 ```
@@ -680,8 +683,8 @@ Education only, not investment advice.
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-25 | 00:50 | reel | no | 2000 | lofi | 2026-11-25-3d-night-calls.mp4 | / | posted 00:5x Dubai (Paulson asked), media 18111912173267093 |
-| 2026-11-26 | 17:30 | reel | no | 2000 | desi | 2026-11-25-3d-amma-wedding-gold.mp4 | /gold-price-calculator/ | approved |
-| 2026-11-27 | 17:30 | reel | no | 2000 | cinematic | 2026-11-25-3d-rice-tin.mp4 | / | approved |
+| 2026-11-26 | 17:30 | reel | no | 2000 | desi | 2026-11-25-3d-amma-wedding-gold.mp4 | /gold-price-calculator/ | on hold: "Same gold today: about ₹11 lakh" / "44 times" use the mid-Nov 24K price (~₹1.40 lakh per 10 g); after the fall to Kerala 22K ₹91,360 a pavan on 25 Nov, 80 g of 24K is nearer ₹10 lakh (~39×). Needs today's 24K rate and Paulson's OK before posting (EOD QA 25 Nov; end-card footnote overlap also fixed in the script, not yet re-rendered) |
+| 2026-11-27 | 17:30 | reel | no | 2000 | cinematic | 2026-11-25-3d-rice-tin.mp4 | / | approved (quality re-render 25 Nov EOD: first line readable on frame 1, stronger top scrim so the gold line is legible over the steam; same text and caption) |
 
 ```captions
 [2026-11-25 00:50]

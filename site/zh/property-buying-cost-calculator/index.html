@@ -57,8 +57,8 @@
   <option value="IN">印度</option><option value="AE">阿联酋（迪拜）</option><option value="GB">英国（英格兰）</option>
   <option value="CN">中国</option><option value="RU">俄罗斯</option><option value="XX">其他国家</option></select></div>
  <div id="stw"><label for="st">邦</label><select id="st">
-  <option value="KL">Kerala</option><option value="MH">Maharashtra</option><option value="KA">Karnataka</option><option value="TN">Tamil Nadu</option>
-  <option value="DL">Delhi</option><option value="UP">Uttar Pradesh</option><option value="GJ">Gujarat</option><option value="OT">其他邦</option></select></div></div>
+  <option value="KL">喀拉拉邦</option><option value="MH">马哈拉施特拉邦</option><option value="KA">卡纳塔克邦</option><option value="TN">泰米尔纳德邦</option>
+  <option value="DL">德里</option><option value="UP">北方邦</option><option value="GJ">古吉拉特邦</option><option value="OT">其他邦</option></select></div></div>
  <div class="row2"><div id="byw"><label for="by">购房者</label><select id="by"></select></div>
  <div id="arw"><label for="ar">建筑面积（m²）</label><input id="ar" inputmode="decimal" value="90"></div></div>
  <div class="row2"><div><label for="pr">购买价格（<span class="cur">₹</span>)</label><input id="pr" inputmode="decimal" value="5000000"></div>
@@ -109,7 +109,7 @@ const C = {
 const TZ = { 'Asia/Dubai': 'AE', 'Asia/Muscat': 'AE', 'Europe/London': 'GB', 'Asia/Kolkata': 'IN', 'Asia/Calcutta': 'IN', 'Asia/Shanghai': 'CN', 'Asia/Chongqing': 'CN', 'Europe/Moscow': 'RU' };
 const LG = { hi: 'IN', ml: 'IN', zh: 'CN', ru: 'RU' };
 let cur = C.IN;
-const M = x => cur.cur + (Number.isFinite(x) ? x : 0).toLocaleString(cur.loc, { maximumFractionDigits: 0 });
+const M = x => { const v = (Number.isFinite(x) ? x : 0).toLocaleString(cur.loc, { maximumFractionDigits: 0 }); return cur.cur === '₽' ? v + ' ₽' : cur.cur + v; };
 const show = (id, on) => { $(id).hidden = !on; };
 function setCountry(first) {
   const k = $('ctry').value; cur = C[k];

@@ -96,6 +96,14 @@ function preview() {
   if (!img) { pc.fillStyle = '#8a8f98'; pc.textAlign = 'center'; pc.textBaseline = 'middle'; pc.font = '600 ' + Math.round(pv.width / 14) + 'px Inter, Arial, sans-serif'; pc.fillText('Tap here to choose', pv.width / 2, pv.height / 2 - pv.width / 22); pc.fillText('a photo', pv.width / 2, pv.height / 2 + pv.width / 22); }
 }
 const enc = (c, type, q) => new Promise(r => c.toBlob(r, type, q));
+// Simple, small images (e.g. a signature) can stay below a form's minimum KB even at 100% quality.
+// Add blank JPEG comment segments (FF FE) after the start marker: the picture is unchanged and the file stays a valid JPG.
+async function padJpeg(b, target) {
+  const src = new Uint8Array(await b.arrayBuffer()); let need = target - src.length; if (need <= 0) return b;
+  const parts = [src.slice(0, 2)];
+  while (need > 0) { const n = Math.min(65533, Math.max(need - 4, 1)), seg = new Uint8Array(n + 4); seg[0] = 0xFF; seg[1] = 0xFE; seg[2] = (n + 2) >> 8; seg[3] = (n + 2) & 255; seg.fill(32, 4); parts.push(seg); need -= n + 4; }
+  parts.push(src.slice(2)); return new Blob(parts, { type: 'image/jpeg' });
+}
 async function make() {
   preview();
   const [w, h] = dims(), mx = V('maxkb') * 1024, mn = V('minkb') * 1024, png = $('fmt').value === 'png';
@@ -115,6 +123,7 @@ async function make() {
         if (mx > 0 && t.size > mx) break;
         b = t; q = tq; if (t.size >= mn) break;
       }
+      if (b.size < mn) b = await padJpeg(b, mn + 300 > mx && mx > 0 ? mn : mn + 300);
     }
   }
   const kb = b.size / 1024;
@@ -268,7 +277,7 @@ _variant("resize-photo-to-20kb", "custom", 300, 400, 0, 20, False,
 <h3>Forms that ask for 10–20 KB</h3><p>Signatures for bank and many government exams are commonly 10–20 KB. Choose <em>Signature</em> in the list for 140 × 60 px.</p>""" + _COMMON_TIPS,
  faqs=[("How can I reduce a photo to 20 KB?", "Choose the photo, keep the maximum at 20 KB and download. If the result is still too big, lower the width and height."),
        ("Will reducing to 20 KB make my photo blurry?", "Only slightly at small pixel sizes. The tool uses the highest JPG quality that fits, and keeping the pixel size to what the form asks for keeps it sharp."),
-       ("Why is my file below the minimum KB?", "Some forms ask for 10–20 KB. Set the minimum to 10 and increase the pixel size a little if the file is too small.")])
+       ("Why is my file below the minimum KB?", "Some forms ask for 10–20 KB, but a plain signature or simple photo can be only 3–7 KB at full quality. For JPG files the tool fills the gap with blank comment data inside the file, so it reaches the minimum without changing the picture. For PNG, increase the pixel size a little.")])
 
 _variant("resize-photo-to-50kb", "pp", 413, 531, 20, 50, False,
  name="Resize Photo to 50 KB",

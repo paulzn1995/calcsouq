@@ -406,6 +406,12 @@ LANGS["ru"]["tools"]["property-buying-cost-calculator"] = dict(
   "'В России нет налога на покупку. Основной госплатёж — пошлина Росреестра 2 000 рублей для физлица. Нотариус нужен только в некоторых сделках (доли, несовершеннолетний собственник). Комиссия агента 2–5% оговаривается отдельно.'",
   "'Введите ставки своей страны. Актуальные цифры уточните у нотариуса, юриста или в реестре недвижимости.'"])
 
+# Indian state names in the state list (EOD QA 25 Nov: they showed in English on hi/zh/ru pages)
+KEYS["property-buying-cost-calculator"] += [">Kerala<", ">Maharashtra<", ">Karnataka<", ">Tamil Nadu<", ">Delhi<", ">Uttar Pradesh<", ">Gujarat<"]
+LANGS["hi"]["tools"]["property-buying-cost-calculator"]["tr"] += [">केरल<", ">महाराष्ट्र<", ">कर्नाटक<", ">तमिलनाडु<", ">दिल्ली<", ">उत्तर प्रदेश<", ">गुजरात<"]
+LANGS["zh"]["tools"]["property-buying-cost-calculator"]["tr"] += [">喀拉拉邦<", ">马哈拉施特拉邦<", ">卡纳塔克邦<", ">泰米尔纳德邦<", ">德里<", ">北方邦<", ">古吉拉特邦<"]
+LANGS["ru"]["tools"]["property-buying-cost-calculator"]["tr"] += [">Керала<", ">Махараштра<", ">Карнатака<", ">Тамилнад<", ">Дели<", ">Уттар-Прадеш<", ">Гуджарат<"]
+
 for code in ("hi", "zh", "ru"):
     t = LANGS[code]["tools"]["property-buying-cost-calculator"]
     keys = KEYS["property-buying-cost-calculator"]

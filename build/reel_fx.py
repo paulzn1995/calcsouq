@@ -332,6 +332,28 @@ def contact_sheet(mp4, out, fps=1, cols=6):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-vf", vf, "-frames:v", "1", out], check=True)
     return out
 
+
+def check_media(path):
+    """Pre-queue check (EOD QA 25 Nov): 1080x1920, 18-25 s, an audio stream that is not silent. Returns a list of problems."""
+    import subprocess, json, re
+    pr = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", path]))
+    st = pr.get("streams", []); probs = []
+    v = [s for s in st if s.get("codec_type") == "video"]; a = [s for s in st if s.get("codec_type") == "audio"]
+    dur = float(pr["format"]["duration"])
+    if not v or (v[0].get("width"), v[0].get("height")) != (1080, 1920): probs.append("video is not 1080x1920")
+    if not 18 <= dur <= 25.6: probs.append(f"duration {dur:.1f} s (reading pace wants 18-25 s)")
+    if not a: probs.append("NO AUDIO STREAM: run build/reel_audio.py on it")
+    else:
+        out = subprocess.run(["ffmpeg", "-i", path, "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr
+        m = re.search(r"mean_volume: (-?[\d.]+) dB", out)
+        if m and float(m.group(1)) < -45: probs.append(f"audio nearly silent (mean {m.group(1)} dB)")
+    return probs
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) == 4 and sys.argv[1] == "sheet": print(contact_sheet(sys.argv[2], sys.argv[3]))
+    if len(sys.argv) >= 3 and sys.argv[1] == "check":  # python3 build/reel_fx.py check a.mp4 [b.mp4 ...]
+        bad = 0
+        for f in sys.argv[2:]:
+            p = check_media(f); bad += bool(p); print(("OK   " if not p else "FAIL ") + f + ("" if not p else ": " + "; ".join(p)))
+        sys.exit(1 if bad else 0)

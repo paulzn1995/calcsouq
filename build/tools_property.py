@@ -55,7 +55,7 @@ const C = {
 const TZ = { 'Asia/Dubai': 'AE', 'Asia/Muscat': 'AE', 'Europe/London': 'GB', 'Asia/Kolkata': 'IN', 'Asia/Calcutta': 'IN', 'Asia/Shanghai': 'CN', 'Asia/Chongqing': 'CN', 'Europe/Moscow': 'RU' };
 const LG = { hi: 'IN', ml: 'IN', zh: 'CN', ru: 'RU' };
 let cur = C.IN;
-const M = x => cur.cur + (Number.isFinite(x) ? x : 0).toLocaleString(cur.loc, { maximumFractionDigits: 0 });
+const M = x => { const v = (Number.isFinite(x) ? x : 0).toLocaleString(cur.loc, { maximumFractionDigits: 0 }); return cur.cur === '₽' ? v + ' ₽' : cur.cur + v; };
 const show = (id, on) => { $(id).hidden = !on; };
 function setCountry(first) {
   const k = $('ctry').value; cur = C[k];

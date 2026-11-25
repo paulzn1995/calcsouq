@@ -590,7 +590,7 @@ A(group="docs", slug="how-to-make-a-wifi-qr-code", tool="qr-code-generator",
 <h2>What the code contains</h2>
 <p>A Wi-Fi QR code is plain text in a standard format that phone cameras recognise:</p>
 <div class="scroll"><table><thead><tr><th>Network</th><th>Text inside the code</th></tr></thead><tbody>
-<tr><td>Name <em>Home 5G</em>, password <em>blue;sky</em>, WPA2</td><td><code>WIFI:T:WPA;S:Home 5G;P:blue\;sky;;</code></td></tr>
+<tr><td>Name <em>Home 5G</em>, password <em>blue;sky</em>, WPA2</td><td><code>WIFI:T:WPA;S:Home 5G;P:blue\\;sky;;</code></td></tr>
 <tr><td>Open café network <em>Cafe Guest</em></td><td><code>WIFI:T:nopass;S:Cafe Guest;;</code></td></tr></tbody></table></div>
 <p>Special characters such as <code>;</code> <code>,</code> <code>:</code> <code>\\</code> and <code>"</code> must be escaped with a backslash, as in the first row. The generator does this for you, which is the most common reason hand-made codes fail.</p>
 <h2>If the code does not work</h2>
