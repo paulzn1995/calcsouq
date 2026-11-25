@@ -18,6 +18,7 @@ Media files live in build/static/media/ig/ and are served at https://www.calcsou
 | 2026-11-21 00:43 | reel | 2026-11-21-emi-hidden-cost.mp4 | /loan-emi-calculator/ | posted (approved by Paulson in chat) | 18063848429798439 |
 
 ## Learnings
+- 2026-11-25 data (last 3 days): 1 billion seconds is still the clear winner (32% skip, 8.4 s avg watch, 176 views), then 1 ounce = 3.9 pavan (54%, 4.6 s) and Hormuz (52%): personal-number count-ups and unit/weight conversions win; story/emotion reels (father's shoes 92%) and reverse-GST (81%) lag, shares still 0. Today: two life/unit conversions (UAE 20,089 days old, 5 cents = 2,178 sq ft) plus raise-vs-inflation, same-BMI and 70% win-rate maths, all opening on one counting number.
 - 2026-11-24 EOD data: 1 billion seconds is our best reel yet (33% skip, 8.4 s avg watch, 172 views): personal life number counting up on frame 1. The Malayalam onion teaser got our first real shares (13, 48% skip): an everyday price shock (kitchen item, local language) is what people forward. The father's-shoes story reel did worst of the day (92% skip, 2.1 s; house-road 59% on 44 views): story reels still need a readable hook in the first second, not a slow fade into a line at the top edge.
 - 2026-11-24 EOD layout: several reels put headlines at y≈170–230 (under Instagram's top bar) and footnotes at y≈1560–1650 (under the caption and buttons). Keep all text between y 250 and 1540 and at 44 px or more: run reel_fx.layout_report([(label, y, px, lines)]) before rendering; the contact sheet (`reel_fx.py sheet`) now draws red lines at those edges. two-friends was re-rendered this way (19.5 s).
 - 2026-11-24 EOD crossposts: the Nvidia Short went to Instagram at 25.5 s with a YouTube "Subscribe" end card. For Instagram copies, end on a share/comment prompt and keep 18–25 s.
@@ -92,6 +93,7 @@ Used so far (avoid repeating within 2 weeks): SIP flat vs step-up, 1,000 traders
 Used 23 Nov: 10,000 days old, flat vs reducing rate (10% flat = 17.9%), down 50% up 50%, ₹100 a day for 30 years, break-even win rate at 1:3.
 Used 24 Nov: 1 billion seconds old, GST inside ₹118 (reverse GST), UAE National Day 1 leave = 5 days off, 1 ounce = 3.9 pavan, 100 traders same strategy.
 Used 22 Nov: working days left in 2026, FD vs SIP 15 yrs, UAE gratuity 10 yrs (21 vs 30 days), Rule of 72 doubling, position size / 10 losses in a row, Bitcoin −51% loss maths, gold off record, Fed hike mortgage, Nvidia teaser, gold loan (ML) teaser.
+Used 25 Nov: UAE 55 = 20,089 days, 5 cents = 2,178 sq ft, real raise 8% vs 6% inflation, same BMI 24.9 at 160 vs 185 cm, 70% win rate still losing (swapped in from Fri 27 21:30; Fri 21:30 now takes the forex pip value idea, VERIFY USD/JPY that day).
 Planned 25 Nov carousel: EMI on ₹10 lakh at 5 rates (5/10/20 years, per-₹1-lakh shortcut).
 
 ## 2026-11-21 daily set (made by the daily Reels creator; slots are Dubai time)
@@ -720,4 +722,75 @@ Would you book now or wait? Comment 👇
 
 Rates from bank announcements and news reports, 4–16 Nov 2026; checked 25 Nov. Education only, not financial advice.
 #FDRates #FixedDeposit #MalayalamReels #Kerala #CalcSouq
+```
+
+## 2026-11-25 daily set (made by the daily Reels creator; slots are Dubai time)
+Renders: build/reels_2026_11_25.py (reels, reading pace SLOW = 1.75, 23.1 s each, big counting number on frame 1, answer at ~6 s; figures in the header, re-checked in Python 25 Nov), build/stories_2026_11_25.py (stories). Soundtrack: build/reel_audio.py, seed = 2026112N (N = 1..5). Slot changes: Wednesday reel slot 13:30 → 14:30 (carousel at 13:30, two-friends at 13:00); 19:00 → 20:30 so it does not sit 30 min before the 19:30 ₹100 teaser. Calendar swap: Wed 21:30 forex pip value (needs a live USD/JPY rate; rate hooks lose) swapped with Fri 21:30 "70% win rate and still losing" (loss maths wins). Today's 3D curiosity reel = the nostalgia set already posted at 00:50, so the evening reel is drawn in code.
+
+| Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-25 | 11:00 | reel | no | 4500 | pop | 2026-11-25-uae-55-days-old.mp4 | /age-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 12:00 | story | — | — | — | 2026-11-25-story-uae-55-quiz.jpg | /age-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 14:30 | reel | yes | 4500 | desi | 2026-11-25-5-cent-plot-sqft.mp4 | /kerala-land-converter/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 16:00 | reel | yes | 4500 | cinematic | 2026-11-25-real-raise.mp4 | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 18:00 | story | — | — | — | 2026-11-25-story-raise-vs-inflation.jpg | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 20:30 | reel | no | 4500 | lofi | 2026-11-25-same-bmi-24-9.mp4 | /bmi-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 21:30 | reel | no | 4500 | electro | 2026-11-25-70pct-win-losing.mp4 | /risk-reward-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+
+```captions
+[2026-11-25 11:00]
+How many days old is the UAE on its 55th National Day?
+2 Dec 1971 → 2 Dec 2026 = 20,089 days.
+55 years × 365 = 20,075, plus 14 leap days (1972–2024).
+That's about 1.74 billion seconds.
+Link in bio → Age calculator (exact age and total days lived)
+How many days old are you? 👇
+Six emirates formed the UAE on 2 Dec 1971; Ras Al Khaimah joined on 10 Feb 1972.
+#uaenationalday #eidaletihad #uae55 #agecalculator #lifeinnumbers #calcsouq
+
+[2026-11-25 12:00]
+(story) Quiz: On 2 Dec the UAE turns 55. How many days old? A 12,045 · B 20,089 · C 55,000. Answer in today's reel. calcsouq.com
+
+[2026-11-25 14:30]
+How many sq ft is a 5-cent plot?
+2,178 sq ft. 1 cent = 435.6 sq ft (1/100 of an acre).
+5 cents ≈ 202 m², about 46.7 ft a side if square.
+10 cents = 4,356 sq ft · 100 cents = 1 acre.
+Link in bio → Kerala land converter (cent, acre, are, sq ft, m²)
+How many cents is your family's plot? 👇
+Standard conversion: 1 acre = 43,560 sq ft.
+#kerala #centtosqft #keralaland #plot #realestatekerala #calcsouq
+
+[2026-11-25 16:00]
+8% raise, 6% inflation: what's your real raise?
+1.9%, not 2%: 1.08 ÷ 1.06 − 1 = 1.89%.
+₹50,000 → ₹54,000. In today's prices that's ₹50,943.
+Only a 5% raise? Real change −0.9%: a pay cut in disguise.
+Link in bio → Percentage calculator
+Did your last raise beat inflation? 👇
+Illustrative rates, not current official inflation. Not financial advice.
+#salaryhike #inflation #realraise #salary #personalfinance #calcsouq
+
+[2026-11-25 18:00]
+(story) Quiz: 5% raise, 6% inflation: raise or pay cut? A Small raise · B No change · C Pay cut. Answer in today's reel. calcsouq.com
+
+[2026-11-25 20:30]
+Same BMI 24.9: how much do a 160 cm and a 185 cm person weigh?
+160 cm → 63.7 kg. 185 cm → 85.2 kg. 21.5 kg apart, same BMI.
+BMI = weight (kg) ÷ height (m)².
+WHO adult "normal" range: 18.5–24.9.
+Link in bio → BMI calculator
+Did you guess C? 👇
+BMI is a screening number, not a diagnosis: it doesn't measure muscle or body fat, and some Asian guidelines use lower cut-offs. Not medical advice.
+#bmi #bmicalculator #healthyweight #fitness #height #calcsouq
+
+[2026-11-25 21:30]
+70% win rate and still losing money? Yes.
+Average win $50, average loss $150.
+100 trades: 70 × $50 = +$3,500 · 30 × $150 = −$4,500 → −$1,000 (−$10 a trade).
+Break-even win rate at 1:3 risk-reward: 75%.
+Link in bio → Risk-reward calculator
+What matters more to you: win rate or win size? 👇
+Example numbers, before fees and slippage. Education only, not investment advice.
+#trading #riskreward #winrate #forex #tradingpsychology #calcsouq
 ```
