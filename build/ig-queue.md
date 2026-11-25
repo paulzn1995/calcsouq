@@ -243,6 +243,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-23 | 18:00 | reel | no | 1500 | cinematic | 2026-11-23-emi-rbi-ml-teaser.mp4 | /loan-emi-calculator/ | posted 23 Nov 19:06 Dubai (approved: YouTube teaser rule), media 18018958883968828 |
 | 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | posted 24 Nov 21:05 Dubai (approved: YouTube teaser rule; quality re-render 23 Nov EOD), media 18085449521722911 |
 | 2026-11-25 | 19:30 | reel | no | 3000 | cinematic | 2026-11-25-100rs-ml-teaser.mp4 | /sip-calculator/ | approved |
+| 2026-11-25 | 17:45 | reel | no | 1500 | cinematic | 2026-11-25-fd-ml-teaser.mp4 | /compound-interest-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -702,4 +703,21 @@ Then a ₹30 meal and a ₹33 rice secret. But the real twist is rent.
 What's YOUR daily number? Comment 👇
 Real 2026 Kerala prices from news reports; Appu is a fictional animated character.
 #100RupeesChallenge #Kerala #MalayalamReels #Budget #CalcSouq
+```
+
+[2026-11-25 17:45]
+```
+FD ഇപ്പോൾ ഇടണോ, ഡിസംബർ 4 വരെ കാത്തിരിക്കണോ? 🤔 FD rates are up: lock now or wait?
+
+🏦 Seniors at big banks now get 7.2–7.4% (HDFC 7.20%, Federal Bank 7.40%, Nov 2026)
+💰 ₹5 lakh for 1 year at 6.25%: +₹31,990 interest
+📈 But prices rose 6.09% (₹30,450) → real gain only ≈ ₹1,540
+⏳ Waiting a month with idle money: lose ≈ ₹2,604 of interest; a 0.25% rise adds only ≈ ₹1,311 a year
+
+▶️ മുഴുവൻ വീഡിയോ (Malayalam, English subtitles): youtube.com/@calcsouq (link in bio)
+Your own FD: calcsouq.com/compound-interest-calculator
+Would you book now or wait? Comment 👇
+
+Rates from bank announcements and news reports, 4–16 Nov 2026; checked 25 Nov. Education only, not financial advice.
+#FDRates #FixedDeposit #MalayalamReels #Kerala #CalcSouq
 ```
