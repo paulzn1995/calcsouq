@@ -729,7 +729,7 @@ Renders: build/reels_2026_11_25.py (reels, reading pace SLOW = 1.75, 23.1 s each
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-25 | 11:00 | reel | no | 4500 | pop | 2026-11-25-uae-55-days-old.mp4 | /age-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 11:00 | reel | no | 4500 | pop | 2026-11-25-uae-55-days-old.mp4 | /age-calculator/ | posted 11:05 Dubai (auto-approved), media 18134269337484185 |
 | 2026-11-25 | 12:00 | story | — | — | — | 2026-11-25-story-uae-55-quiz.jpg | /age-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 14:30 | reel | yes | 4500 | desi | 2026-11-25-5-cent-plot-sqft.mp4 | /kerala-land-converter/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 16:00 | reel | yes | 4500 | cinematic | 2026-11-25-real-raise.mp4 | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
