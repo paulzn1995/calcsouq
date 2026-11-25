@@ -2,7 +2,7 @@
 
 Length 14:34, 1920x1080. 25 narrated chapters (ElevenLabs flow G2WMRAT57HLDTilMD6Uv, voice Mahendran J, eleven_v3, Malayalam), 46 AI-generated realistic stills, DANGER METER gauge, stress-test table, formula card, English subtitles burnt in, English + Malayalam caption files, CalcSouq's own music bed.
 
-Final video: see the "Final video" line added after the composition finishes.
+Final video: ElevenLabs generation dFJmzU6R2LRHGqIVGFZo (composition node O5uW4c7Mt7ospiTgimun on flow G2WMRAT57HLDTilMD6Uv). Download it from https://elevenlabs.io/app/image-video/history?modality=video&generationId=dFJmzU6R2LRHGqIVGFZo
 Sreeja, Ammini, Rajan and Anu are fictional; every price and rule is from 2026 sources (sources.md). The 10% interest rate in the examples is an assumption and is said so in the video.
 **AI use: Yes** (AI-generated realistic scenes).
 
