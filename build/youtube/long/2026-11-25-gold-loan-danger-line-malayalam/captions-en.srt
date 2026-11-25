@@ -1,0 +1,535 @@
+1
+00:00:00,000 --> 00:00:06,508
+Twenty days ago, on 5 November, one pavan of gold cost ₹1,07,080 in Kerala.
+
+2
+00:00:06,508 --> 00:00:11,257
+Today, 25 November, it is ₹91,360.
+
+3
+00:00:11,257 --> 00:00:17,062
+₹15,720 vanished from every pavan, in just twenty days.
+
+4
+00:00:17,062 --> 00:00:21,987
+And it fell again today, by another ₹295 a gram.
+
+5
+00:00:21,987 --> 00:00:26,678
+But this video is not about people buying gold. It is about people who have pledged it.
+
+6
+00:00:26,678 --> 00:00:36,300
+Because in these weeks, a message may land on many phones. By the end of this video you will know exactly what it is, and what to do if it comes.
+
+7
+00:00:36,700 --> 00:00:43,361
+On world markets, on the 18th of this month, gold dropped to about $3,720 an ounce.
+
+8
+00:00:43,361 --> 00:00:49,111
+The lowest since September 2025: a 14-month low.
+
+9
+00:00:49,111 --> 00:00:55,317
+In January the same gold was above $5,500. It has lost about a third since then.
+
+10
+00:00:55,317 --> 00:01:05,508
+Same story here. In late January, 10 grams of 24-carat was about ₹1.8 lakh. Today in Kerala it is ₹1,24,580.
+
+11
+00:01:05,508 --> 00:01:11,657
+By Reuters' count, gold is heading for its worst year since 2015.
+
+12
+00:01:11,657 --> 00:01:20,440
+We saw why this is happening in our last video. Today we look at something else: what this fall does to your pledged gold.
+
+13
+00:01:20,833 --> 00:01:23,795
+Notice one number: ₹20 lakh crore.
+
+14
+00:01:23,795 --> 00:01:31,264
+That is roughly the total that banks and NBFCs in India have lent against gold.
+
+15
+00:01:31,264 --> 00:01:37,702
+Bank gold loans alone grew more than 80% in a year, crossing ₹5.5 lakh crore.
+
+16
+00:01:37,702 --> 00:01:43,239
+As prices climbed, the same gold fetched a bigger loan. Many took the maximum.
+
+17
+00:01:43,239 --> 00:01:50,493
+Now, as prices fall, that maths flips. Those who pledged at the highest prices are most at risk.
+
+18
+00:01:50,900 --> 00:02:00,607
+This is Sreeja, 40. She runs a small tailoring shop in Thrissur. She is fictional, but the maths uses real prices.
+
+19
+00:02:00,607 --> 00:02:04,875
+Her daughter Anu got a nursing admission. The fees have to be paid.
+
+20
+00:02:04,875 --> 00:02:09,006
+In the cupboard is her ten pavan of wedding gold: 80 grams.
+
+21
+00:02:09,006 --> 00:02:15,133
+On 5 November, the highest-priced day this month, she pledged it at a bank.
+
+22
+00:02:15,133 --> 00:02:23,532
+₹13,385 a gram. Gold value: ₹10,70,800.
+
+23
+00:02:23,532 --> 00:02:31,680
+She borrowed ₹7,30,000 as a bullet loan: principal and interest paid together after one year.
+
+24
+00:02:32,067 --> 00:02:34,294
+Sreeja did a simple sum.
+
+25
+00:02:34,294 --> 00:02:41,855
+₹10.7 lakh of gold, a ₹7.3 lakh loan: just 68%.
+
+26
+00:02:41,855 --> 00:02:51,169
+For loans above ₹5 lakh, the RBI limit is 75%. She felt safe with a seven-point cushion.
+
+27
+00:02:51,169 --> 00:02:55,422
+But there is a big mistake in this sum. Most people never learn it.
+
+28
+00:02:55,422 --> 00:03:05,750
+On a bullet loan, LTV is not worked out on today's loan amount. It is on the total payable at maturity: principal plus a full year's interest.
+
+29
+00:03:05,750 --> 00:03:15,567
+At an assumed 10% interest, she owes ₹8,03,000 at maturity. So her LTV was 75% on day one. Zero cushion.
+
+30
+00:03:15,967 --> 00:03:22,987
+Now jump twenty days. Today 22-carat is ₹11,420 a gram.
+
+31
+00:03:22,987 --> 00:03:28,218
+The same 80 grams is now worth ₹9,13,600.
+
+32
+00:03:28,218 --> 00:03:31,927
+The amount owed has not changed: ₹8,03,000.
+
+33
+00:03:31,927 --> 00:03:36,960
+Her LTV is now 88%, well above the 75% limit.
+
+34
+00:03:36,960 --> 00:03:43,847
+Sreeja did nothing wrong. She never missed a payment. Yet she is now outside the limit.
+
+35
+00:03:43,847 --> 00:03:48,187
+On pledge day, hardly anyone thinks about this.
+
+36
+00:03:48,600 --> 00:03:52,907
+That's when the message arrives. It is called a margin call.
+
+37
+00:03:52,907 --> 00:03:59,955
+In plain words: your gold is worth less, your loan is outside the safe limit, please fix it.
+
+38
+00:03:59,955 --> 00:04:08,503
+There are usually three ways: repay part, pledge more gold, or close the loan.
+
+39
+00:04:08,503 --> 00:04:16,921
+How many days you get depends on each lender's policy and your agreement. Look it up in your agreement today.
+
+40
+00:04:16,921 --> 00:04:22,011
+Ignore it and let the loan default, and after notice the gold can go to auction.
+
+41
+00:04:22,011 --> 00:04:27,140
+So how much must Sreeja pay? The answer is bigger than you would expect.
+
+42
+00:04:27,533 --> 00:04:36,925
+Way one: pay cash. To get back to 75%, her total payable must come down by ₹1,17,800.
+
+43
+00:04:36,925 --> 00:04:42,914
+Allowing for interest, that is about ₹1.07 lakh paid into the principal today.
+
+44
+00:04:42,914 --> 00:04:49,244
+Way two: more gold. 13.75 grams, about one and three-quarter pavan more.
+
+45
+00:04:49,244 --> 00:04:57,411
+Does someone who pledged gold for fees have ₹1 lakh lying around? Another pavan and three-quarters at home?
+
+46
+00:04:57,411 --> 00:05:04,313
+That is the real fear of a margin call. It asks for money exactly when you have the least of it.
+
+47
+00:05:04,700 --> 00:05:11,161
+One question: how low must prices go before Sreeja's gold is worth only what she owes?
+
+48
+00:05:11,161 --> 00:05:19,058
+₹8,03,000 divided by 80 grams: ₹10,037 a gram, ₹80,300 a pavan.
+
+49
+00:05:19,058 --> 00:05:22,517
+Just 12% below today's price.
+
+50
+00:05:22,517 --> 00:05:26,563
+Remember: prices fell about 15% this month alone.
+
+51
+00:05:26,563 --> 00:05:33,481
+Cross that line and even selling all the gold won't clear the debt. That's why lenders act well before it.
+
+52
+00:05:33,481 --> 00:05:39,720
+I will give you an easy formula for your own danger line near the end.
+
+53
+00:05:40,133 --> 00:05:46,259
+Let's stress-test it. What happens to Sreeja's loan if prices fall further?
+
+54
+00:05:46,259 --> 00:05:54,074
+5% lower: pavan ₹86,792, LTV 92.5%.
+
+55
+00:05:54,074 --> 00:06:01,961
+10% lower: pavan ₹82,224, LTV about 98%.
+
+56
+00:06:01,961 --> 00:06:11,396
+20% lower: pavan ₹73,088, LTV 110%. The gold is worth less than the debt.
+
+57
+00:06:11,396 --> 00:06:19,793
+No one can say for sure whether prices fall or rise. But you can build a table like this for your own loan.
+
+58
+00:06:20,200 --> 00:06:24,570
+Now a shocking twist. Small borrowers have the thinnest cushion.
+
+59
+00:06:24,570 --> 00:06:32,123
+This is Ammini: two pavan, 16 grams. For loans up to ₹2.5 lakh, the RBI allows up to 85%.
+
+60
+00:06:32,123 --> 00:06:40,799
+On the same 5 November, she took close to the maximum: ₹1,65,000, with ₹1,81,500 payable.
+
+61
+00:06:40,799 --> 00:06:47,790
+Her danger line is ₹90,750 a pavan. Today's price: ₹91,360.
+
+62
+00:06:47,790 --> 00:06:53,533
+So today Ammini's gold and debt are almost equal. LTV 99%.
+
+63
+00:06:53,533 --> 00:07:02,260
+The higher LTV was brought in to help small borrowers. But when prices fall, that same high LTV hurts them first.
+
+64
+00:07:02,667 --> 00:07:06,778
+Now Rajan. Same ten pavan, same ₹7.3 lakh, same day.
+
+65
+00:07:06,778 --> 00:07:11,855
+One difference: instead of a bullet loan, he pays an EMI every month.
+
+66
+00:07:11,855 --> 00:07:19,653
+After his first EMI the balance is about ₹6.72 lakh, and no future interest is piled on top.
+
+67
+00:07:19,653 --> 00:07:24,006
+At today's price, Rajan's LTV is 73.5%: inside the limit.
+
+68
+00:07:24,006 --> 00:07:31,744
+Reports say EMI gold loans have largely held up in this fall. Every month the principal shrinks and the cushion grows.
+
+69
+00:07:31,744 --> 00:07:40,567
+But note: this needs income of about ₹64,000 a month for the EMI. The choice has to be made on the day you borrow.
+
+70
+00:07:40,967 --> 00:07:45,655
+Another secret: a pavan at the jeweller and a pavan at the bank are not the same.
+
+71
+00:07:45,655 --> 00:07:54,700
+Under RBI rules, lenders give no value to making charges or stones. Only the gold's weight and purity count.
+
+72
+00:07:54,700 --> 00:08:01,698
+So the bank's value for a stone-set necklace can be far below the amount on its bill.
+
+73
+00:08:01,698 --> 00:08:10,149
+There's a rule for the price too: the lower of the previous day's close or the 30-day average.
+
+74
+00:08:10,149 --> 00:08:20,947
+In a falling market, yesterday's price sits below the average. So during a fall the lower price is always used; averaging won't save you.
+
+75
+00:08:21,333 --> 00:08:25,723
+Why won't this fall stop? Three fresh reasons from this week.
+
+76
+00:08:25,723 --> 00:08:30,114
+One: the US dollar hit a 19-month high.
+
+77
+00:08:30,114 --> 00:08:37,013
+Two: markets see a US rate hike in December as near-certain, with odds above 95%.
+
+78
+00:08:37,013 --> 00:08:43,411
+Three: high oil prices feed inflation fears, which strengthen bets on even higher rates.
+
+79
+00:08:43,411 --> 00:08:50,673
+When rates rise, big investors move money out of gold, which pays no interest. That's the pressure on the price.
+
+80
+00:08:51,067 --> 00:08:58,407
+A curious bit of history: in 1980 gold hit a record of $850 an ounce.
+
+81
+00:08:58,407 --> 00:09:03,402
+The world waited 27 years, until 2008, to see that price again.
+
+82
+00:09:03,402 --> 00:09:08,275
+This is not a prediction that it will happen again. No one knows that.
+
+83
+00:09:08,275 --> 00:09:15,491
+Just remember: the gold market moves over years. Your bullet loan lasts only 12 months.
+
+84
+00:09:15,491 --> 00:09:21,527
+Waiting only in the hope that prices bounce back is not a plan. It's a risk.
+
+85
+00:09:21,933 --> 00:09:31,382
+It's not only scary numbers. The RBI's new rules, in force since 1 April this year, give you some strong protections.
+
+86
+00:09:31,382 --> 00:09:38,906
+One: the valuation method, collateral details, repayment terms and auction rules must all be written in your agreement.
+
+87
+00:09:38,906 --> 00:09:45,105
+Two: they must be given in a language you understand. You have the right to ask for Malayalam.
+
+88
+00:09:45,105 --> 00:09:54,553
+Three: on bullet loans, principal and interest must be repaid within 12 months. The old habit of paying only interest and renewing for years is over.
+
+89
+00:09:54,967 --> 00:09:58,956
+The biggest fear is auction. Even there, the rules are on your side.
+
+90
+00:09:58,956 --> 00:10:05,063
+You must get advance notice before any auction. Your gold can't just vanish one day.
+
+91
+00:10:05,063 --> 00:10:13,103
+The reserve price can't be below 90% of market value; only after two failed auctions can it drop to 85%.
+
+92
+00:10:13,103 --> 00:10:19,024
+Any surplus after clearing the loan must come back to you within seven working days.
+
+93
+00:10:19,024 --> 00:10:27,987
+Once you repay, your gold must be returned within seven working days. For each day of delay, you are owed ₹5,000.
+
+94
+00:10:28,400 --> 00:10:32,503
+Now the most important part. What do you do if that message comes?
+
+95
+00:10:32,503 --> 00:10:37,647
+First: don't panic, and don't ignore it. It is not an auction. It is a warning.
+
+96
+00:10:37,647 --> 00:10:46,634
+Contact the branch on your pledge receipt directly, not a number or link in the message. Scam messages can look exactly the same.
+
+97
+00:10:46,634 --> 00:10:53,536
+Get three things in writing: the gold price they used, your current LTV, and how many days you have.
+
+98
+00:10:53,536 --> 00:10:58,460
+With those three numbers, you can decide calmly.
+
+99
+00:10:58,867 --> 00:11:00,915
+Each choice has its own cost.
+
+100
+00:11:00,915 --> 00:11:08,346
+Part-paying shrinks the loan and the interest. But don't fund it with another, costlier loan.
+
+101
+00:11:08,346 --> 00:11:15,074
+Pledging more gold needs no cash today. But if prices fall further, that extra gold is exposed too.
+
+102
+00:11:15,074 --> 00:11:24,553
+Selling part of the gold to close the loan locks in today's lower price. But unlike an auction, you stay in control.
+
+103
+00:11:24,553 --> 00:11:32,927
+Which is right depends on your income and savings. If unsure, talk to a registered financial adviser.
+
+104
+00:11:33,333 --> 00:11:37,714
+Even if no message has come, here are four things you can do now.
+
+105
+00:11:37,714 --> 00:11:46,164
+One: ask whether you can pay interest monthly, even on a bullet loan. A smaller amount payable means a lower LTV.
+
+106
+00:11:46,164 --> 00:11:53,048
+Two: put even a small amount into the principal every month. Every payment pushes your danger line lower.
+
+107
+00:11:53,048 --> 00:11:58,869
+Three: know in advance where ₹1 to 1.5 lakh could come from if needed.
+
+108
+00:11:58,869 --> 00:12:05,553
+Four: work out your own LTV once a week. You should know before the lender tells you.
+
+109
+00:12:05,967 --> 00:12:14,007
+If you're about to take a new gold loan: with lower prices, the same gold fetches far less than in January.
+
+110
+00:12:14,007 --> 00:12:24,855
+Don't take the maximum. Experts suggest staying below 80% of what's allowed; some say 60 to 65% of the gold's value.
+
+111
+00:12:24,855 --> 00:12:28,492
+If you can, choose the EMI option. Remember Rajan.
+
+112
+00:12:28,492 --> 00:12:36,022
+Compare not just the rate, but processing fees, late penalties and auction terms across lenders.
+
+113
+00:12:36,022 --> 00:12:44,107
+Pledging gold to invest in shares or crypto is a double risk. If both fall together, there's no way out.
+
+114
+00:12:44,500 --> 00:12:47,606
+Now the formula I promised. Grab a pen and paper.
+
+115
+00:12:47,606 --> 00:12:51,769
+First: the total payable at maturity, principal plus interest.
+
+116
+00:12:51,769 --> 00:12:58,113
+Divide it by the grams of gold: the net weight, without stones.
+
+117
+00:12:58,113 --> 00:13:04,390
+That is your danger line per gram. Multiply by eight for the pavan danger line.
+
+118
+00:13:04,390 --> 00:13:13,575
+To find your margin-call line, divide that per-gram figure by your LTV limit: 0.75 for 75%.
+
+119
+00:13:13,575 --> 00:13:20,880
+Compare today's per-gram price with both lines. You'll see at a glance how far away you are.
+
+120
+00:13:21,267 --> 00:13:26,309
+Sreeja didn't panic. She went straight to the branch and got those three numbers in writing.
+
+121
+00:13:26,309 --> 00:13:34,146
+She paid ₹60,000 from her shop savings, and pledged one more bangle of about six grams to close the gap.
+
+122
+00:13:34,146 --> 00:13:37,305
+And she decided to pay the interest every month from now on.
+
+123
+00:13:37,305 --> 00:13:40,768
+Anu's fees are paid. The wedding gold is still safe.
+
+124
+00:13:40,768 --> 00:13:45,807
+What made the difference wasn't luck. She knew the maths. That's all.
+
+125
+00:13:46,200 --> 00:13:50,188
+One: on a bullet loan, LTV includes the interest.
+
+126
+00:13:50,188 --> 00:13:54,019
+Two: the bank's pavan is not your bill's pavan.
+
+127
+00:13:54,019 --> 00:13:57,537
+Three: small loans have the thinnest cushion.
+
+128
+00:13:57,537 --> 00:14:02,932
+Four: the message is a warning, not an auction. Go to your branch directly.
+
+129
+00:14:02,932 --> 00:14:07,220
+Five: work out your danger line today.
+
+130
+00:14:07,633 --> 00:14:14,643
+In your home or neighbourhood there's surely someone with pledged gold, especially older people like Ammini.
+
+131
+00:14:14,643 --> 00:14:19,356
+Send them this video. They should know this before any message arrives.
+
+132
+00:14:19,356 --> 00:14:23,223
+Tell us in the comments: how far away is your danger line at today's price?
+
+133
+00:14:23,223 --> 00:14:29,447
+This is general information, not financial advice. The 10% interest in the examples is an assumption.
+
+134
+00:14:29,447 --> 00:14:33,373
+Subscribe to CalcSouq for more like this.

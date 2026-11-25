@@ -246,6 +246,7 @@ Rule: every long YouTube video gets a 20–25 s vertical teaser reel (reading pa
 | 2026-11-24 | 19:30 | reel | no | 1500 | cinematic | 2026-11-23-onion-ml-teaser.mp4 | /percentage-calculator/ | posted 24 Nov 21:05 Dubai (approved: YouTube teaser rule; quality re-render 23 Nov EOD), media 18085449521722911 |
 | 2026-11-25 | 19:30 | reel | no | 3000 | cinematic | 2026-11-25-100rs-ml-teaser.mp4 | /sip-calculator/ | approved |
 | 2026-11-25 | 17:45 | reel | no | 1500 | cinematic | 2026-11-25-fd-ml-teaser.mp4 | /compound-interest-calculator/ | posted 25 Nov 18:07 Dubai (approved: YouTube teaser rule), media 18119550557015812 |
+| 2026-11-26 | 20:30 | reel | no | 1500 | cinematic | 2026-11-25-gold-loan-danger-ml-teaser.mp4 | /gold-price-calculator/ | approved |
 
 [2026-11-22 17:30]
 ```
@@ -814,4 +815,16 @@ Link in bio → Risk-reward calculator
 What matters more to you: win rate or win size? 👇
 Example numbers, before fees and slippage. Education only, not investment advice.
 #trading #riskreward #winrate #forex #tradingpsychology #calcsouq
+```captions
+[2026-11-26 20:30]
+20 ദിവസം കൊണ്ട് ഒരു പവന് ₹15,720 കുറഞ്ഞു 📉 ഗോൾഡ് ലോൺ ഉണ്ടോ? ഈ മെസേജ് വരാം.
+
+Kerala 22K: ₹1,07,080 (5 Nov) → ₹91,360 (25 Nov). Gold is at a 14-month low.
+On a bullet loan the bank counts a full year's interest in your LTV, and a small loan taken at 85% can already be near 99%.
+Know your danger line: amount payable ÷ grams × 8 = the pavan price where your gold only just covers your loan.
+
+▶️ മുഴുവൻ വീഡിയോ (Malayalam, English subtitles): youtube.com/@calcsouq (link in bio)
+Share it with someone who has pledged gold 🙏
+Prices: Kerala board rates. Rules: RBI gold loan directions (from 1 Apr 2026). Example people are fictional; 10% interest assumed. Not financial advice.
+#GoldLoan #GoldPrice #Kerala #MalayalamReels #CalcSouq
 ```

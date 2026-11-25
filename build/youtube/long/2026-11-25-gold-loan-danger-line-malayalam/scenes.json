@@ -1,0 +1,1129 @@
+{
+ "S01": {
+  "head": [
+   "ലോക്കറിലെ സ്വർണം ഉരുകുന്നു",
+   "The gold in your locker is melting"
+  ],
+  "who": null,
+  "fx": "ticker",
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Extreme close-up of a traditional Kerala gold necklace lying in a steel bank-locker tray, a thin red light sweeping across it in a dark vault. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A smartphone lying face-up on a dark wooden table at night, its screen glowing with a blurred notification bubble, the light reflecting on a gold bangle beside it. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇരുപത് ദിവസം മുമ്പ്, നവംബർ അഞ്ചിന്, കേരളത്തിൽ ഒരു പവൻ സ്വർണത്തിന് ഒരു ലക്ഷത്തി ഏഴായിരത്തി എൺപത് രൂപയായിരുന്നു.",
+    "Twenty days ago, on 5 November, one pavan of gold cost ₹1,07,080 in Kerala.",
+    null,
+    "5 Nov · ₹1,07,080"
+   ],
+   [
+    "ഇന്ന്, നവംബർ ഇരുപത്തിയഞ്ചിന്, അത് തൊണ്ണൂറ്റി ഒന്നായിരത്തി മുന്നൂറ്റി അറുപത് രൂപ.",
+    "Today, 25 November, it is ₹91,360.",
+    null,
+    "25 Nov · ₹91,360"
+   ],
+   [
+    "ഓരോ പവനിൽ നിന്നും പതിനയ്യായിരത്തി എഴുനൂറ്റി ഇരുപത് രൂപ മാഞ്ഞുപോയി. അതും വെറും ഇരുപത് ദിവസം കൊണ്ട്.",
+    "₹15,720 vanished from every pavan, in just twenty days.",
+    null,
+    "−₹15,720 per pavan"
+   ],
+   [
+    "ഇന്നും വില താഴേക്ക് തന്നെ. ഒരു ഗ്രാമിന് ഇരുനൂറ്റി തൊണ്ണൂറ്റിയഞ്ച് രൂപ കൂടി കുറഞ്ഞു.",
+    "And it fell again today, by another ₹295 a gram.",
+    null,
+    "Today −₹295 / g"
+   ],
+   [
+    "പക്ഷേ ഈ വീഡിയോ സ്വർണം വാങ്ങുന്നവരെ കുറിച്ചല്ല. സ്വർണം പണയം വെച്ചവരെ കുറിച്ചാണ്.",
+    "But this video is not about people buying gold. It is about people who have pledged it.",
+    null,
+    null
+   ],
+   [
+    "കാരണം, ഈ ആഴ്ചകളിൽ പലരുടെയും ഫോണിലേക്ക് ഒരു മെസേജ് വരാൻ സാധ്യതയുണ്ട്. അത് എന്താണ്, വന്നാൽ എന്ത് ചെയ്യണം, എന്ന് ഈ വീഡിയോ കഴിയുമ്പോൾ നിങ്ങൾക്ക് കൃത്യമായി അറിയാം.",
+    "Because in these weeks, a message may land on many phones. By the end of this video you will know exactly what it is, and what to do if it comes.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S02": {
+  "head": [
+   "പതിനാല് മാസത്തെ താഴ്ച",
+   "A 14-month low"
+  ],
+  "who": null,
+  "fx": "ticker",
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Gold bars stacked on a dark trading desk, reflections of red falling chart lines glowing from out-of-focus monitors behind them. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Slow-motion moment of a tall stack of gold coins toppling over on a black glass surface, coins scattering, cold blue light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ലോക വിപണിയിൽ, ഈ മാസം പതിനെട്ടിന്, ഒരു ഔൺസ് സ്വർണത്തിന്റെ വില മൂവായിരത്തി എഴുനൂറ്റി ഇരുപത് ഡോളറിനടുത്ത് വരെ താഴ്ന്നു.",
+    "On world markets, on the 18th of this month, gold dropped to about $3,720 an ounce.",
+    null,
+    "$3,720 / oz"
+   ],
+   [
+    "രണ്ടായിരത്തി ഇരുപത്തിയഞ്ച് സെപ്റ്റംബറിന് ശേഷമുള്ള ഏറ്റവും താഴ്ന്ന വില. അതായത് പതിനാല് മാസത്തെ താഴ്ച.",
+    "The lowest since September 2025: a 14-month low.",
+    null,
+    "14-month low"
+   ],
+   [
+    "ജനുവരിയിൽ ഇതേ സ്വർണം അയ്യായിരത്തി അഞ്ഞൂറ് ഡോളറിന് മുകളിലായിരുന്നു. അവിടെ നിന്ന് ഏകദേശം മൂന്നിലൊന്ന് ഇടിഞ്ഞു.",
+    "In January the same gold was above $5,500. It has lost about a third since then.",
+    null,
+    "≈ −32% from peak"
+   ],
+   [
+    "നമ്മുടെ നാട്ടിലും ഇതേ കഥ. ജനുവരി അവസാനം ഇരുപത്തിനാല് കാരറ്റ് പത്ത് ഗ്രാമിന് ഏകദേശം ഒരു ലക്ഷത്തി എൺപതിനായിരം രൂപ. ഇന്ന് കേരളത്തിൽ ഒരു ലക്ഷത്തി ഇരുപത്തിനാലായിരത്തി അഞ്ഞൂറ്റി എൺപത്.",
+    "Same story here. In late January, 10 grams of 24-carat was about ₹1.8 lakh. Today in Kerala it is ₹1,24,580.",
+    null,
+    "24K 10 g · ₹1.8L → ₹1.25L"
+   ],
+   [
+    "റോയിട്ടേഴ്സിന്റെ കണക്കിൽ, രണ്ടായിരത്തി പതിനഞ്ചിന് ശേഷം സ്വർണത്തിന്റെ ഏറ്റവും മോശം വർഷത്തിലേക്കാണ് ഈ പോക്ക്.",
+    "By Reuters' count, gold is heading for its worst year since 2015.",
+    null,
+    "Worst year since 2015"
+   ],
+   [
+    "എന്തുകൊണ്ട് ഇത് സംഭവിക്കുന്നു എന്ന് നമ്മൾ കഴിഞ്ഞ വീഡിയോയിൽ കണ്ടു. ഇന്ന് നോക്കുന്നത് മറ്റൊന്നാണ്: ഈ ഇടിവ് നിങ്ങളുടെ പണയ സ്വർണത്തോട് എന്ത് ചെയ്യുന്നു.",
+    "We saw why this is happening in our last video. Today we look at something else: what this fall does to your pledged gold.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S03": {
+  "head": [
+   "ഇരുപത് ലക്ഷം കോടി",
+   "₹20 lakh crore"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Dusk aerial view of a busy Kerala town street lined with small bank and finance shopfronts, glowing windows, light rain on the road, blank shop boards. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A long queue of ordinary Malayali men and women waiting at a bank counter with small jewellery pouches in hand, ceiling fans, fluorescent light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഒരു സംഖ്യ ശ്രദ്ധിക്കൂ. ഇരുപത് ലക്ഷം കോടി രൂപ.",
+    "Notice one number: ₹20 lakh crore.",
+    null,
+    "₹20 lakh crore"
+   ],
+   [
+    "ഇന്ത്യയിൽ ബാങ്കുകളും NBFCകളും ചേർന്ന്, സ്വർണം പണയം വെച്ച് നൽകിയിരിക്കുന്ന ആകെ വായ്പ ഏകദേശം ഇത്രയുമാണെന്നാണ് കണക്ക്.",
+    "That is roughly the total that banks and NBFCs in India have lent against gold.",
+    null,
+    "India's gold loans"
+   ],
+   [
+    "ബാങ്കുകളുടെ ഗോൾഡ് ലോൺ മാത്രം ഒരു വർഷം കൊണ്ട് എൺപത് ശതമാനത്തിലധികം വളർന്ന്, അഞ്ചര ലക്ഷം കോടി കടന്നു.",
+    "Bank gold loans alone grew more than 80% in a year, crossing ₹5.5 lakh crore.",
+    null,
+    "Banks · +80% in a year"
+   ],
+   [
+    "വില കയറിക്കൊണ്ടിരുന്നപ്പോൾ, ഒരേ സ്വർണത്തിന് കൂടുതൽ ലോൺ കിട്ടി. പലരും പരമാവധി എടുത്തു.",
+    "As prices climbed, the same gold fetched a bigger loan. Many took the maximum.",
+    null,
+    null
+   ],
+   [
+    "ഇപ്പോൾ വില താഴുമ്പോൾ, ആ കണക്ക് തിരിഞ്ഞു മറിയുന്നു. ഏറ്റവും ഉയർന്ന വിലയിൽ പണയം വെച്ചവരാണ് ഏറ്റവും അപകടത്തിൽ.",
+    "Now, as prices fall, that maths flips. Those who pledged at the highest prices are most at risk.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S04": {
+  "head": [
+   "ശ്രീജയുടെ പത്ത് പവൻ",
+   "Sreeja's ten pavan"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar sits on her bed at home opening a red velvet jewellery box full of traditional Kerala wedding gold necklaces and bangles, soft window light, a tender, worried look. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. At a bank gold-loan desk, an appraiser's hands weigh a gold necklace on a small digital scale while Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar watches anxiously across the desk. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇത് ശ്രീജ. നാൽപ്പത് വയസ്സ്. തൃശ്ശൂരിൽ ഒരു ചെറിയ തയ്യൽക്കട നടത്തുന്നു. ഇതൊരു സാങ്കൽപ്പിക കഥാപാത്രമാണ്, പക്ഷേ കണക്കുകൾ യഥാർത്ഥ വിലകൾ വെച്ചാണ്.",
+    "This is Sreeja, 40. She runs a small tailoring shop in Thrissur. She is fictional, but the maths uses real prices.",
+    null,
+    "Fictional · real prices"
+   ],
+   [
+    "മകൾ അനുവിന് നഴ്സിംഗ് അഡ്മിഷൻ കിട്ടി. ഫീസ് അടയ്ക്കാൻ പണം വേണം.",
+    "Her daughter Anu got a nursing admission. The fees have to be paid.",
+    null,
+    null
+   ],
+   [
+    "അലമാരയിൽ കല്യാണത്തിന് കിട്ടിയ പത്ത് പവൻ ഉണ്ട്. എൺപത് ഗ്രാം.",
+    "In the cupboard is her ten pavan of wedding gold: 80 grams.",
+    null,
+    "10 pavan = 80 g"
+   ],
+   [
+    "നവംബർ അഞ്ചിന്, ഈ മാസത്തെ ഏറ്റവും ഉയർന്ന വിലയുള്ള ദിവസം, അവൾ അത് ഒരു ബാങ്കിൽ പണയം വെച്ചു.",
+    "On 5 November, the highest-priced day this month, she pledged it at a bank.",
+    null,
+    null
+   ],
+   [
+    "ഒരു ഗ്രാമിന് പതിമൂവായിരത്തി മുന്നൂറ്റി എൺപത്തിയഞ്ച് രൂപ. സ്വർണത്തിന്റെ മൂല്യം പത്ത് ലക്ഷത്തി എഴുപതിനായിരത്തി എണ്ണൂറ് രൂപ.",
+    "₹13,385 a gram. Gold value: ₹10,70,800.",
+    null,
+    "Value · ₹10,70,800"
+   ],
+   [
+    "അവൾ എടുത്തത് ഏഴ് ലക്ഷത്തി മുപ്പതിനായിരം രൂപ. ഒരു വർഷം കഴിഞ്ഞ് മുതലും പലിശയും ഒന്നിച്ച് അടയ്ക്കുന്ന ബുള്ളറ്റ് ലോൺ.",
+    "She borrowed ₹7,30,000 as a bullet loan: principal and interest paid together after one year.",
+    null,
+    "Loan · ₹7,30,000"
+   ]
+  ]
+ },
+ "S05": {
+  "head": [
+   "അവൾ വിശ്വസിച്ച കണക്ക്",
+   "The maths she believed"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar at her kitchen table late at night with a calculator and a small notebook under a warm lamp, a relieved half-smile. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Close-up of a pencil and calculator on a notebook page covered in handwritten sums, the writing blurred, a steel tumbler of tea beside it. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ശ്രീജ ഒരു ലളിതമായ കണക്ക് കൂട്ടി.",
+    "Sreeja did a simple sum.",
+    null,
+    null
+   ],
+   [
+    "പത്ത് ലക്ഷത്തി എഴുപതിനായിരത്തിന്റെ സ്വർണം. ഏഴ് ലക്ഷത്തി മുപ്പതിനായിരം ലോൺ. അതായത് അറുപത്തിയെട്ട് ശതമാനം മാത്രം.",
+    "₹10.7 lakh of gold, a ₹7.3 lakh loan: just 68%.",
+    68,
+    "68%?"
+   ],
+   [
+    "അഞ്ച് ലക്ഷത്തിന് മുകളിലുള്ള ലോണിന് റിസർവ് ബാങ്ക് അനുവദിക്കുന്നത് എഴുപത്തിയഞ്ച് ശതമാനം വരെ. ഏഴ് ശതമാനം കുഷൻ ഉണ്ടല്ലോ എന്ന് അവൾ ആശ്വസിച്ചു.",
+    "For loans above ₹5 lakh, the RBI limit is 75%. She felt safe with a seven-point cushion.",
+    null,
+    "RBI limit · 75%"
+   ],
+   [
+    "പക്ഷേ ഈ കണക്കിൽ ഒരു വലിയ തെറ്റുണ്ട്. മിക്കവരും ഇത് അറിയാറില്ല.",
+    "But there is a big mistake in this sum. Most people never learn it.",
+    null,
+    null
+   ],
+   [
+    "ബുള്ളറ്റ് ലോണിൽ, എൽ ടി വി കണക്കാക്കുന്നത് ഇന്നത്തെ ലോൺ തുക വെച്ചല്ല. കാലാവധി തീരുമ്പോൾ അടയ്ക്കേണ്ട ആകെ തുക, അതായത് മുതലും ഒരു വർഷത്തെ പലിശയും ചേർത്താണ്.",
+    "On a bullet loan, LTV is not worked out on today's loan amount. It is on the total payable at maturity: principal plus a full year's interest.",
+    null,
+    "LTV uses the maturity amount"
+   ],
+   [
+    "പത്ത് ശതമാനം പലിശ എന്ന് കരുതിയാൽ, അടയ്ക്കേണ്ടത് എട്ട് ലക്ഷത്തി മൂവായിരം. അപ്പോൾ ആദ്യ ദിവസം തന്നെ എൽ ടി വി എഴുപത്തിയഞ്ച് ശതമാനം. കുഷൻ പൂജ്യം.",
+    "At an assumed 10% interest, she owes ₹8,03,000 at maturity. So her LTV was 75% on day one. Zero cushion.",
+    75,
+    "Day 1 · 75% · cushion 0"
+   ]
+  ]
+ },
+ "S06": {
+  "head": [
+   "ഇരുപത് ദിവസം കഴിഞ്ഞ്",
+   "Twenty days later"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A gold necklace resting on the glass plate of a jeweller's scale, a red glow falling over it from above, dark background, dust in the light beam. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar working at a sewing machine in her small tailoring shop, fabric rolls behind her, her phone buzzing on the table beside the machine, she glances at it. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി ഇരുപത് ദിവസം മുന്നോട്ട്. ഇന്ന്, ഒരു ഗ്രാം ഇരുപത്തിരണ്ട് കാരറ്റിന് പതിനോരായിരത്തി നാനൂറ്റി ഇരുപത് രൂപ.",
+    "Now jump twenty days. Today 22-carat is ₹11,420 a gram.",
+    null,
+    "Today · ₹11,420 / g"
+   ],
+   [
+    "അതേ എൺപത് ഗ്രാമിന്റെ മൂല്യം ഇപ്പോൾ ഒമ്പത് ലക്ഷത്തി പതിമൂവായിരത്തി അറുനൂറ് രൂപ.",
+    "The same 80 grams is now worth ₹9,13,600.",
+    null,
+    "Value · ₹9,13,600"
+   ],
+   [
+    "അടയ്ക്കേണ്ട തുക മാറിയിട്ടില്ല. എട്ട് ലക്ഷത്തി മൂവായിരം.",
+    "The amount owed has not changed: ₹8,03,000.",
+    null,
+    "Owed · ₹8,03,000"
+   ],
+   [
+    "എൽ ടി വി ഇപ്പോൾ എൺപത്തിയെട്ട് ശതമാനം. പരിധിയായ എഴുപത്തിയഞ്ചിന് വളരെ മുകളിൽ.",
+    "Her LTV is now 88%, well above the 75% limit.",
+    87.9,
+    "LTV · 88%"
+   ],
+   [
+    "ശ്രീജ ഒരു തെറ്റും ചെയ്തിട്ടില്ല. ഒരു അടവും മുടക്കിയിട്ടില്ല. എന്നിട്ടും അവൾ ഇപ്പോൾ പരിധിക്ക് പുറത്താണ്.",
+    "Sreeja did nothing wrong. She never missed a payment. Yet she is now outside the limit.",
+    null,
+    null
+   ],
+   [
+    "പണയം വെക്കുന്ന ദിവസം, ഇക്കാര്യം ആരും അധികം ശ്രദ്ധിക്കാറില്ല.",
+    "On pledge day, hardly anyone thinks about this.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S07": {
+  "head": [
+   "ആ മെസേജ്",
+   "The message"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A dim bedroom at night, a phone on the bedside table lit up with a blurred message bubble, the glow falling on a framed family photo with faces turned away. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar sitting on the edge of her bed at night reading her phone, the screen light on her worried face, her hand on her forehead. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "അപ്പോഴാണ് ആ മെസേജ് വരുന്നത്. ഇതിനെ മാർജിൻ കോൾ എന്ന് വിളിക്കുന്നു.",
+    "That's when the message arrives. It is called a margin call.",
+    null,
+    "Margin call"
+   ],
+   [
+    "ലളിതമായി പറഞ്ഞാൽ: നിങ്ങളുടെ സ്വർണത്തിന്റെ മൂല്യം കുറഞ്ഞു, ലോൺ സുരക്ഷിത പരിധിക്ക് പുറത്തായി, അത് ശരിയാക്കണം.",
+    "In plain words: your gold is worth less, your loan is outside the safe limit, please fix it.",
+    null,
+    null
+   ],
+   [
+    "ശരിയാക്കാൻ സാധാരണ മൂന്ന് വഴികളാണ്. കുറച്ച് പണം തിരിച്ചടയ്ക്കുക, കൂടുതൽ സ്വർണം പണയം വെക്കുക, അല്ലെങ്കിൽ ലോൺ മുഴുവൻ അടച്ച് തീർക്കുക.",
+    "There are usually three ways: repay part, pledge more gold, or close the loan.",
+    null,
+    "Pay · Pledge · Close"
+   ],
+   [
+    "എത്ര ദിവസം സമയം കിട്ടും എന്നത് ഓരോ സ്ഥാപനത്തിന്റെയും നയവും നിങ്ങളുടെ കരാറും അനുസരിച്ചാണ്. അത് ഇന്ന് തന്നെ കരാറിൽ നോക്കി വെക്കുക.",
+    "How many days you get depends on each lender's policy and your agreement. Look it up in your agreement today.",
+    null,
+    "Check your agreement"
+   ],
+   [
+    "ഇത് അവഗണിച്ച് ലോൺ മുടങ്ങിയാൽ, നോട്ടീസ് നൽകിയ ശേഷം സ്വർണം ലേലത്തിലേക്ക് പോകാം.",
+    "Ignore it and let the loan default, and after notice the gold can go to auction.",
+    null,
+    null
+   ],
+   [
+    "അപ്പോൾ ശ്രീജ എത്ര അടയ്ക്കണം? ഉത്തരം നിങ്ങൾ പ്രതീക്ഷിക്കുന്നതിലും വലുതാണ്.",
+    "So how much must Sreeja pay? The answer is bigger than you would expect.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S08": {
+  "head": [
+   "എത്ര വേണ്ടിവരും?",
+   "How much will it take?"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. An old brass balance scale on a dark table: on one pan a heap of gold jewellery, on the other pan a few plain brown paper envelopes, the beam tilted, dramatic side light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar opening a grey steel almirah at home, looking at two thin gold bangles in her palm, hesitant, evening light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "വഴി ഒന്ന്: പണം അടയ്ക്കുക. എൽ ടി വി എഴുപത്തിയഞ്ചിലേക്ക് തിരികെ എത്താൻ, അടയ്ക്കേണ്ട ആകെ തുക ഒരു ലക്ഷത്തി പതിനേഴായിരത്തി എണ്ണൂറ് രൂപ കുറയണം.",
+    "Way one: pay cash. To get back to 75%, her total payable must come down by ₹1,17,800.",
+    null,
+    "Cut payable by ₹1,17,800"
+   ],
+   [
+    "പലിശ കൂടി കണക്കിലെടുത്താൽ, ഇന്ന് മുതലിലേക്ക് ഏകദേശം ഒരു ലക്ഷത്തി ഏഴായിരം രൂപ അടയ്ക്കണം.",
+    "Allowing for interest, that is about ₹1.07 lakh paid into the principal today.",
+    null,
+    "≈ ₹1.07 lakh now"
+   ],
+   [
+    "വഴി രണ്ട്: കൂടുതൽ സ്വർണം. പതിമൂന്നേമുക്കാൽ ഗ്രാം. ഏകദേശം ഒന്നേമുക്കാൽ പവൻ കൂടി പണയം വെക്കണം.",
+    "Way two: more gold. 13.75 grams, about one and three-quarter pavan more.",
+    null,
+    "+13.75 g ≈ 1¾ pavan"
+   ],
+   [
+    "ഫീസ് അടയ്ക്കാൻ സ്വർണം പണയം വെച്ച ഒരാളുടെ കയ്യിൽ ഒരു ലക്ഷം രൂപ വെറുതെ ഇരിക്കുമോ? ഒന്നേമുക്കാൽ പവൻ കൂടി വീട്ടിലുണ്ടാകുമോ?",
+    "Does someone who pledged gold for fees have ₹1 lakh lying around? Another pavan and three-quarters at home?",
+    null,
+    null
+   ],
+   [
+    "ഇതാണ് മാർജിൻ കോളിന്റെ യഥാർത്ഥ ഭയം. പണം ഏറ്റവും കുറവുള്ള സമയത്ത് തന്നെയാണ് അത് പണം ചോദിക്കുന്നത്.",
+    "That is the real fear of a margin call. It asks for money exactly when you have the least of it.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S09": {
+  "head": [
+   "അപകട രേഖ",
+   "The danger line"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A glowing thin red laser line cutting horizontally across a pile of gold jewellery in a pitch-dark room, smoke in the air. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A traditional Kerala house at night in the rain with a single lit window, a woman's silhouette inside, coconut palms swaying. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി ഒരു ചോദ്യം. വില എത്ര വരെ താഴ്ന്നാൽ, ശ്രീജയുടെ സ്വർണത്തിന്റെ മൂല്യം അവളുടെ കടത്തിന് തുല്യമാകും?",
+    "One question: how low must prices go before Sreeja's gold is worth only what she owes?",
+    null,
+    null
+   ],
+   [
+    "എട്ട് ലക്ഷത്തി മൂവായിരം ഹരിക്കണം എൺപത് ഗ്രാം. ഗ്രാമിന് പതിനായിരത്തി മുപ്പത്തിയേഴ് രൂപ. ഒരു പവന് എൺപതിനായിരത്തി മുന്നൂറ്.",
+    "₹8,03,000 divided by 80 grams: ₹10,037 a gram, ₹80,300 a pavan.",
+    null,
+    "Danger line · ₹80,300 / pavan"
+   ],
+   [
+    "ഇന്നത്തെ വിലയിൽ നിന്ന് വെറും പന്ത്രണ്ട് ശതമാനം താഴെ.",
+    "Just 12% below today's price.",
+    null,
+    "Only 12% away"
+   ],
+   [
+    "ഈ മാസം മാത്രം വില പതിനഞ്ച് ശതമാനത്തോളം ഇടിഞ്ഞു എന്ന് ഓർക്കുക.",
+    "Remember: prices fell about 15% this month alone.",
+    null,
+    "This month · −15%"
+   ],
+   [
+    "ആ രേഖ കടന്നാൽ, സ്വർണം മുഴുവൻ വിറ്റാലും കടം തീരില്ല. സ്ഥാപനങ്ങൾ അതിന് വളരെ മുമ്പേ ഇടപെടുന്നത് അതുകൊണ്ടാണ്.",
+    "Cross that line and even selling all the gold won't clear the debt. That's why lenders act well before it.",
+    null,
+    null
+   ],
+   [
+    "നിങ്ങളുടെ സ്വന്തം ലോണിന്റെ അപകട രേഖ കണ്ടെത്താൻ ഒരു എളുപ്പ ഫോർമുല ഈ വീഡിയോയുടെ അവസാനം തരാം.",
+    "I will give you an easy formula for your own danger line near the end.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S10": {
+  "head": [
+   "വില ഇനിയും താഴ്ന്നാൽ",
+   "If prices fall further"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": "stress",
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Gold bangles on a black slate surface with rain drops falling on them in slow motion, cold blue rim light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഒരു സ്ട്രെസ് ടെസ്റ്റ് നോക്കാം. വില ഇനിയും താഴ്ന്നാൽ ശ്രീജയുടെ ലോണിന് എന്ത് സംഭവിക്കും?",
+    "Let's stress-test it. What happens to Sreeja's loan if prices fall further?",
+    null,
+    null
+   ],
+   [
+    "അഞ്ച് ശതമാനം കൂടി കുറഞ്ഞാൽ, പവൻ എൺപത്തിയാറായിരത്തി എഴുനൂറ്റി തൊണ്ണൂറ്റിരണ്ട്. എൽ ടി വി തൊണ്ണൂറ്റിരണ്ടര ശതമാനം.",
+    "5% lower: pavan ₹86,792, LTV 92.5%.",
+    92.5,
+    null
+   ],
+   [
+    "പത്ത് ശതമാനം കുറഞ്ഞാൽ, പവൻ എൺപത്തിരണ്ടായിരത്തി ഇരുനൂറ്റി ഇരുപത്തിനാല്. എൽ ടി വി ഏകദേശം തൊണ്ണൂറ്റിയെട്ട് ശതമാനം.",
+    "10% lower: pavan ₹82,224, LTV about 98%.",
+    97.7,
+    null
+   ],
+   [
+    "ഇരുപത് ശതമാനം കുറഞ്ഞാൽ, പവൻ എഴുപത്തിമൂവായിരത്തി എൺപത്തിയെട്ട്. എൽ ടി വി നൂറ്റിപ്പത്ത് ശതമാനം. സ്വർണത്തിന്റെ മൂല്യം കടത്തേക്കാൾ കുറവ്.",
+    "20% lower: pavan ₹73,088, LTV 110%. The gold is worth less than the debt.",
+    109.9,
+    null
+   ],
+   [
+    "വില ഇനി താഴുമോ കയറുമോ എന്ന് ആർക്കും ഉറപ്പിച്ച് പറയാൻ കഴിയില്ല. പക്ഷേ ഇതുപോലൊരു ടേബിൾ നിങ്ങളുടെ ലോണിനും ഉണ്ടാക്കാം.",
+    "No one can say for sure whether prices fall or rise. But you can build a table like this for your own loan.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S11": {
+  "head": [
+   "ചെറിയ ലോൺ, വലിയ അപകടം",
+   "Small loan, bigger danger"
+  ],
+  "who": [
+   "AMMINI",
+   85
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Ammini, a 68-year-old Malayali grandmother with grey hair in a bun, wearing a cream-and-gold Kerala set-mundu sitting on the verandah of an old tiled Kerala house holding two thin gold bangles in her wrinkled hands, looking at them quietly, afternoon light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Ammini, a 68-year-old Malayali grandmother with grey hair in a bun, wearing a cream-and-gold Kerala set-mundu at the counter of a small finance branch, handing a cloth pouch to a staff member behind glass, ceiling fan, tube light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി ഞെട്ടിക്കുന്ന ഒരു കാര്യം. ചെറിയ ലോണുകാർക്കാണ് ഏറ്റവും കുറവ് കുഷൻ.",
+    "Now a shocking twist. Small borrowers have the thinnest cushion.",
+    null,
+    null
+   ],
+   [
+    "ഇത് അമ്മിണി. രണ്ട് പവൻ, പതിനാറ് ഗ്രാം. രണ്ടര ലക്ഷം വരെയുള്ള ലോണിന് റിസർവ് ബാങ്ക് എൺപത്തിയഞ്ച് ശതമാനം വരെ അനുവദിക്കുന്നു.",
+    "This is Ammini: two pavan, 16 grams. For loans up to ₹2.5 lakh, the RBI allows up to 85%.",
+    null,
+    "Up to ₹2.5 lakh · 85%"
+   ],
+   [
+    "അതേ നവംബർ അഞ്ചിന്, അമ്മിണി ഏതാണ്ട് പരമാവധി എടുത്തു. ഒരു ലക്ഷത്തി അറുപത്തയ്യായിരം. അടയ്ക്കേണ്ടത് ഒരു ലക്ഷത്തി എൺപത്തിയൊന്നായിരത്തി അഞ്ഞൂറ്.",
+    "On the same 5 November, she took close to the maximum: ₹1,65,000, with ₹1,81,500 payable.",
+    85,
+    "Payable · ₹1,81,500"
+   ],
+   [
+    "അവരുടെ അപകട രേഖ, പവന് തൊണ്ണൂറായിരത്തി എഴുനൂറ്റി അമ്പത്. ഇന്നത്തെ വില തൊണ്ണൂറ്റി ഒന്നായിരത്തി മുന്നൂറ്റി അറുപത്.",
+    "Her danger line is ₹90,750 a pavan. Today's price: ₹91,360.",
+    null,
+    "Just ₹610 above the line"
+   ],
+   [
+    "അതായത്, ഇന്ന് അമ്മിണിയുടെ സ്വർണവും കടവും ഏതാണ്ട് തുല്യം. എൽ ടി വി തൊണ്ണൂറ്റിയൊമ്പത് ശതമാനം.",
+    "So today Ammini's gold and debt are almost equal. LTV 99%.",
+    99.3,
+    "LTV · 99%"
+   ],
+   [
+    "ഉയർന്ന എൽ ടി വി ചെറിയ ലോണുകാരെ സഹായിക്കാനാണ് കൊണ്ടുവന്നത്. പക്ഷേ വില വീഴുമ്പോൾ, അതേ ഉയർന്ന എൽ ടി വി ആദ്യം വേദനിപ്പിക്കുന്നത് അവരെയാണ്.",
+    "The higher LTV was brought in to help small borrowers. But when prices fall, that same high LTV hurts them first.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S12": {
+  "head": [
+   "രാജന്റെ രഹസ്യം",
+   "Rajan's secret"
+  ],
+  "who": [
+   "RAJAN",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Rajan, a 45-year-old Malayali auto-rickshaw driver with a thick moustache and a khaki uniform shirt at a bank counter calmly handing over his monthly payment, relaxed, his auto-rickshaw visible through the glass door behind him. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A wall calendar in a small Kerala home with neat tick marks on several months, an auto-rickshaw key hanging on a nail beside it, morning light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി രാജൻ. അതേ പത്ത് പവൻ, അതേ ഏഴ് ലക്ഷത്തി മുപ്പതിനായിരം, അതേ ദിവസം.",
+    "Now Rajan. Same ten pavan, same ₹7.3 lakh, same day.",
+    null,
+    null
+   ],
+   [
+    "ഒരു വ്യത്യാസം മാത്രം. ബുള്ളറ്റ് ലോണിന് പകരം, അയാൾ എല്ലാ മാസവും ഇ എം ഐ അടയ്ക്കുന്നു.",
+    "One difference: instead of a bullet loan, he pays an EMI every month.",
+    null,
+    "EMI, not bullet"
+   ],
+   [
+    "ആദ്യ ഇ എം ഐ കഴിഞ്ഞപ്പോൾ തന്നെ ബാക്കി മുതൽ ഏകദേശം ആറ് ലക്ഷത്തി എഴുപത്തിരണ്ടായിരമായി. ഭാവിയിലെ പലിശ മുൻകൂട്ടി കൂട്ടിയിടുന്നുമില്ല.",
+    "After his first EMI the balance is about ₹6.72 lakh, and no future interest is piled on top.",
+    null,
+    "Balance · ₹6.72 lakh"
+   ],
+   [
+    "ഇന്നത്തെ വിലയിൽ രാജന്റെ എൽ ടി വി എഴുപത്തിമൂന്നര ശതമാനം. പരിധിക്കുള്ളിൽ.",
+    "At today's price, Rajan's LTV is 73.5%: inside the limit.",
+    73.5,
+    "LTV · 73.5%"
+   ],
+   [
+    "ഈ ഇടിവിലും ഇ എം ഐ ഗോൾഡ് ലോണുകൾ വലിയ പ്രശ്നമില്ലാതെ നിൽക്കുന്നു എന്നാണ് റിപ്പോർട്ടുകൾ. ഓരോ മാസവും മുതൽ കുറയുന്നു, കുഷൻ കൂടുന്നു.",
+    "Reports say EMI gold loans have largely held up in this fall. Every month the principal shrinks and the cushion grows.",
+    null,
+    null
+   ],
+   [
+    "പക്ഷേ ഒരു കാര്യം. ഇതിന് എല്ലാ മാസവും ഏകദേശം അറുപത്തിനാലായിരം രൂപ അടയ്ക്കാനുള്ള വരുമാനം വേണം. ലോൺ എടുക്കുന്ന ദിവസം തന്നെ ഈ തീരുമാനം എടുക്കണം.",
+    "But note: this needs income of about ₹64,000 a month for the EMI. The choice has to be made on the day you borrow.",
+    null,
+    "EMI ≈ ₹64,000 / month"
+   ]
+  ]
+ },
+ "S13": {
+  "head": [
+   "ബാങ്കിന്റെ പവൻ",
+   "The bank's pavan"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Macro shot of a gold appraiser's hands testing a gold chain on a black touchstone with a magnifying loupe, a small acid bottle and scale nearby. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Split scene: on the left a brightly lit jewellery showroom glass counter with stone-studded necklaces, on the right a plain bank appraisal tray with the same necklace, cold light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി മറ്റൊരു രഹസ്യം. ജ്വല്ലറിയിലെ ഒരു പവനും ബാങ്കിലെ ഒരു പവനും ഒന്നല്ല.",
+    "Another secret: a pavan at the jeweller and a pavan at the bank are not the same.",
+    null,
+    null
+   ],
+   [
+    "റിസർവ് ബാങ്ക് നിയമപ്രകാരം, പണിക്കൂലിക്കും കല്ലുകൾക്കും ബാങ്ക് ഒരു രൂപ പോലും മൂല്യം കൊടുക്കില്ല. സ്വർണത്തിന്റെ തൂക്കവും ശുദ്ധിയും മാത്രം.",
+    "Under RBI rules, lenders give no value to making charges or stones. Only the gold's weight and purity count.",
+    null,
+    "No value for making or stones"
+   ],
+   [
+    "അതായത്, കല്ലുവെച്ച ഒരു നെക്ലേസിന് ബാങ്ക് കാണുന്ന മൂല്യം, അതിന്റെ ബില്ലിലെ തുകയേക്കാൾ വളരെ കുറവായിരിക്കും.",
+    "So the bank's value for a stone-set necklace can be far below the amount on its bill.",
+    null,
+    null
+   ],
+   [
+    "വില എടുക്കുന്നതിലും ഒരു നിയമമുണ്ട്. തലേ ദിവസത്തെ ക്ലോസിംഗ് വിലയോ, കഴിഞ്ഞ മുപ്പത് ദിവസത്തെ ശരാശരിയോ, ഏതാണോ കുറവ് അതാണ് എടുക്കുക.",
+    "There's a rule for the price too: the lower of the previous day's close or the 30-day average.",
+    null,
+    "Lower of · last close / 30-day avg"
+   ],
+   [
+    "വില താഴുന്ന കാലത്ത്, തലേ ദിവസത്തെ വില ശരാശരിയേക്കാൾ കുറവായിരിക്കും. അതായത് ഇടിവിന്റെ സമയത്ത് എപ്പോഴും താഴ്ന്ന വില തന്നെ എടുക്കും. ശരാശരി നിങ്ങളെ രക്ഷിക്കില്ല.",
+    "In a falling market, yesterday's price sits below the average. So during a fall the lower price is always used; averaging won't save you.",
+    null,
+    "Falling market · lower price"
+   ]
+  ]
+ },
+ "S14": {
+  "head": [
+   "ഇടിവ് എന്തുകൊണ്ട് നിൽക്കുന്നില്ല",
+   "Why the fall won't stop"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A dark financial-district skyline at night with one tower lit in green, gold bars in the foreground slowly sinking into black water, cinematic fog. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A huge oil tanker ploughing through a stormy sea at dusk, waves crashing, orange sky. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഈ ഇടിവ് എന്തുകൊണ്ട് നിൽക്കുന്നില്ല? ഈ ആഴ്ചയിലെ മൂന്ന് പുതിയ കാരണങ്ങൾ.",
+    "Why won't this fall stop? Three fresh reasons from this week.",
+    null,
+    null
+   ],
+   [
+    "ഒന്ന്: അമേരിക്കൻ ഡോളർ പത്തൊമ്പത് മാസത്തെ ഏറ്റവും ഉയർന്ന നിലയിൽ എത്തി.",
+    "One: the US dollar hit a 19-month high.",
+    null,
+    "Dollar · 19-month high"
+   ],
+   [
+    "രണ്ട്: ഡിസംബറിൽ അമേരിക്ക പലിശ കൂട്ടുമെന്ന് വിപണി ഏതാണ്ട് ഉറപ്പിച്ചു. സാധ്യത തൊണ്ണൂറ്റഞ്ച് ശതമാനത്തിന് മുകളിൽ.",
+    "Two: markets see a US rate hike in December as near-certain, with odds above 95%.",
+    null,
+    "Dec hike odds · 95%+"
+   ],
+   [
+    "മൂന്ന്: ഉയർന്ന എണ്ണവില വിലക്കയറ്റ ഭയം കൂട്ടുന്നു. അത് പലിശ ഇനിയും കൂടാം എന്ന പ്രതീക്ഷ ശക്തമാക്കുന്നു.",
+    "Three: high oil prices feed inflation fears, which strengthen bets on even higher rates.",
+    null,
+    "Oil → inflation fears"
+   ],
+   [
+    "പലിശ കൂടുമ്പോൾ, ഒരു പലിശയും തരാത്ത സ്വർണത്തിൽ നിന്ന് വലിയ നിക്ഷേപകർ പണം മാറ്റുന്നു. അതാണ് വിലയിലെ ഈ സമ്മർദ്ദം.",
+    "When rates rise, big investors move money out of gold, which pays no interest. That's the pressure on the price.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S15": {
+  "head": [
+   "ചരിത്രത്തിലെ ഒരു കൗതുകം",
+   "A curious piece of history"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Old gold coins scattered on a dusty antique wooden desk beside a brass hourglass, a single shaft of window light, vintage mood. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Extreme close-up of golden sand falling through an hourglass, black background, glowing particles. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ചരിത്രത്തിൽ നിന്ന് ഒരു കൗതുകം. ആയിരത്തി തൊള്ളായിരത്തി എൺപതിൽ സ്വർണം ഔൺസിന് എണ്ണൂറ്റി അമ്പത് ഡോളർ എന്ന റെക്കോർഡിലെത്തി.",
+    "A curious bit of history: in 1980 gold hit a record of $850 an ounce.",
+    null,
+    "1980 · $850"
+   ],
+   [
+    "ആ വില വീണ്ടും കാണാൻ ലോകം ഇരുപത്തിയേഴ് വർഷം കാത്തിരുന്നു. രണ്ടായിരത്തി എട്ട് വരെ.",
+    "The world waited 27 years, until 2008, to see that price again.",
+    null,
+    "27 years to recover"
+   ],
+   [
+    "ഇത് പറയുന്നത് വില ഇനി അങ്ങനെ പോകും എന്ന് പ്രവചിക്കാനല്ല. അത് ആർക്കും അറിയില്ല.",
+    "This is not a prediction that it will happen again. No one knows that.",
+    null,
+    null
+   ],
+   [
+    "ഒരു കാര്യം മാത്രം ഓർക്കാൻ: സ്വർണ വിപണി വർഷങ്ങൾ കൊണ്ടാണ് നീങ്ങുന്നത്. നിങ്ങളുടെ ബുള്ളറ്റ് ലോൺ പന്ത്രണ്ട് മാസം മാത്രം.",
+    "Just remember: the gold market moves over years. Your bullet loan lasts only 12 months.",
+    null,
+    "Your loan · 12 months"
+   ],
+   [
+    "വില തിരികെ കയറും എന്ന പ്രതീക്ഷയിൽ മാത്രം കാത്തിരിക്കുന്നത് ഒരു പ്ലാൻ അല്ല. അതൊരു റിസ്ക് ആണ്.",
+    "Waiting only in the hope that prices bounce back is not a plan. It's a risk.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S16": {
+  "head": [
+   "പുതിയ നിയമങ്ങൾ നിങ്ങൾക്കൊപ്പം",
+   "The new rules are on your side"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A grand neoclassical central-bank style building with tall columns at dawn, mist, pigeons, no signage. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Close-up of a woman's hand signing a loan agreement with a blue pen at a bank desk, the printed lines blurred, a stamp pad nearby. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഭയപ്പെടുത്തുന്ന കണക്കുകൾ മാത്രമല്ല ഉള്ളത്. ഈ വർഷം ഏപ്രിൽ ഒന്ന് മുതൽ നിലവിൽ വന്ന റിസർവ് ബാങ്കിന്റെ പുതിയ നിയമങ്ങൾ നിങ്ങൾക്ക് ചില ശക്തമായ സംരക്ഷണങ്ങൾ തരുന്നു.",
+    "It's not only scary numbers. The RBI's new rules, in force since 1 April this year, give you some strong protections.",
+    null,
+    "RBI rules · from 1 Apr 2026"
+   ],
+   [
+    "ഒന്ന്: വില കണക്കാക്കുന്ന രീതി, സ്വർണത്തിന്റെ വിവരങ്ങൾ, തിരിച്ചടവ് വ്യവസ്ഥകൾ, ലേല നിയമങ്ങൾ, എല്ലാം ലോൺ കരാറിൽ എഴുതിയിരിക്കണം.",
+    "One: the valuation method, collateral details, repayment terms and auction rules must all be written in your agreement.",
+    null,
+    "All terms in writing"
+   ],
+   [
+    "രണ്ട്: ഇവയെല്ലാം നിങ്ങൾക്ക് മനസ്സിലാകുന്ന ഭാഷയിൽ തരണം. മലയാളത്തിൽ ചോദിക്കാനുള്ള അവകാശം നിങ്ങൾക്കുണ്ട്.",
+    "Two: they must be given in a language you understand. You have the right to ask for Malayalam.",
+    null,
+    "In your language"
+   ],
+   [
+    "മൂന്ന്: ബുള്ളറ്റ് ലോണിൽ മുതലും പലിശയും പന്ത്രണ്ട് മാസത്തിനകം അടയ്ക്കണം. പലിശ മാത്രം അടച്ച് വർഷങ്ങളോളം പുതുക്കിക്കൊണ്ടിരിക്കുന്ന പഴയ രീതി ഇനി നടക്കില്ല.",
+    "Three: on bullet loans, principal and interest must be repaid within 12 months. The old habit of paying only interest and renewing for years is over.",
+    null,
+    "Bullet · repay in 12 months"
+   ]
+  ]
+ },
+ "S17": {
+  "head": [
+   "ലേലത്തിന് മുമ്പ്",
+   "Before any auction"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A wooden auction gavel resting on a desk next to a velvet tray of gold jewellery, dim room, single overhead lamp. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A postman's hand delivering a sealed white envelope to a woman's hand at the doorway of a Kerala home, morning light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഏറ്റവും വലിയ ഭയം ലേലമാണ്. അവിടെയും നിയമം നിങ്ങളുടെ ഭാഗത്തുണ്ട്.",
+    "The biggest fear is auction. Even there, the rules are on your side.",
+    null,
+    null
+   ],
+   [
+    "ലേലത്തിന് മുമ്പ് നിങ്ങൾക്ക് മുൻകൂർ നോട്ടീസ് നൽകണം. പെട്ടെന്ന് ഒരു ദിവസം സ്വർണം അപ്രത്യക്ഷമാകില്ല.",
+    "You must get advance notice before any auction. Your gold can't just vanish one day.",
+    null,
+    "Advance notice first"
+   ],
+   [
+    "ലേലത്തിന്റെ അടിസ്ഥാന വില വിപണി മൂല്യത്തിന്റെ തൊണ്ണൂറ് ശതമാനത്തിൽ കുറയരുത്. രണ്ട് ലേലം പരാജയപ്പെട്ടാൽ മാത്രം എൺപത്തിയഞ്ച് ശതമാനം.",
+    "The reserve price can't be below 90% of market value; only after two failed auctions can it drop to 85%.",
+    null,
+    "Reserve · 90% → 85%"
+   ],
+   [
+    "ലോൺ തീർത്ത ശേഷം ബാക്കി പണമുണ്ടെങ്കിൽ, ഏഴ് പ്രവൃത്തി ദിവസത്തിനകം അത് നിങ്ങൾക്ക് തിരികെ കിട്ടണം.",
+    "Any surplus after clearing the loan must come back to you within seven working days.",
+    null,
+    "Surplus back · 7 working days"
+   ],
+   [
+    "ലോൺ അടച്ചു തീർത്താൽ, സ്വർണം ഏഴ് പ്രവൃത്തി ദിവസത്തിനകം തിരികെ നൽകണം. വൈകിയാൽ, ഓരോ ദിവസത്തിനും അയ്യായിരം രൂപ നിങ്ങൾക്ക് നഷ്ടപരിഹാരം കിട്ടണം.",
+    "Once you repay, your gold must be returned within seven working days. For each day of delay, you are owed ₹5,000.",
+    null,
+    "Late return · ₹5,000 / day"
+   ]
+  ]
+ },
+ "S18": {
+  "head": [
+   "മെസേജ് വന്നാൽ: ആദ്യ ദിവസം",
+   "If the message comes: day one"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar sitting calmly across a desk from a bank officer in a branch, papers between them, the officer pointing at a document, daylight. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A hand holding a small paper pledge receipt next to a phone showing a calculator app, on a wooden counter, shallow focus. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി ഏറ്റവും പ്രധാനപ്പെട്ട ഭാഗം. ആ മെസേജ് വന്നാൽ എന്ത് ചെയ്യണം?",
+    "Now the most important part. What do you do if that message comes?",
+    null,
+    null
+   ],
+   [
+    "ആദ്യം: പരിഭ്രമിക്കരുത്, അവഗണിക്കുകയുമരുത്. ഇത് ലേലമല്ല. ഇതൊരു മുന്നറിയിപ്പാണ്.",
+    "First: don't panic, and don't ignore it. It is not an auction. It is a warning.",
+    null,
+    "A warning, not an auction"
+   ],
+   [
+    "മെസേജിലെ നമ്പറിലേക്കോ ലിങ്കിലേക്കോ അല്ല, നിങ്ങളുടെ പണയ രസീതിലുള്ള ബ്രാഞ്ചിൽ നേരിട്ട് ബന്ധപ്പെടുക. തട്ടിപ്പ് മെസേജുകളും ഇതേ രൂപത്തിൽ വരാം.",
+    "Contact the branch on your pledge receipt directly, not a number or link in the message. Scam messages can look exactly the same.",
+    null,
+    "Call the branch on your receipt"
+   ],
+   [
+    "മൂന്ന് കാര്യങ്ങൾ എഴുതി വാങ്ങുക: അവർ എടുത്ത സ്വർണവില, നിങ്ങളുടെ ഇപ്പോഴത്തെ എൽ ടി വി, എത്ര ദിവസം സമയമുണ്ട്.",
+    "Get three things in writing: the gold price they used, your current LTV, and how many days you have.",
+    null,
+    "Price · LTV · Deadline"
+   ],
+   [
+    "ഈ മൂന്ന് സംഖ്യകൾ കയ്യിലുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ശാന്തമായി തീരുമാനിക്കാം.",
+    "With those three numbers, you can decide calmly.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S19": {
+  "head": [
+   "മൂന്ന് വഴികൾ, മൂന്ന് വില",
+   "Three choices, three costs"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Three tall doors at the end of a dark corridor, one glowing gold, one teal, one red, polished floor reflecting the light. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar and Anu, her 18-year-old daughter with a long single braid, in a white nursing-student coat at a dining table at night talking seriously, a notebook between them, a single pendant lamp above. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഓരോ വഴിക്കും അതിന്റേതായ വിലയുണ്ട്.",
+    "Each choice has its own cost.",
+    null,
+    null
+   ],
+   [
+    "ഭാഗികമായി അടയ്ക്കുന്നത് ലോൺ ചെറുതാക്കും, പലിശയും കുറയും. പക്ഷേ അതിനുള്ള പണം കൂടിയ പലിശയുള്ള മറ്റൊരു കടത്തിൽ നിന്ന് എടുക്കരുത്.",
+    "Part-paying shrinks the loan and the interest. But don't fund it with another, costlier loan.",
+    null,
+    "Don't borrow to pay"
+   ],
+   [
+    "കൂടുതൽ സ്വർണം പണയം വെച്ചാൽ ഇന്ന് പണം വേണ്ട. പക്ഷേ വില ഇനിയും താഴ്ന്നാൽ, അധികമായി വെച്ച സ്വർണവും അതേ അപകടത്തിലാകും.",
+    "Pledging more gold needs no cash today. But if prices fall further, that extra gold is exposed too.",
+    null,
+    "More gold · more exposure"
+   ],
+   [
+    "ലോൺ തീർക്കാൻ സ്വർണത്തിന്റെ ഒരു ഭാഗം വിൽക്കുന്നത്, ഇപ്പോഴത്തെ താഴ്ന്ന വിലയിൽ നഷ്ടം ഉറപ്പിക്കലാണ്. പക്ഷേ ലേലത്തെ അപേക്ഷിച്ച് നിയന്ത്രണം നിങ്ങളുടെ കയ്യിലായിരിക്കും.",
+    "Selling part of the gold to close the loan locks in today's lower price. But unlike an auction, you stay in control.",
+    null,
+    "Sell · you stay in control"
+   ],
+   [
+    "ഏത് വഴി ശരി എന്നത് നിങ്ങളുടെ വരുമാനവും സമ്പാദ്യവും അനുസരിച്ചാണ്. സംശയമുണ്ടെങ്കിൽ, രജിസ്റ്റർ ചെയ്ത ഒരു ഫിനാൻഷ്യൽ അഡ്വൈസറുമായി സംസാരിക്കുക.",
+    "Which is right depends on your income and savings. If unsure, talk to a registered financial adviser.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S20": {
+  "head": [
+   "മെസേജ് വരുന്നതിന് മുമ്പ്",
+   "Before any message comes"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar at home at night checking her phone and writing in a notebook at a small desk, determined expression, warm lamp. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Close-up of hands dropping coins into an old steel tin box on a kitchen shelf, morning light, a calendar blurred behind. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "മെസേജ് വന്നിട്ടില്ലെങ്കിലും, ഇപ്പോൾ തന്നെ ചെയ്യാവുന്ന നാല് കാര്യങ്ങൾ.",
+    "Even if no message has come, here are four things you can do now.",
+    null,
+    null
+   ],
+   [
+    "ഒന്ന്: ബുള്ളറ്റ് ലോൺ ആണെങ്കിലും, പലിശ മാസം തോറും അടയ്ക്കാൻ പറ്റുമോ എന്ന് ചോദിക്കുക. അടയ്ക്കേണ്ട ആകെ തുക കുറയുമ്പോൾ എൽ ടി വിയും കുറയും.",
+    "One: ask whether you can pay interest monthly, even on a bullet loan. A smaller amount payable means a lower LTV.",
+    null,
+    "Pay interest monthly"
+   ],
+   [
+    "രണ്ട്: എല്ലാ മാസവും ചെറിയ തുകയെങ്കിലും മുതലിലേക്ക് അടയ്ക്കുക. ഓരോ അടവും നിങ്ങളുടെ അപകട രേഖയെ താഴേക്ക് തള്ളും.",
+    "Two: put even a small amount into the principal every month. Every payment pushes your danger line lower.",
+    null,
+    "Small principal payments"
+   ],
+   [
+    "മൂന്ന്: ആവശ്യം വന്നാൽ ഒന്നോ ഒന്നരയോ ലക്ഷം എവിടെ നിന്ന് കിട്ടും എന്ന് മുൻകൂട്ടി കണ്ടുവെക്കുക.",
+    "Three: know in advance where ₹1 to 1.5 lakh could come from if needed.",
+    null,
+    "Plan a buffer"
+   ],
+   [
+    "നാല്: ആഴ്ചയിൽ ഒരിക്കൽ നിങ്ങളുടെ എൽ ടി വി സ്വയം കണക്കാക്കുക. സ്ഥാപനം പറയുന്നതിന് മുമ്പ് നിങ്ങൾ അറിയണം.",
+    "Four: work out your own LTV once a week. You should know before the lender tells you.",
+    null,
+    "Check LTV weekly"
+   ]
+  ]
+ },
+ "S21": {
+  "head": [
+   "പുതിയ ലോൺ എടുക്കുന്നവർക്ക്",
+   "If you're taking a new loan"
+  ],
+  "who": null,
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A young Malayali couple sitting at a bank gold-loan counter, the wife holding a small jewellery box, the husband reading a form, bright daylight. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Close-up of a small digital jewellery scale with a gold chain on it, its display blurred, a loupe beside it. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇപ്പോൾ പുതിയ ഗോൾഡ് ലോൺ എടുക്കാൻ പോകുന്നവരോട്: വില കുറഞ്ഞതുകൊണ്ട്, അതേ സ്വർണത്തിന് ജനുവരിയിലേതിനേക്കാൾ വളരെ കുറവ് ലോണേ കിട്ടൂ.",
+    "If you're about to take a new gold loan: with lower prices, the same gold fetches far less than in January.",
+    null,
+    null
+   ],
+   [
+    "അനുവദിക്കുന്ന പരമാവധി എടുക്കരുത്. പരമാവധിയുടെ എൺപത് ശതമാനത്തിൽ താഴെ എടുക്കാനാണ് വിദഗ്ദ്ധർ പറയുന്നത്. ചിലർ സ്വർണ മൂല്യത്തിന്റെ അറുപത്, അറുപത്തഞ്ച് ശതമാനം എന്നും പറയുന്നു.",
+    "Don't take the maximum. Experts suggest staying below 80% of what's allowed; some say 60 to 65% of the gold's value.",
+    null,
+    "Borrow ≈ 60–65% of value"
+   ],
+   [
+    "കഴിയുമെങ്കിൽ ഇ എം ഐ ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക. രാജനെ ഓർക്കുക.",
+    "If you can, choose the EMI option. Remember Rajan.",
+    null,
+    "Prefer EMI"
+   ],
+   [
+    "പലിശ നിരക്ക് മാത്രമല്ല, പ്രോസസിംഗ് ഫീസ്, വൈകിയാലുള്ള പിഴ, ലേല വ്യവസ്ഥകൾ എന്നിവയും സ്ഥാപനങ്ങൾ തമ്മിൽ താരതമ്യം ചെയ്യുക.",
+    "Compare not just the rate, but processing fees, late penalties and auction terms across lenders.",
+    null,
+    null
+   ],
+   [
+    "സ്വർണം പണയം വെച്ച് ഓഹരിയിലോ ക്രിപ്റ്റോയിലോ നിക്ഷേപിക്കുന്നത് ഇരട്ട അപകടമാണ്. രണ്ടും ഒരുമിച്ച് വീണാൽ രക്ഷപ്പെടാൻ വഴിയില്ല.",
+    "Pledging gold to invest in shares or crypto is a double risk. If both fall together, there's no way out.",
+    null,
+    "Double risk"
+   ]
+  ]
+ },
+ "S22": {
+  "head": [
+   "നിങ്ങളുടെ അപകട രേഖ",
+   "Your own danger line"
+  ],
+  "who": null,
+  "fx": "formula",
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A dark wooden desk seen from above with an open notebook, a pen, a calculator and a small paper pledge receipt, one warm lamp. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഇനി പറഞ്ഞ ഫോർമുല. ഒരു പേനയും പേപ്പറും എടുക്കൂ.",
+    "Now the formula I promised. Grab a pen and paper.",
+    null,
+    null
+   ],
+   [
+    "ആദ്യം: കാലാവധിയിൽ അടയ്ക്കേണ്ട ആകെ തുക. മുതലും പലിശയും ചേർത്ത്.",
+    "First: the total payable at maturity, principal plus interest.",
+    null,
+    null
+   ],
+   [
+    "അതിനെ നിങ്ങളുടെ സ്വർണത്തിന്റെ ഗ്രാം കൊണ്ട് ഹരിക്കുക. കല്ലിന്റെ തൂക്കം ഒഴിവാക്കിയ നെറ്റ് തൂക്കം.",
+    "Divide it by the grams of gold: the net weight, without stones.",
+    null,
+    null
+   ],
+   [
+    "കിട്ടുന്ന സംഖ്യയാണ് ഗ്രാമിന് നിങ്ങളുടെ അപകട രേഖ. അതിനെ എട്ട് കൊണ്ട് ഗുണിച്ചാൽ പവന്റെ അപകട രേഖ.",
+    "That is your danger line per gram. Multiply by eight for the pavan danger line.",
+    null,
+    null
+   ],
+   [
+    "മാർജിൻ കോൾ രേഖ കണ്ടെത്താൻ, ആ ഗ്രാം വിലയെ നിങ്ങളുടെ എൽ ടി വി പരിധി കൊണ്ട് ഹരിക്കുക. എഴുപത്തിയഞ്ച് ശതമാനം എങ്കിൽ, പൂജ്യം പോയിന്റ് ഏഴ് അഞ്ച്.",
+    "To find your margin-call line, divide that per-gram figure by your LTV limit: 0.75 for 75%.",
+    null,
+    null
+   ],
+   [
+    "ഇന്നത്തെ ഗ്രാം വില ഈ രണ്ട് രേഖകളുമായി താരതമ്യം ചെയ്യുക. നിങ്ങൾ എത്ര അകലെയാണ് എന്ന് ഒറ്റനോട്ടത്തിൽ അറിയാം.",
+    "Compare today's per-gram price with both lines. You'll see at a glance how far away you are.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S23": {
+  "head": [
+   "ശ്രീജ എന്ത് ചെയ്തു",
+   "What Sreeja did"
+  ],
+  "who": [
+   "SREEJA",
+   75
+  ],
+  "fx": null,
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar standing at a bank counter, calm and composed, taking a printed paper from a bank officer, daylight. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "B": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. Sreeja, a 40-year-old Malayali woman with long black hair in a low bun, a small round bindi, gold stud earrings, wearing a maroon cotton churidar and Anu, her 18-year-old daughter with a long single braid, in a white nursing-student coat smiling together in their small home in the evening, Anu, her 18-year-old daughter with a long single braid, in a white nursing-student coat holding nursing textbooks, warm golden light, hopeful mood. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ശ്രീജ പരിഭ്രമിച്ചില്ല. അവൾ നേരിട്ട് ബ്രാഞ്ചിൽ പോയി, ആ മൂന്ന് സംഖ്യകൾ എഴുതി വാങ്ങി.",
+    "Sreeja didn't panic. She went straight to the branch and got those three numbers in writing.",
+    null,
+    null
+   ],
+   [
+    "തയ്യൽക്കടയിലെ സമ്പാദ്യത്തിൽ നിന്ന് അറുപതിനായിരം രൂപ അടച്ചു. ബാക്കി വിടവ് നികത്താൻ ഏകദേശം ആറ് ഗ്രാമിന്റെ ഒരു വള കൂടി പണയം വെച്ചു.",
+    "She paid ₹60,000 from her shop savings, and pledged one more bangle of about six grams to close the gap.",
+    75,
+    "₹60,000 + one bangle"
+   ],
+   [
+    "ഇനി എല്ലാ മാസവും പലിശ അടയ്ക്കാനും അവൾ തീരുമാനിച്ചു.",
+    "And she decided to pay the interest every month from now on.",
+    null,
+    null
+   ],
+   [
+    "അനുവിന്റെ ഫീസ് അടച്ചു. കല്യാണ സ്വർണം ഇപ്പോഴും സുരക്ഷിതം.",
+    "Anu's fees are paid. The wedding gold is still safe.",
+    null,
+    null
+   ],
+   [
+    "വ്യത്യാസം ഉണ്ടാക്കിയത് ഭാഗ്യമല്ല. അവൾക്ക് കണക്ക് അറിയാമായിരുന്നു. അത്രമാത്രം.",
+    "What made the difference wasn't luck. She knew the maths. That's all.",
+    null,
+    null
+   ]
+  ]
+ },
+ "S24": {
+  "head": [
+   "ഓർക്കേണ്ട അഞ്ച് കാര്യങ്ങൾ",
+   "Five things to remember"
+  ],
+  "who": null,
+  "fx": "recap",
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. A traditional Kerala gold necklace laid on dark green velvet under a soft spotlight, calm and hopeful mood. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "ഒന്ന്: ബുള്ളറ്റ് ലോണിൽ എൽ ടി വി പലിശ ഉൾപ്പെടെയാണ്.",
+    "One: on a bullet loan, LTV includes the interest.",
+    null,
+    "LTV includes interest"
+   ],
+   [
+    "രണ്ട്: ബാങ്കിന്റെ പവൻ നിങ്ങളുടെ ബില്ലിലെ പവനല്ല.",
+    "Two: the bank's pavan is not your bill's pavan.",
+    null,
+    "Bank value ≠ bill value"
+   ],
+   [
+    "മൂന്ന്: ചെറിയ ലോണുകൾക്ക് കുഷൻ ഏറ്റവും കുറവ്.",
+    "Three: small loans have the thinnest cushion.",
+    null,
+    "Small loans · thin cushion"
+   ],
+   [
+    "നാല്: മെസേജ് ഒരു മുന്നറിയിപ്പാണ്, ലേലമല്ല. ബ്രാഞ്ചിൽ നേരിട്ട് പോവുക.",
+    "Four: the message is a warning, not an auction. Go to your branch directly.",
+    null,
+    "Warning, not auction"
+   ],
+   [
+    "അഞ്ച്: നിങ്ങളുടെ അപകട രേഖ ഇന്ന് തന്നെ കണക്കാക്കുക.",
+    "Five: work out your danger line today.",
+    null,
+    "Know your danger line"
+   ]
+  ]
+ },
+ "S25": {
+  "head": [
+   "ഇത് ഷെയർ ചെയ്യൂ",
+   "Pass this on"
+  ],
+  "who": null,
+  "fx": "end",
+  "A": "Hyper-realistic cinematic film still, shot on a full-frame cinema camera, 35mm lens, natural skin texture, present-day Kerala, India, widescreen 16:9. An elderly Malayali mother and her adult son sitting together on a verandah in the evening looking at a phone, warm light, rain outside. Moody teal-and-gold colour grade, dramatic low-key lighting, shallow depth of field, rich detail. No text, no numbers, no readable signs, no logos, no banknotes.",
+  "s": [
+   [
+    "നിങ്ങളുടെ വീട്ടിലോ അയൽപക്കത്തോ സ്വർണം പണയം വെച്ച ഒരാളെങ്കിലും ഉണ്ടാകും. പ്രത്യേകിച്ച് അമ്മിണിയെപ്പോലെ പ്രായമുള്ളവർ.",
+    "In your home or neighbourhood there's surely someone with pledged gold, especially older people like Ammini.",
+    null,
+    null
+   ],
+   [
+    "ഈ വീഡിയോ അവർക്ക് അയച്ചുകൊടുക്കൂ. ഒരു മെസേജ് വരുന്നതിന് മുമ്പ് അവർ ഇത് അറിയണം.",
+    "Send them this video. They should know this before any message arrives.",
+    null,
+    null
+   ],
+   [
+    "കമന്റിൽ പറയൂ: ഇന്നത്തെ വിലയിൽ നിങ്ങളുടെ അപകട രേഖ എത്ര അകലെയാണ്?",
+    "Tell us in the comments: how far away is your danger line at today's price?",
+    null,
+    null
+   ],
+   [
+    "ഇത് പൊതുവായ വിവരം മാത്രമാണ്, സാമ്പത്തിക ഉപദേശമല്ല. ഉദാഹരണങ്ങളിലെ പത്ത് ശതമാനം പലിശ ഒരു അനുമാനം മാത്രം.",
+    "This is general information, not financial advice. The 10% interest in the examples is an assumption.",
+    null,
+    null
+   ],
+   [
+    "ഇതുപോലുള്ള പുതിയ കാര്യങ്ങൾക്ക് CalcSouq സബ്സ്ക്രൈബ് ചെയ്യൂ.",
+    "Subscribe to CalcSouq for more like this.",
+    null,
+    null
+   ]
+  ]
+ }
+}
