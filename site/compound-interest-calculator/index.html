@@ -7,10 +7,15 @@
 <meta name="description" content="Calculate compound interest and fixed deposit maturity with yearly, half-yearly, quarterly, monthly or daily compounding, plus optional monthly additions.">
 <meta name="keywords" content="compound interest calculator, fd calculator, fixed deposit calculator, fd maturity calculator, quarterly compounding calculator, savings growth calculator, interest calculator">
 <link rel="canonical" href="https://www.calcsouq.com/compound-interest-calculator/">
+<link rel="alternate" hreflang="en" href="https://www.calcsouq.com/compound-interest-calculator/">
+<link rel="alternate" hreflang="hi" href="https://www.calcsouq.com/hi/compound-interest-calculator/">
+<link rel="alternate" hreflang="zh" href="https://www.calcsouq.com/zh/compound-interest-calculator/">
+<link rel="alternate" hreflang="ru" href="https://www.calcsouq.com/ru/compound-interest-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcsouq.com/compound-interest-calculator/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcSouq">
-<meta property="og:locale" content="en_GB">
+<meta property="og:locale" content="en_GB"><meta property="og:locale:alternate" content="hi_IN"><meta property="og:locale:alternate" content="zh_CN"><meta property="og:locale:alternate" content="ru_RU">
 <meta property="og:title" content="Compound Interest Calculator &amp; FD Maturity Calculator (Monthly, Quarterly)">
 <meta property="og:description" content="Calculate compound interest and fixed deposit maturity with yearly, half-yearly, quarterly, monthly or daily compounding, plus optional monthly additions.">
 <meta property="og:url" content="https://www.calcsouq.com/compound-interest-calculator/">
@@ -41,11 +46,11 @@
 <a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
 <div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg><input type="search" class="q" placeholder="Search calculators and guides" aria-label="Search calculators and guides" autocomplete="off"><div class="results" role="listbox"></div></div>
 <nav aria-label="Main"><a href="/#calculators">Calculators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
-<details class="lang"><summary title="Language / भाषा / 语言 / Язык"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>English</span></summary><div class="lang-menu"><a href="/" lang="en" hreflang="en" aria-current="true">English</a><a href="/hi/" lang="hi" hreflang="hi">हिन्दी</a><a href="/zh/" lang="zh" hreflang="zh">中文</a><a href="/ru/" lang="ru" hreflang="ru">Русский</a><a href="/ml/" lang="ml" hreflang="ml">മലയാളം</a></div></details>
+<details class="lang"><summary title="Language / भाषा / 语言 / Язык"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>English</span></summary><div class="lang-menu"><a href="/compound-interest-calculator/" lang="en" hreflang="en" aria-current="true">English</a><a href="/hi/compound-interest-calculator/" lang="hi" hreflang="hi">हिन्दी</a><a href="/zh/compound-interest-calculator/" lang="zh" hreflang="zh">中文</a><a href="/ru/compound-interest-calculator/" lang="ru" hreflang="ru">Русский</a><a href="/ml/" lang="ml" hreflang="ml">മലയാളം</a></div></details>
 </div></header>
 <main class="wrap"><div class="crumbs"><a href="/">Home</a> › <a href="/#uae">Money, tax & salary</a></div>
 <h1>Compound interest and FD calculator</h1><p class="lede">See what a deposit grows to with compound interest, and how much of it is interest.</p>
-<div class="meta"><span>Updated 25 Nov 2026</span><span>Free, no sign-up</span><a href="#how">How it works</a></div>
+<div class="meta"><span>Updated 25 Nov 2026</span><span>Free, no sign-up</span><a href="/hi/compound-interest-calculator/" lang="hi">हिन्दी</a><a href="/zh/compound-interest-calculator/" lang="zh">中文</a><a href="/ru/compound-interest-calculator/" lang="ru">Русский</a><a href="#how">How it works</a></div>
 <section class="tool" aria-label="Compound Interest &amp; FD Calculator">
 <div class="inputs">
  <div><label for="p">Starting amount</label><input id="p" inputmode="decimal" value="100000"></div>
@@ -80,13 +85,15 @@
 <script src="/assets/site.js?v=b7706094"></script>
 <script>
 {
+const LOC = { zh: 'zh-CN', ru: 'ru-RU' }[document.documentElement.lang];
+const G = (v, d) => LOC ? (Number.isFinite(v) ? v : 0).toLocaleString(LOC, { minimumFractionDigits: d, maximumFractionDigits: d }) : F(v, d);
 function calc() {
   const P = V('p'), r = V('rate') / 100, n = +$('cmp').value, t = V('yrs'), add = V('add');
   const months = Math.round(t * 12), mr = Math.pow(1 + r / n, n / 12) - 1;
   let bal = P; for (let i = 0; i < months; i++) bal = bal * (1 + mr) + add;
   const inv = P + add * months, eff = (Math.pow(1 + r / n, n) - 1) * 100;
-  $('out').textContent = F(bal, 2);
-  $('lines').innerHTML = [['Total deposited', F(inv, 2)], ['Interest earned', F(bal - inv, 2)], ['Effective annual rate', F(eff, 2) + '%'], ['Simple interest would give', F(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+  $('out').textContent = G(bal, 2);
+  $('lines').innerHTML = [['Total deposited', G(inv, 2)], ['Interest earned', G(bal - inv, 2)], ['Effective annual rate', G(eff, 2) + '%'], ['Simple interest would give', G(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
 }
 document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
 }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复利计算器：存款复利、每月定投、本息合计，按年/季/月/日复利计算</title>
+<meta name="description" content="输入本金、年利率和年限，计算复利终值、利息和实际年化利率。支持按年、半年、季度、月、日复利，以及每月追加存入金额。">
+<meta name="keywords" content="复利计算器, 复利计算公式, 存款利息计算器, 本息合计计算, 每月定投复利计算, 年化收益率计算, 利滚利计算器">
+<link rel="canonical" href="https://www.calcsouq.com/zh/compound-interest-calculator/">
+<link rel="alternate" hreflang="en" href="https://www.calcsouq.com/compound-interest-calculator/">
+<link rel="alternate" hreflang="hi" href="https://www.calcsouq.com/hi/compound-interest-calculator/">
+<link rel="alternate" hreflang="zh" href="https://www.calcsouq.com/zh/compound-interest-calculator/">
+<link rel="alternate" hreflang="ru" href="https://www.calcsouq.com/ru/compound-interest-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcsouq.com/compound-interest-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:locale" content="zh_CN"><meta property="og:locale:alternate" content="en_GB"><meta property="og:locale:alternate" content="hi_IN"><meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:title" content="复利计算器：存款复利、每月定投、本息合计，按年/季/月/日复利计算">
+<meta property="og:description" content="输入本金、年利率和年限，计算复利终值、利息和实际年化利率。支持按年、半年、季度、月、日复利，以及每月追加存入金额。">
+<meta property="og:url" content="https://www.calcsouq.com/zh/compound-interest-calculator/">
+<meta property="og:image" content="https://www.calcsouq.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CalcSouq">
+<meta name="google-adsense-account" content="ca-pub-4755763168748886">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4755763168748886" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/site.css?v=b7706094">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "复利计算器（存款利息）", "description": "输入本金、年利率和年限，计算复利终值、利息和实际年化利率。支持按年、半年、季度、月、日复利，以及每月追加存入金额。", "url": "https://www.calcsouq.com/zh/compound-interest-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "zh"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "复利计算器（存款利息）", "item": "https://www.calcsouq.com/zh/compound-interest-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "复利怎么计算？", "acceptedAnswer": {"@type": "Answer", "text": "终值 = 本金 × (1 + 年利率 ÷ 每年计息次数)^(计息次数 × 年数)。"}}, {"@type": "Question", "name": "复利和单利差多少？", "acceptedAnswer": {"@type": "Answer", "text": "单利只对本金计息，复利对已产生的利息继续计息，时间越长差距越大。"}}, {"@type": "Question", "name": "实际年化利率是什么？", "acceptedAnswer": {"@type": "Answer", "text": "考虑复利后一年的真实收益率。年利率3%按月复利，实际年化约3.04%。"}}], "inLanguage": "zh"}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
+<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg><input type="search" class="q" placeholder="搜索计算器和指南" aria-label="搜索计算器和指南" autocomplete="off"><div class="results" role="listbox"></div></div>
+<nav aria-label="Main"><a href="/#calculators">计算器</a><a href="/guides/">指南</a><a href="/about/">关于</a></nav>
+<details class="lang"><summary title="Language / भाषा / 语言 / Язык"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>中文</span></summary><div class="lang-menu"><a href="/compound-interest-calculator/" lang="en" hreflang="en">English</a><a href="/hi/compound-interest-calculator/" lang="hi" hreflang="hi">हिन्दी</a><a href="/zh/compound-interest-calculator/" lang="zh" hreflang="zh" aria-current="true">中文</a><a href="/ru/compound-interest-calculator/" lang="ru" hreflang="ru">Русский</a><a href="/ml/" lang="ml" hreflang="ml">മലയാളം</a></div></details>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/zh/">中文</a> › 复利计算器（存款利息）</div>
+<h1>复利计算器</h1><p class="lede">本金、利率、年限填进去，就能看到复利滚动后的本息合计，以及其中有多少是利息。</p>
+<div class="meta"><span>更新于 25.11.2026</span><span>免费，无需注册</span><a href="/compound-interest-calculator/" lang="en">English</a><a href="/hi/compound-interest-calculator/" lang="hi">हिन्दी</a><a href="/ru/compound-interest-calculator/" lang="ru">Русский</a></div>
+<section class="tool" aria-label="复利计算器（存款利息）">
+<div class="inputs">
+ <div><label for="p">本金</label><input id="p" inputmode="decimal" value="100000"></div>
+ <div class="row2"><div><label for="rate">年利率（%）</label><input id="rate" inputmode="decimal" value="7"></div>
+ <div><label for="yrs">年数</label><input id="yrs" inputmode="decimal" value="5"></div></div>
+ <div class="row2"><div><label for="cmp">复利频率</label><select id="cmp"><option value="1">按年</option><option value="2">按半年</option><option value="4" selected>按季度</option><option value="12">按月</option><option value="365">按日</option></select></div>
+ <div><label for="add">每月追加</label><input id="add" inputmode="decimal" value="0"></div></div>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">本息合计</div><div class="big" id="out">—</div>
+ <ul class="lines" id="lines"></ul>
+ <p class="formula">A = P × (1 + r/n)<sup>n×t</sup>。每月追加金额在月末存入。税前。</p>
+</div></section>
+<div class="share" aria-label="Share"><span>分享结果</span><a class="wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a><button type="button" class="native">分享</button><button type="button" class="copy"><span hidden></span>复制链接</button><button type="button" class="print">打印</button></div>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">广告</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>在 CalcSouq 投放广告</b><span>请通过联系页面与我们联系。</span></a></div></div></aside>
+<article id="how"><h2>复利公式</h2><p><strong>A = P × (1 + r ÷ n)<sup>n × t</sup></strong>：P为本金，r为年利率，n为每年计息次数，t为年数。计息越频繁，实际年化利率越高。</p>
+<h3>示例</h3><p>本金100,000元，年利率2.5%，按年复利10年：100,000 × 1.025<sup>10</sup> ≈ <strong>128,008元</strong>，利息约28,008元；单利只有25,000元。</p>
+<p>如果每月再存1,000元（共存入220,000元），10年后约为263,983元。</p>
+<div class="scroll"><table><thead><tr><th>情况</th><th>10年后</th></tr></thead><tbody><tr><td>10万元，2.5%，单利</td><td>125,000元</td></tr><tr><td>10万元，2.5%，复利</td><td>128,008元</td></tr><tr><td>再加每月1,000元</td><td>约263,983元</td></tr></tbody></table></div>
+<p>国内定期存款大多到期一次还本付息，不会自动利滚利；到期后转存才相当于复利。结果为税前估算，收益不作保证。</p><div class="fb">这个计算器有用吗？ <button type="button" class="btn">有用</button><button type="button" class="btn">没用</button></div></article>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">广告</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>在 CalcSouq 投放广告</b><span>请通过联系页面与我们联系。</span></a></div></div></aside>
+<section class="faq"><h2>常见问题</h2><details><summary>复利怎么计算？</summary><p>终值 = 本金 × (1 + 年利率 ÷ 每年计息次数)^(计息次数 × 年数)。</p></details><details><summary>复利和单利差多少？</summary><p>单利只对本金计息，复利对已产生的利息继续计息，时间越长差距越大。</p></details><details><summary>实际年化利率是什么？</summary><p>考虑复利后一年的真实收益率。年利率3%按月复利，实际年化约3.04%。</p></details></section>
+<section class="related"><h2>相关计算器</h2><div class="grid"><a class="card" href="/zh/china-income-tax-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>个税计算器（工资税后）</b><span>五险一金、专项附加扣除、税后工资</span></div></a><a class="card" href="/zh/mortgage-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>房贷计算器（等额本息 / 等额本金）</b><span>月供、总利息、两种还款方式对比</span></div></a><a class="card" href="/zh/gst-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>增值税计算器（含税价 / 不含税价）</b><span>价税分离：含税价换算不含税价</span></div></a><a class="card" href="/zh/property-buying-cost-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div><b>购房成本计算器</b><span>契税、登记费和中介费</span></div></a><a class="card" href="/zh/photo-resizer/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg></div><div><b>照片尺寸调整（像素和KB）</b><span>裁剪、调整尺寸、压缩到指定KB</span></div></a><a class="card" href="/zh/image-to-pdf/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>JPG 转 PDF</b><span>多张照片合成一个 PDF</span></div></a><a class="card" href="/zh/age-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>年龄计算器</b><span>任意日期的精确年龄</span></div></a><a class="card" href="/zh/percentage-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>百分比计算器</b><span>百分比、变化率、加减百分比</span></div></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/#calculators">全部计算器</a><a href="/guides/">指南</a><a href="/templates/">Templates</a><a href="/hi/" lang="hi">हिन्दी</a><a href="/zh/" lang="zh">中文</a><a href="/ru/" lang="ru">Русский</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">关于</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<div class="follow"><span>Follow CalcSouq</span><div class="social"><a class="ig" href="https://www.instagram.com/calcsouq/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a class="yt" href="https://www.youtube.com/@calcsouq" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5.2 3L10 15z" fill="currentColor"/></svg><span>YouTube</span></a></div></div>
+<p>© <span class="yr">2026</span> CalcSouq. 结果仅为一般信息的估算，不构成法律、税务或投资建议。发现错误？请发邮件至 contact@calcsouq.com。</p>
+</div></footer>
+<script src="/assets/site.js?v=b7706094"></script>
+<script>
+{
+const LOC = { zh: 'zh-CN', ru: 'ru-RU' }[document.documentElement.lang];
+const G = (v, d) => LOC ? (Number.isFinite(v) ? v : 0).toLocaleString(LOC, { minimumFractionDigits: d, maximumFractionDigits: d }) : F(v, d);
+function calc() {
+  const P = V('p'), r = V('rate') / 100, n = +$('cmp').value, t = V('yrs'), add = V('add');
+  const months = Math.round(t * 12), mr = Math.pow(1 + r / n, n / 12) - 1;
+  let bal = P; for (let i = 0; i < months; i++) bal = bal * (1 + mr) + add;
+  const inv = P + add * months, eff = (Math.pow(1 + r / n, n) - 1) * 100;
+  $('out').textContent = G(bal, 2);
+  $('lines').innerHTML = [['累计存入', G(inv, 2)], ['利息收益', G(bal - inv, 2)], ['实际年化利率', G(eff, 2) + '%'], ['如按单利', G(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+}
+document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
+}
+</script>
+</body>
+</html>

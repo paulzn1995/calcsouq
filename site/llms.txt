@@ -36,7 +36,7 @@
 - [Percentage Calculator](https://www.calcsouq.com/percentage-calculator/): % of, % change, increase and decrease
 - [SIP Calculator (with Step-Up)](https://www.calcsouq.com/sip-calculator/): Monthly investing with yearly step-up
 - [Compound Interest & FD Calculator](https://www.calcsouq.com/compound-interest-calculator/): FD maturity and compound growth
-- [GST Calculator (India, 2026 Rates)](https://www.calcsouq.com/gst-calculator/): Add or remove GST, CGST/SGST split
+- [GST & VAT Calculator (India and other countries)](https://www.calcsouq.com/gst-calculator/): Add or remove GST/VAT in any country
 - [Days Between Dates & Date Calculator](https://www.calcsouq.com/date-calculator/): Days, working days, add or subtract days
 - [Word & Character Counter](https://www.calcsouq.com/word-counter/): Words, characters, reading time
 - [BMI Calculator](https://www.calcsouq.com/bmi-calculator/): BMI, category and healthy weight range
@@ -54,20 +54,25 @@
 - [उम्र कैलकुलेटर](https://www.calcsouq.com/hi/age-calculator/): किसी भी तारीख पर सटीक उम्र
 - [प्रतिशत कैलकुलेटर](https://www.calcsouq.com/hi/percentage-calculator/): % निकालें, % बदलाव, बढ़ोतरी-घटौती
 - [SIP कैलकुलेटर (स्टेप-अप के साथ)](https://www.calcsouq.com/hi/sip-calculator/): हर महीने निवेश, हर साल बढ़ोतरी
-- [GST कैलकुलेटर (2026 दरें)](https://www.calcsouq.com/hi/gst-calculator/): GST जोड़ें या हटाएँ, CGST/SGST
+- [GST कैलकुलेटर (2026 दरें, VAT भी)](https://www.calcsouq.com/hi/gst-calculator/): GST जोड़ें या हटाएँ, CGST/SGST
 - [प्रॉपर्टी ख़रीद लागत कैलकुलेटर](https://www.calcsouq.com/hi/property-buying-cost-calculator/): स्टांप ड्यूटी, रजिस्ट्रेशन — हर राज्य के लिए
+- [चक्रवृद्धि ब्याज और FD कैलकुलेटर](https://www.calcsouq.com/hi/compound-interest-calculator/): FD मैच्योरिटी और कंपाउंड ब्याज
+- [लोन EMI कैलकुलेटर](https://www.calcsouq.com/hi/loan-emi-calculator/): मासिक किस्त और कुल ब्याज
 
 ## 中文 (zh)
 - [个税计算器（工资税后）](https://www.calcsouq.com/zh/china-income-tax-calculator/): 五险一金、专项附加扣除、税后工资
 - [房贷计算器（等额本息 / 等额本金）](https://www.calcsouq.com/zh/mortgage-calculator/): 月供、总利息、两种还款方式对比
+- [增值税计算器（含税价 / 不含税价）](https://www.calcsouq.com/zh/gst-calculator/): 价税分离：含税价换算不含税价
 - [购房成本计算器](https://www.calcsouq.com/zh/property-buying-cost-calculator/): 契税、登记费和中介费
 - [照片尺寸调整（像素和KB）](https://www.calcsouq.com/zh/photo-resizer/): 裁剪、调整尺寸、压缩到指定KB
 - [JPG 转 PDF](https://www.calcsouq.com/zh/image-to-pdf/): 多张照片合成一个 PDF
 - [年龄计算器](https://www.calcsouq.com/zh/age-calculator/): 任意日期的精确年龄
 - [百分比计算器](https://www.calcsouq.com/zh/percentage-calculator/): 百分比、变化率、加减百分比
+- [复利计算器（存款利息）](https://www.calcsouq.com/zh/compound-interest-calculator/): 本息合计、复利与单利对比
 
 ## Русский (ru)
 - [Калькулятор НДФЛ и зарплаты на руки](https://www.calcsouq.com/ru/russia-salary-tax-calculator/): Зарплата на руки по шкале 13–22%
+- [Калькулятор НДС 22%: выделить и начислить](https://www.calcsouq.com/ru/gst-calculator/): Выделить НДС из суммы или начислить сверху
 - [Ипотечный калькулятор: аннуитет и дифференцированный](https://www.calcsouq.com/ru/mortgage-calculator/): Платёж, переплата, график по годам
 - [Налоговый вычет за квартиру и ипотеку](https://www.calcsouq.com/ru/russia-property-tax-deduction-calculator/): Возврат НДФЛ за покупку жилья и проценты
 - [Расходы на покупку недвижимости](https://www.calcsouq.com/ru/property-buying-cost-calculator/): Госпошлина, нотариус, агент — по странам
@@ -75,6 +80,7 @@
 - [JPG в PDF](https://www.calcsouq.com/ru/image-to-pdf/): Объединить фото в один PDF
 - [Калькулятор возраста](https://www.calcsouq.com/ru/age-calculator/): Точный возраст на любую дату
 - [Калькулятор процентов](https://www.calcsouq.com/ru/percentage-calculator/): Процент от числа, изменение, прибавить %
+- [Калькулятор сложных процентов и вкладов](https://www.calcsouq.com/ru/compound-interest-calculator/): Вклад с капитализацией и пополнением
 
 ## മലയാളം (ml)
 - [യുഎഇ ഫൈനൽ സെറ്റിൽമെന്റ് കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/uae-final-settlement-calculator/): ഗ്രാറ്റുവിറ്റി, അവധി, നോട്ടീസ്, ശമ്പളം — ഒറ്റയടിക്ക്
@@ -85,3 +91,4 @@
 - [സ്ഥലം + വീട് ബജറ്റ് പ്ലാനർ (കേരളം)](https://www.calcsouq.com/ml/kerala-plot-house-budget-calculator/): സ്ഥലം, രജിസ്ട്രേഷൻ, നിർമ്മാണം — ഒറ്റ ബജറ്റ്
 - [ദിർഹം – രൂപ റെമിറ്റൻസ് കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/aed-to-inr-calculator/): കൂടുതൽ രൂപ കിട്ടുന്നത് ഏതിൽ
 - [PSC ഫോട്ടോ റീസൈസർ](https://www.calcsouq.com/ml/kerala-psc-photo-resizer/): 150 × 200, 30 KB-ൽ താഴെ, പേരും തീയതിയും
+- [ലോൺ EMI കാൽക്കുലേറ്റർ](https://www.calcsouq.com/ml/loan-emi-calculator/): മാസ തവണയും ആകെ പലിശയും

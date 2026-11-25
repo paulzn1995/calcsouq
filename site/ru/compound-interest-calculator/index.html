@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Калькулятор сложных процентов: вклад с капитализацией и ежемесячным пополнением</title>
+<meta name="description" content="Рассчитайте доход по вкладу с капитализацией процентов — ежемесячной, ежеквартальной или ежегодной — и с пополнением каждый месяц. Итоговая сумма, начисленные проценты и эффективная ставка.">
+<meta name="keywords" content="калькулятор сложных процентов, калькулятор вклада с капитализацией, вклад с ежемесячной капитализацией, сложный процент формула, депозитный калькулятор, калькулятор вклада с пополнением, эффективная ставка вклада">
+<link rel="canonical" href="https://www.calcsouq.com/ru/compound-interest-calculator/">
+<link rel="alternate" hreflang="en" href="https://www.calcsouq.com/compound-interest-calculator/">
+<link rel="alternate" hreflang="hi" href="https://www.calcsouq.com/hi/compound-interest-calculator/">
+<link rel="alternate" hreflang="zh" href="https://www.calcsouq.com/zh/compound-interest-calculator/">
+<link rel="alternate" hreflang="ru" href="https://www.calcsouq.com/ru/compound-interest-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcsouq.com/compound-interest-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcSouq">
+<meta property="og:locale" content="ru_RU"><meta property="og:locale:alternate" content="en_GB"><meta property="og:locale:alternate" content="hi_IN"><meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:title" content="Калькулятор сложных процентов: вклад с капитализацией и ежемесячным пополнением">
+<meta property="og:description" content="Рассчитайте доход по вкладу с капитализацией процентов — ежемесячной, ежеквартальной или ежегодной — и с пополнением каждый месяц. Итоговая сумма, начисленные проценты и эффективная ставка.">
+<meta property="og:url" content="https://www.calcsouq.com/ru/compound-interest-calculator/">
+<meta property="og:image" content="https://www.calcsouq.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CalcSouq">
+<meta name="google-adsense-account" content="ca-pub-4755763168748886">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4755763168748886" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/site.css?v=b7706094">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Калькулятор сложных процентов и вкладов", "description": "Рассчитайте доход по вкладу с капитализацией процентов — ежемесячной, ежеквартальной или ежегодной — и с пополнением каждый месяц. Итоговая сумма, начисленные проценты и эффективная ставка.", "url": "https://www.calcsouq.com/ru/compound-interest-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "ru"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcsouq.com/"}, {"@type": "ListItem", "position": 2, "name": "Калькулятор сложных процентов и вкладов", "item": "https://www.calcsouq.com/ru/compound-interest-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое капитализация процентов?", "acceptedAnswer": {"@type": "Answer", "text": "Начисленные проценты прибавляются к сумме вклада, и в следующий период проценты начисляются уже на большую сумму."}}, {"@type": "Question", "name": "Что выгоднее: ежемесячная капитализация или выплата в конце срока?", "acceptedAnswer": {"@type": "Answer", "text": "При одинаковой ставке ежемесячная капитализация даёт больше. Но банки часто дают более высокую ставку без капитализации — сравнивайте эффективную ставку."}}, {"@type": "Question", "name": "Учитывается ли налог?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, результат до НДФЛ."}}], "inLanguage": "ru"}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/" aria-label="CalcSouq home"><i>C</i>CalcSouq</a>
+<div class="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"/></svg><input type="search" class="q" placeholder="Поиск калькуляторов и статей" aria-label="Поиск калькуляторов и статей" autocomplete="off"><div class="results" role="listbox"></div></div>
+<nav aria-label="Main"><a href="/#calculators">Калькуляторы</a><a href="/guides/">Статьи</a><a href="/about/">О сайте</a></nav>
+<details class="lang"><summary title="Language / भाषा / 语言 / Язык"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Русский</span></summary><div class="lang-menu"><a href="/compound-interest-calculator/" lang="en" hreflang="en">English</a><a href="/hi/compound-interest-calculator/" lang="hi" hreflang="hi">हिन्दी</a><a href="/zh/compound-interest-calculator/" lang="zh" hreflang="zh">中文</a><a href="/ru/compound-interest-calculator/" lang="ru" hreflang="ru" aria-current="true">Русский</a><a href="/ml/" lang="ml" hreflang="ml">മലയാളം</a></div></details>
+</div></header>
+<main class="wrap"><div class="crumbs"><a href="/ru/">Русский</a> › Калькулятор сложных процентов и вкладов</div>
+<h1>Калькулятор сложных процентов</h1><p class="lede">Сколько вырастет вклад, если проценты прибавляются к сумме и тоже приносят доход.</p>
+<div class="meta"><span>Обновлено 25.11.2026</span><span>Бесплатно, без регистрации</span><a href="/compound-interest-calculator/" lang="en">English</a><a href="/hi/compound-interest-calculator/" lang="hi">हिन्दी</a><a href="/zh/compound-interest-calculator/" lang="zh">中文</a></div>
+<section class="tool" aria-label="Калькулятор сложных процентов и вкладов">
+<div class="inputs">
+ <div><label for="p">Сумма вклада</label><input id="p" inputmode="decimal" value="100000"></div>
+ <div class="row2"><div><label for="rate">Ставка (% годовых)</label><input id="rate" inputmode="decimal" value="7"></div>
+ <div><label for="yrs">Срок, лет</label><input id="yrs" inputmode="decimal" value="5"></div></div>
+ <div class="row2"><div><label for="cmp">Капитализация</label><select id="cmp"><option value="1">Ежегодно</option><option value="2">Раз в полгода</option><option value="4" selected>Ежеквартально</option><option value="12">Ежемесячно</option><option value="365">Ежедневно</option></select></div>
+ <div><label for="add">Пополнение в месяц</label><input id="add" inputmode="decimal" value="0"></div></div>
+</div>
+<div class="result" aria-live="polite">
+ <div class="big-label">Итоговая сумма</div><div class="big" id="out">—</div>
+ <ul class="lines" id="lines"></ul>
+ <p class="formula">A = P × (1 + r/n)<sup>n×t</sup>. Пополнения зачисляются в конце каждого месяца. До налога.</p>
+</div></section>
+<div class="share" aria-label="Share"><span>Поделиться результатом</span><a class="wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a><button type="button" class="native">Поделиться</button><button type="button" class="copy"><span hidden></span>Копировать ссылку</button><button type="button" class="print">Печать</button></div>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Реклама</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Реклама на CalcSouq</b><span>Свяжитесь с нами через страницу контактов.</span></a></div></div></aside>
+<article id="how"><h2>Формула сложных процентов</h2><p><strong>A = P × (1 + r ÷ n)<sup>n × t</sup></strong>, где P — сумма вклада, r — годовая ставка, n — сколько раз в год начисляются проценты, t — срок в годах. Чем чаще капитализация, тем выше <strong>эффективная ставка</strong>.</p>
+<h3>Пример</h3><p>Вклад 500 000 ₽ на год под 16% годовых с ежемесячной капитализацией: 500 000 × (1 + 0,16 ÷ 12)<sup>12</sup> ≈ <strong>586 135 ₽</strong>. Доход 86 135 ₽, эффективная ставка 17,23%. Без капитализации было бы 80 000 ₽.</p>
+<div class="scroll"><table><thead><tr><th>Капитализация</th><th>500 000 ₽, 16%, 1 год</th></tr></thead><tbody><tr><td>Нет (проценты в конце)</td><td>580 000 ₽</td></tr><tr><td>Ежемесячная</td><td>586 135 ₽</td></tr></tbody></table></div>
+<p>Ставка в примере условная — введите ставку своего банка. Расчёт до налога: процентный доход сверх необлагаемого лимита облагается НДФЛ.</p><div class="fb">Этот калькулятор был полезен? <button type="button" class="btn">Да</button><button type="button" class="btn">Нет</button></div></article>
+<aside class="stall" aria-label="Advertisement"><div class="stall-in"><div class="stall-label">Реклама</div><div class="stall-body"><a class="house" href="/contact/" style="text-decoration:none;color:inherit"><b>Реклама на CalcSouq</b><span>Свяжитесь с нами через страницу контактов.</span></a></div></div></aside>
+<section class="faq"><h2>Частые вопросы</h2><details><summary>Что такое капитализация процентов?</summary><p>Начисленные проценты прибавляются к сумме вклада, и в следующий период проценты начисляются уже на большую сумму.</p></details><details><summary>Что выгоднее: ежемесячная капитализация или выплата в конце срока?</summary><p>При одинаковой ставке ежемесячная капитализация даёт больше. Но банки часто дают более высокую ставку без капитализации — сравнивайте эффективную ставку.</p></details><details><summary>Учитывается ли налог?</summary><p>Нет, результат до НДФЛ.</p></details></section>
+<section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/ru/russia-salary-tax-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Калькулятор НДФЛ и зарплаты на руки</b><span>Зарплата на руки по шкале 13–22%</span></div></a><a class="card" href="/ru/gst-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Калькулятор НДС 22%: выделить и начислить</b><span>Выделить НДС из суммы или начислить сверху</span></div></a><a class="card" href="/ru/mortgage-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Ипотечный калькулятор: аннуитет и дифференцированный</b><span>Платёж, переплата, график по годам</span></div></a><a class="card" href="/ru/russia-property-tax-deduction-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div><b>Налоговый вычет за квартиру и ипотеку</b><span>Возврат НДФЛ за покупку жилья и проценты</span></div></a><a class="card" href="/ru/property-buying-cost-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div><b>Расходы на покупку недвижимости</b><span>Госпошлина, нотариус, агент — по странам</span></div></a><a class="card" href="/ru/photo-resizer/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg></div><div><b>Изменить размер фото (пиксели и КБ)</b><span>Обрезать, изменить размер, сжать до КБ</span></div></a><a class="card" href="/ru/image-to-pdf/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>JPG в PDF</b><span>Объединить фото в один PDF</span></div></a><a class="card" href="/ru/age-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div><div><b>Калькулятор возраста</b><span>Точный возраст на любую дату</span></div></a><a class="card" href="/ru/percentage-calculator/"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></div><div><b>Калькулятор процентов</b><span>Процент от числа, изменение, прибавить %</span></div></a></div></section></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer"><a href="/#calculators">Все калькуляторы</a><a href="/guides/">Статьи</a><a href="/templates/">Templates</a><a href="/hi/" lang="hi">हिन्दी</a><a href="/zh/" lang="zh">中文</a><a href="/ru/" lang="ru">Русский</a><a href="/ml/" lang="ml">മലയാളം</a><a href="/about/">О сайте</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></nav>
+<div class="follow"><span>Follow CalcSouq</span><div class="social"><a class="ig" href="https://www.instagram.com/calcsouq/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a class="yt" href="https://www.youtube.com/@calcsouq" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5.2 3L10 15z" fill="currentColor"/></svg><span>YouTube</span></a></div></div>
+<p>© <span class="yr">2026</span> CalcSouq. Результаты — оценки для общей информации, а не юридическая, налоговая или инвестиционная консультация. Нашли ошибку? Напишите на contact@calcsouq.com.</p>
+</div></footer>
+<script src="/assets/site.js?v=b7706094"></script>
+<script>
+{
+const LOC = { zh: 'zh-CN', ru: 'ru-RU' }[document.documentElement.lang];
+const G = (v, d) => LOC ? (Number.isFinite(v) ? v : 0).toLocaleString(LOC, { minimumFractionDigits: d, maximumFractionDigits: d }) : F(v, d);
+function calc() {
+  const P = V('p'), r = V('rate') / 100, n = +$('cmp').value, t = V('yrs'), add = V('add');
+  const months = Math.round(t * 12), mr = Math.pow(1 + r / n, n / 12) - 1;
+  let bal = P; for (let i = 0; i < months; i++) bal = bal * (1 + mr) + add;
+  const inv = P + add * months, eff = (Math.pow(1 + r / n, n) - 1) * 100;
+  $('out').textContent = G(bal, 2);
+  $('lines').innerHTML = [['Всего внесено', G(inv, 2)], ['Начисленные проценты', G(bal - inv, 2)], ['Эффективная ставка', G(eff, 2) + '%'], ['Без капитализации было бы', G(P * (1 + r * t) + add * months, 2)]].map(([a, v]) => `<li><span>${a}</span><b>${v}</b></li>`).join('');
+}
+document.querySelectorAll('.inputs input, .inputs select').forEach(i => i.addEventListener('input', calc)); calc();
+}
+</script>
+</body>
+</html>
