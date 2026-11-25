@@ -450,7 +450,7 @@ Render: build/carousel_2026_11_25.py (7 slides, 1080x1350 JPEG). All figures are
 
 | Date | Slot | Type | Trial | cover_ms | Style | Media | Page | Status |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-25 | 13:30 | carousel | — | — | dark cheat sheet | 2026-11-25-emi-10-lakh-1..7.jpg | /loan-emi-calculator/ | awaiting approval (auto at 2026-11-22 15:58) |
+| 2026-11-25 | 13:30 | carousel | — | — | dark cheat sheet | 2026-11-25-emi-10-lakh-1..7.jpg | /loan-emi-calculator/ | posted 16:06 Dubai (auto-approved), media 18092499623703441 |
 
 ```captions
 [2026-11-25 13:30]
@@ -731,7 +731,7 @@ Renders: build/reels_2026_11_25.py (reels, reading pace SLOW = 1.75, 23.1 s each
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-25 | 11:00 | reel | no | 4500 | pop | 2026-11-25-uae-55-days-old.mp4 | /age-calculator/ | posted 11:05 Dubai (auto-approved), media 18134269337484185 |
 | 2026-11-25 | 12:00 | story | — | — | — | 2026-11-25-story-uae-55-quiz.jpg | /age-calculator/ | posted (auto-approved) 12:04 Dubai, media 18135735658756539 |
-| 2026-11-25 | 14:30 | reel | yes | 4500 | desi | 2026-11-25-5-cent-plot-sqft.mp4 | /kerala-land-converter/ | awaiting approval (auto at 2026-11-25 09:55) |
+| 2026-11-25 | 14:30 | reel | yes | 4500 | desi | 2026-11-25-5-cent-plot-sqft.mp4 | /kerala-land-converter/ | posted 16:06 Dubai (auto-approved; trial refused, too few followers, posted as normal reel), media 18438692359196677 |
 | 2026-11-25 | 16:00 | reel | yes | 4500 | cinematic | 2026-11-25-real-raise.mp4 | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 18:00 | story | — | — | — | 2026-11-25-story-raise-vs-inflation.jpg | /percentage-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
 | 2026-11-25 | 20:30 | reel | no | 4500 | lofi | 2026-11-25-same-bmi-24-9.mp4 | /bmi-calculator/ | awaiting approval (auto at 2026-11-25 09:55) |
