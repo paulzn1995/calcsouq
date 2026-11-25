@@ -815,6 +815,8 @@ Link in bio → Risk-reward calculator
 What matters more to you: win rate or win size? 👇
 Example numbers, before fees and slippage. Education only, not investment advice.
 #trading #riskreward #winrate #forex #tradingpsychology #calcsouq
+```
+
 ```captions
 [2026-11-26 20:30]
 20 ദിവസം കൊണ്ട് ഒരു പവന് ₹15,720 കുറഞ്ഞു 📉 ഗോൾഡ് ലോൺ ഉണ്ടോ? ഈ മെസേജ് വരാം.
