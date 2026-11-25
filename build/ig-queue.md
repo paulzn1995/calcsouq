@@ -622,7 +622,7 @@ Sources: Saxo, 10 Things, IC Markets, Tickmill market reports, 23–24 Nov 2026.
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-24 | 13:45 | reel | no | 9000 | cinematic | 2026-11-24-father-shoes.mp4 | / | posted 13:5x Dubai (Paulson asked), media 17928953472199454 |
 | 2026-11-24 | 20:30 | reel | no | 9000 | cinematic | 2026-11-24-house-road.mp4 | / | posted 21:05 Dubai (approved), media 17896875063683883 |
-| 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | approved (quality re-render 24 Nov EOD: 17 → 19.5 s, text moved out of IG-covered top/bottom zones, footnote 38 → 46 px; same words, numbers and caption) |
+| 2026-11-25 | 13:00 | reel | no | 10000 | lofi | 2026-11-24-two-friends.mp4 | /sip-calculator/ | posted 13:04 Dubai (approved; quality re-render 24 Nov EOD), media 17914555230580823 |
 
 ```captions
 [2026-11-24 13:45]
